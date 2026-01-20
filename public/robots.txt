@@ -1,0 +1,27 @@
+# Allow all search engines to crawl
+User-agent: *
+Allow: /
+Allow: /fleet
+Allow: /tours
+Allow: /booking
+Allow: /vehicles/
+
+# Disallow admin or API endpoints
+Disallow: /api/
+Disallow: /_next/
+
+# Sitemap location
+Sitemap: https://limozrwanda.com/sitemap.xml
+
+# Crawl-delay for politeness
+Crawl-delay: 1
+
+# Specific rules for major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /

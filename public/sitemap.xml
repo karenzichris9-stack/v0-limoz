@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <!-- Updated homepage with higher priority and image schema -->
+  <url>
+    <loc>https://limozrwanda.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://limozrwanda.com/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://limozrwanda.com/" />
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://limozrwanda.com/land-cruiser-exterior-side-angle.jpg</image:loc>
+      <image:caption>Limoz Rwanda - Premium Car Rental in Kigali</image:caption>
+    </image:image>
+  </url>
+  
+  <url>
+    <loc>https://limozrwanda.com/fleet</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://limozrwanda.com/fleet" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://limozrwanda.com/fleet" />
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  
+  <url>
+    <loc>https://limozrwanda.com/tours</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://limozrwanda.com/tours" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://limozrwanda.com/tours" />
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  
+  <url>
+    <loc>https://limozrwanda.com/booking</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://limozrwanda.com/booking" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://limozrwanda.com/booking" />
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  
+  <url>
+    <loc>https://limozrwanda.com/about</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://limozrwanda.com/about" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://limozrwanda.com/about" />
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  
+  <url>
+    <loc>https://limozrwanda.com/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://limozrwanda.com/contact" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://limozrwanda.com/contact" />
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  
+  <url>
+    <loc>https://limozrwanda.com/news</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://limozrwanda.com/news" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://limozrwanda.com/news" />
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.60</priority>
+  </url>
+  
+  <!-- Added more vehicle detail pages for better indexing -->
+  <url>
+    <loc>https://limozrwanda.com/vehicles/land-cruiser-txl-2023</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  
+  <url>
+    <loc>https://limozrwanda.com/vehicles/land-cruiser-gx-2023</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  
+  <url>
+    <loc>https://limozrwanda.com/vehicles/land-cruiser-lc-300-v6</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  
+  <url>
+    <loc>https://limozrwanda.com/vehicles/mercedes-e-class</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  
+  <url>
+    <loc>https://limozrwanda.com/vehicles/mercedes-s-class</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  
+  <url>
+    <loc>https://limozrwanda.com/vehicles/executive-van</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  
+  <url>
+    <loc>https://limozrwanda.com/vehicles/toyota-prado-txl</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  
+  <url>
+    <loc>https://limozrwanda.com/vehicles/toyota-fortuner</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  
+  <url>
+    <loc>https://limozrwanda.com/vehicles/toyota-rav4</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  
+  <url>
+    <loc>https://limozrwanda.com/vehicles/byd-atto-3</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  
+  <url>
+    <loc>https://limozrwanda.com/vehicles/byd-dolphin</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+</urlset>
