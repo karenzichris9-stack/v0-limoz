@@ -116,66 +116,30 @@ export default function NewsPageClient() {
             {t("news.title")}
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">{t("news.subtitle")}</p>
-          <div className="w-24 h-1 bg-[#f39c12] mx-auto mt-6"></div>
+          
         </div>
 
         <section className="mb-20">
           <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-            <img
-              src="/brand-new-fleet-promo.png"
-              alt={isFrench ? "Nouvelle Flotte en Chargement" : "Brand New Fleet Loading"}
-              className="w-full h-auto object-contain"
-            />
+            
           </div>
           <div className="text-center mt-8">
-            <p className="text-xl text-gray-700 font-medium">
-              {isFrench
-                ? "Restez à l'écoute pour notre nouvelle flotte de véhicules de luxe arrivant bientôt!"
-                : "Stay tuned for our brand new fleet of luxury vehicles arriving soon!"}
-            </p>
+            
           </div>
         </section>
 
         <section className="mb-20">
           <div className="text-center mb-12">
             <div className="flex items-center justify-center gap-3 mb-4">
-              <Sparkles className="w-8 h-8 text-[#f39c12]" />
-              <h2 className="text-4xl font-bold">{t("news.incomingFleet")}</h2>
-              <Sparkles className="w-8 h-8 text-[#f39c12]" />
+              
+              
+              
             </div>
-            <p className="text-gray-600 text-lg">{t("news.incomingDesc")}</p>
+            
           </div>
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             {incomingFleet.map((vehicle, index) => (
-              <div
-                key={index}
-                className="bg-gradient-to-br from-[#f39c12]/5 to-[#f39c12]/10 border-2 border-[#f39c12]/20 rounded-2xl overflow-hidden hover:shadow-2xl transition-all hover:scale-105 group"
-              >
-                <div className="aspect-video bg-white flex items-center justify-center p-6 relative overflow-hidden">
-                  <img
-                    src={vehicle.image || "/placeholder.svg?height=300&width=500"}
-                    alt={t(`news.${vehicle.nameKey}`)}
-                    className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute top-4 right-4">
-                    <span className="bg-[#f39c12] text-white px-3 py-1 rounded-full text-xs font-bold uppercase">
-                      {t("news.comingSoon")}
-                    </span>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-xs font-semibold text-[#f39c12] uppercase tracking-wide">
-                      {t(`news.${vehicle.classKey}`)} Class
-                    </span>
-                    <span className="text-xs text-gray-600 font-medium">
-                      {isFrench ? vehicle.expectedArrivalFr : vehicle.expectedArrival}
-                    </span>
-                  </div>
-                  <h3 className="text-xl font-bold mb-3 text-gray-900">{t(`news.${vehicle.nameKey}`)}</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">{t(`news.${vehicle.descriptionKey}`)}</p>
-                </div>
-              </div>
+              null
             ))}
           </div>
         </section>

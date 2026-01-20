@@ -3,32 +3,33 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* New Year 2026 theme with midnight blue, gold, champagne palette */
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
+  --background: oklch(0.98 0.005 250);
+  --foreground: oklch(0.15 0.02 250);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
+  --primary: oklch(0.75 0.15 85);
+  --primary-foreground: oklch(0.15 0.02 250);
+  --secondary: oklch(0.95 0.02 85);
+  --secondary-foreground: oklch(0.2 0.02 250);
+  --muted: oklch(0.95 0.01 250);
+  --muted-foreground: oklch(0.5 0.02 250);
+  --accent: oklch(0.85 0.1 85);
+  --accent-foreground: oklch(0.15 0.02 250);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.577 0.245 27.325);
   --border: oklch(0.922 0 0);
   --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
+  --ring: oklch(0.75 0.15 85);
+  --chart-1: oklch(0.75 0.15 85);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
-  --radius: 0.625rem;
+  --radius: 0.75rem;
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
   --sidebar-primary: oklch(0.205 0 0);
@@ -37,41 +38,58 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  /* New Year 2026 theme colors */
+  --ny-midnight: #0f0f23;
+  --ny-deep-blue: #1a1a3e;
+  --ny-gold: #ffd700;
+  --ny-champagne: #f7e7ce;
+  --ny-rose-gold: #b76e79;
+  --ny-neon-blue: #4fc3f7;
+  --ny-neon-pink: #f06292;
+  --ny-white: #ffffff;
+
+  /* Holiday theme CSS variables */
+  --holiday-primary: #ffd700;
+  --holiday-secondary: #f7e7ce;
+  --holiday-accent: #4fc3f7;
+  --holiday-gradient-from: #0f0f23;
+  --holiday-gradient-to: #1a1a3e;
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.145 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.145 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.985 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
+  --background: oklch(0.08 0.02 250);
+  --foreground: oklch(0.95 0.01 85);
+  --card: oklch(0.12 0.02 250);
+  --card-foreground: oklch(0.95 0.01 85);
+  --popover: oklch(0.12 0.02 250);
+  --popover-foreground: oklch(0.95 0.01 85);
+  --primary: oklch(0.8 0.15 85);
+  --primary-foreground: oklch(0.1 0.02 250);
+  --secondary: oklch(0.2 0.02 250);
+  --secondary-foreground: oklch(0.95 0.01 85);
+  --muted: oklch(0.2 0.02 250);
+  --muted-foreground: oklch(0.7 0.01 85);
+  --accent: oklch(0.25 0.02 250);
+  --accent-foreground: oklch(0.95 0.01 85);
   --destructive: oklch(0.396 0.141 25.723);
   --destructive-foreground: oklch(0.637 0.237 25.331);
-  --border: oklch(0.269 0 0);
-  --input: oklch(0.269 0 0);
-  --ring: oklch(0.439 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
+  --border: oklch(0.25 0.02 250);
+  --input: oklch(0.2 0.02 250);
+  --ring: oklch(0.8 0.15 85);
+  --chart-1: oklch(0.8 0.15 85);
   --chart-2: oklch(0.696 0.17 162.48);
   --chart-3: oklch(0.769 0.188 70.08);
   --chart-4: oklch(0.627 0.265 303.9);
   --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(0.269 0 0);
-  --sidebar-ring: oklch(0.439 0 0);
+  --sidebar: oklch(0.12 0.02 250);
+  --sidebar-foreground: oklch(0.95 0.01 85);
+  --sidebar-primary: oklch(0.8 0.15 85);
+  --sidebar-primary-foreground: oklch(0.1 0.02 250);
+  --sidebar-accent: oklch(0.2 0.02 250);
+  --sidebar-accent-foreground: oklch(0.95 0.01 85);
+  --sidebar-border: oklch(0.25 0.02 250);
+  --sidebar-ring: oklch(0.5 0.02 250);
 }
 
 @theme inline {
@@ -125,23 +143,21 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
-/* Adding performance optimizations for faster Core Web Vitals */
-
-/* Image optimization for better LCP */
+/* Performance optimizations */
 img {
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
 }
 
-/* Hardware acceleration for animations to improve INP */
 .gpu-accelerated {
   transform: translateZ(0);
   will-change: transform;
 }
 
-/* Reduce motion for accessibility and better CLS */
+/* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -152,18 +168,16 @@ img {
   }
 }
 
-/* Font optimization - prevent FOIT (Flash of Invisible Text) */
 @font-face {
   font-display: swap;
 }
 
-/* Adding sophisticated luxury transitions and animations */
-/* Luxury Transitions & Animations */
+/* Enhanced luxury transitions */
 * {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Smooth page transitions */
+/* Core animations */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -206,34 +220,25 @@ img {
   }
 }
 
-/* Luxury fade in animation for page loads */
 body > main {
   animation: fadeIn 0.6s ease-out;
 }
 
-/* Smooth scroll with luxury easing */
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 80px;
-}
-
-/* Luxury hover effects for interactive elements */
 a,
 button {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Card hover effects with luxury shadow */
+/* New Year themed card hover with gold glow */
 .card-hover {
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card-hover:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 20px 40px rgba(255, 215, 0, 0.15), 0 0 30px rgba(255, 215, 0, 0.1);
 }
 
-/* Image zoom on hover */
 .image-zoom-container {
   overflow: hidden;
 }
@@ -246,7 +251,6 @@ button {
   transform: scale(1.08);
 }
 
-/* Stagger animation utility */
 .stagger-item {
   animation: slideUp 0.6s ease-out backwards;
 }
@@ -270,7 +274,6 @@ button {
   animation-delay: 0.6s;
 }
 
-/* Elegant loading spinner */
 @keyframes spin-smooth {
   to {
     transform: rotate(360deg);
@@ -281,7 +284,6 @@ button {
   animation: spin-smooth 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
 }
 
-/* Luxury button ripple effect */
 @keyframes ripple {
   0% {
     transform: scale(0);
@@ -302,7 +304,7 @@ button {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(255, 215, 0, 0.3) 0%, transparent 70%);
   transform: scale(0);
   opacity: 0;
   pointer-events: none;
@@ -312,7 +314,6 @@ button {
   animation: ripple 0.6s ease-out;
 }
 
-/* Smooth section reveal on scroll */
 .reveal-on-scroll {
   opacity: 0;
   transform: translateY(40px);
@@ -322,4 +323,397 @@ button {
 .reveal-on-scroll.revealed {
   opacity: 1;
   transform: translateY(0);
+}
+
+@keyframes loading-bar {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
+
+@keyframes skeleton-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.skeleton-loading {
+  animation: skeleton-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Enhanced New Year 2026 celebration animations */
+@keyframes snowfall {
+  0% {
+    transform: translateY(-10px) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes float-up {
+  0% {
+    transform: translateY(100%) scale(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100%) scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes confetti {
+  0% {
+    transform: translateY(-10px) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100px) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(0.8);
+  }
+}
+
+@keyframes firework {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes firework-burst {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  20% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes firework-particle {
+  0% {
+    transform: rotate(var(--rotation)) translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(var(--rotation)) translateY(-80px);
+    opacity: 0;
+  }
+}
+
+@keyframes firework-particle-inner {
+  0% {
+    transform: rotate(var(--rotation)) translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(var(--rotation)) translateY(-50px);
+    opacity: 0;
+  }
+}
+
+@keyframes twinkle-star {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes confetti-fall {
+  0% {
+    transform: translateY(-20px) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0.5;
+  }
+}
+
+@keyframes float-banner {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes bounce-slow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* New gold shimmer animation for buttons and accents */
+@keyframes gold-shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+@keyframes sparkle {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1) rotate(180deg);
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 5px rgba(255, 215, 0, 0.5), 0 0 10px rgba(255, 215, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.8), 0 0 40px rgba(255, 215, 0, 0.5);
+  }
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes float-particle {
+  0%,
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+  25% {
+    transform: translateY(-20px) translateX(10px);
+  }
+  50% {
+    transform: translateY(-10px) translateX(-10px);
+  }
+  75% {
+    transform: translateY(-30px) translateX(5px);
+  }
+}
+
+.animate-firework {
+  animation: firework-burst 2s ease-out infinite;
+}
+.animate-firework-particle {
+  animation: firework-particle 1.5s ease-out infinite;
+}
+.animate-firework-particle-inner {
+  animation: firework-particle-inner 1.2s ease-out infinite;
+}
+.animate-twinkle-star {
+  animation: twinkle-star ease-in-out infinite;
+}
+.animate-confetti-fall {
+  animation: confetti-fall linear infinite;
+}
+.animate-float-banner {
+  animation: float-banner 3s ease-in-out infinite;
+}
+.animate-bounce-slow {
+  animation: bounce-slow 2s ease-in-out infinite;
+}
+.animate-shimmer {
+  animation: shimmer 2s ease-in-out infinite;
+}
+.animate-gold-shimmer {
+  animation: gold-shimmer 3s ease-in-out infinite;
+  background-size: 200% auto;
+}
+.animate-sparkle {
+  animation: sparkle 2s ease-in-out infinite;
+}
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+.animate-gradient-shift {
+  animation: gradient-shift 4s ease infinite;
+  background-size: 200% 200%;
+}
+.animate-float-particle {
+  animation: float-particle 4s ease-in-out infinite;
+}
+
+/* New Year themed utility classes */
+.ny-gradient-bg {
+  background: linear-gradient(135deg, var(--ny-midnight) 0%, var(--ny-deep-blue) 50%, #2a2a5e 100%);
+}
+
+.ny-gold-text {
+  background: linear-gradient(135deg, #ffd700 0%, #f7e7ce 50%, #ffd700 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.ny-gold-border {
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.1);
+}
+
+.ny-glow-gold {
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3), 0 0 40px rgba(255, 215, 0, 0.1);
+}
+
+.ny-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(247, 231, 206, 0.9) 100%);
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  box-shadow: 0 10px 40px rgba(15, 15, 35, 0.1), 0 0 20px rgba(255, 215, 0, 0.05);
+}
+
+.ny-dark-card {
+  background: linear-gradient(135deg, rgba(15, 15, 35, 0.95) 0%, rgba(26, 26, 62, 0.9) 100%);
+  border: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+/* Festive section divider */
+.ny-divider {
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 215, 0, 0.5) 50%, transparent 100%);
+  position: relative;
+}
+
+.ny-divider::before {
+  content: "✦";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffd700;
+  font-size: 1.5rem;
+  background: var(--background);
+  padding: 0 1rem;
+}
+
+/* Conversion-focused animations */
+@keyframes pulse-subtle {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(255, 215, 0, 0);
+  }
+}
+
+@keyframes draw-line {
+  0% {
+    stroke-dasharray: 200;
+    stroke-dashoffset: 200;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2s ease-in-out infinite;
+}
+.animate-draw-line {
+  animation: draw-line 1.5s ease-out forwards;
+  stroke-dasharray: 200;
+}
+
+.scroll-snap-container {
+  scroll-snap-type: y proximity;
+}
+.scroll-snap-section {
+  scroll-snap-align: start;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #ffd700;
+  outline-offset: 2px;
+}
+
+.btn-hover-lift {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(255, 215, 0, 0.2);
+}
+
+/* Holiday theme overrides */
+.holiday-theme {
+}
+.holiday-christmas {
+}
+.holiday-new-year {
+}
+.holiday-rwanda-independence,
+.holiday-liberation-day {
 }

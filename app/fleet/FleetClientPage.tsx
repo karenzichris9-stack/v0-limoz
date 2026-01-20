@@ -10,23 +10,25 @@ export default function FleetClientPage() {
 
   const vvipFleet = [
     {
-      id: "land-cruiser-txl-2023",
-      name: "LANDCRUISER 200 SERIES", // Updated name from "Land Cruiser TXL 2023" to "LANDCRUISER 200 SERIES"
-      image: "/land-cruiser-exterior-side-angle.jpg",
+      id: "land-cruiser-lc300-v6",
+      name: "Land Cruiser LC 300 V6",
+      image: "/land-cruiser-lc300-v6.jpg",
+      useContain: true,
       features: [
-        { icon: Wind, labelKey: "climate", valueKey: "dualClimateControl" },
+        { icon: Wind, labelKey: "climate", valueKey: "triZoneClimate" },
         { icon: Users, labelKey: "capacity", valueKey: "sevenSeater" },
         { icon: Cog, labelKey: "transmission", valueKey: "automatic" },
-        { icon: Radio, labelKey: "entertainment", valueKey: "premiumSound" },
+        { icon: Radio, labelKey: "entertainment", valueKey: "premiumAudio" },
         { icon: Shield, labelKey: "safety", valueKey: "advancedSafety" },
       ],
     },
     {
-      id: "land-cruiser-lc300-v6",
-      name: "Land Cruiser LC 300 V6",
-      image: "/land-cruiser-lc300-v6.jpg",
+      id: "land-cruiser-250-series",
+      name: "Land Cruiser 250 Series",
+      image: "/land-cruiser-250-series.jpg",
+      imagePosition: "object-bottom",
       features: [
-        { icon: Wind, labelKey: "climate", valueKey: "triZoneClimate" },
+        { icon: Wind, labelKey: "climate", valueKey: "dualClimateControl" },
         { icon: Users, labelKey: "capacity", valueKey: "sevenSeater" },
         { icon: Cog, labelKey: "transmission", valueKey: "automatic" },
         { icon: Radio, labelKey: "entertainment", valueKey: "premiumAudio" },
@@ -45,16 +47,17 @@ export default function FleetClientPage() {
         { icon: Shield, labelKey: "safety", valueKey: "premiumSafety" },
       ],
     },
+    
     {
-      id: "mercedes-s-class",
-      name: "Mercedes-Benz S-Class",
-      image: "/mercedes-s-class.jpg",
+      id: "toyota-rav4-2024",
+      name: "Toyota RAV4 2024",
+      image: "/toyota-rav4-2024.jpg",
       features: [
-        { icon: Wind, labelKey: "climate", valueKey: "fourZoneClimate" },
+        { icon: Wind, labelKey: "climate", valueKey: "dualClimateControl" },
         { icon: Users, labelKey: "capacity", valueKey: "fiveSeater" },
         { icon: Cog, labelKey: "transmission", valueKey: "automatic" },
-        { icon: Radio, labelKey: "entertainment", valueKey: "burmesterSound" },
-        { icon: Shield, labelKey: "safety", valueKey: "executiveSafety" },
+        { icon: Radio, labelKey: "entertainment", valueKey: "premiumAudio" },
+        { icon: Shield, labelKey: "safety", valueKey: "advancedSafety" },
       ],
     },
     {
@@ -62,6 +65,7 @@ export default function FleetClientPage() {
       name: "Executive Van",
       image: "/executive-van-hiace.jpg",
       isExecutiveVan: true,
+      imagePosition: "object-bottom",
       features: [
         { icon: Wind, labelKey: "climate", valueKey: "rearClimateControl" },
         { icon: Users, labelKey: "capacity", valueKey: "fourteenSeater" },
@@ -71,43 +75,18 @@ export default function FleetClientPage() {
         { icon: Shield, labelKey: "safety", valueKey: "passengerSafety" },
       ],
     },
-    {
-      id: "land-cruiser-gx-2023",
-      name: "Land Cruiser GX 2023",
-      image: "/land-cruiser-gx.jpg", // Updated to use new Land Cruiser GX image
-      features: [
-        { icon: Wind, labelKey: "climate", valueKey: "dualZoneClimate" },
-        { icon: Users, labelKey: "capacity", valueKey: "sevenSeater" },
-        { icon: Cog, labelKey: "transmission", valueKey: "automatic" },
-        { icon: Radio, labelKey: "entertainment", valueKey: "advancedAudio" },
-        { icon: Shield, labelKey: "safety", valueKey: "comprehensiveSafety" },
-      ],
-    },
-    {
-      id: "byd-atto-3",
-      name: "BYD Atto 3",
-      image: "/byd-atto-3.jpg",
-      features: [
-        { icon: Wind, labelKey: "climate", valueKey: "dualZoneClimate" },
-        { icon: Users, labelKey: "capacity", valueKey: "fiveSeater" },
-        { icon: Zap, labelKey: "range", valueKey: "range420km" },
-        { icon: Cog, labelKey: "transmission", valueKey: "automatic" },
-        { icon: Wifi, labelKey: "connectivity", valueKey: "smartConnect" },
-        { icon: Shield, labelKey: "safety", valueKey: "evSafety" },
-      ],
-    },
   ]
 
   const vipVehicles = [
     {
-      id: "mercedes-e-class",
-      name: "Mercedes-Benz E-Class",
-      image: "/merc-e-class.jpg",
+      id: "land-cruiser-200-series",
+      name: "Land Cruiser 200 Series",
+      image: "/land-cruiser-exterior-side-angle.jpg",
       features: [
-        { icon: Wind, labelKey: "climate", valueKey: "climate" },
-        { icon: Users, labelKey: "capacity", valueKey: "fiveSeater" },
+        { icon: Wind, labelKey: "climate", valueKey: "dualClimateControl" },
+        { icon: Users, labelKey: "capacity", valueKey: "sevenSeater" },
         { icon: Cog, labelKey: "transmission", valueKey: "automatic" },
-        { icon: Radio, labelKey: "entertainment", valueKey: "infotainment" },
+        { icon: Radio, labelKey: "entertainment", valueKey: "premiumSound" },
         { icon: Shield, labelKey: "safety", valueKey: "advancedSafety" },
       ],
     },
@@ -115,6 +94,7 @@ export default function FleetClientPage() {
       id: "byd-atto-3",
       name: "BYD ATTO 3",
       image: "/byd-atto3.jpg",
+      imagePosition: "object-bottom",
       features: [
         { icon: Zap, labelKey: "power", valueKey: "electric" },
         { icon: Wind, labelKey: "climate", valueKey: "climate" },
@@ -142,6 +122,7 @@ export default function FleetClientPage() {
       id: "coaster-bus",
       name: "Coaster Bus",
       image: "/coaster-bus.jpg",
+      imagePosition: "object-bottom",
       features: [
         { icon: Users, labelKey: "capacity", valueKey: "thirtyThreeSeater" },
         { icon: Wind, labelKey: "climate", valueKey: "airConditioning" },
@@ -149,6 +130,19 @@ export default function FleetClientPage() {
         { icon: Package, labelKey: "cargo", valueKey: "doubleCabPickup" },
         { icon: Shield, labelKey: "safety", valueKey: "passengerSafety" },
         { icon: Wifi, labelKey: "type", valueKey: "groupTransport" },
+      ],
+    },
+    {
+      id: "tunland-foton",
+      name: "Tunland Foton",
+      image: "/tunland-foton.jpg",
+      imagePosition: "object-bottom",
+      features: [
+        { icon: Wind, labelKey: "climate", valueKey: "airConditioning" },
+        { icon: Users, labelKey: "capacity", valueKey: "fiveSeater" },
+        { icon: Cog, labelKey: "transmission", valueKey: "manual" },
+        { icon: Package, labelKey: "cargo", valueKey: "doubleCabPickup" },
+        { icon: Shield, labelKey: "safety", valueKey: "durabilitySafety" },
       ],
     },
   ]
@@ -189,12 +183,12 @@ export default function FleetClientPage() {
                 className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-2xl transition-all hover:scale-105 group block"
               >
                 <div
-                  className={`aspect-[4/3] bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center p-4 group-hover:from-[#f39c12]/5 group-hover:to-[#f39c12]/10 transition-all ${vehicle.isExecutiveVan ? "executive-van-image" : ""}`}
+                  className={`aspect-[4/3] bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden flex items-center justify-center ${vehicle.isExecutiveVan ? "executive-van-image" : ""}`}
                 >
                   <img
                     src={vehicle.image || "/placeholder.svg"}
                     alt={vehicle.name}
-                    className={`w-full h-full rounded-lg object-cover`}
+                    className={`w-full h-full object-cover ${vehicle.imagePosition || "object-center"} group-hover:scale-105 transition-transform duration-300`}
                   />
                 </div>
                 <div className="p-6">
@@ -233,11 +227,11 @@ export default function FleetClientPage() {
                 key={index}
                 className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-2xl transition-all hover:scale-105 group"
               >
-                <div className="aspect-[4/3] bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center p-4 group-hover:from-[#f39c12]/5 group-hover:to-[#f39c12]/10 transition-all">
+                <div className="aspect-[4/3] bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden flex items-center justify-center">
                   <img
                     src={vehicle.image || "/placeholder.svg"}
                     alt={vehicle.name}
-                    className="w-full h-full rounded-lg object-cover"
+                    className={`w-full h-full object-cover ${vehicle.imagePosition || "object-center"} group-hover:scale-105 transition-transform duration-300`}
                   />
                 </div>
                 <div className="p-6">
@@ -276,11 +270,11 @@ export default function FleetClientPage() {
                 key={index}
                 className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-2xl transition-all hover:scale-105 group"
               >
-                <div className="aspect-[4/3] bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center p-4 group-hover:from-[#f39c12]/5 group-hover:to-[#f39c12]/10 transition-all">
+                <div className="aspect-[4/3] bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden flex items-center justify-center">
                   <img
                     src={vehicle.image || "/placeholder.svg"}
                     alt={vehicle.name}
-                    className="w-full h-full object-cover rounded-lg"
+                    className={`w-full h-full object-cover ${vehicle.imagePosition || "object-center"} group-hover:scale-105 transition-transform duration-300`}
                   />
                 </div>
                 <div className="p-6">
@@ -315,11 +309,11 @@ export default function FleetClientPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-2xl transition-all hover:scale-105 group">
-              <div className="aspect-[4/3] bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center p-4 group-hover:from-[#f39c12]/5 group-hover:to-[#f39c12]/10 transition-all">
+              <div className="aspect-[4/3] bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden flex items-center justify-center">
                 <img
                   src="/safari-land-cruiser-with-pop-up-roof.jpg"
                   alt="Safari Land Cruiser"
-                  className="w-full h-full object-cover rounded-lg"
+                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <div className="p-6">
@@ -350,11 +344,11 @@ export default function FleetClientPage() {
               </div>
             </div>
             <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-2xl transition-all hover:scale-105 group">
-              <div className="aspect-[4/3] bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center p-4 group-hover:from-[#f39c12]/5 group-hover:to-[#f39c12]/10 transition-all">
+              <div className="aspect-[4/3] bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden flex items-center justify-center">
                 <img
                   src="/safari-4x4-vehicle-with-open-roof.jpg"
                   alt="Safari 4x4"
-                  className="w-full h-full object-cover rounded-lg"
+                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <div className="p-6">

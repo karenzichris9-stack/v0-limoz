@@ -1,10 +1,15 @@
 "use client"
 
 import type React from "react"
-import { Phone, Mail, MapPin, Clock, Star } from "lucide-react"
+import { Phone, Mail, MapPin, Clock, Star, ChevronDown } from "lucide-react"
 import { useState } from "react"
 import { Footer } from "@/components/footer"
 import { useLanguage } from "@/lib/language-context"
+
+interface FAQItem {
+  question: string
+  answer: string
+}
 
 export default function ContactPageClient() {
   const { t } = useLanguage()
@@ -15,6 +20,50 @@ export default function ContactPageClient() {
     type: "success" | "error" | null
     message: string
   }>({ type: null, message: "" })
+  const [openFAQ, setOpenFAQ] = useState<number | null>(null)
+
+  const faqItems: FAQItem[] = [
+    {
+      question: t("contact.faq.q1"),
+      answer: t("contact.faq.a1"),
+    },
+    {
+      question: t("contact.faq.q2"),
+      answer: t("contact.faq.a2"),
+    },
+    {
+      question: t("contact.faq.q3"),
+      answer: t("contact.faq.a3"),
+    },
+    {
+      question: t("contact.faq.q4"),
+      answer: t("contact.faq.a4"),
+    },
+    {
+      question: t("contact.faq.q5"),
+      answer: t("contact.faq.a5"),
+    },
+    {
+      question: t("contact.faq.q6"),
+      answer: t("contact.faq.a6"),
+    },
+    {
+      question: t("contact.faq.q7"),
+      answer: t("contact.faq.a7"),
+    },
+    {
+      question: t("contact.faq.q8"),
+      answer: t("contact.faq.a8"),
+    },
+    {
+      question: t("contact.faq.q9"),
+      answer: t("contact.faq.a9"),
+    },
+    {
+      question: t("contact.faq.q10"),
+      answer: t("contact.faq.a10"),
+    },
+  ]
 
   async function handleReviewSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
@@ -83,12 +132,12 @@ export default function ContactPageClient() {
               <div>
                 <h3 className="font-semibold mb-1">{t("contact.whatsapp")}</h3>
                 <a
-                  href="https://wa.me/250782280204"
+                  href="https://wa.me/250788318990"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-green-600 hover:text-green-700 transition-colors"
                 >
-                  +250 782 280 204
+                  +250 788 318 990
                 </a>
               </div>
             </div>
@@ -122,6 +171,37 @@ export default function ContactPageClient() {
           </div>
         </div>
 
+        <div className="mt-16">
+          <h2 className="text-2xl font-bold mb-2">{t("contact.faq.title")}</h2>
+          <p className="text-gray-600 mb-8">{t("contact.faq.subtitle")}</p>
+
+          <div className="space-y-4">
+            {faqItems.map((item, index) => (
+              <div key={index} className="border border-gray-200 rounded-lg overflow-hidden">
+                <button
+                  onClick={() => setOpenFAQ(openFAQ === index ? null : index)}
+                  className="w-full flex items-center justify-between p-4 text-left bg-gray-50 hover:bg-gray-100 transition-colors"
+                >
+                  <span className="font-semibold text-gray-800">{item.question}</span>
+                  <ChevronDown
+                    className={`w-5 h-5 text-[#f39c12] transition-transform duration-300 ${
+                      openFAQ === index ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+                <div
+                  className={`overflow-hidden transition-all duration-300 ${
+                    openFAQ === index ? "max-h-96" : "max-h-0"
+                  }`}
+                >
+                  <p className="p-4 text-gray-700 bg-white leading-relaxed">{item.answer}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Rate Our Services Section */}
         <div className="bg-gray-50 p-8 rounded-lg mt-12">
           <h2 className="text-2xl font-bold mb-2">{t("contact.rateTitle")}</h2>
           <p className="text-gray-600 mb-6">{t("contact.rateSubtitle")}</p>

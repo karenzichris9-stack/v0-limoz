@@ -5,6 +5,12 @@ import "./globals.css"
 import { Header } from "@/components/header"
 import { LanguageProvider } from "@/lib/language-context"
 import { PageTransition } from "@/components/page-transition"
+import { RouteProgress } from "@/components/route-progress"
+import { HolidayThemeProvider } from "@/components/holiday-theme-provider"
+import { HolidayBanner } from "@/components/holiday-banner"
+import { ChristmasDecorations } from "@/components/christmas-decorations"
+import { NewYearDecorations } from "@/components/new-year-decorations"
+import { Suspense } from "react"
 
 const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
@@ -120,6 +126,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="preload" href="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DJI_20251020_114443_765%E2%80%AFAM_video-BzcXMHtGoQifH3iXlvQJySAQPtf2GQ.MP4" as="video" type="video/mp4" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -340,10 +349,18 @@ export default function RootLayout({
       </head>
       <body className={`font-sans antialiased`}>
         <LanguageProvider>
-          <Header />
-          <main>
-            <PageTransition>{children}</PageTransition>
-          </main>
+          <HolidayThemeProvider>
+            <ChristmasDecorations />
+            <NewYearDecorations />
+            <HolidayBanner />
+            <Suspense fallback={null}>
+              <RouteProgress />
+            </Suspense>
+            <Header />
+            <main>
+              <PageTransition>{children}</PageTransition>
+            </main>
+          </HolidayThemeProvider>
         </LanguageProvider>
       </body>
     </html>

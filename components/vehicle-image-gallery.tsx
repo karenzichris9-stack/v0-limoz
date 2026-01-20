@@ -19,8 +19,12 @@ export function VehicleImageGallery({ vehicleName, mainImage, images }: VehicleI
   return (
     <div className="grid md:grid-cols-2 gap-6 mb-12">
       {/* Main Display Image */}
-      <div className="aspect-video bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl overflow-hidden">
-        <img src={currentImage || "/placeholder.svg"} alt={vehicleName} className="w-full h-full object-cover" />
+      <div className="aspect-video bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl overflow-hidden flex items-center justify-center">
+        <img
+          src={currentImage || "/placeholder.svg"}
+          alt={vehicleName}
+          className="max-w-full max-h-full object-contain"
+        />
       </div>
       {/* Thumbnail Grid */}
       <div className="grid grid-cols-2 gap-4">
