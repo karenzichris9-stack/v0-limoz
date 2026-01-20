@@ -128,11 +128,7 @@ export default function VehicleDetailPage() {
                 <div className="grid sm:grid-cols-2 gap-4">
                   {vehicle.images.interior.map((img, idx) => (
                     <div key={idx} className="aspect-video bg-gray-100 rounded-xl overflow-hidden">
-                      <img
-                        src={img || "/placeholder.svg?height=400&width=600"}
-                        alt={`${vehicle.name} interior ${idx + 1}`}
-                        className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
-                      />
+                      
                     </div>
                   ))}
                 </div>
