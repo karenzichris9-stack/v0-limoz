@@ -25,6 +25,8 @@ const vehicles = [
     name: "Land Cruiser LC 300 V6",
     type: "VVIP Class",
     image: "/lc300-interior-front-cabin.jpg",
+    useCover: true,
+    imagePosition: "object-bottom",
     seats: 7,
     transmission: "Automatic",
     fuelType: "Petrol",
@@ -94,7 +96,9 @@ export function Fleet() {
                         <img
                           src={vehicle.image || "/placeholder.svg"}
                           alt={vehicle.name}
-                          className="w-full h-48 object-contain transition-transform duration-700 group-hover:scale-110"
+                          className={`w-full h-48 ${
+                            vehicle.useCover ? "object-cover" : "object-contain"
+                          } ${vehicle.imagePosition || "object-center"} transition-transform duration-700 group-hover:scale-110`}
                         />
                       </div>
 
