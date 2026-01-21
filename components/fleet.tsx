@@ -14,7 +14,6 @@ const vehicles = [
     name: "Toyota RAV4 2024",
     type: "VVIP Class",
     image: "/toyota-rav4-2024.jpg",
-    imagePosition: "object-center",
     seats: 5,
     transmission: "Automatic",
     fuelType: "Petrol",
@@ -26,7 +25,6 @@ const vehicles = [
     name: "Land Cruiser LC 300 V6",
     type: "VVIP Class",
     image: "/land-cruiser-lc300-v6.jpg",
-    imagePosition: "object-center",
     seats: 7,
     transmission: "Automatic",
     fuelType: "Petrol",
@@ -38,7 +36,6 @@ const vehicles = [
     name: "Land Cruiser 250 Series",
     type: "VVIP Class",
     image: "/land-cruiser-250-series.jpg",
-    imagePosition: "object-bottom",
     seats: 7,
     transmission: "Automatic",
     fuelType: "Diesel",
@@ -87,7 +84,7 @@ export function Fleet() {
                   >
                     <Card className="overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-[#f39c12]/10 border-0 bg-white">
                       {/* Image container */}
-                      <div className="aspect-[4/3] bg-gradient-to-br from-gray-50 to-gray-100 relative overflow-hidden">
+                      <div className="bg-gradient-to-b from-gray-50 to-white p-6 relative overflow-hidden">
                         {/* Rating badge */}
                         <div className="absolute top-4 right-4 flex items-center gap-1 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full shadow-sm z-10">
                           <Star className="w-3.5 h-3.5 fill-[#f39c12] text-[#f39c12]" />
@@ -97,7 +94,7 @@ export function Fleet() {
                         <img
                           src={vehicle.image || "/placeholder.svg"}
                           alt={vehicle.name}
-                          className={`w-full h-full object-cover ${vehicle.imagePosition || "object-center"} transition-transform duration-700 group-hover:scale-105`}
+                          className="w-full h-48 object-contain transition-transform duration-700 group-hover:scale-110"
                         />
                       </div>
 
