@@ -20,6 +20,17 @@ export default function VehicleDetailPage() {
     notFound()
   }
 
+  const isLc300 = vehicle.id === "land-cruiser-lc300-v6"
+  const interiorImages = vehicle.images.interior ?? []
+  const splitIndex = Math.ceil(interiorImages.length / 2)
+  const galleryInteriorImages = isLc300 ? interiorImages.slice(0, splitIndex) : []
+  const detailInteriorImages = isLc300 ? interiorImages.slice(splitIndex) : interiorImages
+  const galleryMainImage =
+    isLc300 && galleryInteriorImages.length > 0 ? galleryInteriorImages[0] : vehicle.image
+  const galleryImages = isLc300
+    ? { exterior: galleryInteriorImages.slice(1), interior: [] }
+    : vehicle.images
+
   return (
     <div className="min-h-screen bg-white pt-24">
       <Header />
@@ -45,7 +56,7 @@ export default function VehicleDetailPage() {
           <p className="text-xl text-gray-600 leading-relaxed max-w-4xl">{vehicle.description}</p>
         </div>
 
-        <VehicleImageGallery vehicleName={vehicle.name} mainImage={vehicle.image} images={vehicle.images} />
+        <VehicleImageGallery vehicleName={vehicle.name} mainImage={galleryMainImage} images={galleryImages} />
 
         {/* Video Section */}
         {vehicle.videos && vehicle.videos.length > 0 && (
@@ -122,11 +133,11 @@ export default function VehicleDetailPage() {
             </div>
 
             {/* Interior Gallery */}
-            {vehicle.images.interior && vehicle.images.interior.length > 0 && (
+            {detailInteriorImages && detailInteriorImages.length > 0 && (
               <div>
                 <h2 className="text-3xl font-bold mb-6">{t("vehicleDetails.interiorGallery")}</h2>
                 <div className="grid sm:grid-cols-2 gap-4">
-                  {vehicle.images.interior.map((img, idx) => (
+                  {detailInteriorImages.map((img, idx) => (
                     <div key={idx} className="aspect-video bg-gray-100 rounded-xl overflow-hidden">
                       <img
                         src={img || "/placeholder.svg?height=400&width=600"}

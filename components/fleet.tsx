@@ -24,7 +24,7 @@ const vehicles = [
   {
     name: "Land Cruiser LC 300 V6",
     type: "VVIP Class",
-    image: "/land-cruiser-lc300-v6.jpg",
+    image: "/lc300-interior-front-cabin.jpg",
     seats: 7,
     transmission: "Automatic",
     fuelType: "Petrol",
