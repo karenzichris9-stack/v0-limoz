@@ -109,17 +109,18 @@ export const vehicles: Vehicle[] = [
     id: "land-cruiser-lc300-v6",
     name: "Land Cruiser LC 300 V6",
     class: "VVIP",
-    image: "/land-cruiser-lc300-v6.jpg",
+    image: "/lc300-interior-front-cabin.jpg",
     images: {
-      exterior: ["/land-cruiser-lc300-v6.jpg", "/lc300-exterior-side.jpg", "/lc300-exterior-front.jpg"],
+      exterior: [],
       interior: [
+        "/lc300-interior-front-cabin.jpg",
+        "/lc300-interior-dashboard.jpg",
         "/lc300-interior-infotainment.jpg",
-        "/lc300-interior-rear-screens.jpg",
         "/lc300-interior-middle-seats.jpg",
+        "/lc300-interior-rear-screens.jpg",
+        "/lc300-interior-rear-view.jpg",
         "/lc300-interior-sunroof-view.jpg",
         "/lc300-interior-door-detail.jpg",
-        "/lc300-interior-front-cabin.jpg",
-        "/lc300-interior-rear-view.jpg",
       ],
     },
     price: {
