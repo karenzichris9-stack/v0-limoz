@@ -122,7 +122,8 @@ export default function FleetClientPage() {
       id: "coaster-bus",
       name: "Coaster Bus",
       image: "/coaster-bus.jpg",
-      imagePosition: "object-bottom",
+      imagePosition: "object-center",
+      useContain: true,
       features: [
         { icon: Users, labelKey: "capacity", valueKey: "thirtyThreeSeater" },
         { icon: Wind, labelKey: "climate", valueKey: "airConditioning" },
@@ -188,7 +189,7 @@ export default function FleetClientPage() {
                   <img
                     src={vehicle.image || "/placeholder.svg"}
                     alt={vehicle.name}
-                    className={`w-full h-full object-cover ${vehicle.imagePosition || "object-center"} group-hover:scale-105 transition-transform duration-300`}
+                    className={`w-full h-full ${vehicle.useContain ? "object-contain p-2" : "object-cover"} ${vehicle.imagePosition || "object-center"} ${vehicle.useContain ? "group-hover:scale-100" : "group-hover:scale-105"} transition-transform duration-300`}
                   />
                 </div>
                 <div className="p-6">
