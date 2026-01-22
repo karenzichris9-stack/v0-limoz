@@ -4,6 +4,7 @@ import Link from "next/link"
 import { Car, Users, Cog, Wind, Shield, Radio, Wifi, Zap, Package } from "lucide-react"
 import { useLanguage } from "@/lib/language-context"
 import { Button } from "@/components/ui/button"
+import VehicleImage from "@/components/VehicleImage"
 
 export default function FleetClientPage() {
   const { t } = useLanguage()
@@ -13,8 +14,8 @@ export default function FleetClientPage() {
       id: "land-cruiser-lc300-v6",
       name: "Land Cruiser LC 300 V6",
       image: "/land-cruiser-lc300-v6.jpg",
-      imagePosition: "object-center",
-      useContain: true,
+      useVehicleImage: true, // Use special VehicleImage component for better fit
+      vehicleImageProps: { cropY: -8, zoom: 1.15 },
       features: [
         { icon: Wind, labelKey: "climate", valueKey: "triZoneClimate" },
         { icon: Users, labelKey: "capacity", valueKey: "sevenSeater" },
@@ -187,11 +188,20 @@ export default function FleetClientPage() {
                 <div
                   className={`aspect-[4/3] bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden flex items-center justify-center ${vehicle.isExecutiveVan ? "executive-van-image" : ""}`}
                 >
-                  <img
-                    src={vehicle.image || "/placeholder.svg"}
-                    alt={vehicle.name}
-                    className={`w-full h-full ${vehicle.useContain ? "object-contain p-2" : "object-cover"} ${vehicle.imagePosition || "object-center"} ${vehicle.useContain ? "group-hover:scale-100" : "group-hover:scale-105"} transition-transform duration-300`}
-                  />
+                  {vehicle.useVehicleImage ? (
+                    <VehicleImage
+                      src={vehicle.image || "/placeholder.svg"}
+                      alt={vehicle.name}
+                      cropY={vehicle.vehicleImageProps?.cropY}
+                      zoom={vehicle.vehicleImageProps?.zoom}
+                    />
+                  ) : (
+                    <img
+                      src={vehicle.image || "/placeholder.svg"}
+                      alt={vehicle.name}
+                      className={`w-full h-full object-cover ${vehicle.imagePosition || "object-center"} group-hover:scale-105 transition-transform duration-300`}
+                    />
+                  )}
                 </div>
                 <div className="p-6">
                   <h3 className="text-2xl font-bold mb-6 text-gray-900">{vehicle.name}</h3>
