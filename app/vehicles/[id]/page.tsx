@@ -31,7 +31,7 @@ export default function VehicleDetailPage() {
   const galleryImages = isLc300
     ? { exterior: galleryInteriorImages.slice(1), interior: [] }
     : vehicle.images
-  const galleryMainFit = isLc250 ? "cover" : "contain"
+  const galleryMainFit = "contain"
 
   return (
     <div className="min-h-screen bg-white pt-24">
