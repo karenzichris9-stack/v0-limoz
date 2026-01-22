@@ -21,6 +21,7 @@ export default function VehicleDetailPage() {
   }
 
   const isLc300 = vehicle.id === "land-cruiser-lc300-v6"
+  const isLc250 = vehicle.id === "land-cruiser-250-series"
   const interiorImages = vehicle.images.interior ?? []
   const splitIndex = Math.ceil(interiorImages.length / 2)
   const galleryInteriorImages = isLc300 ? interiorImages.slice(0, splitIndex) : []
@@ -30,6 +31,7 @@ export default function VehicleDetailPage() {
   const galleryImages = isLc300
     ? { exterior: galleryInteriorImages.slice(1), interior: [] }
     : vehicle.images
+  const galleryMainFit = isLc250 ? "cover" : "contain"
 
   return (
     <div className="min-h-screen bg-white pt-24">
@@ -56,7 +58,12 @@ export default function VehicleDetailPage() {
           <p className="text-xl text-gray-600 leading-relaxed max-w-4xl">{vehicle.description}</p>
         </div>
 
-        <VehicleImageGallery vehicleName={vehicle.name} mainImage={galleryMainImage} images={galleryImages} />
+        <VehicleImageGallery
+          vehicleName={vehicle.name}
+          mainImage={galleryMainImage}
+          mainImageFit={galleryMainFit}
+          images={galleryImages}
+        />
 
         {/* Video Section */}
         {vehicle.videos && vehicle.videos.length > 0 && (

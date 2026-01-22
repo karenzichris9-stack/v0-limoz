@@ -5,13 +5,14 @@ import { useState } from "react"
 interface VehicleImageGalleryProps {
   vehicleName: string
   mainImage: string
+  mainImageFit?: "contain" | "cover"
   images: {
     exterior: string[]
     interior: string[]
   }
 }
 
-export function VehicleImageGallery({ vehicleName, mainImage, images }: VehicleImageGalleryProps) {
+export function VehicleImageGallery({ vehicleName, mainImage, mainImageFit = "contain", images }: VehicleImageGalleryProps) {
   const [currentImage, setCurrentImage] = useState(mainImage)
 
   const allImages = [mainImage, ...images.exterior, ...images.interior].filter(Boolean)
@@ -23,7 +24,9 @@ export function VehicleImageGallery({ vehicleName, mainImage, images }: VehicleI
         <img
           src={currentImage || "/placeholder.svg"}
           alt={vehicleName}
-          className="max-w-full max-h-full object-contain"
+          className={
+            mainImageFit === "cover" ? "w-full h-full object-cover" : "max-w-full max-h-full object-contain"
+          }
         />
       </div>
       {/* Thumbnail Grid */}
