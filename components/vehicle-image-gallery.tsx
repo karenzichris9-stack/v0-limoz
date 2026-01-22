@@ -24,9 +24,7 @@ export function VehicleImageGallery({ vehicleName, mainImage, mainImageFit = "co
         <img
           src={currentImage || "/placeholder.svg"}
           alt={vehicleName}
-          className={
-            mainImageFit === "cover" ? "w-full h-full object-cover" : "max-w-full max-h-full object-contain"
-          }
+          className={mainImageFit === "cover" ? "w-full h-full object-cover" : "w-full h-full object-contain"}
         />
       </div>
       {/* Thumbnail Grid */}
