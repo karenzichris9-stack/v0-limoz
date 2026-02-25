@@ -71,14 +71,14 @@ export function Testimonials() {
           {/* Navigation arrows */}
           <button
             onClick={goToPrev}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 z-10 p-2 bg-white rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-110"
+            className="absolute left-1 md:left-0 top-1/2 -translate-y-1/2 md:-translate-x-12 z-10 p-2 bg-white rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-110"
             aria-label="Previous testimonial"
           >
             <ChevronLeft className="w-5 h-5 text-gray-600" />
           </button>
           <button
             onClick={goToNext}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 z-10 p-2 bg-white rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-110"
+            className="absolute right-1 md:right-0 top-1/2 -translate-y-1/2 md:translate-x-12 z-10 p-2 bg-white rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-110"
             aria-label="Next testimonial"
           >
             <ChevronRight className="w-5 h-5 text-gray-600" />
@@ -91,7 +91,7 @@ export function Testimonials() {
               <div className="absolute top-0 right-0 w-32 h-32 bg-[#f39c12]/5 rounded-full -translate-y-1/2 translate-x-1/2" />
               <div className="absolute bottom-0 left-0 w-24 h-24 bg-[#f39c12]/5 rounded-full translate-y-1/2 -translate-x-1/2" />
 
-              <CardContent className="p-8 md:p-12 relative">
+              <CardContent className="p-6 pt-8 md:p-12 relative">
                 <Quote className="w-12 h-12 text-[#f39c12]/20 absolute top-6 left-6" />
 
                 {/* Rating */}
@@ -105,7 +105,7 @@ export function Testimonials() {
                   ))}
                 </div>
 
-                <p className="text-gray-700 text-xl md:text-2xl leading-relaxed mb-8 text-center italic transition-all duration-500">
+                <p className="text-gray-700 text-base md:text-2xl leading-relaxed mb-6 md:mb-8 text-center italic transition-all duration-500">
                   "{activeIndex === 0 ? t("testimonials.quote") : testimonials[activeIndex].quote}"
                 </p>
 

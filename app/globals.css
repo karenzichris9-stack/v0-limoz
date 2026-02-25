@@ -133,6 +133,28 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Prevent iOS zoom on form inputs */
+@media screen and (max-width: 768px) {
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"],
+  input[type="date"],
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+}
+
+/* Improve touch targets on mobile */
+@media (pointer: coarse) {
+  a, button {
+    min-height: 44px;
+    min-width: 44px;
+  }
 }
 
 /* Performance optimizations */
@@ -161,10 +183,7 @@ img {
   font-display: swap;
 }
 
-/* Enhanced luxury transitions */
-* {
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
+
 
 /* Core animations */
 @keyframes fadeIn {
@@ -215,7 +234,7 @@ body > main {
 
 a,
 button {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
 }
 
 /* Card hover with gold glow */

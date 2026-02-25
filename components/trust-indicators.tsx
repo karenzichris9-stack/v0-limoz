@@ -16,22 +16,6 @@ export function TrustIndicators() {
 
   return (
     <div className="relative bg-gradient-to-r from-[#0f0f23] via-[#1a1a3e] to-[#0f0f23] py-8 overflow-hidden">
-      {/* Decorative stars */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(10)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-1 h-1 bg-[#ffd700] rounded-full animate-twinkle-star"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 2}s`,
-              opacity: 0.5,
-            }}
-          />
-        ))}
-      </div>
-
       {/* Top gold accent line */}
       <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#ffd700]/50 to-transparent" />
 

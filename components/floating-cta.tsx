@@ -21,7 +21,7 @@ export function FloatingCTA() {
   if (!isVisible) return null
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
+    <div className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 flex flex-col items-end gap-3">
       {/* Expanded options */}
       <div
         className={cn(
@@ -56,7 +56,7 @@ export function FloatingCTA() {
         onClick={() => setIsExpanded(!isExpanded)}
         className={cn(
           "p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-110",
-          isExpanded ? "bg-gray-800 rotate-45" : "bg-[#f39c12] animate-bounce-slow",
+          isExpanded ? "bg-gray-800 rotate-45" : "bg-[#f39c12]",
         )}
       >
         {isExpanded ? <X className="w-6 h-6 text-white" /> : <Phone className="w-6 h-6 text-white" />}

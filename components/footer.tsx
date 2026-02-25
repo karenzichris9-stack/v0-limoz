@@ -1,6 +1,6 @@
 "use client"
 
-import { Phone, MapPin, Mail, Facebook, Instagram, Sparkles } from "lucide-react"
+import { Phone, MapPin, Mail, Facebook, Instagram } from "lucide-react"
 import { useLanguage } from "@/lib/language-context"
 
 export function Footer() {
@@ -8,34 +8,9 @@ export function Footer() {
 
   return (
     <footer className="relative bg-gradient-to-b from-[#1a1a3e] to-[#0f0f23] text-white overflow-hidden">
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(15)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-1 h-1 bg-[#ffd700] rounded-full animate-twinkle-star"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 3}s`,
-              opacity: 0.3,
-            }}
-          />
-        ))}
-      </div>
-
       <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#ffd700]/50 to-transparent" />
 
       <div className="container mx-auto px-4 py-12 relative">
-        <div className="text-center mb-10">
-          <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#ffd700]/10 border border-[#ffd700]/20 mb-4">
-            <Sparkles className="w-5 h-5 text-[#ffd700] animate-sparkle" />
-            <span className="text-[#ffd700] font-semibold">Happy New Year 2026!</span>
-            <Sparkles className="w-5 h-5 text-[#ffd700] animate-sparkle" style={{ animationDelay: "0.5s" }} />
-          </div>
-          <p className="text-white/60 text-sm">
-            Thank you for choosing Limoz Rwanda. Here's to another year of safe travels!
-          </p>
-        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto">
           {/* Phone */}

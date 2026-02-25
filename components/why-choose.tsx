@@ -3,6 +3,7 @@
 import { Check, Shield, Clock, Award, Headphones } from "lucide-react"
 import { useLanguage } from "@/lib/language-context"
 import { AnimatedSection } from "./animated-section"
+import Image from "next/image"
 
 export function WhyChoose() {
   const { t } = useLanguage()
@@ -21,18 +22,20 @@ export function WhyChoose() {
           {/* Image */}
           <AnimatedSection animation="fade-right" className="order-2 md:order-1">
             <div className="relative">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-[#ffd700]/20">
-                <img
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-[#ffd700]/20 aspect-[4/3]">
+                <Image
                   src="/car-trunk-open-with-luggage-aerial-view.jpg"
                   alt="Car with luggage"
-                  className="w-full h-auto"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
                 {/* Gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0f0f23]/60 to-transparent" />
               </div>
 
-              {/* Floating card - New Year gold theme */}
-              <div className="absolute -bottom-6 -right-6 bg-gradient-to-br from-[#ffd700] to-[#f7e7ce] text-[#0f0f23] p-6 rounded-xl shadow-xl border border-[#ffd700]/30">
+              {/* Rating card */}
+              <div className="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 bg-gradient-to-br from-[#ffd700] to-[#f7e7ce] text-[#0f0f23] p-4 md:p-6 rounded-xl shadow-xl border border-[#ffd700]/30">
                 <p className="text-4xl font-bold">4.9</p>
                 <div className="flex gap-1 my-1">
                   {[...Array(5)].map((_, i) => (

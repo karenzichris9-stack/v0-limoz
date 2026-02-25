@@ -35,7 +35,7 @@ export function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out border-b ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 ease-out border-b ${
         scrolled
           ? "bg-gradient-to-r from-[#0f0f23]/98 via-[#1a1a3e]/98 to-[#0f0f23]/98 backdrop-blur-md border-[#ffd700]/20 shadow-xl shadow-[#ffd700]/5"
           : "bg-gradient-to-r from-[#0f0f23]/95 via-[#1a1a3e]/95 to-[#0f0f23]/95 backdrop-blur-sm border-[#ffd700]/10"
@@ -115,7 +115,7 @@ export function Header() {
 
         {mobileMenuOpen && (
           <div className="lg:hidden py-4 border-t border-[#ffd700]/20 animate-in slide-in-from-top duration-300">
-            <nav className="flex flex-col gap-4">
+            <nav className="flex flex-col gap-1">
               {[
                 { href: "/", key: "home" },
                 { href: "/about", key: "about" },
@@ -128,7 +128,7 @@ export function Header() {
                 <Link
                   key={item.key}
                   href={item.href}
-                  className={`${isActive(item.href) ? "text-[#ffd700]" : "text-white"} hover:text-[#ffd700] transition-colors text-sm font-medium`}
+                  className={`${isActive(item.href) ? "text-[#ffd700] bg-[#ffd700]/10" : "text-white"} hover:text-[#ffd700] transition-colors text-sm font-medium py-3 px-3 rounded-lg`}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {t(`header.${item.key}`)}
