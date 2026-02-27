@@ -53,11 +53,11 @@ export function Fleet() {
       <div className="container mx-auto px-4">
         <AnimatedSection animation="fade-up" className="text-center mb-12">
           <span className="inline-block px-4 py-1.5 bg-[#f39c12]/10 text-[#f39c12] text-sm font-semibold rounded-full mb-4">
-            Premium Fleet
+            {t("fleet.sectionLabel")}
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">Our Fleet.</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">{t("fleet.homeTitle")}</h2>
           <p className="text-gray-600 max-w-2xl mx-auto mb-6">
-            Choose from our collection of premium vehicles, each maintained to the highest standards
+            {t("fleet.homeSubtitle")}
           </p>
           <Button
             asChild
@@ -65,7 +65,7 @@ export function Fleet() {
             className="border-[#f39c12] text-[#f39c12] hover:bg-[#f39c12] hover:text-white bg-transparent group"
           >
             <Link href="/fleet" className="flex items-center gap-2">
-              Browse All Cars
+              {t("fleet.browseAll")}
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </Link>
           </Button>
@@ -108,7 +108,7 @@ export function Fleet() {
                         <div className="flex items-center gap-4 text-sm text-gray-600 mt-3 md:mt-4">
                           <div className="flex items-center gap-1.5">
                             <Users className="w-4 h-4 text-[#f39c12]" />
-                            <span>{vehicle.seats} Seats</span>
+                            <span>{vehicle.seats} {t("fleet.seats")}</span>
                           </div>
                           <div className="flex items-center gap-1.5">
                             <Cog className="w-4 h-4 text-[#f39c12]" />
@@ -121,7 +121,7 @@ export function Fleet() {
 
                         {/* Always-visible CTA */}
                         <div className="mt-3 md:mt-4 pt-3 md:pt-4 border-t border-gray-100 flex items-center justify-between">
-                          <span className="text-sm text-gray-500">View details</span>
+                          <span className="text-sm text-gray-500">{t("fleet.viewDetails")}</span>
                           <ArrowRight className="w-4 h-4 text-[#f39c12] group-hover:translate-x-1 transition-transform" />
                         </div>
                       </CardContent>
@@ -143,7 +143,7 @@ export function Fleet() {
                       />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-lg mb-3">Vehicle Features:</h4>
+                      <h4 className="font-semibold text-lg mb-3">{t("fleet.vehicleFeatures")}</h4>
                       <div className="grid grid-cols-2 gap-3">
                         {vehicle.features.map((feature, idx) => (
                           <div key={idx} className="flex items-center gap-2 text-gray-700">
@@ -155,10 +155,10 @@ export function Fleet() {
                     </div>
                     <div className="flex items-center gap-2 text-gray-600">
                       <Users className="w-5 h-5" />
-                      <span className="font-semibold">{vehicle.seats} Passenger Capacity</span>
+                      <span className="font-semibold">{vehicle.seats} {t("fleet.passengerCapacity")}</span>
                     </div>
                     <Button asChild className="w-full bg-[#f39c12] hover:bg-[#e67e22] text-white">
-                      <Link href="/booking">Book This Vehicle</Link>
+                      <Link href="/booking">{t("fleet.bookThisVehicle")}</Link>
                     </Button>
                   </div>
                 </DialogContent>

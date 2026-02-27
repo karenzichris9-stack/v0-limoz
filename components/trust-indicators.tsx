@@ -5,13 +5,13 @@ import { useLanguage } from "@/lib/language-context"
 import { AnimatedSection } from "./animated-section"
 
 export function TrustIndicators() {
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
 
   const indicators = [
-    { icon: Shield, label: "Licensed & Insured", value: "100%" },
-    { icon: Award, label: "Years Experience", value: "10+" },
-    { icon: Users, label: "Happy Clients", value: "5000+" },
-    { icon: Star, label: "Average Rating", value: "4.9" },
+    { icon: Shield, label: language === "fr" ? "Agréé et assuré" : "Licensed & Insured", value: "100%" },
+    { icon: Award, label: language === "fr" ? "Années d'expérience" : "Years Experience", value: "10+" },
+    { icon: Users, label: language === "fr" ? "Clients satisfaits" : "Happy Clients", value: "5000+" },
+    { icon: Star, label: language === "fr" ? "Note moyenne" : "Average Rating", value: "4.9" },
   ]
 
   return (

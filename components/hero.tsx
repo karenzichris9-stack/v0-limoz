@@ -66,19 +66,19 @@ export function Hero() {
             </p>
           </div>
 
-          {/* Trust badges - simpler, no stagger animation */}
+          {/* Trust badges */}
           <div className="flex flex-wrap justify-center gap-3 md:gap-6 mb-6 md:mb-8">
             <div className="flex items-center gap-2 text-white/90 bg-white/10 backdrop-blur-sm px-3 py-1.5 md:px-4 md:py-2 rounded-full border border-[#ffd700]/20">
               <Shield className="w-3.5 h-3.5 md:w-4 md:h-4 text-[#ffd700]" />
-              <span className="text-xs md:text-sm font-medium">Fully Insured</span>
+              <span className="text-xs md:text-sm font-medium">{t("hero.fullyInsured")}</span>
             </div>
             <div className="flex items-center gap-2 text-white/90 bg-white/10 backdrop-blur-sm px-3 py-1.5 md:px-4 md:py-2 rounded-full border border-[#ffd700]/20">
               <Clock className="w-3.5 h-3.5 md:w-4 md:h-4 text-[#ffd700]" />
-              <span className="text-xs md:text-sm font-medium">24/7 Service</span>
+              <span className="text-xs md:text-sm font-medium">{t("hero.service247")}</span>
             </div>
             <div className="flex items-center gap-2 text-white/90 bg-white/10 backdrop-blur-sm px-3 py-1.5 md:px-4 md:py-2 rounded-full border border-[#ffd700]/20">
               <Star className="w-3.5 h-3.5 md:w-4 md:h-4 text-[#ffd700]" />
-              <span className="text-xs md:text-sm font-medium">4.9 Rating</span>
+              <span className="text-xs md:text-sm font-medium">{t("hero.rating49")}</span>
             </div>
           </div>
 
@@ -98,7 +98,7 @@ export function Hero() {
 
             {/* Value props */}
             <div className="mt-5 md:mt-6 pt-5 md:pt-6 border-t border-[#ffd700]/20 grid grid-cols-2 gap-3 md:gap-4">
-              {["Professional Chauffeurs", "Airport Pickup", "Flexible Bookings", "Best Rates"].map((prop, i) => (
+              {[t("hero.professionalChauffeurs"), t("hero.airportPickup"), t("hero.flexibleBookings"), t("hero.bestRates")].map((prop, i) => (
                 <div key={i} className="flex items-center gap-2 text-xs md:text-sm text-[#1a1a3e]/80">
                   <CheckCircle className="w-3.5 h-3.5 md:w-4 md:h-4 text-[#ffd700] flex-shrink-0" />
                   <span>{prop}</span>
@@ -116,7 +116,7 @@ export function Hero() {
               <div className="p-2 bg-white/10 rounded-full group-hover:bg-[#ffd700] group-hover:text-[#0f0f23] transition-colors border border-[#ffd700]/20">
                 <Phone className="w-4 h-4" />
               </div>
-              <span className="text-xs md:text-sm">Need help? Call +250 788 318 990</span>
+              <span className="text-xs md:text-sm">{t("hero.needHelp")}</span>
             </a>
           </div>
         </div>

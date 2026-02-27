@@ -9,7 +9,7 @@ import Image from "next/image"
 export function About() {
   const { t } = useLanguage()
 
-  const highlights = ["Professional chauffeurs", "Luxury fleet", "24/7 availability", "Competitive rates"]
+  const highlights = [t("about.professionalChauffeurs"), t("about.luxuryFleet"), t("about.availability247"), t("about.competitiveRates")]
 
   return (
     <section className="py-12 md:py-20 bg-gradient-to-b from-[#f7e7ce]/20 via-white to-white overflow-hidden relative">
@@ -20,7 +20,7 @@ export function About() {
           <AnimatedSection animation="fade-right">
             <div>
               <span className="inline-block px-4 py-1.5 bg-gradient-to-r from-[#ffd700]/10 to-[#f7e7ce]/20 text-[#0f0f23] text-sm font-semibold rounded-full mb-4 border border-[#ffd700]/20">
-                About Us
+                {t("about.sectionLabel")}
               </span>
               <h2 className="text-4xl md:text-5xl font-bold text-[#0f0f23] mb-6 leading-tight">{t("about.title")}</h2>
               <div className="w-24 h-1 bg-gradient-to-r from-[#ffd700] to-[#f7e7ce] mb-8 rounded-full" />
@@ -38,7 +38,7 @@ export function About() {
               </div>
 
               <CTAButton href="/about" variant="primary" showArrow>
-                Learn More About Us
+                {t("about.learnMore")}
               </CTAButton>
             </div>
           </AnimatedSection>
@@ -70,21 +70,21 @@ export function About() {
                     <p className="text-2xl font-bold bg-gradient-to-r from-[#ffd700] to-[#f7e7ce] bg-clip-text text-transparent">
                       10+
                     </p>
-                    <p className="text-xs text-gray-500">Years</p>
+                    <p className="text-xs text-gray-500">{t("about.years")}</p>
                   </div>
                   <div className="w-px h-10 bg-[#ffd700]/30" />
                   <div className="text-center flex-1">
                     <p className="text-2xl font-bold bg-gradient-to-r from-[#ffd700] to-[#f7e7ce] bg-clip-text text-transparent">
                       50+
                     </p>
-                    <p className="text-xs text-gray-500">Vehicles</p>
+                    <p className="text-xs text-gray-500">{t("about.vehicles")}</p>
                   </div>
                   <div className="w-px h-10 bg-[#ffd700]/30" />
                   <div className="text-center flex-1">
                     <p className="text-2xl font-bold bg-gradient-to-r from-[#ffd700] to-[#f7e7ce] bg-clip-text text-transparent">
                       5K+
                     </p>
-                    <p className="text-xs text-gray-500">Clients</p>
+                    <p className="text-xs text-gray-500">{t("about.clients")}</p>
                   </div>
                 </div>
               </div>

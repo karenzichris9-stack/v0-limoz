@@ -3,8 +3,10 @@
 import { useState, useEffect } from "react"
 import { Phone, MessageCircle, X } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { useLanguage } from "@/lib/language-context"
 
 export function FloatingCTA() {
+  const { language } = useLanguage()
   const [isVisible, setIsVisible] = useState(false)
   const [isExpanded, setIsExpanded] = useState(false)
 
@@ -36,7 +38,7 @@ export function FloatingCTA() {
           <div className="p-2 bg-green-500 rounded-full">
             <Phone className="w-4 h-4 text-white" />
           </div>
-          <span className="text-sm font-medium text-gray-800">Call Now</span>
+          <span className="text-sm font-medium text-gray-800">{language === "fr" ? "Appeler" : "Call Now"}</span>
         </a>
         <a
           href="https://wa.me/250788318990"
