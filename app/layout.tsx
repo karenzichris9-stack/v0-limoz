@@ -8,6 +8,7 @@ import { PageTransition } from "@/components/page-transition"
 import { RouteProgress } from "@/components/route-progress"
 
 import { Suspense } from "react"
+import Script from "next/script"
 
 const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
@@ -125,8 +126,12 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <script
+      </head>
+      <body className={`font-sans antialiased`}>
+        <Script
+          id="ld-local-business"
           type="application/ld+json"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
@@ -148,11 +153,7 @@ export default function RootLayout({
                 postalCode: "KG 9 Ave",
                 addressCountry: "RW",
               },
-              geo: {
-                "@type": "GeoCoordinates",
-                latitude: -1.9403,
-                longitude: 30.0574,
-              },
+              geo: { "@type": "GeoCoordinates", latitude: -1.9403, longitude: 30.0574 },
               openingHoursSpecification: {
                 "@type": "OpeningHoursSpecification",
                 dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
@@ -167,14 +168,8 @@ export default function RootLayout({
               description:
                 "Leading car rental and tour company in Kigali, Rwanda offering luxury vehicles, safari tours, airport transfers, and professional drivers. Available 24/7 with competitive rates.",
               areaServed: [
-                {
-                  "@type": "City",
-                  name: "Kigali",
-                },
-                {
-                  "@type": "Country",
-                  name: "Rwanda",
-                },
+                { "@type": "City", name: "Kigali" },
+                { "@type": "Country", name: "Rwanda" },
               ],
               hasOfferCatalog: {
                 "@type": "OfferCatalog",
@@ -185,8 +180,7 @@ export default function RootLayout({
                     itemOffered: {
                       "@type": "Product",
                       name: "Luxury Car Rental",
-                      description:
-                        "Premium vehicles including Land Cruiser, Mercedes-Benz, Toyota Prado, and executive sedans for rent in Kigali",
+                      description: "Premium vehicles including Land Cruiser, Mercedes-Benz, Toyota Prado for rent in Kigali",
                       brand: ["Toyota", "Mercedes-Benz", "BYD"],
                     },
                   },
@@ -195,8 +189,7 @@ export default function RootLayout({
                     itemOffered: {
                       "@type": "Service",
                       name: "Rwanda Safari Tours",
-                      description:
-                        "Gorilla trekking in Volcanoes NP, Akagera game drives, Nyungwe canopy walks, and cultural tours",
+                      description: "Gorilla trekking in Volcanoes NP, Akagera game drives, Nyungwe canopy walks",
                       areaServed: "Rwanda",
                     },
                   },
@@ -205,8 +198,7 @@ export default function RootLayout({
                     itemOffered: {
                       "@type": "Service",
                       name: "Kigali Airport Transfers",
-                      description:
-                        "24/7 airport pickup and drop-off service at Kigali International Airport with professional drivers",
+                      description: "24/7 airport pickup and drop-off at Kigali International Airport",
                     },
                   },
                   {
@@ -214,8 +206,7 @@ export default function RootLayout({
                     itemOffered: {
                       "@type": "Service",
                       name: "Executive Chauffeur Service",
-                      description:
-                        "Professional chauffeur-driven luxury transport for business executives and VIP clients in Rwanda",
+                      description: "Professional chauffeur-driven luxury transport for business executives and VIP clients",
                     },
                   },
                 ],
@@ -232,43 +223,27 @@ export default function RootLayout({
             }),
           }}
         />
-        <script
+        <Script
+          id="ld-breadcrumbs"
           type="application/ld+json"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "BreadcrumbList",
               itemListElement: [
-                {
-                  "@type": "ListItem",
-                  position: 1,
-                  name: "Home",
-                  item: "https://limozrwanda.com/",
-                },
-                {
-                  "@type": "ListItem",
-                  position: 2,
-                  name: "Our Fleet",
-                  item: "https://limozrwanda.com/fleet",
-                },
-                {
-                  "@type": "ListItem",
-                  position: 3,
-                  name: "Tours & Safaris",
-                  item: "https://limozrwanda.com/tours",
-                },
-                {
-                  "@type": "ListItem",
-                  position: 4,
-                  name: "Booking",
-                  item: "https://limozrwanda.com/booking",
-                },
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://limozrwanda.com/" },
+                { "@type": "ListItem", position: 2, name: "Our Fleet", item: "https://limozrwanda.com/fleet" },
+                { "@type": "ListItem", position: 3, name: "Tours & Safaris", item: "https://limozrwanda.com/tours" },
+                { "@type": "ListItem", position: 4, name: "Booking", item: "https://limozrwanda.com/booking" },
               ],
             }),
           }}
         />
-        <script
+        <Script
+          id="ld-faq"
           type="application/ld+json"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
@@ -279,7 +254,7 @@ export default function RootLayout({
                   name: "How much does car rental cost in Kigali, Rwanda?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Car rental prices in Kigali vary by vehicle type. Standard cars start from $40/day, SUVs like Toyota Prado from $80/day, Land Cruiser from $120/day, and luxury sedans from $100/day. Long-term and monthly rentals receive discounted rates. Contact us for exact pricing.",
+                    text: "Car rental prices in Kigali vary by vehicle type. Standard cars start from $40/day, SUVs like Toyota Prado from $80/day, Land Cruiser from $120/day, and luxury sedans from $100/day. Long-term and monthly rentals receive discounted rates.",
                   },
                 },
                 {
@@ -287,7 +262,7 @@ export default function RootLayout({
                   name: "Do I need a driver for car rental in Rwanda?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "We offer both self-drive and chauffeur-driven options. Many clients prefer our professional drivers who know Rwanda's roads, speak English/French/Kinyarwanda, and can serve as tour guides. Driver services include fuel, accommodation if overnight trips.",
+                    text: "We offer both self-drive and chauffeur-driven options. Many clients prefer our professional drivers who know Rwanda's roads and speak English/French/Kinyarwanda.",
                   },
                 },
                 {
@@ -295,7 +270,7 @@ export default function RootLayout({
                   name: "Can I rent a car for gorilla trekking in Rwanda?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Yes! We provide 4x4 safari vehicles perfect for gorilla trekking to Volcanoes National Park. Our Land Cruisers and Prados handle mountain roads excellently. We can arrange complete packages including permits, accommodation, and experienced driver-guides.",
+                    text: "Yes! We provide 4x4 safari vehicles perfect for gorilla trekking to Volcanoes National Park. Our Land Cruisers and Prados handle mountain roads excellently.",
                   },
                 },
                 {
@@ -303,7 +278,7 @@ export default function RootLayout({
                   name: "How do I book a car rental in Kigali?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Book online 24/7 through our website with instant confirmation. You can also call/WhatsApp +250 782 280 204 or email info@limozrwanda.com. We accept bookings via mobile money, bank transfer, or credit card with flexible payment options.",
+                    text: "Book online 24/7 through our website with instant confirmation. You can also call/WhatsApp +250 782 280 204 or email info@limozrwanda.com.",
                   },
                 },
                 {
@@ -311,7 +286,7 @@ export default function RootLayout({
                   name: "Do you provide airport transfers in Kigali?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Yes, we offer 24/7 Kigali International Airport transfer services. Our drivers meet you at arrivals with name boards, assist with luggage, and ensure comfortable transport to your hotel. Book in advance or call upon arrival.",
+                    text: "Yes, we offer 24/7 Kigali International Airport transfer services. Our drivers meet you at arrivals with name boards and assist with luggage.",
                   },
                 },
                 {
@@ -319,7 +294,7 @@ export default function RootLayout({
                   name: "What vehicles do you have for safari in Rwanda?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Our safari fleet includes Toyota Land Cruiser 4x4s, Land Cruiser Prado, and modified safari vehicles with pop-up roofs for game viewing. All vehicles are regularly serviced, GPS-equipped, and driven by experienced safari guides familiar with Akagera, Volcanoes, and Nyungwe parks.",
+                    text: "Our safari fleet includes Toyota Land Cruiser 4x4s, Land Cruiser Prado, and modified safari vehicles with pop-up roofs for game viewing.",
                   },
                 },
                 {
@@ -327,7 +302,7 @@ export default function RootLayout({
                   name: "What documents do I need to rent a car in Rwanda?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "For self-drive rentals: valid driver's license (international license if not from Rwanda), passport copy, and deposit. For chauffeur-driven services: just your passport for identification. We handle all vehicle documentation and insurance.",
+                    text: "For self-drive: valid driver's license (international if not from Rwanda), passport copy, and deposit. For chauffeur-driven: just your passport.",
                   },
                 },
                 {
@@ -335,15 +310,13 @@ export default function RootLayout({
                   name: "Do you offer long-term car rental in Kigali?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Yes! We offer weekly, monthly, and long-term rental packages at discounted rates for expats, NGOs, businesses, and extended tourists. Includes regular maintenance, 24/7 roadside assistance, and flexible contract terms. Contact us for corporate rates.",
+                    text: "Yes! We offer weekly, monthly, and long-term rental packages at discounted rates for expats, NGOs, businesses, and extended tourists.",
                   },
                 },
               ],
             }),
           }}
         />
-      </head>
-      <body className={`font-sans antialiased`}>
         <LanguageProvider>
           <Suspense fallback={null}>
             <RouteProgress />
