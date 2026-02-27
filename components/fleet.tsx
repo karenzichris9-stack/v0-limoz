@@ -36,6 +36,7 @@ const vehicles = [
     name: "Land Cruiser 250 Series",
     type: "VVIP Class",
     image: "/land-cruiser-250-series.jpg",
+    imagePosition: "object-bottom",
     seats: 7,
     transmission: "Automatic",
     fuelType: "Diesel",
@@ -91,7 +92,7 @@ export function Fleet() {
                             src={vehicle.image || "/placeholder.svg"}
                             alt={vehicle.name}
                             fill
-                            className="object-cover transition-transform duration-500 group-hover:scale-105"
+                            className={`object-cover transition-transform duration-500 group-hover:scale-105 ${vehicle.imagePosition || "object-center"}`}
                             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                           />
                         </div>
@@ -138,7 +139,7 @@ export function Fleet() {
                         src={vehicle.image || "/placeholder.svg"}
                         alt={vehicle.name}
                         fill
-                        className="object-cover"
+                        className={`object-cover ${vehicle.imagePosition || "object-center"}`}
                         sizes="(max-width: 768px) 100vw, 640px"
                       />
                     </div>
