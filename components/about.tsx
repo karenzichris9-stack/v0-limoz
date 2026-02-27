@@ -61,30 +61,30 @@ export function About() {
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
+              </div>
 
-                {/* Stats overlay */}
-                <div className="absolute bottom-3 left-3 right-3 md:bottom-6 md:left-6 md:right-6 bg-white/95 backdrop-blur-sm rounded-lg p-3 md:p-4 shadow-lg border border-[#ffd700]/20">
-                  <div className="flex justify-between items-center">
-                    <div className="text-center">
-                      <p className="text-2xl font-bold bg-gradient-to-r from-[#ffd700] to-[#f7e7ce] bg-clip-text text-transparent">
-                        10+
-                      </p>
-                      <p className="text-xs text-gray-500">Years</p>
-                    </div>
-                    <div className="w-px h-10 bg-[#ffd700]/30" />
-                    <div className="text-center">
-                      <p className="text-2xl font-bold bg-gradient-to-r from-[#ffd700] to-[#f7e7ce] bg-clip-text text-transparent">
-                        50+
-                      </p>
-                      <p className="text-xs text-gray-500">Vehicles</p>
-                    </div>
-                    <div className="w-px h-10 bg-[#ffd700]/30" />
-                    <div className="text-center">
-                      <p className="text-2xl font-bold bg-gradient-to-r from-[#ffd700] to-[#f7e7ce] bg-clip-text text-transparent">
-                        5K+
-                      </p>
-                      <p className="text-xs text-gray-500">Clients</p>
-                    </div>
+              {/* Stats bar - below image */}
+              <div className="relative mt-4 bg-white rounded-lg p-3 md:p-4 shadow-lg border border-[#ffd700]/20">
+                <div className="flex justify-between items-center">
+                  <div className="text-center flex-1">
+                    <p className="text-2xl font-bold bg-gradient-to-r from-[#ffd700] to-[#f7e7ce] bg-clip-text text-transparent">
+                      10+
+                    </p>
+                    <p className="text-xs text-gray-500">Years</p>
+                  </div>
+                  <div className="w-px h-10 bg-[#ffd700]/30" />
+                  <div className="text-center flex-1">
+                    <p className="text-2xl font-bold bg-gradient-to-r from-[#ffd700] to-[#f7e7ce] bg-clip-text text-transparent">
+                      50+
+                    </p>
+                    <p className="text-xs text-gray-500">Vehicles</p>
+                  </div>
+                  <div className="w-px h-10 bg-[#ffd700]/30" />
+                  <div className="text-center flex-1">
+                    <p className="text-2xl font-bold bg-gradient-to-r from-[#ffd700] to-[#f7e7ce] bg-clip-text text-transparent">
+                      5K+
+                    </p>
+                    <p className="text-xs text-gray-500">Clients</p>
                   </div>
                 </div>
               </div>
