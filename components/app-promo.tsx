@@ -37,13 +37,13 @@ export function AppPromo() {
               <div className="absolute inset-0 bg-[#f39c12]/20 blur-3xl rounded-full" />
 
               {/* Phone */}
-              <div className="relative w-48 md:w-64 h-[320px] md:h-[420px]">
+              <div className="relative w-56 md:w-72 h-[360px] md:h-[460px]">
                 <Image
                   src="/mobile-phone-app-mockup.jpg"
                   alt="Limoz App"
                   fill
-                  className="object-contain relative z-10 drop-shadow-2xl"
-                  sizes="256px"
+                  className="object-contain z-10 drop-shadow-2xl"
+                  sizes="288px"
                 />
 
                 {/* Floating feature cards - hidden on small mobile */}

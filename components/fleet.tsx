@@ -79,19 +79,19 @@ export function Fleet() {
                   <div className="cursor-pointer group">
                     <Card className="overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-[#f39c12]/10 border-0 bg-white">
                       {/* Image container */}
-                      <div className="bg-gradient-to-b from-gray-50 to-white p-4 md:p-6 relative overflow-hidden">
+                      <div className="relative overflow-hidden">
                         {/* Rating badge */}
-                        <div className="absolute top-3 right-3 md:top-4 md:right-4 flex items-center gap-1 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full shadow-sm z-10">
+                        <div className="absolute top-3 right-3 flex items-center gap-1 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full shadow-sm z-10">
                           <Star className="w-3.5 h-3.5 fill-[#f39c12] text-[#f39c12]" />
                           <span className="text-xs font-bold text-gray-900">{vehicle.rating}</span>
                         </div>
 
-                        <div className="relative w-full h-40 md:h-48">
+                        <div className="relative w-full aspect-[16/10]">
                           <Image
                             src={vehicle.image || "/placeholder.svg"}
                             alt={vehicle.name}
                             fill
-                            className="object-contain transition-transform duration-500 group-hover:scale-105"
+                            className="object-cover transition-transform duration-500 group-hover:scale-105"
                             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                           />
                         </div>
@@ -133,12 +133,12 @@ export function Fleet() {
                     <DialogTitle className="text-2xl font-bold">{vehicle.name}</DialogTitle>
                   </DialogHeader>
                   <div className="space-y-6">
-                    <div className="relative w-full h-64">
+                    <div className="relative w-full aspect-[16/10] rounded-lg overflow-hidden">
                       <Image
                         src={vehicle.image || "/placeholder.svg"}
                         alt={vehicle.name}
                         fill
-                        className="object-contain"
+                        className="object-cover"
                         sizes="(max-width: 768px) 100vw, 640px"
                       />
                     </div>
