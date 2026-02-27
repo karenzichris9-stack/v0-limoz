@@ -82,7 +82,7 @@ export function CTAButton({
   )
 
   if (href) {
-    return <Link href={href}>{buttonContent}</Link>
+    return <Link href={href} className={cn(className?.includes("w-full") && "w-full sm:w-auto")}>{buttonContent}</Link>
   }
 
   return buttonContent

@@ -24,29 +24,31 @@ export function Hero() {
   }, [])
 
   return (
-    <section className="relative min-h-[100svh] overflow-hidden">
+    <section className="relative overflow-hidden">
       {/* Poster image shown immediately for fast LCP */}
-      <Image
-        src="/luxury-car-on-scenic-road-in-rwanda.jpg"
-        alt="Luxury car on scenic road in Rwanda"
-        fill
-        priority
-        className={`object-cover transition-opacity duration-700 ${videoLoaded ? "opacity-0" : "opacity-100"}`}
-        sizes="100vw"
-      />
+      <div className="absolute inset-0">
+        <Image
+          src="/luxury-car-on-scenic-road-in-rwanda.jpg"
+          alt="Luxury car on scenic road in Rwanda"
+          fill
+          priority
+          className={`object-cover transition-opacity duration-700 ${videoLoaded ? "opacity-0" : "opacity-100"}`}
+          sizes="100vw"
+        />
 
-      {/* Video loads lazily after first paint */}
-      <video
-        ref={videoRef}
-        autoPlay
-        loop
-        muted
-        playsInline
-        onCanPlay={() => setVideoLoaded(true)}
-        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${videoLoaded ? "opacity-100" : "opacity-0"}`}
-      />
+        {/* Video loads lazily after first paint */}
+        <video
+          ref={videoRef}
+          autoPlay
+          loop
+          muted
+          playsInline
+          onCanPlay={() => setVideoLoaded(true)}
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${videoLoaded ? "opacity-100" : "opacity-0"}`}
+        />
 
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0f0f23]/80 via-[#1a1a3e]/60 to-[#0f0f23]/90" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0f0f23]/80 via-[#1a1a3e]/60 to-[#0f0f23]/90" />
+      </div>
 
       {/* Main content */}
       <div className="relative min-h-[100svh] flex flex-col justify-end pb-8 md:pb-20">
@@ -81,15 +83,15 @@ export function Hero() {
           </div>
 
           {/* CTA card */}
-          <div className="relative bg-white/95 backdrop-blur-md py-6 px-5 md:py-8 md:px-12 rounded-2xl max-w-3xl mx-auto shadow-2xl border border-[#ffd700]/30">
+          <div className="relative bg-white/95 backdrop-blur-md py-6 px-4 md:py-8 md:px-12 rounded-2xl max-w-3xl mx-auto shadow-2xl border border-[#ffd700]/30 overflow-hidden">
             <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#0f0f23] mb-2">{t("hero.title")}</h2>
             <p className="text-[#1a1a3e]/80 mb-5 md:mb-6 text-sm md:text-lg">{t("hero.subtitle")}</p>
 
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-              <CTAButton href="/booking" variant="primary" size="lg" showArrow pulse>
+              <CTAButton href="/booking" variant="primary" size="lg" showArrow pulse className="w-full sm:w-auto">
                 {t("hero.carBooking")}
               </CTAButton>
-              <CTAButton href="/tours-booking" variant="outline" size="lg" showArrow>
+              <CTAButton href="/tours-booking" variant="outline" size="lg" showArrow className="w-full sm:w-auto">
                 {t("hero.toursBooking")}
               </CTAButton>
             </div>
