@@ -109,9 +109,9 @@ export const vehicles: Vehicle[] = [
     id: "land-cruiser-lc300-v6",
     name: "Land Cruiser LC 300 V6",
     class: "VVIP",
-    image: "/lc300-interior-front-cabin.jpg",
+    image: "/lc300-exterior-front.jpg",
     images: {
-      exterior: [],
+      exterior: ["/lc300-exterior-front.jpg", "/lc300-exterior-side.jpg"],
       interior: [
         "/lc300-interior-front-cabin.jpg",
         "/lc300-interior-dashboard.jpg",

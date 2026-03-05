@@ -64,7 +64,6 @@ export function Header() {
               { href: "/tours", key: "tours" },
               { href: "/fleet", key: "fleet" },
               { href: "/booking", key: "booking" },
-              { href: "/news", key: "news" },
               { href: "/contact", key: "contact" },
             ].map((item) => (
               <Link
@@ -122,7 +121,6 @@ export function Header() {
                 { href: "/tours", key: "tours" },
                 { href: "/fleet", key: "fleet" },
                 { href: "/booking", key: "booking" },
-                { href: "/news", key: "news" },
                 { href: "/contact", key: "contact" },
               ].map((item) => (
                 <Link
