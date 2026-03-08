@@ -4,14 +4,15 @@ import { useLanguage } from "@/lib/language-context"
 import { AnimatedSection } from "./animated-section"
 import { CTAButton } from "./cta-button"
 import { Smartphone, Bell, MapPin, CreditCard, Check } from "lucide-react"
+import Image from "next/image"
 
 export function AppPromo() {
   const { t } = useLanguage()
 
   const features = [
-    { icon: Bell, text: "Real-time notifications" },
-    { icon: MapPin, text: "Live tracking" },
-    { icon: CreditCard, text: "Secure payments" },
+    { icon: Bell, text: t("appPromo.realTimeNotifications") },
+    { icon: MapPin, text: t("appPromo.liveTracking") },
+    { icon: CreditCard, text: t("appPromo.securePayments") },
   ]
 
   return (
@@ -36,32 +37,31 @@ export function AppPromo() {
               <div className="absolute inset-0 bg-[#f39c12]/20 blur-3xl rounded-full" />
 
               {/* Phone */}
-              <div className="relative">
-                <img
+              <div className="relative w-56 md:w-72 h-[360px] md:h-[460px]">
+                <Image
                   src="/mobile-phone-app-mockup.jpg"
                   alt="Limoz App"
-                  className="w-64 h-auto relative z-10 drop-shadow-2xl"
+                  fill
+                  className="object-contain z-10 drop-shadow-2xl"
+                  sizes="288px"
                 />
 
-                {/* Floating feature cards */}
-                <div className="absolute -right-8 top-1/4 bg-white text-gray-900 p-3 rounded-lg shadow-xl animate-bounce-slow">
+                {/* Floating feature cards - hidden on small mobile */}
+                <div className="hidden sm:block absolute -right-8 top-1/4 bg-white text-gray-900 p-3 rounded-lg shadow-xl z-20">
                   <div className="flex items-center gap-2">
                     <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
                       <Check className="w-5 h-5 text-white" />
                     </div>
-                    <span className="text-sm font-medium">Booking Confirmed</span>
+                    <span className="text-sm font-medium">{t("appPromo.bookingConfirmed")}</span>
                   </div>
                 </div>
 
-                <div
-                  className="absolute -left-8 bottom-1/3 bg-white text-gray-900 p-3 rounded-lg shadow-xl animate-bounce-slow"
-                  style={{ animationDelay: "0.5s" }}
-                >
+                <div className="hidden sm:block absolute -left-8 bottom-1/3 bg-white text-gray-900 p-3 rounded-lg shadow-xl z-20">
                   <div className="flex items-center gap-2">
                     <div className="w-8 h-8 bg-[#f39c12] rounded-full flex items-center justify-center">
                       <MapPin className="w-5 h-5 text-white" />
                     </div>
-                    <span className="text-sm font-medium">Driver nearby</span>
+                    <span className="text-sm font-medium">{t("appPromo.driverNearby")}</span>
                   </div>
                 </div>
               </div>
@@ -97,7 +97,7 @@ export function AppPromo() {
             {/* Coming soon badge */}
             <p className="mt-4 text-white/60 text-sm flex items-center gap-2">
               <Smartphone className="w-4 h-4" />
-              Available soon on iOS and Android
+              {t("appPromo.availableSoon")}
             </p>
           </AnimatedSection>
         </div>

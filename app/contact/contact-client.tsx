@@ -51,18 +51,7 @@ export default function ContactPageClient() {
       question: t("contact.faq.q7"),
       answer: t("contact.faq.a7"),
     },
-    {
-      question: t("contact.faq.q8"),
-      answer: t("contact.faq.a8"),
-    },
-    {
-      question: t("contact.faq.q9"),
-      answer: t("contact.faq.a9"),
-    },
-    {
-      question: t("contact.faq.q10"),
-      answer: t("contact.faq.a10"),
-    },
+
   ]
 
   async function handleReviewSubmit(e: React.FormEvent<HTMLFormElement>) {

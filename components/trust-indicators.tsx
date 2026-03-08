@@ -5,33 +5,17 @@ import { useLanguage } from "@/lib/language-context"
 import { AnimatedSection } from "./animated-section"
 
 export function TrustIndicators() {
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
 
   const indicators = [
-    { icon: Shield, label: "Licensed & Insured", value: "100%" },
-    { icon: Award, label: "Years Experience", value: "10+" },
-    { icon: Users, label: "Happy Clients", value: "5000+" },
-    { icon: Star, label: "Average Rating", value: "4.9" },
+    { icon: Shield, label: language === "fr" ? "Agréé et assuré" : "Licensed & Insured", value: "100%" },
+    { icon: Award, label: language === "fr" ? "Années d'expérience" : "Years Experience", value: "10+" },
+    { icon: Users, label: language === "fr" ? "Clients satisfaits" : "Happy Clients", value: "5000+" },
+    { icon: Star, label: language === "fr" ? "Note moyenne" : "Average Rating", value: "4.9" },
   ]
 
   return (
     <div className="relative bg-gradient-to-r from-[#0f0f23] via-[#1a1a3e] to-[#0f0f23] py-8 overflow-hidden">
-      {/* Decorative stars */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(10)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-1 h-1 bg-[#ffd700] rounded-full animate-twinkle-star"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 2}s`,
-              opacity: 0.5,
-            }}
-          />
-        ))}
-      </div>
-
       {/* Top gold accent line */}
       <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#ffd700]/50 to-transparent" />
 

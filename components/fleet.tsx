@@ -4,8 +4,8 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
 import Link from "next/link"
-import { Users, Gauge, Cog, Wind, ArrowRight, Star } from "lucide-react"
-import { useState } from "react"
+import Image from "next/image"
+import { Users, Cog, ArrowRight, Star } from "lucide-react"
 import { AnimatedSection } from "./animated-section"
 import { useLanguage } from "@/lib/language-context"
 
@@ -24,7 +24,7 @@ const vehicles = [
   {
     name: "Land Cruiser LC 300 V6",
     type: "VVIP Class",
-    image: "/lc300-interior-front-cabin.jpg",
+    image: "/lc300-exterior-front.jpg",
     seats: 7,
     transmission: "Automatic",
     fuelType: "Petrol",
@@ -36,6 +36,7 @@ const vehicles = [
     name: "Land Cruiser 250 Series",
     type: "VVIP Class",
     image: "/land-cruiser-250-series.jpg",
+    imagePosition: "object-bottom",
     seats: 7,
     transmission: "Automatic",
     fuelType: "Diesel",
@@ -46,7 +47,6 @@ const vehicles = [
 ]
 
 export function Fleet() {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
   const { t } = useLanguage()
 
   return (
@@ -54,11 +54,11 @@ export function Fleet() {
       <div className="container mx-auto px-4">
         <AnimatedSection animation="fade-up" className="text-center mb-12">
           <span className="inline-block px-4 py-1.5 bg-[#f39c12]/10 text-[#f39c12] text-sm font-semibold rounded-full mb-4">
-            Premium Fleet
+            {t("fleet.sectionLabel")}
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">Our Fleet.</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">{t("fleet.homeTitle")}</h2>
           <p className="text-gray-600 max-w-2xl mx-auto mb-6">
-            Choose from our collection of premium vehicles, each maintained to the highest standards
+            {t("fleet.homeSubtitle")}
           </p>
           <Button
             asChild
@@ -66,7 +66,7 @@ export function Fleet() {
             className="border-[#f39c12] text-[#f39c12] hover:bg-[#f39c12] hover:text-white bg-transparent group"
           >
             <Link href="/fleet" className="flex items-center gap-2">
-              Browse All Cars
+              {t("fleet.browseAll")}
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </Link>
           </Button>
@@ -77,90 +77,56 @@ export function Fleet() {
             <AnimatedSection key={index} animation="fade-up" delay={index * 0.1}>
               <Dialog>
                 <DialogTrigger asChild>
-                  <div
-                    className="relative cursor-pointer group"
-                    onMouseEnter={() => setHoveredIndex(index)}
-                    onMouseLeave={() => setHoveredIndex(null)}
-                  >
-                    <Card className="overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-[#f39c12]/10 border-0 bg-white">
+                  <div className="cursor-pointer group">
+                    <Card className="overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-[#f39c12]/10 border-0 bg-white">
                       {/* Image container */}
-                      <div className="bg-gradient-to-b from-gray-50 to-white p-6 relative overflow-hidden">
+                      <div className="relative overflow-hidden">
                         {/* Rating badge */}
-                        <div className="absolute top-4 right-4 flex items-center gap-1 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full shadow-sm z-10">
+                        <div className="absolute top-3 right-3 flex items-center gap-1 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full shadow-sm z-10">
                           <Star className="w-3.5 h-3.5 fill-[#f39c12] text-[#f39c12]" />
                           <span className="text-xs font-bold text-gray-900">{vehicle.rating}</span>
                         </div>
 
-                        <img
-                          src={vehicle.image || "/placeholder.svg"}
-                          alt={vehicle.name}
-                          className="w-full h-48 object-contain transition-transform duration-700 group-hover:scale-110"
-                        />
+                        <div className="relative w-full aspect-[16/10]">
+                          <Image
+                            src={vehicle.image || "/placeholder.svg"}
+                            alt={vehicle.name}
+                            fill
+                            className={`object-cover transition-transform duration-500 group-hover:scale-105 ${vehicle.imagePosition || "object-center"}`}
+                            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                          />
+                        </div>
                       </div>
 
-                      <CardContent className="p-6">
-                        <div className="flex items-start justify-between mb-2">
-                          <div>
-                            <h3 className="text-xl font-bold text-black group-hover:text-[#f39c12] transition-colors">
-                              {vehicle.name}
-                            </h3>
-                            <p className="text-[#f39c12] font-medium text-sm">{vehicle.type}</p>
-                          </div>
+                      <CardContent className="p-4 md:p-6">
+                        <div className="mb-2">
+                          <h3 className="text-lg md:text-xl font-bold text-black group-hover:text-[#f39c12] transition-colors">
+                            {vehicle.name}
+                          </h3>
+                          <p className="text-[#f39c12] font-medium text-sm">{vehicle.type}</p>
                         </div>
 
-                        <div className="flex items-center gap-4 text-sm text-gray-600 mt-4">
+                        <div className="flex items-center gap-4 text-sm text-gray-600 mt-3 md:mt-4">
                           <div className="flex items-center gap-1.5">
                             <Users className="w-4 h-4 text-[#f39c12]" />
-                            <span>{vehicle.seats} Seats</span>
+                            <span>{vehicle.seats} {t("fleet.seats")}</span>
                           </div>
                           <div className="flex items-center gap-1.5">
                             <Cog className="w-4 h-4 text-[#f39c12]" />
                             <span>{vehicle.transmission}</span>
                           </div>
+                          <div className="flex items-center gap-1.5 text-xs text-gray-400">
+                            {vehicle.driveType}
+                          </div>
                         </div>
 
-                        {/* Hover CTA */}
-                        <div className="mt-4 pt-4 border-t border-gray-100 flex items-center justify-between opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                          <span className="text-sm text-gray-500">Click to view details</span>
-                          <ArrowRight className="w-4 h-4 text-[#f39c12] transform translate-x-0 group-hover:translate-x-1 transition-transform" />
+                        {/* Always-visible CTA */}
+                        <div className="mt-3 md:mt-4 pt-3 md:pt-4 border-t border-gray-100 flex items-center justify-between">
+                          <span className="text-sm text-gray-500">{t("fleet.viewDetails")}</span>
+                          <ArrowRight className="w-4 h-4 text-[#f39c12] group-hover:translate-x-1 transition-transform" />
                         </div>
                       </CardContent>
                     </Card>
-
-                    {/* Feature overlay on hover */}
-                    {hoveredIndex === index && (
-                      <div className="absolute inset-0 bg-gradient-to-br from-black/95 to-black/90 rounded-lg flex items-end justify-center p-6 animate-in slide-in-from-bottom-8 fade-in duration-300 pointer-events-none">
-                        <div className="text-white space-y-4 w-full pb-4">
-                          <div className="flex items-center gap-4 animate-in slide-in-from-bottom-4 fade-in duration-500 delay-100">
-                            <div className="p-3 bg-[#f39c12] rounded-lg">
-                              <Wind className="w-6 h-6 text-white" />
-                            </div>
-                            <div>
-                              <p className="text-xs text-gray-400 uppercase tracking-wide">Climate</p>
-                              <p className="font-bold text-lg">Air Conditioning</p>
-                            </div>
-                          </div>
-                          <div className="flex items-center gap-4 animate-in slide-in-from-bottom-4 fade-in duration-500 delay-300">
-                            <div className="p-3 bg-[#f39c12] rounded-lg">
-                              <Gauge className="w-6 h-6 text-white" />
-                            </div>
-                            <div>
-                              <p className="text-xs text-gray-400 uppercase tracking-wide">Drive</p>
-                              <p className="font-bold text-lg">{vehicle.driveType}</p>
-                            </div>
-                          </div>
-                          <div className="flex items-center gap-4 animate-in slide-in-from-bottom-4 fade-in duration-500 delay-500">
-                            <div className="p-3 bg-[#f39c12] rounded-lg">
-                              <Cog className="w-6 h-6 text-white" />
-                            </div>
-                            <div>
-                              <p className="text-xs text-gray-400 uppercase tracking-wide">Transmission</p>
-                              <p className="font-bold text-lg">{vehicle.transmission}</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    )}
                   </div>
                 </DialogTrigger>
                 <DialogContent className="max-w-2xl">
@@ -168,13 +134,17 @@ export function Fleet() {
                     <DialogTitle className="text-2xl font-bold">{vehicle.name}</DialogTitle>
                   </DialogHeader>
                   <div className="space-y-6">
-                    <img
-                      src={vehicle.image || "/placeholder.svg"}
-                      alt={vehicle.name}
-                      className="w-full h-64 object-contain"
-                    />
+                    <div className="relative w-full aspect-[16/10] rounded-lg overflow-hidden">
+                      <Image
+                        src={vehicle.image || "/placeholder.svg"}
+                        alt={vehicle.name}
+                        fill
+                        className={`object-cover ${vehicle.imagePosition || "object-center"}`}
+                        sizes="(max-width: 768px) 100vw, 640px"
+                      />
+                    </div>
                     <div>
-                      <h4 className="font-semibold text-lg mb-3">Vehicle Features:</h4>
+                      <h4 className="font-semibold text-lg mb-3">{t("fleet.vehicleFeatures")}</h4>
                       <div className="grid grid-cols-2 gap-3">
                         {vehicle.features.map((feature, idx) => (
                           <div key={idx} className="flex items-center gap-2 text-gray-700">
@@ -186,10 +156,10 @@ export function Fleet() {
                     </div>
                     <div className="flex items-center gap-2 text-gray-600">
                       <Users className="w-5 h-5" />
-                      <span className="font-semibold">{vehicle.seats} Passenger Capacity</span>
+                      <span className="font-semibold">{vehicle.seats} {t("fleet.passengerCapacity")}</span>
                     </div>
                     <Button asChild className="w-full bg-[#f39c12] hover:bg-[#e67e22] text-white">
-                      <Link href="/booking">Book This Vehicle</Link>
+                      <Link href="/booking">{t("fleet.bookThisVehicle")}</Link>
                     </Button>
                   </div>
                 </DialogContent>

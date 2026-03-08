@@ -61,14 +61,7 @@
     <priority>0.70</priority>
   </url>
   
-  <url>
-    <loc>https://limozrwanda.com/news</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://limozrwanda.com/news" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://limozrwanda.com/news" />
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.60</priority>
-  </url>
+
   
   <!-- Added more vehicle detail pages for better indexing -->
   <url>

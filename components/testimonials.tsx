@@ -7,33 +7,32 @@ import { useLanguage } from "@/lib/language-context"
 import { AnimatedSection } from "./animated-section"
 import { useState, useEffect } from "react"
 
-const testimonials = [
-  {
-    quote: "testimonials.quote",
-    author: "testimonials.author",
-    role: "Business Executive",
-    rating: 5,
-    location: "Kigali",
-  },
-  {
-    quote:
-      "Exceptional service from start to finish. The driver was punctual and professional. Highly recommend for business travel.",
-    author: "Marie Claire",
-    role: "Hotel Manager",
-    rating: 5,
-    location: "Musanze",
-  },
-  {
-    quote: "Perfect for our safari trip! The Land Cruiser was comfortable and our guide knew all the best spots.",
-    author: "James Wilson",
-    role: "Tourist",
-    rating: 5,
-    location: "Akagera",
-  },
-]
-
 export function Testimonials() {
   const { t } = useLanguage()
+
+  const testimonials = [
+    {
+      quoteKey: "testimonials.quote",
+      authorKey: "testimonials.author",
+      roleKey: "testimonials.role1",
+      rating: 5,
+      location: "Kigali",
+    },
+    {
+      quoteKey: "testimonials.quote2",
+      author: "Marie Claire",
+      roleKey: "testimonials.role2",
+      rating: 5,
+      location: "Musanze",
+    },
+    {
+      quoteKey: "testimonials.quote3",
+      author: "James Wilson",
+      roleKey: "testimonials.role3",
+      rating: 5,
+      location: "Akagera",
+    },
+  ]
   const [activeIndex, setActiveIndex] = useState(0)
   const [isAutoPlaying, setIsAutoPlaying] = useState(true)
 
@@ -61,24 +60,24 @@ export function Testimonials() {
       <div className="container mx-auto px-4">
         <AnimatedSection animation="fade-up" className="text-center mb-12">
           <span className="inline-block px-4 py-1.5 bg-[#f39c12]/10 text-[#f39c12] text-sm font-semibold rounded-full mb-4">
-            Testimonials
+            {t("testimonials.sectionLabel")}
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">{t("testimonials.title")}</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">See what our customers say about their experience with us</p>
+          <p className="text-gray-600 max-w-2xl mx-auto">{t("testimonials.subtitle")}</p>
         </AnimatedSection>
 
         <div className="max-w-4xl mx-auto relative">
           {/* Navigation arrows */}
           <button
             onClick={goToPrev}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 z-10 p-2 bg-white rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-110"
+            className="absolute left-1 md:left-0 top-1/2 -translate-y-1/2 md:-translate-x-12 z-10 p-2 bg-white rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-110"
             aria-label="Previous testimonial"
           >
             <ChevronLeft className="w-5 h-5 text-gray-600" />
           </button>
           <button
             onClick={goToNext}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 z-10 p-2 bg-white rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-110"
+            className="absolute right-1 md:right-0 top-1/2 -translate-y-1/2 md:translate-x-12 z-10 p-2 bg-white rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-110"
             aria-label="Next testimonial"
           >
             <ChevronRight className="w-5 h-5 text-gray-600" />
@@ -91,7 +90,7 @@ export function Testimonials() {
               <div className="absolute top-0 right-0 w-32 h-32 bg-[#f39c12]/5 rounded-full -translate-y-1/2 translate-x-1/2" />
               <div className="absolute bottom-0 left-0 w-24 h-24 bg-[#f39c12]/5 rounded-full translate-y-1/2 -translate-x-1/2" />
 
-              <CardContent className="p-8 md:p-12 relative">
+              <CardContent className="p-6 pt-8 md:p-12 relative">
                 <Quote className="w-12 h-12 text-[#f39c12]/20 absolute top-6 left-6" />
 
                 {/* Rating */}
@@ -105,22 +104,22 @@ export function Testimonials() {
                   ))}
                 </div>
 
-                <p className="text-gray-700 text-xl md:text-2xl leading-relaxed mb-8 text-center italic transition-all duration-500">
-                  "{activeIndex === 0 ? t("testimonials.quote") : testimonials[activeIndex].quote}"
+                <p className="text-gray-700 text-base md:text-2xl leading-relaxed mb-6 md:mb-8 text-center italic transition-all duration-500">
+                  "{t(testimonials[activeIndex].quoteKey)}"
                 </p>
 
                 <div className="flex items-center justify-center gap-4">
                   <Avatar className="w-14 h-14 bg-gradient-to-br from-[#f39c12] to-[#e67e22] ring-4 ring-[#f39c12]/20">
                     <AvatarFallback className="bg-transparent text-white font-bold">
-                      {(activeIndex === 0 ? t("testimonials.author") : testimonials[activeIndex].author).charAt(0)}
+                      {(testimonials[activeIndex].authorKey ? t(testimonials[activeIndex].authorKey!) : testimonials[activeIndex].author!).charAt(0)}
                     </AvatarFallback>
                   </Avatar>
                   <div className="text-left">
                     <p className="font-bold text-gray-900 text-lg">
-                      {activeIndex === 0 ? t("testimonials.author") : testimonials[activeIndex].author}
+                      {testimonials[activeIndex].authorKey ? t(testimonials[activeIndex].authorKey!) : testimonials[activeIndex].author}
                     </p>
                     <p className="text-sm text-gray-500">
-                      {testimonials[activeIndex].role} • {testimonials[activeIndex].location}
+                      {t(testimonials[activeIndex].roleKey)} • {testimonials[activeIndex].location}
                     </p>
                   </div>
                 </div>
@@ -158,7 +157,7 @@ export function Testimonials() {
                   </div>
                 ))}
               </div>
-              <span className="text-gray-600 text-sm font-medium">Trusted by 5,000+ customers</span>
+              <span className="text-gray-600 text-sm font-medium">{t("testimonials.trustedBy")}</span>
             </div>
           </AnimatedSection>
         </div>

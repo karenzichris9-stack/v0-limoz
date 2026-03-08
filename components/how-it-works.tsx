@@ -34,10 +34,10 @@ export function HowItWorks() {
       <div className="container mx-auto px-4">
         <AnimatedSection animation="fade-up" className="text-center mb-16">
           <span className="inline-block px-4 py-1.5 bg-[#f39c12]/10 text-[#f39c12] text-sm font-semibold rounded-full mb-4">
-            Simple Process
+            {t("howItWorks.sectionLabel")}
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">{t("howItWorks.title")}</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto text-lg">Book your premium ride in just 3 simple steps</p>
+          <p className="text-gray-600 max-w-2xl mx-auto text-lg">{t("howItWorks.subtitle")}</p>
         </AnimatedSection>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto relative">
@@ -79,7 +79,7 @@ export function HowItWorks() {
         {/* CTA */}
         <AnimatedSection animation="fade-up" delay={0.5} className="text-center mt-12">
           <CTAButton href="/booking" variant="primary" size="lg" showArrow>
-            Start Booking Now
+            {t("howItWorks.startBooking")}
           </CTAButton>
         </AnimatedSection>
       </div>

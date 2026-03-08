@@ -3,15 +3,16 @@
 import { Check, Shield, Clock, Award, Headphones } from "lucide-react"
 import { useLanguage } from "@/lib/language-context"
 import { AnimatedSection } from "./animated-section"
+import Image from "next/image"
 
 export function WhyChoose() {
   const { t } = useLanguage()
 
   const features = [
-    { icon: Shield, title: "Fully Insured", desc: "Complete coverage for peace of mind" },
-    { icon: Clock, title: "24/7 Service", desc: "Available whenever you need us" },
-    { icon: Award, title: "Premium Fleet", desc: "Well-maintained luxury vehicles" },
-    { icon: Headphones, title: "Expert Support", desc: "Professional assistance always" },
+    { icon: Shield, title: t("whyChoose.fullyInsured"), desc: t("whyChoose.fullyInsuredDesc") },
+    { icon: Clock, title: t("whyChoose.service247"), desc: t("whyChoose.service247Desc") },
+    { icon: Award, title: t("whyChoose.premiumFleet"), desc: t("whyChoose.premiumFleetDesc") },
+    { icon: Headphones, title: t("whyChoose.expertSupport"), desc: t("whyChoose.expertSupportDesc") },
   ]
 
   return (
@@ -21,18 +22,20 @@ export function WhyChoose() {
           {/* Image */}
           <AnimatedSection animation="fade-right" className="order-2 md:order-1">
             <div className="relative">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-[#ffd700]/20">
-                <img
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-[#ffd700]/20 aspect-[4/3]">
+                <Image
                   src="/car-trunk-open-with-luggage-aerial-view.jpg"
                   alt="Car with luggage"
-                  className="w-full h-auto"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
                 {/* Gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0f0f23]/60 to-transparent" />
               </div>
 
-              {/* Floating card - New Year gold theme */}
-              <div className="absolute -bottom-6 -right-6 bg-gradient-to-br from-[#ffd700] to-[#f7e7ce] text-[#0f0f23] p-6 rounded-xl shadow-xl border border-[#ffd700]/30">
+              {/* Rating card */}
+              <div className="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 bg-gradient-to-br from-[#ffd700] to-[#f7e7ce] text-[#0f0f23] p-4 md:p-6 rounded-xl shadow-xl border border-[#ffd700]/30">
                 <p className="text-4xl font-bold">4.9</p>
                 <div className="flex gap-1 my-1">
                   {[...Array(5)].map((_, i) => (
@@ -41,7 +44,7 @@ export function WhyChoose() {
                     </svg>
                   ))}
                 </div>
-                <p className="text-sm opacity-80">Customer Rating</p>
+                <p className="text-sm opacity-80">{t("whyChoose.customerRating")}</p>
               </div>
             </div>
           </AnimatedSection>
@@ -49,7 +52,7 @@ export function WhyChoose() {
           {/* Text Content */}
           <AnimatedSection animation="fade-left" className="order-1 md:order-2">
             <span className="inline-block px-4 py-1.5 bg-gradient-to-r from-[#ffd700]/10 to-[#f7e7ce]/20 text-[#0f0f23] text-sm font-semibold rounded-full mb-4 border border-[#ffd700]/20">
-              Why Choose Us
+              {t("whyChoose.sectionLabel")}
             </span>
             <h2 className="text-4xl md:text-5xl font-bold text-[#0f0f23] mb-8 leading-tight">{t("whyChoose.title")}</h2>
 

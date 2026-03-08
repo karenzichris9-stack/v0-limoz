@@ -20,18 +20,10 @@ export default function VehicleDetailPage() {
     notFound()
   }
 
-  const isLc300 = vehicle.id === "land-cruiser-lc300-v6"
-  const isLc250 = vehicle.id === "land-cruiser-250-series"
-  const interiorImages = vehicle.images.interior ?? []
-  const splitIndex = Math.ceil(interiorImages.length / 2)
-  const galleryInteriorImages = isLc300 ? interiorImages.slice(0, splitIndex) : []
-  const detailInteriorImages = isLc300 ? interiorImages.slice(splitIndex) : interiorImages
-  const galleryMainImage =
-    isLc300 && galleryInteriorImages.length > 0 ? galleryInteriorImages[0] : vehicle.image
-  const galleryImages = isLc300
-    ? { exterior: galleryInteriorImages.slice(1), interior: [] }
-    : vehicle.images
-  const galleryMainFit = "contain"
+  const detailInteriorImages = vehicle.images.interior ?? []
+  const galleryMainImage = vehicle.image
+  const galleryImages = vehicle.images
+  const galleryMainFit = "cover"
 
   return (
     <div className="min-h-screen bg-white pt-24">

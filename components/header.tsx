@@ -6,12 +6,11 @@ import { Menu, X, Globe } from "lucide-react"
 import { usePathname } from "next/navigation"
 import { useLanguage } from "@/lib/language-context"
 import Image from "next/image"
-import { getCurrentHoliday } from "@/lib/holiday-config"
+
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
-  const [isHolidaySeason, setIsHolidaySeason] = useState(false)
   const pathname = usePathname()
   const { language, setLanguage, t } = useLanguage()
 
@@ -27,11 +26,7 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  useEffect(() => {
-    const holiday = getCurrentHoliday()
-    const shouldShowHat = holiday?.id === "holiday-season" || holiday?.decorations?.showSnowfall === true
-    setIsHolidaySeason(shouldShowHat)
-  }, [])
+
 
   const isActive = (path: string) => {
     if (path === "/") return pathname === "/"
@@ -40,7 +35,7 @@ export function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out border-b ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 ease-out border-b ${
         scrolled
           ? "bg-gradient-to-r from-[#0f0f23]/98 via-[#1a1a3e]/98 to-[#0f0f23]/98 backdrop-blur-md border-[#ffd700]/20 shadow-xl shadow-[#ffd700]/5"
           : "bg-gradient-to-r from-[#0f0f23]/95 via-[#1a1a3e]/95 to-[#0f0f23]/95 backdrop-blur-sm border-[#ffd700]/10"
@@ -51,17 +46,8 @@ export function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative">
-              <div className="relative w-12 h-12 transition-transform duration-300 group-hover:scale-110">
-                <Image src="/limoz-logo.png" alt="Limoz Rwanda Logo" fill className="object-contain" priority />
-              </div>
-              {isHolidaySeason && (
-                <div className="absolute -top-3 -right-1 w-8 h-8 pointer-events-none z-10">
-                  <div className="relative animate-bounce-slow" style={{ animationDuration: "2s" }}>
-                    <span className="text-2xl">🎉</span>
-                  </div>
-                </div>
-              )}
+            <div className="relative w-12 h-12 transition-transform duration-300 group-hover:scale-110">
+              <Image src="/limoz-logo.png" alt="Limoz Rwanda Logo" fill className="object-contain" priority />
             </div>
             <div className="flex flex-col">
               <span className="font-bold text-sm bg-gradient-to-r from-[#ffd700] via-white to-[#ffd700] bg-clip-text text-transparent animate-gold-shimmer">
@@ -78,7 +64,6 @@ export function Header() {
               { href: "/tours", key: "tours" },
               { href: "/fleet", key: "fleet" },
               { href: "/booking", key: "booking" },
-              { href: "/news", key: "news" },
               { href: "/contact", key: "contact" },
             ].map((item) => (
               <Link
@@ -129,20 +114,19 @@ export function Header() {
 
         {mobileMenuOpen && (
           <div className="lg:hidden py-4 border-t border-[#ffd700]/20 animate-in slide-in-from-top duration-300">
-            <nav className="flex flex-col gap-4">
+            <nav className="flex flex-col gap-1">
               {[
                 { href: "/", key: "home" },
                 { href: "/about", key: "about" },
                 { href: "/tours", key: "tours" },
                 { href: "/fleet", key: "fleet" },
                 { href: "/booking", key: "booking" },
-                { href: "/news", key: "news" },
                 { href: "/contact", key: "contact" },
               ].map((item) => (
                 <Link
                   key={item.key}
                   href={item.href}
-                  className={`${isActive(item.href) ? "text-[#ffd700]" : "text-white"} hover:text-[#ffd700] transition-colors text-sm font-medium`}
+                  className={`${isActive(item.href) ? "text-[#ffd700] bg-[#ffd700]/10" : "text-white"} hover:text-[#ffd700] transition-colors text-sm font-medium py-3 px-3 rounded-lg`}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {t(`header.${item.key}`)}

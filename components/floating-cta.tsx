@@ -3,8 +3,10 @@
 import { useState, useEffect } from "react"
 import { Phone, MessageCircle, X } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { useLanguage } from "@/lib/language-context"
 
 export function FloatingCTA() {
+  const { language } = useLanguage()
   const [isVisible, setIsVisible] = useState(false)
   const [isExpanded, setIsExpanded] = useState(false)
 
@@ -21,7 +23,7 @@ export function FloatingCTA() {
   if (!isVisible) return null
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
+    <div className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 flex flex-col items-end gap-3">
       {/* Expanded options */}
       <div
         className={cn(
@@ -36,7 +38,7 @@ export function FloatingCTA() {
           <div className="p-2 bg-green-500 rounded-full">
             <Phone className="w-4 h-4 text-white" />
           </div>
-          <span className="text-sm font-medium text-gray-800">Call Now</span>
+          <span className="text-sm font-medium text-gray-800">{language === "fr" ? "Appeler" : "Call Now"}</span>
         </a>
         <a
           href="https://wa.me/250788318990"
@@ -56,7 +58,7 @@ export function FloatingCTA() {
         onClick={() => setIsExpanded(!isExpanded)}
         className={cn(
           "p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-110",
-          isExpanded ? "bg-gray-800 rotate-45" : "bg-[#f39c12] animate-bounce-slow",
+          isExpanded ? "bg-gray-800 rotate-45" : "bg-[#f39c12]",
         )}
       >
         {isExpanded ? <X className="w-6 h-6 text-white" /> : <Phone className="w-6 h-6 text-white" />}
