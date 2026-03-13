@@ -100,12 +100,9 @@ export default function AboutClientPage() {
               <div className="w-14 h-14 bg-[#f39c12]/10 rounded-full flex items-center justify-center flex-shrink-0">
                 <Eye className="w-7 h-7 text-[#f39c12]" />
               </div>
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Our Vision</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900">{t("aboutPage.vision")}</h2>
             </div>
-            <p className="text-gray-700 leading-relaxed text-lg">
-              To be the leading premium transportation and car rental company in Rwanda and the East African region,
-              setting the standard for excellence, reliability, and innovation in mobility services.
-            </p>
+            <p className="text-gray-700 leading-relaxed text-lg">{t("aboutPage.visionText")}</p>
           </div>
 
           <div className="bg-gradient-to-br from-[#f39c12]/5 to-white p-8 md:p-10 rounded-2xl shadow-sm border border-[#f39c12]/10">
@@ -113,12 +110,9 @@ export default function AboutClientPage() {
               <div className="w-14 h-14 bg-[#1e3a5f]/10 rounded-full flex items-center justify-center flex-shrink-0">
                 <Target className="w-7 h-7 text-[#1e3a5f]" />
               </div>
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Our Mission</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900">{t("aboutPage.mission")}</h2>
             </div>
-            <p className="text-gray-700 leading-relaxed text-lg">
-              To provide safe, comfortable, and professional transportation solutions that exceed client expectations
-              through a modern fleet, highly trained drivers, and an unwavering commitment to customer satisfaction.
-            </p>
+            <p className="text-gray-700 leading-relaxed text-lg">{t("aboutPage.missionText")}</p>
           </div>
         </section>
 

@@ -422,6 +422,12 @@ export const translations = {
       fleet: "Our Fleet",
       fleetText:
         "Our diverse fleet includes luxury sedans, SUVs, Land Cruisers, executive vans, safari vehicles, and economy cars. From the prestigious Land Cruiser TXL and LC 300 V6 to comfortable Toyota HiAce vans, we have the perfect vehicle for every occasion and budget.",
+      vision: "Our Vision",
+      visionText:
+        "To be the leading premium transportation and car rental company in Rwanda and the East African region, setting the standard for excellence, reliability, and innovation in mobility services.",
+      mission: "Our Mission",
+      missionText:
+        "To provide safe, comfortable, and professional transportation solutions that exceed client expectations through a modern fleet, highly trained drivers, and an unwavering commitment to customer satisfaction.",
       management: "Management & Leadership",
       managementSubtitle: "Meet the dedicated team behind Limoz Rwanda's success",
       cta: "Ready to Experience Premium Transportation?",
@@ -875,6 +881,12 @@ export const translations = {
       fleet: "Notre Flotte",
       fleetText:
         "Notre flotte diversifiée comprend des berlines de luxe, des SUV, des Land Cruiser, des fourgonnettes exécutives, des véhicules de safari et des voitures économiques. Du prestigieux Land Cruiser TXL et LC 300 V6 aux confortables fourgonnettes Toyota HiAce, nous avons le véhicule parfait pour chaque occasion et budget.",
+      vision: "Notre Vision",
+      visionText:
+        "Être la première entreprise de transport premium et de location de voitures au Rwanda et dans la région d'Afrique de l'Est, en fixant la norme pour l'excellence, la fiabilité et l'innovation dans les services de mobilité.",
+      mission: "Notre Mission",
+      missionText:
+        "Fournir des solutions de transport sûres, confortables et professionnelles qui dépassent les attentes des clients grâce à une flotte moderne, des chauffeurs hautement formés et un engagement inébranlable envers la satisfaction des clients.",
       management: "Direction et Leadership",
       managementSubtitle: "Rencontrez l'équipe dévouée derrière Limoz Rwanda's success",
       cta: "Prêt à Découvrir un Transport Premium?",
