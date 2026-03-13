@@ -81,13 +81,11 @@ export default function AboutClientPage() {
                 <Building2 className="w-8 h-8 text-white/80" />
               </div>
               <div>
-                <p className="text-white/60 text-sm font-medium tracking-wider uppercase mb-2">Part of</p>
-                <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">The MFK Group</h3>
-                <p className="text-white/80 text-lg leading-relaxed">
-                  Limoz Rwanda Ltd operates under the MFK Group, a diversified conglomerate committed to excellence
-                  across multiple industries. This partnership strengthens our capacity to deliver world-class
-                  transportation and car rental services throughout Rwanda and the East African region.
+                <p className="text-white/60 text-sm font-medium tracking-wider uppercase mb-2">
+                  {t("aboutPage.mfkPartOf")}
                 </p>
+                <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">{t("aboutPage.mfkGroup")}</h3>
+                <p className="text-white/80 text-lg leading-relaxed">{t("aboutPage.mfkText")}</p>
               </div>
             </div>
           </div>

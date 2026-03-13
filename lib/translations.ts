@@ -422,6 +422,10 @@ export const translations = {
       fleet: "Our Fleet",
       fleetText:
         "Our diverse fleet includes luxury sedans, SUVs, Land Cruisers, executive vans, safari vehicles, and economy cars. From the prestigious Land Cruiser TXL and LC 300 V6 to comfortable Toyota HiAce vans, we have the perfect vehicle for every occasion and budget.",
+      mfkPartOf: "Part of",
+      mfkGroup: "The MFK Group",
+      mfkText:
+        "Limoz Rwanda Ltd operates under the MFK Group, a diversified conglomerate committed to excellence across multiple industries. This partnership strengthens our capacity to deliver world-class transportation and car rental services throughout Rwanda and the East African region.",
       vision: "Our Vision",
       visionText:
         "To be the leading premium transportation and car rental company in Rwanda and the East African region, setting the standard for excellence, reliability, and innovation in mobility services.",
@@ -881,6 +885,10 @@ export const translations = {
       fleet: "Notre Flotte",
       fleetText:
         "Notre flotte diversifiée comprend des berlines de luxe, des SUV, des Land Cruiser, des fourgonnettes exécutives, des véhicules de safari et des voitures économiques. Du prestigieux Land Cruiser TXL et LC 300 V6 aux confortables fourgonnettes Toyota HiAce, nous avons le véhicule parfait pour chaque occasion et budget.",
+      mfkPartOf: "Partie de",
+      mfkGroup: "Le Groupe MFK",
+      mfkText:
+        "Limoz Rwanda Ltd opère sous le Groupe MFK, un conglomérat diversifié engagé envers l'excellence dans plusieurs industries. Ce partenariat renforce notre capacité à fournir des services de transport et de location de voitures de classe mondiale dans toute la région du Rwanda et de l'Afrique de l'Est.",
       vision: "Notre Vision",
       visionText:
         "Être la première entreprise de transport premium et de location de voitures au Rwanda et dans la région d'Afrique de l'Est, en fixant la norme pour l'excellence, la fiabilité et l'innovation dans les services de mobilité.",
