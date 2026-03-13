@@ -12,9 +12,11 @@ export default function ClientToursPage() {
     {
       name: t("tours.gorillaTrekkingName"),
       location: t("tours.gorillaTrekkingLocation"),
-      duration: t("tours.fullDay"),
-      groupSize: `${t("tours.upTo")} 8 ${t("tours.people")}`,
-      price: t("tours.contactForPricing"),
+      duration: "1 Day",
+      durationText: t("tours.fullDay"),
+      groupSize: "Up to 8 pax",
+      groupSizeText: `${t("tours.upTo")} 8 ${t("tours.people")}`,
+      price: "From $799/person",
       image: "/gorilla-trekking-volcanoes-national-park.jpg",
       description: t("tours.gorillaTrekkingDesc"),
       highlights: [
@@ -29,9 +31,11 @@ export default function ClientToursPage() {
     {
       name: t("tours.nyungweCanopyName"),
       location: t("tours.nyungweCanopyLocation"),
-      duration: t("tours.halfDay"),
-      groupSize: `${t("tours.upTo")} 12 ${t("tours.people")}`,
-      price: t("tours.contactForPricing"),
+      duration: "Half Day",
+      durationText: t("tours.halfDay"),
+      groupSize: "Up to 12 pax",
+      groupSizeText: `${t("tours.upTo")} 12 ${t("tours.people")}`,
+      price: "From $199/person",
       image: "/nyungwe.jpg",
       description: t("tours.nyungweCanopyDesc"),
       highlights: [
@@ -46,9 +50,11 @@ export default function ClientToursPage() {
     {
       name: t("tours.akageraSafariName"),
       location: t("tours.akageraSafariLocation"),
-      duration: t("tours.multiDay"),
-      groupSize: `${t("tours.upTo")} 7 ${t("tours.people")}`,
-      price: t("tours.contactForPricing"),
+      duration: "2-3 Days",
+      durationText: t("tours.multiDay"),
+      groupSize: "Up to 7 pax",
+      groupSizeText: `${t("tours.upTo")} 7 ${t("tours.people")}`,
+      price: "From $599/person",
       image: "/safari-land-cruiser-with-pop-up-roof.jpg",
       description: t("tours.akageraSafariDesc"),
       highlights: [
@@ -63,9 +69,11 @@ export default function ClientToursPage() {
     {
       name: t("tours.kingsPalaceName"),
       location: t("tours.kingsPalaceLocation"),
-      duration: t("tours.halfDay"),
-      groupSize: `${t("tours.upTo")} 15 ${t("tours.people")}`,
-      price: t("tours.contactForPricing"),
+      duration: "Half Day",
+      durationText: t("tours.halfDay"),
+      groupSize: "Up to 15 pax",
+      groupSizeText: `${t("tours.upTo")} 15 ${t("tours.people")}`,
+      price: "From $89/person",
       image: "/palace.jpg",
       description: t("tours.kingsPalaceDesc"),
       highlights: [
@@ -80,9 +88,11 @@ export default function ClientToursPage() {
     {
       name: t("tours.bigogweName"),
       location: t("tours.bigogweLocation"),
-      duration: t("tours.fullDay"),
-      groupSize: `${t("tours.upTo")} 10 ${t("tours.people")}`,
-      price: t("tours.contactForPricing"),
+      duration: "1 Day",
+      durationText: t("tours.fullDay"),
+      groupSize: "Up to 10 pax",
+      groupSizeText: `${t("tours.upTo")} 10 ${t("tours.people")}`,
+      price: "From $299/person",
       image: "/bigogwe.jpg",
       description: t("tours.bigogweDesc"),
       highlights: [
@@ -128,6 +138,23 @@ export default function ClientToursPage() {
               <div className="lg:w-3/5 p-8 lg:p-12 flex flex-col justify-between">
                 <div>
                   <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-gray-900">{tour.name}</h2>
+
+                  {/* Info Badges */}
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    <span className="inline-flex items-center gap-1 px-3 py-1.5 bg-[#1e3a5f] text-white text-sm font-medium rounded-full">
+                      <Clock className="w-4 h-4" />
+                      {tour.duration}
+                    </span>
+                    <span className="inline-flex items-center gap-1 px-3 py-1.5 bg-[#1e3a5f] text-white text-sm font-medium rounded-full">
+                      <Users className="w-4 h-4" />
+                      {tour.groupSize}
+                    </span>
+                    <span className="inline-flex items-center gap-1 px-3 py-1.5 bg-[#f39c12] text-white text-sm font-medium rounded-full">
+                      <Star className="w-4 h-4" />
+                      {tour.price}
+                    </span>
+                  </div>
+
                   <p className="text-gray-600 mb-6 leading-relaxed">{tour.description}</p>
 
                   {/* Tour Details */}
@@ -190,13 +217,7 @@ export default function ClientToursPage() {
                     href="/booking"
                     className="flex items-center justify-center flex-1 text-center bg-[#f39c12] text-white py-4 px-6 rounded-lg hover:bg-[#e08e0b] transition-all font-semibold text-base shadow-md hover:shadow-lg"
                   >
-                    {t("tours.bookTour")}
-                  </a>
-                  <a
-                    href="/contact"
-                    className="flex items-center justify-center flex-1 text-center border-2 border-[#f39c12] text-[#f39c12] py-4 px-6 rounded-lg hover:bg-[#f39c12] hover:text-white transition-all font-semibold text-base"
-                  >
-                    {t("tours.inquire")}
+                    {t("tours.enquireNow") || "Enquire Now"}
                   </a>
                 </div>
               </div>

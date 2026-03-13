@@ -1,6 +1,7 @@
 "use client"
 
 import { Phone, MapPin, Mail, Facebook, Instagram } from "lucide-react"
+import Image from "next/image"
 import { useLanguage } from "@/lib/language-context"
 
 export function Footer() {
@@ -12,27 +13,30 @@ export function Footer() {
 
       <div className="container mx-auto px-4 py-12 relative">
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto">
-          {/* Phone */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-6xl mx-auto">
+          {/* Logo & Tagline */}
+          <div>
+            <div className="flex items-center gap-3 mb-4">
+              <div className="relative w-12 h-12">
+                <Image src="/limoz-logo.png" alt="Limoz Rwanda Logo" fill className="object-contain" />
+              </div>
+              <span className="font-bold text-lg text-[#ffd700]">{t("header.logo")}</span>
+            </div>
+            <p className="text-[#ffd700] italic text-sm">{t("footer.tagline") || "Like it, Hire it."}</p>
+          </div>
+          {/* Contact */}
           <div>
             <h3 className="text-[#ffd700] text-xl font-bold mb-6">{t("footer.phone")}</h3>
             <div className="space-y-3">
               <a
-                href="tel:+250788309189"
+                href="tel:+250788315017"
                 className="flex items-center gap-3 text-gray-300 hover:text-[#ffd700] transition-colors group"
               >
                 <Phone className="w-5 h-5 group-hover:animate-pulse" />
-                <span>(+250) 788 309 189</span>
+                <span>(+250) 788 315 017</span>
               </a>
               <a
-                href="tel:+250788318990"
-                className="flex items-center gap-3 text-gray-300 hover:text-[#ffd700] transition-colors group"
-              >
-                <Phone className="w-5 h-5 group-hover:animate-pulse" />
-                <span>(+250) 788 318 990</span>
-              </a>
-              <a
-                href="https://wa.me/250788318990"
+                href="https://wa.me/250788315017"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-gray-300 hover:text-green-400 transition-colors group"
@@ -42,22 +46,6 @@ export function Footer() {
                 </svg>
                 <span>WhatsApp</span>
               </a>
-            </div>
-          </div>
-
-          {/* Address */}
-          <div>
-            <h3 className="text-[#ffd700] text-xl font-bold mb-6">{t("footer.address")}</h3>
-            <div className="flex items-start gap-3 text-gray-300">
-              <MapPin className="w-5 h-5 flex-shrink-0 mt-1 text-[#ffd700]/60" />
-              <span>{t("footer.location1")}</span>
-            </div>
-          </div>
-
-          {/* Email */}
-          <div>
-            <h3 className="text-[#ffd700] text-xl font-bold mb-6">{t("footer.email")}</h3>
-            <div className="space-y-3">
               <a
                 href="mailto:info@limozrwanda.com"
                 className="flex items-center gap-3 text-gray-300 hover:text-[#ffd700] transition-colors group"
@@ -65,14 +53,30 @@ export function Footer() {
                 <Mail className="w-5 h-5 group-hover:animate-pulse" />
                 <span>info@limozrwanda.com</span>
               </a>
-              <a
-                href="mailto:booking@limozrwanda.com"
-                className="flex items-center gap-3 text-gray-300 hover:text-[#ffd700] transition-colors group"
-              >
-                <Mail className="w-5 h-5 group-hover:animate-pulse" />
-                <span>booking@limozrwanda.com</span>
-              </a>
             </div>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h3 className="text-[#ffd700] text-xl font-bold mb-6">{t("footer.quickLinks") || "Quick Links"}</h3>
+            <nav className="space-y-2">
+              {[
+                { href: "/", key: "home" },
+                { href: "/about", key: "about" },
+                { href: "/tours", key: "tours" },
+                { href: "/fleet", key: "fleet" },
+                { href: "/booking", key: "booking" },
+                { href: "/contact", key: "contact" },
+              ].map((item) => (
+                <a
+                  key={item.key}
+                  href={item.href}
+                  className="block text-gray-300 hover:text-[#ffd700] transition-colors text-sm"
+                >
+                  {t(`header.${item.key}`)}
+                </a>
+              ))}
+            </nav>
           </div>
         </div>
       </div>
@@ -81,7 +85,7 @@ export function Footer() {
       <div className="border-t border-[#ffd700]/20">
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-gray-400 text-sm">{t("footer.copyright")}</p>
+            <p className="text-gray-400 text-sm">© 2025 Limoz Rwanda Ltd. All rights reserved. A member of MFK Group.</p>
             <div className="flex items-center gap-4">
               <a
                 href="https://www.facebook.com/share/17bspxbw33/?mibextid=wwXIfr"
