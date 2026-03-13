@@ -171,10 +171,10 @@ export default function FleetClientPage() {
         </div>
 
         {/* VVIP Class */}
-        <section className="mb-20">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-2">{t("fleet.vvipClass")}</h2>
-            <p className="text-gray-600">{t("fleet.vvipDesc")}</p>
+        <section className="mb-32">
+          <div className="mb-16 pl-6 border-l-4 border-[#E8A020]">
+            <h2 className="text-4xl font-bold mb-2 text-gray-900">{t("fleet.vvipClass")}</h2>
+            <p className="text-gray-600 text-lg">{t("fleet.vvipDesc")}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {vvipFleet.map((vehicle, index) => (
@@ -183,13 +183,12 @@ export default function FleetClientPage() {
                 href={`/vehicles/${vehicle.id}`}
                 className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-2xl transition-all hover:scale-105 group block"
               >
-                <div
-                  className={`aspect-[4/3] bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden flex items-center justify-center ${vehicle.isExecutiveVan ? "executive-van-image" : ""}`}
-                >
+                <div className="h-64 bg-[#f2f2f6] overflow-hidden flex items-center justify-center p-3">
                   <img
                     src={vehicle.image || "/placeholder.svg"}
                     alt={vehicle.name}
-                    className={`w-full h-full ${vehicle.useContain ? "object-contain p-2" : "object-cover"} ${vehicle.imagePosition || "object-center"} ${vehicle.useContain ? "group-hover:scale-100" : "group-hover:scale-105"} transition-transform duration-300`}
+                    loading="lazy"
+                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <div className="p-6">
@@ -217,10 +216,10 @@ export default function FleetClientPage() {
         </section>
 
         {/* VIP Class */}
-        <section className="mb-20">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-2">{t("fleet.vipClass")}</h2>
-            <p className="text-gray-600">{t("fleet.vipDesc")}</p>
+        <section className="mb-32">
+          <div className="mb-16 pl-6 border-l-4 border-[#E8A020]">
+            <h2 className="text-4xl font-bold mb-2 text-gray-900">{t("fleet.vipClass")}</h2>
+            <p className="text-gray-600 text-lg">{t("fleet.vipDesc")}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {vipVehicles.map((vehicle, index) => (
@@ -228,11 +227,12 @@ export default function FleetClientPage() {
                 key={index}
                 className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-2xl transition-all hover:scale-105 group"
               >
-                <div className="aspect-[4/3] bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden flex items-center justify-center">
+                <div className="h-64 bg-[#f2f2f6] overflow-hidden flex items-center justify-center p-3">
                   <img
                     src={vehicle.image || "/placeholder.svg"}
                     alt={vehicle.name}
-                    className={`w-full h-full object-cover ${vehicle.imagePosition || "object-center"} group-hover:scale-105 transition-transform duration-300`}
+                    loading="lazy"
+                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <div className="p-6">
@@ -260,10 +260,10 @@ export default function FleetClientPage() {
         </section>
 
         {/* Utility Vehicles */}
-        <section className="mb-20">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-2">{t("fleet.utilityVehicles")}</h2>
-            <p className="text-gray-600">{t("fleet.utilityDesc")}</p>
+        <section className="mb-32">
+          <div className="mb-16 pl-6 border-l-4 border-[#E8A020]">
+            <h2 className="text-4xl font-bold mb-2 text-gray-900">{t("fleet.utilityVehicles")}</h2>
+            <p className="text-gray-600 text-lg">{t("fleet.utilityDesc")}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {utilityVehicles.map((vehicle, index) => (
@@ -271,11 +271,12 @@ export default function FleetClientPage() {
                 key={index}
                 className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-2xl transition-all hover:scale-105 group"
               >
-                <div className="aspect-[4/3] bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden flex items-center justify-center">
+                <div className="h-64 bg-[#f2f2f6] overflow-hidden flex items-center justify-center p-3">
                   <img
                     src={vehicle.image || "/placeholder.svg"}
                     alt={vehicle.name}
-                    className={`w-full h-full object-cover ${vehicle.imagePosition || "object-center"} group-hover:scale-105 transition-transform duration-300`}
+                    loading="lazy"
+                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <div className="p-6">
@@ -304,17 +305,18 @@ export default function FleetClientPage() {
 
         {/* Safari Cars */}
         <section>
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-2">{t("fleet.safariCars")}</h2>
-            <p className="text-gray-600">{t("fleet.safariDesc")}</p>
+          <div className="mb-16 pl-6 border-l-4 border-[#E8A020]">
+            <h2 className="text-4xl font-bold mb-2 text-gray-900">{t("fleet.safariCars")}</h2>
+            <p className="text-gray-600 text-lg">{t("fleet.safariDesc")}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-2xl transition-all hover:scale-105 group">
-              <div className="aspect-[4/3] bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden flex items-center justify-center">
+              <div className="h-64 bg-[#f2f2f6] overflow-hidden flex items-center justify-center p-3">
                 <img
                   src="/safari-land-cruiser-with-pop-up-roof.jpg"
                   alt="Safari Land Cruiser"
-                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <div className="p-6">

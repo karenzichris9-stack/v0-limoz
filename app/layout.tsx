@@ -127,6 +127,8 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* Preload hero poster image for faster LCP */}
+        <link rel="preload" as="image" href="/luxury-car-on-scenic-road-in-rwanda.jpg" />
       </head>
       <body className={`font-sans antialiased`}>
         <JsonLd />

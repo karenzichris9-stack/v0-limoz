@@ -87,12 +87,13 @@ export function Fleet() {
                           <span className="text-xs font-bold text-gray-900">{vehicle.rating}</span>
                         </div>
 
-                        <div className="relative w-full aspect-[16/10]">
+                        <div className="relative w-full h-64 bg-[#f2f2f6]">
                           <Image
                             src={vehicle.image || "/placeholder.svg"}
                             alt={vehicle.name}
                             fill
-                            className={`object-cover transition-transform duration-500 group-hover:scale-105 ${vehicle.imagePosition || "object-center"}`}
+                            loading="lazy"
+                            className="object-contain p-3 transition-transform duration-500 group-hover:scale-105"
                             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                           />
                         </div>

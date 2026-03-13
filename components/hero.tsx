@@ -9,7 +9,9 @@ import Image from "next/image"
 export function Hero() {
   const { t } = useLanguage()
   const videoRef = useRef<HTMLVideoElement>(null)
+  const containerRef = useRef<HTMLDivElement>(null)
   const [videoLoaded, setVideoLoaded] = useState(false)
+  const [parallaxOffset, setParallaxOffset] = useState(0)
 
   useEffect(() => {
     // Lazy-load video after page paint
@@ -23,10 +25,24 @@ export function Hero() {
     return () => clearTimeout(timer)
   }, [])
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (containerRef.current) {
+        const scrollY = window.scrollY
+        // Parallax effect: move at 40% of scroll speed
+        setParallaxOffset(scrollY * 0.4)
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll, { passive: true })
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
   return (
-    <section className="relative overflow-hidden">
-      {/* Poster image shown immediately for fast LCP */}
-      <div className="absolute inset-0">
+    <section className="relative overflow-hidden" ref={containerRef}>
+      {/* Background with parallax effect */}
+      <div className="absolute inset-0" style={{ transform: `translateY(${parallaxOffset}px)` }}>
+        {/* Poster image shown immediately for fast LCP */}
         <Image
           src="/luxury-car-on-scenic-road-in-rwanda.jpg"
           alt="Luxury car on scenic road in Rwanda"
@@ -47,7 +63,8 @@ export function Hero() {
           className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${videoLoaded ? "opacity-100" : "opacity-0"}`}
         />
 
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0f0f23]/80 via-[#1a1a3e]/60 to-[#0f0f23]/90" />
+        {/* 50% opacity dark overlay for text readability */}
+        <div className="absolute inset-0 bg-black/50" />
       </div>
 
       {/* Main content */}
