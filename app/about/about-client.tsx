@@ -28,7 +28,7 @@ export default function AboutClientPage() {
       </div>
 
       {/* 4-Stat Counter Row */}
-      <div className="bg-[#1e3a5f] py-12 md:py-16 px-4">
+      <div className="bg-black/30 backdrop-blur-sm py-12 md:py-16 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             <div className="text-center">
