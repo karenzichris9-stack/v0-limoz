@@ -234,40 +234,7 @@ export const vehicles: Vehicle[] = [
       "The Mercedes-Benz S-Class represents the ultimate in automotive luxury. With its executive rear seating, cutting-edge technology, and whisper-quiet cabin, this flagship sedan is the preferred choice for VIP transportation and high-profile events.",
     available: true,
   },
-  {
-    id: "toyota-hilux",
-    name: "Toyota Hilux 2012",
-    class: "Safari",
-    image: "/toyota-hilux-2012.jpg",
-    images: {
-      exterior: ["/toyota-hilux-2012.jpg"],
-      interior: [],
-    },
-    price: {
-      daily: 150,
-      weekly: 900,
-      monthly: 3000,
-    },
-    specs: {
-      seats: 5,
-      transmission: "Automatic",
-      fuelType: "Diesel",
-      driveType: "4WD",
-      luggage: "8 Bags",
-      year: 2012,
-    },
-    features: [
-      "4WD System",
-      "Air Conditioning",
-      "Bluetooth Audio",
-      "Tough Suspension",
-      "High Ground Clearance",
-      "Tow Bar",
-    ],
-    description:
-      "The Toyota Hilux 2012 is a robust and reliable pickup truck, perfect for safari adventures and navigating rugged terrain. With its powerful engine and 4WD capability, it ensures you reach your destination with ease.",
-    available: true,
-  },
+
   {
     id: "byd-atto-3",
     name: "BYD Atto 3",
