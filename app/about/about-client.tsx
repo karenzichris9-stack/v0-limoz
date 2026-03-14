@@ -28,24 +28,24 @@ export default function AboutClientPage() {
       </div>
 
       {/* 4-Stat Counter Row */}
-      <div className="bg-black/30 backdrop-blur-sm py-12 md:py-16 px-4">
+      <div className="py-12 md:py-16 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-[#ffd700] mb-2">50+</div>
-              <p className="text-white text-sm md:text-base font-medium">{t("aboutPage.statsVehicles") || "Vehicles"}</p>
+              <div className="text-4xl md:text-5xl font-bold text-[#ffd700] mb-2 drop-shadow-lg">50+</div>
+              <p className="text-white text-sm md:text-base font-medium drop-shadow-lg">{t("aboutPage.statsVehicles") || "Vehicles"}</p>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-[#ffd700] mb-2">5+</div>
-              <p className="text-white text-sm md:text-base font-medium">{t("aboutPage.statsYears") || "Years Experience"}</p>
+              <div className="text-4xl md:text-5xl font-bold text-[#ffd700] mb-2 drop-shadow-lg">5+</div>
+              <p className="text-white text-sm md:text-base font-medium drop-shadow-lg">{t("aboutPage.statsYears") || "Years Experience"}</p>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-[#ffd700] mb-2">1000+</div>
-              <p className="text-white text-sm md:text-base font-medium">{t("aboutPage.statsClients") || "Happy Clients"}</p>
+              <div className="text-4xl md:text-5xl font-bold text-[#ffd700] mb-2 drop-shadow-lg">1000+</div>
+              <p className="text-white text-sm md:text-base font-medium drop-shadow-lg">{t("aboutPage.statsClients") || "Happy Clients"}</p>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-[#ffd700] mb-2">24/7</div>
-              <p className="text-white text-sm md:text-base font-medium">{t("aboutPage.statsSupport") || "Support"}</p>
+              <div className="text-4xl md:text-5xl font-bold text-[#ffd700] mb-2 drop-shadow-lg">24/7</div>
+              <p className="text-white text-sm md:text-base font-medium drop-shadow-lg">{t("aboutPage.statsSupport") || "Support"}</p>
             </div>
           </div>
         </div>
