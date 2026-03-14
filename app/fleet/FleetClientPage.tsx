@@ -313,8 +313,8 @@ export default function FleetClientPage() {
             <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-2xl transition-all hover:scale-105 group">
                 <div className="h-80 overflow-hidden">
                   <img
-                    src={vehicle.image || "/placeholder.svg"}
-                    alt={vehicle.name}
+                    src="/safari-land-cruiser-with-pop-up-roof.jpg"
+                    alt="Safari Land Cruiser"
                     loading="lazy"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
