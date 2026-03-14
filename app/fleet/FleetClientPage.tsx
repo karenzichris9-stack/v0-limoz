@@ -183,7 +183,7 @@ export default function FleetClientPage() {
                 href={`/vehicles/${vehicle.id}`}
                 className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-2xl transition-all hover:scale-105 group block"
               >
-                <div className="h-64 bg-[#f2f2f6] overflow-hidden flex items-center justify-center p-3">
+                <div className="h-80 bg-[#0F1B2D] overflow-hidden flex items-center justify-center">
                   <img
                     src={vehicle.image || "/placeholder.svg"}
                     alt={vehicle.name}
@@ -227,7 +227,7 @@ export default function FleetClientPage() {
                 key={index}
                 className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-2xl transition-all hover:scale-105 group"
               >
-                <div className="h-64 bg-[#f2f2f6] overflow-hidden flex items-center justify-center p-3">
+                <div className="h-80 bg-[#0F1B2D] overflow-hidden flex items-center justify-center">
                   <img
                     src={vehicle.image || "/placeholder.svg"}
                     alt={vehicle.name}
@@ -271,7 +271,7 @@ export default function FleetClientPage() {
                 key={index}
                 className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-2xl transition-all hover:scale-105 group"
               >
-                <div className="h-64 bg-[#f2f2f6] overflow-hidden flex items-center justify-center p-3">
+                <div className="h-80 bg-[#0F1B2D] overflow-hidden flex items-center justify-center">
                   <img
                     src={vehicle.image || "/placeholder.svg"}
                     alt={vehicle.name}
@@ -311,7 +311,7 @@ export default function FleetClientPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-2xl transition-all hover:scale-105 group">
-              <div className="h-64 bg-[#f2f2f6] overflow-hidden flex items-center justify-center p-3">
+              <div className="h-80 bg-[#0F1B2D] overflow-hidden flex items-center justify-center">
                 <img
                   src="/safari-land-cruiser-with-pop-up-roof.jpg"
                   alt="Safari Land Cruiser"
@@ -347,11 +347,12 @@ export default function FleetClientPage() {
               </div>
             </div>
             <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-2xl transition-all hover:scale-105 group">
-              <div className="aspect-[4/3] bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden flex items-center justify-center">
+              <div className="h-80 bg-[#0F1B2D] overflow-hidden flex items-center justify-center">
                 <img
                   src="/safari-4x4-vehicle-with-open-roof.jpg"
                   alt="Safari 4x4"
-                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <div className="p-6">
