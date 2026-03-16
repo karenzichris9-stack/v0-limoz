@@ -181,21 +181,21 @@ export default function FleetClientPage() {
               <Link
                 key={index}
                 href={`/vehicles/${vehicle.id}`}
-                className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-2xl transition-all hover:scale-105 group block"
+                className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-2xl transition-all hover:scale-105 group block h-full flex flex-col"
               >
-                <div className="h-80 bg-[#0F1B2D] overflow-hidden flex items-center justify-center">
+                <div className="h-72 w-full overflow-hidden flex items-center justify-center flex-shrink-0">
                   <img
                     src={vehicle.image || "/placeholder.svg"}
                     alt={vehicle.name}
                     loading="lazy"
-                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <div className="p-6">
-                  <h3 className="text-2xl font-bold mb-6 text-gray-900">{vehicle.name}</h3>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-                    {vehicle.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-start gap-3">
+                <div className="p-6 flex flex-col flex-grow">
+                  <h3 className="text-xl font-bold mb-4 text-gray-900">{vehicle.name}</h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6 flex-grow">
+                    {vehicle.features.slice(0, 4).map((feature, idx) => (
+                      <div key={idx} className="flex items-start gap-2">
                         <div className="p-2 bg-[#f39c12]/10 rounded-lg flex-shrink-0">
                           <feature.icon className="w-4 h-4 text-[#f39c12]" />
                         </div>
@@ -206,7 +206,7 @@ export default function FleetClientPage() {
                       </div>
                     ))}
                   </div>
-                  <Button className="w-full bg-[#f39c12] hover:bg-[#e67e22] text-white">
+                  <Button className="w-full bg-[#f39c12] hover:bg-[#e67e22] text-white mt-auto">
                     {t("fleet.viewDetails")}
                   </Button>
                 </div>
@@ -225,9 +225,9 @@ export default function FleetClientPage() {
             {vipVehicles.map((vehicle, index) => (
               <div
                 key={index}
-                className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-2xl transition-all hover:scale-105 group"
+                className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-2xl transition-all hover:scale-105 group h-full flex flex-col"
               >
-                <div className="h-80 overflow-hidden">
+                <div className="h-72 w-full overflow-hidden flex items-center justify-center flex-shrink-0">
                   <img
                     src={vehicle.image || "/placeholder.svg"}
                     alt={vehicle.name}
@@ -235,11 +235,11 @@ export default function FleetClientPage() {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <div className="p-6">
-                  <h3 className="text-2xl font-bold mb-6 text-gray-900">{vehicle.name}</h3>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-                    {vehicle.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-start gap-3">
+                <div className="p-6 flex flex-col flex-grow">
+                  <h3 className="text-xl font-bold mb-4 text-gray-900">{vehicle.name}</h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6 flex-grow">
+                    {vehicle.features.slice(0, 4).map((feature, idx) => (
+                      <div key={idx} className="flex items-start gap-2">
                         <div className="p-2 bg-[#f39c12]/10 rounded-lg flex-shrink-0">
                           <feature.icon className="w-4 h-4 text-[#f39c12]" />
                         </div>
@@ -251,7 +251,7 @@ export default function FleetClientPage() {
                     ))}
                   </div>
                   <Link href="/booking">
-                    <Button className="w-full bg-[#f39c12] hover:bg-[#e67e22] text-white">{t("fleet.bookNow")}</Button>
+                    <Button className="w-full bg-[#f39c12] hover:bg-[#e67e22] text-white mt-auto">{t("fleet.bookNow")}</Button>
                   </Link>
                 </div>
               </div>
@@ -269,9 +269,9 @@ export default function FleetClientPage() {
             {utilityVehicles.map((vehicle, index) => (
               <div
                 key={index}
-                className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-2xl transition-all hover:scale-105 group"
+                className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-2xl transition-all hover:scale-105 group h-full flex flex-col"
               >
-                <div className="h-80 overflow-hidden">
+                <div className="h-72 w-full overflow-hidden flex items-center justify-center flex-shrink-0">
                   <img
                     src={vehicle.image || "/placeholder.svg"}
                     alt={vehicle.name}
@@ -279,11 +279,11 @@ export default function FleetClientPage() {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <div className="p-6">
-                  <h3 className="text-2xl font-bold mb-6 text-gray-900">{vehicle.name}</h3>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-                    {vehicle.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-start gap-3">
+                <div className="p-6 flex flex-col flex-grow">
+                  <h3 className="text-xl font-bold mb-4 text-gray-900">{vehicle.name}</h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6 flex-grow">
+                    {vehicle.features.slice(0, 4).map((feature, idx) => (
+                      <div key={idx} className="flex items-start gap-2">
                         <div className="p-2 bg-[#f39c12]/10 rounded-lg flex-shrink-0">
                           <feature.icon className="w-4 h-4 text-[#f39c12]" />
                         </div>
@@ -295,7 +295,7 @@ export default function FleetClientPage() {
                     ))}
                   </div>
                   <Link href="/booking">
-                    <Button className="w-full bg-[#f39c12] hover:bg-[#e67e22] text-white">{t("fleet.bookNow")}</Button>
+                    <Button className="w-full bg-[#f39c12] hover:bg-[#e67e22] text-white mt-auto">{t("fleet.bookNow")}</Button>
                   </Link>
                 </div>
               </div>
@@ -310,8 +310,8 @@ export default function FleetClientPage() {
             <p className="text-gray-600 text-lg">{t("fleet.safariDesc")}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-2xl transition-all hover:scale-105 group">
-                <div className="h-80 overflow-hidden">
+            <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-2xl transition-all hover:scale-105 group h-full flex flex-col">
+                <div className="h-72 w-full overflow-hidden flex items-center justify-center flex-shrink-0">
                   <img
                     src="/safari-land-cruiser-with-pop-up-roof.jpg"
                     alt="Safari Land Cruiser"
@@ -319,10 +319,10 @@ export default function FleetClientPage() {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-              <div className="p-6">
-                <h3 className="text-2xl font-bold mb-4 text-gray-900">Safari Land Cruiser</h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-                  <div className="flex items-start gap-3">
+              <div className="p-6 flex flex-col flex-grow">
+                <h3 className="text-xl font-bold mb-4 text-gray-900">Safari Land Cruiser</h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6 flex-grow">
+                  <div className="flex items-start gap-2">
                     <div className="p-2 bg-[#f39c12]/10 rounded-lg flex-shrink-0">
                       <Car className="w-4 h-4 text-[#f39c12]" />
                     </div>
@@ -331,7 +331,7 @@ export default function FleetClientPage() {
                       <p className="text-sm text-gray-900 font-semibold break-words">{t("fleet.popUpRoof")}</p>
                     </div>
                   </div>
-                  <div className="flex items-start gap-3">
+                  <div className="flex items-start gap-2">
                     <div className="p-2 bg-[#f39c12]/10 rounded-lg flex-shrink-0">
                       <Users className="w-4 h-4 text-[#f39c12]" />
                     </div>
@@ -342,12 +342,12 @@ export default function FleetClientPage() {
                   </div>
                 </div>
                 <Link href="/booking">
-                  <Button className="w-full bg-[#f39c12] hover:bg-[#e67e22] text-white">{t("fleet.bookSafari")}</Button>
+                  <Button className="w-full bg-[#f39c12] hover:bg-[#e67e22] text-white mt-auto">{t("fleet.bookSafari")}</Button>
                 </Link>
               </div>
             </div>
-            <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-2xl transition-all hover:scale-105 group">
-              <div className="h-80 overflow-hidden">
+            <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-2xl transition-all hover:scale-105 group h-full flex flex-col">
+              <div className="h-72 w-full overflow-hidden flex items-center justify-center flex-shrink-0">
                 <img
                   src="/safari-4x4-vehicle-with-open-roof.jpg"
                   alt="Safari 4x4"
@@ -355,10 +355,10 @@ export default function FleetClientPage() {
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <div className="p-6">
-                <h3 className="text-2xl font-bold mb-4 text-gray-900">Safari 4x4</h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-                  <div className="flex items-start gap-3">
+              <div className="p-6 flex flex-col flex-grow">
+                <h3 className="text-xl font-bold mb-4 text-gray-900">Safari 4x4</h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6 flex-grow">
+                  <div className="flex items-start gap-2">
                     <div className="p-2 bg-[#f39c12]/10 rounded-lg flex-shrink-0">
                       <Car className="w-4 h-4 text-[#f39c12]" />
                     </div>
@@ -367,7 +367,7 @@ export default function FleetClientPage() {
                       <p className="text-sm text-gray-900 font-semibold break-words">{t("fleet.openRoof")}</p>
                     </div>
                   </div>
-                  <div className="flex items-start gap-3">
+                  <div className="flex items-start gap-2">
                     <div className="p-2 bg-[#f39c12]/10 rounded-lg flex-shrink-0">
                       <Users className="w-4 h-4 text-[#f39c12]" />
                     </div>
@@ -378,7 +378,7 @@ export default function FleetClientPage() {
                   </div>
                 </div>
                 <Link href="/booking">
-                  <Button className="w-full bg-[#f39c12] hover:bg-[#e67e22] text-white">{t("fleet.bookSafari")}</Button>
+                  <Button className="w-full bg-[#f39c12] hover:bg-[#e67e22] text-white mt-auto">{t("fleet.bookSafari")}</Button>
                 </Link>
               </div>
             </div>
