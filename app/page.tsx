@@ -22,8 +22,8 @@ export default function Home() {
       <WhyChoose />
       <HowItWorks />
       <Testimonials />
-      <AppPromo />
       <Partners />
+      <AppPromo />
       <Footer />
       <FloatingCTA />
       <StickyBookingBar />

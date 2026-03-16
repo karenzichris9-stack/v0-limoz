@@ -72,42 +72,42 @@ export function Fleet() {
           </Button>
         </AnimatedSection>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
           {vehicles.map((vehicle, index) => (
             <AnimatedSection key={index} animation="fade-up" delay={index * 0.1}>
               <Dialog>
                 <DialogTrigger asChild>
-                  <div className="cursor-pointer group">
-                    <Card className="overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-[#f39c12]/10 border-0 bg-white">
+                  <div className="cursor-pointer group h-full">
+                    <Card className="overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-[#f39c12]/10 border-0 bg-white h-full flex flex-col">
                       {/* Image container */}
-                      <div className="relative overflow-hidden">
+                      <div className="relative overflow-hidden flex-shrink-0">
                         {/* Rating badge */}
                         <div className="absolute top-3 right-3 flex items-center gap-1 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full shadow-sm z-10">
                           <Star className="w-3.5 h-3.5 fill-[#f39c12] text-[#f39c12]" />
                           <span className="text-xs font-bold text-gray-900">{vehicle.rating}</span>
                         </div>
 
-                        <div className="relative w-full h-64 bg-[#f2f2f6]">
+                        <div className="relative w-full h-60 sm:h-64 md:h-72">
                           <Image
                             src={vehicle.image || "/placeholder.svg"}
                             alt={vehicle.name}
                             fill
                             loading="lazy"
-                            className="object-contain p-3 transition-transform duration-500 group-hover:scale-105"
-                            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                            className="object-cover transition-transform duration-500 group-hover:scale-105"
+                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                           />
                         </div>
                       </div>
 
-                      <CardContent className="p-4 md:p-6">
-                        <div className="mb-2">
-                          <h3 className="text-lg md:text-xl font-bold text-black group-hover:text-[#f39c12] transition-colors">
+                      <CardContent className="p-4 md:p-6 flex flex-col flex-grow">
+                        <div className="mb-3 md:mb-4">
+                          <h3 className="text-base md:text-lg font-bold text-black group-hover:text-[#f39c12] transition-colors">
                             {vehicle.name}
                           </h3>
-                          <p className="text-[#f39c12] font-medium text-sm">{vehicle.type}</p>
+                          <p className="text-[#f39c12] font-medium text-xs md:text-sm">{vehicle.type}</p>
                         </div>
 
-                        <div className="flex items-center gap-4 text-sm text-gray-600 mt-3 md:mt-4">
+                        <div className="flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-3 text-xs md:text-sm text-gray-600 mb-3 md:mb-4 flex-grow">
                           <div className="flex items-center gap-1.5">
                             <Users className="w-4 h-4 text-[#f39c12]" />
                             <span>{vehicle.seats} {t("fleet.seats")}</span>
@@ -122,19 +122,19 @@ export function Fleet() {
                         </div>
 
                         {/* Always-visible CTA */}
-                        <div className="mt-3 md:mt-4 pt-3 md:pt-4 border-t border-gray-100 flex items-center justify-between">
-                          <span className="text-sm text-gray-500">{t("fleet.viewDetails")}</span>
+                        <div className="pt-3 md:pt-4 border-t border-gray-100 flex items-center justify-between mt-auto">
+                          <span className="text-xs md:text-sm text-gray-500">{t("fleet.viewDetails")}</span>
                           <ArrowRight className="w-4 h-4 text-[#f39c12] group-hover:translate-x-1 transition-transform" />
                         </div>
                       </CardContent>
                     </Card>
                   </div>
                 </DialogTrigger>
-                <DialogContent className="max-w-2xl">
+                <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
                   <DialogHeader>
-                    <DialogTitle className="text-2xl font-bold">{vehicle.name}</DialogTitle>
+                    <DialogTitle className="text-xl md:text-2xl font-bold">{vehicle.name}</DialogTitle>
                   </DialogHeader>
-                  <div className="space-y-6">
+                  <div className="space-y-4 md:space-y-6">
                     <div className="relative w-full aspect-[16/10] rounded-lg overflow-hidden">
                       <Image
                         src={vehicle.image || "/placeholder.svg"}
@@ -145,18 +145,18 @@ export function Fleet() {
                       />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-lg mb-3">{t("fleet.vehicleFeatures")}</h4>
-                      <div className="grid grid-cols-2 gap-3">
+                      <h4 className="font-semibold text-base md:text-lg mb-2 md:mb-3">{t("fleet.vehicleFeatures")}</h4>
+                      <div className="grid grid-cols-2 gap-2 md:gap-3">
                         {vehicle.features.map((feature, idx) => (
-                          <div key={idx} className="flex items-center gap-2 text-gray-700">
-                            <div className="w-2 h-2 bg-[#f39c12] rounded-full" />
+                          <div key={idx} className="flex items-center gap-2 text-xs md:text-sm text-gray-700">
+                            <div className="w-2 h-2 bg-[#f39c12] rounded-full flex-shrink-0" />
                             <span>{feature}</span>
                           </div>
                         ))}
                       </div>
                     </div>
-                    <div className="flex items-center gap-2 text-gray-600">
-                      <Users className="w-5 h-5" />
+                    <div className="flex items-center gap-2 text-sm md:text-base text-gray-600">
+                      <Users className="w-5 h-5 flex-shrink-0" />
                       <span className="font-semibold">{vehicle.seats} {t("fleet.passengerCapacity")}</span>
                     </div>
                     <Button asChild className="w-full bg-[#f39c12] hover:bg-[#e67e22] text-white">
