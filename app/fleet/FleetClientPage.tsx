@@ -107,18 +107,6 @@ export default function FleetClientPage() {
 
   const utilityVehicles = [
     {
-      id: "toyota-hilux-2012",
-      name: "Toyota Hilux 2012",
-      image: "/toyota-hilux-double-cab.png",
-      features: [
-        { icon: Wind, labelKey: "climate", valueKey: "manualAC" },
-        { icon: Users, labelKey: "capacity", valueKey: "fiveSeater" },
-        { icon: Cog, labelKey: "transmission", valueKey: "manual" },
-        { icon: Package, labelKey: "cargo", valueKey: "doubleCabPickup" },
-        { icon: Shield, labelKey: "safety", valueKey: "durabilitySafety" },
-      ],
-    },
-    {
       id: "coaster-bus",
       name: "Coaster Bus",
       image: "/coaster-bus.jpg",
