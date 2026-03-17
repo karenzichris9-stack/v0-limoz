@@ -109,12 +109,20 @@ export const vehicles: Vehicle[] = [
     id: "land-cruiser-lc300-v6",
     name: "Land Cruiser LC 300 V6",
     class: "VVIP",
-    image: "/lc300-exterior-front.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5393-WspN9OVcgly60MLRnyGxBzOdYUT3ra.jpg",
     images: {
-      exterior: ["/lc300-exterior-front.jpg", "/lc300-exterior-side.jpg"],
+      exterior: [
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5393-WspN9OVcgly60MLRnyGxBzOdYUT3ra.jpg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5395-pkC0Njq5kBp1dUJwjX2cLCrc9949uS.jpg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5396-TFMWzJGIqxZVJxO5ZAgUs2NtavmDrB.jpg",
+      ],
       interior: [
-        "/lc300-interior-front-cabin.jpg",
-        "/lc300-interior-dashboard.jpg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5407-SzY9VRSIGt2vSaxEpspSJCc61OFnSn.jpg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5410-TohmOnnKfgtu4edwopPe4wHtWYPtci.jpg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5405-sWUw0ULMS75oggHeEbpCdgOapCwWzD.jpg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5404-M0CHhAL4u0DfuHGzbX2bcWjKA4DkZk.jpg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5403-a7I6MpTNea2GW7Ut2IdQJ5nV5dkAT6.jpg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5399-HnZFE7NHZ3t50tT1D4U9SOfWC947ui.jpg",
       ],
     },
     price: {
