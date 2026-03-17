@@ -109,12 +109,12 @@ export const vehicles: Vehicle[] = [
     id: "land-cruiser-lc300-v6",
     name: "Land Cruiser LC 300 V6",
     class: "VVIP",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5393-WspN9OVcgly60MLRnyGxBzOdYUT3ra.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202026-03-17%20at%2013.19.43-RbOqtR37FFYmytUfMhhcMcWFEd3aib.png",
     images: {
       exterior: [
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5393-WspN9OVcgly60MLRnyGxBzOdYUT3ra.jpg",
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5395-pkC0Njq5kBp1dUJwjX2cLCrc9949uS.jpg",
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5396-TFMWzJGIqxZVJxO5ZAgUs2NtavmDrB.jpg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202026-03-17%20at%2013.19.43-RbOqtR37FFYmytUfMhhcMcWFEd3aib.png",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202026-03-17%20at%2013.22.28-OSqTiX6wrsfunWbVaHzX0LE2gTD3Es.png",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202026-03-17%20at%2013.20.11-P5xqmD2INb6VhN18eeTIPafTvt2Kkd.png",
       ],
       interior: [
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5407-SzY9VRSIGt2vSaxEpspSJCc61OFnSn.jpg",
