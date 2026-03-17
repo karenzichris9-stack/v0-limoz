@@ -12,7 +12,7 @@ export default function FleetClientPage() {
     {
       id: "land-cruiser-lc300-v6",
       name: "Land Cruiser LC 300 V6",
-      image: "/lc-300.jpg",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202026-03-17%20at%2013.19.43-NNzu8LWFmY5AmEL2iMfIBW268YOIGQ.png",
       imagePosition: "object-center",
       features: [
         { icon: Wind, labelKey: "climate", valueKey: "triZoneClimate" },
