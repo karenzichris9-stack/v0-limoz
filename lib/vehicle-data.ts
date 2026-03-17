@@ -284,9 +284,12 @@ export const vehicles: Vehicle[] = [
     id: "land-cruiser-250-series",
     name: "Land Cruiser 250 Series",
     class: "VVIP",
-    image: "/land-cruiser-250-series.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202026-03-17%20at%2013.33.39-RtUQJqAFHRwXKrYfmex38gsD3XzX2b.png",
     images: {
-      exterior: ["/land-cruiser-250-series.jpg"],
+      exterior: [
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202026-03-17%20at%2013.33.39-RtUQJqAFHRwXKrYfmex38gsD3XzX2b.png",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202026-03-17%20at%2013.34.28-Rre05AHdaq8lKXEU7gEWMEhtaymptR.png",
+      ],
       interior: [
         "/land-cruiser-250-interior-1.jpg",
         "/land-cruiser-250-interior-2.jpg",

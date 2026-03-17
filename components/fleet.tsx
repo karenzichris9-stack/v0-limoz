@@ -35,7 +35,7 @@ const vehicles = [
   {
     name: "Land Cruiser 250 Series",
     type: "VVIP Class",
-    image: "/land-cruiser-250-series.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202026-03-17%20at%2013.33.39-RtUQJqAFHRwXKrYfmex38gsD3XzX2b.png",
     imagePosition: "object-bottom",
     seats: 7,
     transmission: "Automatic",
