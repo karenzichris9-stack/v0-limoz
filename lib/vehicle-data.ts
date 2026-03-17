@@ -115,12 +115,6 @@ export const vehicles: Vehicle[] = [
       interior: [
         "/lc300-interior-front-cabin.jpg",
         "/lc300-interior-dashboard.jpg",
-        "/lc300-interior-infotainment.jpg",
-        "/lc300-interior-middle-seats.jpg",
-        "/lc300-interior-rear-screens.jpg",
-        "/lc300-interior-rear-view.jpg",
-        "/lc300-interior-sunroof-view.jpg",
-        "/lc300-interior-door-detail.jpg",
       ],
     },
     price: {
