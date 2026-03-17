@@ -3,73 +3,75 @@
 import { Footer } from "@/components/footer"
 import { useLanguage } from "@/lib/language-context"
 import { Building2, Eye, Target } from "lucide-react"
+import Image from "next/image"
 
 export default function AboutClientPage() {
   const { t } = useLanguage()
 
   return (
-    <div className="min-h-screen bg-white pt-24">
-      <div className="container mx-auto px-4 py-12 max-w-6xl">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-black to-gray-700 bg-clip-text text-transparent">
+    <div className="min-h-screen bg-white pt-20">
+      {/* Full-width Fleet Banner with Headline Overlay */}
+      <div className="relative w-full h-96 md:h-[500px] -mt-20 pt-20">
+        <Image
+          src="/lc300-real.jpg"
+          alt="Limoz Rwanda Fleet"
+          fill
+          className="object-cover brightness-75"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0f0f23] via-transparent to-transparent" />
+        <div className="absolute inset-0 flex items-center justify-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-[#ffd700] text-center text-shadow-lg">
             {t("aboutPage.title")}
           </h1>
-          <div className="w-24 h-1 bg-[#f39c12] mx-auto"></div>
         </div>
+      </div>
 
-        {/* About Us Section */}
-        <section className="mb-20">
-          <div className="bg-gradient-to-br from-gray-50 to-white p-8 md:p-12 rounded-2xl shadow-sm border border-gray-100">
-            <div className="flex items-start gap-4 mb-6">
-              <div className="w-1 h-16 bg-[#f39c12] rounded-full"></div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900">{t("aboutPage.excellence")}</h2>
+      {/* 4-Stat Counter Row */}
+      <div className="py-12 md:py-16 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+            <div className="text-center">
+              <div className="text-4xl md:text-5xl font-bold text-[#ffd700] mb-2 drop-shadow-lg">50+</div>
+              <p className="text-white text-sm md:text-base font-medium drop-shadow-lg">{t("aboutPage.statsVehicles") || "Vehicles"}</p>
             </div>
-            <p className="text-gray-700 leading-relaxed text-lg">{t("aboutPage.excellenceText")}</p>
+            <div className="text-center">
+              <div className="text-4xl md:text-5xl font-bold text-[#ffd700] mb-2 drop-shadow-lg">5+</div>
+              <p className="text-white text-sm md:text-base font-medium drop-shadow-lg">{t("aboutPage.statsYears") || "Years Experience"}</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl md:text-5xl font-bold text-[#ffd700] mb-2 drop-shadow-lg">1000+</div>
+              <p className="text-white text-sm md:text-base font-medium drop-shadow-lg">{t("aboutPage.statsClients") || "Happy Clients"}</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl md:text-5xl font-bold text-[#ffd700] mb-2 drop-shadow-lg">24/7</div>
+              <p className="text-white text-sm md:text-base font-medium drop-shadow-lg">{t("aboutPage.statsSupport") || "Support"}</p>
+            </div>
           </div>
-        </section>
+        </div>
+      </div>
 
-        {/* Why Us Section */}
-        <section className="mb-20">
-          <div className="bg-gradient-to-br from-[#f39c12]/5 to-white p-8 md:p-12 rounded-2xl shadow-sm border border-[#f39c12]/10">
-            <div className="flex items-start gap-4 mb-6">
-              <div className="w-1 h-16 bg-[#f39c12] rounded-full"></div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900">{t("aboutPage.whyUs")}</h2>
-            </div>
-            <p className="text-gray-700 leading-relaxed text-lg">{t("aboutPage.whyUsText")}</p>
-          </div>
-        </section>
+      <div className="container mx-auto px-4 py-12 max-w-6xl">
 
-        {/* Reliability Section */}
-        <section className="mb-20">
-          <div className="bg-gradient-to-br from-gray-50 to-white p-8 md:p-12 rounded-2xl shadow-sm border border-gray-100">
-            <div className="flex items-start gap-4 mb-6">
-              <div className="w-1 h-16 bg-[#f39c12] rounded-full"></div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900">{t("aboutPage.reliability")}</h2>
+        {/* Two-Column Our Story Section */}
+        <section className="mb-20 py-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            {/* Text Column */}
+            <div>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">{t("aboutPage.excellence")}</h2>
+              <div className="space-y-6">
+                <p className="text-gray-700 leading-relaxed text-lg">{t("aboutPage.excellenceText")}</p>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">{t("aboutPage.whyUs")}</h3>
+                  <p className="text-gray-700 leading-relaxed">{t("aboutPage.whyUsText")}</p>
+                </div>
+              </div>
             </div>
-            <p className="text-gray-700 leading-relaxed text-lg">{t("aboutPage.reliabilityText")}</p>
-          </div>
-        </section>
 
-        {/* Our Service Section */}
-        <section className="mb-20">
-          <div className="bg-gradient-to-br from-[#f39c12]/5 to-white p-8 md:p-12 rounded-2xl shadow-sm border border-[#f39c12]/10">
-            <div className="flex items-start gap-4 mb-6">
-              <div className="w-1 h-16 bg-[#f39c12] rounded-full"></div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900">{t("aboutPage.service")}</h2>
+            {/* Image Column */}
+            <div className="relative h-96 md:h-[500px] rounded-2xl overflow-hidden shadow-lg">
+              
             </div>
-            <p className="text-gray-700 leading-relaxed text-lg">{t("aboutPage.serviceText")}</p>
-          </div>
-        </section>
-
-        {/* Our Fleet Section */}
-        <section className="mb-20">
-          <div className="bg-gradient-to-br from-gray-50 to-white p-8 md:p-12 rounded-2xl shadow-sm border border-gray-100">
-            <div className="flex items-start gap-4 mb-6">
-              <div className="w-1 h-16 bg-[#f39c12] rounded-full"></div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900">{t("aboutPage.fleet")}</h2>
-            </div>
-            <p className="text-gray-700 leading-relaxed text-lg">{t("aboutPage.fleetText")}</p>
           </div>
         </section>
 
@@ -81,13 +83,11 @@ export default function AboutClientPage() {
                 <Building2 className="w-8 h-8 text-white/80" />
               </div>
               <div>
-                <p className="text-white/60 text-sm font-medium tracking-wider uppercase mb-2">Part of</p>
-                <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">The MFK Group</h3>
-                <p className="text-white/80 text-lg leading-relaxed">
-                  Limoz Rwanda Ltd operates under the MFK Group, a diversified conglomerate committed to excellence
-                  across multiple industries. This partnership strengthens our capacity to deliver world-class
-                  transportation and car rental services throughout Rwanda and the East African region.
+                <p className="text-white/60 text-sm font-medium tracking-wider uppercase mb-2">
+                  {t("aboutPage.mfkPartOf")}
                 </p>
+                <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">{t("aboutPage.mfkGroup")}</h3>
+                <p className="text-white/80 text-lg leading-relaxed">{t("aboutPage.mfkText")}</p>
               </div>
             </div>
           </div>
@@ -100,12 +100,9 @@ export default function AboutClientPage() {
               <div className="w-14 h-14 bg-[#f39c12]/10 rounded-full flex items-center justify-center flex-shrink-0">
                 <Eye className="w-7 h-7 text-[#f39c12]" />
               </div>
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Our Vision</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900">{t("aboutPage.vision")}</h2>
             </div>
-            <p className="text-gray-700 leading-relaxed text-lg">
-              To be the leading premium transportation and car rental company in Rwanda and the East African region,
-              setting the standard for excellence, reliability, and innovation in mobility services.
-            </p>
+            <p className="text-gray-700 leading-relaxed text-lg">{t("aboutPage.visionText")}</p>
           </div>
 
           <div className="bg-gradient-to-br from-[#f39c12]/5 to-white p-8 md:p-10 rounded-2xl shadow-sm border border-[#f39c12]/10">
@@ -113,12 +110,9 @@ export default function AboutClientPage() {
               <div className="w-14 h-14 bg-[#1e3a5f]/10 rounded-full flex items-center justify-center flex-shrink-0">
                 <Target className="w-7 h-7 text-[#1e3a5f]" />
               </div>
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Our Mission</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900">{t("aboutPage.mission")}</h2>
             </div>
-            <p className="text-gray-700 leading-relaxed text-lg">
-              To provide safe, comfortable, and professional transportation solutions that exceed client expectations
-              through a modern fleet, highly trained drivers, and an unwavering commitment to customer satisfaction.
-            </p>
+            <p className="text-gray-700 leading-relaxed text-lg">{t("aboutPage.missionText")}</p>
           </div>
         </section>
 

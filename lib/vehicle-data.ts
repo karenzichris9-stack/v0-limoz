@@ -109,18 +109,20 @@ export const vehicles: Vehicle[] = [
     id: "land-cruiser-lc300-v6",
     name: "Land Cruiser LC 300 V6",
     class: "VVIP",
-    image: "/lc300-exterior-front.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202026-03-17%20at%2013.19.43-RbOqtR37FFYmytUfMhhcMcWFEd3aib.png",
     images: {
-      exterior: ["/lc300-exterior-front.jpg", "/lc300-exterior-side.jpg"],
+      exterior: [
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202026-03-17%20at%2013.19.43-RbOqtR37FFYmytUfMhhcMcWFEd3aib.png",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202026-03-17%20at%2013.22.28-OSqTiX6wrsfunWbVaHzX0LE2gTD3Es.png",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202026-03-17%20at%2013.20.11-P5xqmD2INb6VhN18eeTIPafTvt2Kkd.png",
+      ],
       interior: [
-        "/lc300-interior-front-cabin.jpg",
-        "/lc300-interior-dashboard.jpg",
-        "/lc300-interior-infotainment.jpg",
-        "/lc300-interior-middle-seats.jpg",
-        "/lc300-interior-rear-screens.jpg",
-        "/lc300-interior-rear-view.jpg",
-        "/lc300-interior-sunroof-view.jpg",
-        "/lc300-interior-door-detail.jpg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5407-SzY9VRSIGt2vSaxEpspSJCc61OFnSn.jpg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5410-TohmOnnKfgtu4edwopPe4wHtWYPtci.jpg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5405-sWUw0ULMS75oggHeEbpCdgOapCwWzD.jpg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5404-M0CHhAL4u0DfuHGzbX2bcWjKA4DkZk.jpg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5403-a7I6MpTNea2GW7Ut2IdQJ5nV5dkAT6.jpg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5399-HnZFE7NHZ3t50tT1D4U9SOfWC947ui.jpg",
       ],
     },
     price: {
@@ -234,40 +236,7 @@ export const vehicles: Vehicle[] = [
       "The Mercedes-Benz S-Class represents the ultimate in automotive luxury. With its executive rear seating, cutting-edge technology, and whisper-quiet cabin, this flagship sedan is the preferred choice for VIP transportation and high-profile events.",
     available: true,
   },
-  {
-    id: "toyota-hilux",
-    name: "Toyota Hilux 2012",
-    class: "Safari",
-    image: "/toyota-hilux-2012.jpg",
-    images: {
-      exterior: ["/toyota-hilux-2012.jpg"],
-      interior: [],
-    },
-    price: {
-      daily: 150,
-      weekly: 900,
-      monthly: 3000,
-    },
-    specs: {
-      seats: 5,
-      transmission: "Automatic",
-      fuelType: "Diesel",
-      driveType: "4WD",
-      luggage: "8 Bags",
-      year: 2012,
-    },
-    features: [
-      "4WD System",
-      "Air Conditioning",
-      "Bluetooth Audio",
-      "Tough Suspension",
-      "High Ground Clearance",
-      "Tow Bar",
-    ],
-    description:
-      "The Toyota Hilux 2012 is a robust and reliable pickup truck, perfect for safari adventures and navigating rugged terrain. With its powerful engine and 4WD capability, it ensures you reach your destination with ease.",
-    available: true,
-  },
+
   {
     id: "byd-atto-3",
     name: "BYD Atto 3",
@@ -315,9 +284,12 @@ export const vehicles: Vehicle[] = [
     id: "land-cruiser-250-series",
     name: "Land Cruiser 250 Series",
     class: "VVIP",
-    image: "/land-cruiser-250-series.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202026-03-17%20at%2013.33.39-RtUQJqAFHRwXKrYfmex38gsD3XzX2b.png",
     images: {
-      exterior: ["/land-cruiser-250-series.jpg"],
+      exterior: [
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202026-03-17%20at%2013.33.39-RtUQJqAFHRwXKrYfmex38gsD3XzX2b.png",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202026-03-17%20at%2013.34.28-Rre05AHdaq8lKXEU7gEWMEhtaymptR.png",
+      ],
       interior: [
         "/land-cruiser-250-interior-1.jpg",
         "/land-cruiser-250-interior-2.jpg",

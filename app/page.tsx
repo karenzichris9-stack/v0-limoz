@@ -6,6 +6,7 @@ import { WhyChoose } from "@/components/why-choose"
 import { HowItWorks } from "@/components/how-it-works"
 import { Testimonials } from "@/components/testimonials"
 import { AppPromo } from "@/components/app-promo"
+import { Partners } from "@/components/partners"
 import { Footer } from "@/components/footer"
 import { FloatingCTA } from "@/components/floating-cta"
 import { StickyBookingBar } from "@/components/sticky-booking-bar"
@@ -21,6 +22,7 @@ export default function Home() {
       <WhyChoose />
       <HowItWorks />
       <Testimonials />
+      <Partners />
       <AppPromo />
       <Footer />
       <FloatingCTA />

@@ -12,7 +12,7 @@ export default function FleetClientPage() {
     {
       id: "land-cruiser-lc300-v6",
       name: "Land Cruiser LC 300 V6",
-      image: "/lc300-exterior-front.jpg",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202026-03-17%20at%2013.19.43-NNzu8LWFmY5AmEL2iMfIBW268YOIGQ.png",
       imagePosition: "object-center",
       features: [
         { icon: Wind, labelKey: "climate", valueKey: "triZoneClimate" },
@@ -25,7 +25,7 @@ export default function FleetClientPage() {
     {
       id: "land-cruiser-250-series",
       name: "Land Cruiser 250 Series",
-      image: "/land-cruiser-250-series.jpg",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202026-03-17%20at%2013.33.39-RtUQJqAFHRwXKrYfmex38gsD3XzX2b.png",
       imagePosition: "object-bottom",
       features: [
         { icon: Wind, labelKey: "climate", valueKey: "dualClimateControl" },
@@ -107,18 +107,6 @@ export default function FleetClientPage() {
 
   const utilityVehicles = [
     {
-      id: "toyota-hilux-2012",
-      name: "Toyota Hilux 2012",
-      image: "/toyota-hilux-double-cab.png",
-      features: [
-        { icon: Wind, labelKey: "climate", valueKey: "manualAC" },
-        { icon: Users, labelKey: "capacity", valueKey: "fiveSeater" },
-        { icon: Cog, labelKey: "transmission", valueKey: "manual" },
-        { icon: Package, labelKey: "cargo", valueKey: "doubleCabPickup" },
-        { icon: Shield, labelKey: "safety", valueKey: "durabilitySafety" },
-      ],
-    },
-    {
       id: "coaster-bus",
       name: "Coaster Bus",
       image: "/coaster-bus.jpg",
@@ -171,32 +159,31 @@ export default function FleetClientPage() {
         </div>
 
         {/* VVIP Class */}
-        <section className="mb-20">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-2">{t("fleet.vvipClass")}</h2>
-            <p className="text-gray-600">{t("fleet.vvipDesc")}</p>
+        <section className="mb-32">
+          <div className="mb-16 pl-6 border-l-4 border-[#E8A020]">
+            <h2 className="text-4xl font-bold mb-2 text-gray-900">{t("fleet.vvipClass")}</h2>
+            <p className="text-gray-600 text-lg">{t("fleet.vvipDesc")}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {vvipFleet.map((vehicle, index) => (
               <Link
                 key={index}
                 href={`/vehicles/${vehicle.id}`}
-                className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-2xl transition-all hover:scale-105 group block"
+                className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-2xl transition-all hover:scale-105 group block h-full flex flex-col"
               >
-                <div
-                  className={`aspect-[4/3] bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden flex items-center justify-center ${vehicle.isExecutiveVan ? "executive-van-image" : ""}`}
-                >
+                <div className="h-72 w-full overflow-hidden flex items-center justify-center flex-shrink-0">
                   <img
                     src={vehicle.image || "/placeholder.svg"}
                     alt={vehicle.name}
-                    className={`w-full h-full ${vehicle.useContain ? "object-contain p-2" : "object-cover"} ${vehicle.imagePosition || "object-center"} ${vehicle.useContain ? "group-hover:scale-100" : "group-hover:scale-105"} transition-transform duration-300`}
+                    loading="lazy"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <div className="p-6">
-                  <h3 className="text-2xl font-bold mb-6 text-gray-900">{vehicle.name}</h3>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-                    {vehicle.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-start gap-3">
+                <div className="p-6 flex flex-col flex-grow">
+                  <h3 className="text-xl font-bold mb-4 text-gray-900">{vehicle.name}</h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6 flex-grow">
+                    {vehicle.features.slice(0, 4).map((feature, idx) => (
+                      <div key={idx} className="flex items-start gap-2">
                         <div className="p-2 bg-[#f39c12]/10 rounded-lg flex-shrink-0">
                           <feature.icon className="w-4 h-4 text-[#f39c12]" />
                         </div>
@@ -207,7 +194,7 @@ export default function FleetClientPage() {
                       </div>
                     ))}
                   </div>
-                  <Button className="w-full bg-[#f39c12] hover:bg-[#e67e22] text-white">
+                  <Button className="w-full bg-[#f39c12] hover:bg-[#e67e22] text-white mt-auto">
                     {t("fleet.viewDetails")}
                   </Button>
                 </div>
@@ -217,29 +204,30 @@ export default function FleetClientPage() {
         </section>
 
         {/* VIP Class */}
-        <section className="mb-20">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-2">{t("fleet.vipClass")}</h2>
-            <p className="text-gray-600">{t("fleet.vipDesc")}</p>
+        <section className="mb-32">
+          <div className="mb-16 pl-6 border-l-4 border-[#E8A020]">
+            <h2 className="text-4xl font-bold mb-2 text-gray-900">{t("fleet.vipClass")}</h2>
+            <p className="text-gray-600 text-lg">{t("fleet.vipDesc")}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {vipVehicles.map((vehicle, index) => (
               <div
                 key={index}
-                className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-2xl transition-all hover:scale-105 group"
+                className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-2xl transition-all hover:scale-105 group h-full flex flex-col"
               >
-                <div className="aspect-[4/3] bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden flex items-center justify-center">
+                <div className="h-72 w-full overflow-hidden flex items-center justify-center flex-shrink-0">
                   <img
                     src={vehicle.image || "/placeholder.svg"}
                     alt={vehicle.name}
-                    className={`w-full h-full object-cover ${vehicle.imagePosition || "object-center"} group-hover:scale-105 transition-transform duration-300`}
+                    loading="lazy"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <div className="p-6">
-                  <h3 className="text-2xl font-bold mb-6 text-gray-900">{vehicle.name}</h3>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-                    {vehicle.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-start gap-3">
+                <div className="p-6 flex flex-col flex-grow">
+                  <h3 className="text-xl font-bold mb-4 text-gray-900">{vehicle.name}</h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6 flex-grow">
+                    {vehicle.features.slice(0, 4).map((feature, idx) => (
+                      <div key={idx} className="flex items-start gap-2">
                         <div className="p-2 bg-[#f39c12]/10 rounded-lg flex-shrink-0">
                           <feature.icon className="w-4 h-4 text-[#f39c12]" />
                         </div>
@@ -251,7 +239,7 @@ export default function FleetClientPage() {
                     ))}
                   </div>
                   <Link href="/booking">
-                    <Button className="w-full bg-[#f39c12] hover:bg-[#e67e22] text-white">{t("fleet.bookNow")}</Button>
+                    <Button className="w-full bg-[#f39c12] hover:bg-[#e67e22] text-white mt-auto">{t("fleet.bookNow")}</Button>
                   </Link>
                 </div>
               </div>
@@ -260,29 +248,30 @@ export default function FleetClientPage() {
         </section>
 
         {/* Utility Vehicles */}
-        <section className="mb-20">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-2">{t("fleet.utilityVehicles")}</h2>
-            <p className="text-gray-600">{t("fleet.utilityDesc")}</p>
+        <section className="mb-32">
+          <div className="mb-16 pl-6 border-l-4 border-[#E8A020]">
+            <h2 className="text-4xl font-bold mb-2 text-gray-900">{t("fleet.utilityVehicles")}</h2>
+            <p className="text-gray-600 text-lg">{t("fleet.utilityDesc")}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {utilityVehicles.map((vehicle, index) => (
               <div
                 key={index}
-                className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-2xl transition-all hover:scale-105 group"
+                className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-2xl transition-all hover:scale-105 group h-full flex flex-col"
               >
-                <div className="aspect-[4/3] bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden flex items-center justify-center">
+                <div className="h-72 w-full overflow-hidden flex items-center justify-center flex-shrink-0">
                   <img
                     src={vehicle.image || "/placeholder.svg"}
                     alt={vehicle.name}
-                    className={`w-full h-full object-cover ${vehicle.imagePosition || "object-center"} group-hover:scale-105 transition-transform duration-300`}
+                    loading="lazy"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <div className="p-6">
-                  <h3 className="text-2xl font-bold mb-6 text-gray-900">{vehicle.name}</h3>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-                    {vehicle.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-start gap-3">
+                <div className="p-6 flex flex-col flex-grow">
+                  <h3 className="text-xl font-bold mb-4 text-gray-900">{vehicle.name}</h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6 flex-grow">
+                    {vehicle.features.slice(0, 4).map((feature, idx) => (
+                      <div key={idx} className="flex items-start gap-2">
                         <div className="p-2 bg-[#f39c12]/10 rounded-lg flex-shrink-0">
                           <feature.icon className="w-4 h-4 text-[#f39c12]" />
                         </div>
@@ -294,7 +283,7 @@ export default function FleetClientPage() {
                     ))}
                   </div>
                   <Link href="/booking">
-                    <Button className="w-full bg-[#f39c12] hover:bg-[#e67e22] text-white">{t("fleet.bookNow")}</Button>
+                    <Button className="w-full bg-[#f39c12] hover:bg-[#e67e22] text-white mt-auto">{t("fleet.bookNow")}</Button>
                   </Link>
                 </div>
               </div>
@@ -304,23 +293,24 @@ export default function FleetClientPage() {
 
         {/* Safari Cars */}
         <section>
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-2">{t("fleet.safariCars")}</h2>
-            <p className="text-gray-600">{t("fleet.safariDesc")}</p>
+          <div className="mb-16 pl-6 border-l-4 border-[#E8A020]">
+            <h2 className="text-4xl font-bold mb-2 text-gray-900">{t("fleet.safariCars")}</h2>
+            <p className="text-gray-600 text-lg">{t("fleet.safariDesc")}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-2xl transition-all hover:scale-105 group">
-              <div className="aspect-[4/3] bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden flex items-center justify-center">
-                <img
-                  src="/safari-land-cruiser-with-pop-up-roof.jpg"
-                  alt="Safari Land Cruiser"
-                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-2xl font-bold mb-4 text-gray-900">Safari Land Cruiser</h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-                  <div className="flex items-start gap-3">
+            <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-2xl transition-all hover:scale-105 group h-full flex flex-col">
+                <div className="h-72 w-full overflow-hidden flex items-center justify-center flex-shrink-0">
+                  <img
+                    src="/safari-land-cruiser-with-pop-up-roof.jpg"
+                    alt="Safari Land Cruiser"
+                    loading="lazy"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              <div className="p-6 flex flex-col flex-grow">
+                <h3 className="text-xl font-bold mb-4 text-gray-900">Safari Land Cruiser</h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6 flex-grow">
+                  <div className="flex items-start gap-2">
                     <div className="p-2 bg-[#f39c12]/10 rounded-lg flex-shrink-0">
                       <Car className="w-4 h-4 text-[#f39c12]" />
                     </div>
@@ -329,7 +319,7 @@ export default function FleetClientPage() {
                       <p className="text-sm text-gray-900 font-semibold break-words">{t("fleet.popUpRoof")}</p>
                     </div>
                   </div>
-                  <div className="flex items-start gap-3">
+                  <div className="flex items-start gap-2">
                     <div className="p-2 bg-[#f39c12]/10 rounded-lg flex-shrink-0">
                       <Users className="w-4 h-4 text-[#f39c12]" />
                     </div>
@@ -340,22 +330,23 @@ export default function FleetClientPage() {
                   </div>
                 </div>
                 <Link href="/booking">
-                  <Button className="w-full bg-[#f39c12] hover:bg-[#e67e22] text-white">{t("fleet.bookSafari")}</Button>
+                  <Button className="w-full bg-[#f39c12] hover:bg-[#e67e22] text-white mt-auto">{t("fleet.bookSafari")}</Button>
                 </Link>
               </div>
             </div>
-            <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-2xl transition-all hover:scale-105 group">
-              <div className="aspect-[4/3] bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden flex items-center justify-center">
+            <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-2xl transition-all hover:scale-105 group h-full flex flex-col">
+              <div className="h-72 w-full overflow-hidden flex items-center justify-center flex-shrink-0">
                 <img
                   src="/safari-4x4-vehicle-with-open-roof.jpg"
                   alt="Safari 4x4"
-                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <div className="p-6">
-                <h3 className="text-2xl font-bold mb-4 text-gray-900">Safari 4x4</h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-                  <div className="flex items-start gap-3">
+              <div className="p-6 flex flex-col flex-grow">
+                <h3 className="text-xl font-bold mb-4 text-gray-900">Safari 4x4</h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6 flex-grow">
+                  <div className="flex items-start gap-2">
                     <div className="p-2 bg-[#f39c12]/10 rounded-lg flex-shrink-0">
                       <Car className="w-4 h-4 text-[#f39c12]" />
                     </div>
@@ -364,7 +355,7 @@ export default function FleetClientPage() {
                       <p className="text-sm text-gray-900 font-semibold break-words">{t("fleet.openRoof")}</p>
                     </div>
                   </div>
-                  <div className="flex items-start gap-3">
+                  <div className="flex items-start gap-2">
                     <div className="p-2 bg-[#f39c12]/10 rounded-lg flex-shrink-0">
                       <Users className="w-4 h-4 text-[#f39c12]" />
                     </div>
@@ -375,7 +366,7 @@ export default function FleetClientPage() {
                   </div>
                 </div>
                 <Link href="/booking">
-                  <Button className="w-full bg-[#f39c12] hover:bg-[#e67e22] text-white">{t("fleet.bookSafari")}</Button>
+                  <Button className="w-full bg-[#f39c12] hover:bg-[#e67e22] text-white mt-auto">{t("fleet.bookSafari")}</Button>
                 </Link>
               </div>
             </div>

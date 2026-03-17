@@ -15,6 +15,8 @@ export function Testimonials() {
       quoteKey: "testimonials.quote",
       authorKey: "testimonials.author",
       roleKey: "testimonials.role1",
+      company: "The Serena Hotel",
+      initials: "TR",
       rating: 5,
       location: "Kigali",
     },
@@ -22,6 +24,8 @@ export function Testimonials() {
       quoteKey: "testimonials.quote2",
       author: "Marie Claire",
       roleKey: "testimonials.role2",
+      company: "Musanze Tourism",
+      initials: "MC",
       rating: 5,
       location: "Musanze",
     },
@@ -29,6 +33,8 @@ export function Testimonials() {
       quoteKey: "testimonials.quote3",
       author: "James Wilson",
       roleKey: "testimonials.role3",
+      company: "Safari Adventures",
+      initials: "JW",
       rating: 5,
       location: "Akagera",
     },
@@ -109,16 +115,19 @@ export function Testimonials() {
                 </p>
 
                 <div className="flex items-center justify-center gap-4">
-                  <Avatar className="w-14 h-14 bg-gradient-to-br from-[#f39c12] to-[#e67e22] ring-4 ring-[#f39c12]/20">
-                    <AvatarFallback className="bg-transparent text-white font-bold">
-                      {(testimonials[activeIndex].authorKey ? t(testimonials[activeIndex].authorKey!) : testimonials[activeIndex].author!).charAt(0)}
+                  <Avatar className="w-16 h-16 bg-gradient-to-br from-[#f39c12] to-[#e67e22] ring-4 ring-[#f39c12]/20 flex items-center justify-center">
+                    <AvatarFallback className="bg-transparent text-white font-bold text-xl">
+                      {testimonials[activeIndex].initials}
                     </AvatarFallback>
                   </Avatar>
                   <div className="text-left">
                     <p className="font-bold text-gray-900 text-lg">
                       {testimonials[activeIndex].authorKey ? t(testimonials[activeIndex].authorKey!) : testimonials[activeIndex].author}
                     </p>
-                    <p className="text-sm text-gray-500">
+                    <p className="text-sm text-gray-600 font-medium">
+                      {testimonials[activeIndex].company}
+                    </p>
+                    <p className="text-xs text-gray-500">
                       {t(testimonials[activeIndex].roleKey)} • {testimonials[activeIndex].location}
                     </p>
                   </div>
