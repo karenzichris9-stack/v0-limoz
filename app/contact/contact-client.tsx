@@ -177,8 +177,8 @@ export default function ContactPageClient() {
         <hr className="my-16" />
 
         <div className="mt-12 mb-16">
-          <h2 className="text-3xl font-bold mb-2 text-gray-900">{t("contact.faq.title")}</h2>
-          <p className="text-gray-600 mb-8 text-lg">{t("contact.faq.subtitle")}</p>
+          <h2 className="text-3xl font-bold mb-2 text-gray-900">Frequently Asked Questions</h2>
+          <p className="text-gray-600 mb-8 text-lg">Find answers to common questions about our services, fleet, and booking process.</p>
 
           <div className="space-y-3 max-w-4xl">
             {faqItems.map((item, index) => (
