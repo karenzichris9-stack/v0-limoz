@@ -14,7 +14,7 @@ export function Partners() {
     },
     {
       name: "Anko Properties Limited",
-      logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ANKO%20PROPERTIES-CeO4shZ2XRnzDBrcuGfYVEsiuxWMGG.png",
+      logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ANKO%20PROPERTIES-4IK1Sa2GGSQorwTg7ds5P0GCvIjrnn.png",
       alt: "Anko Properties Limited"
     },
     {
