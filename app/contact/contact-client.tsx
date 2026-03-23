@@ -74,14 +74,19 @@ export default function ContactPageClient() {
   }
 
   return (
-    <div className="min-h-screen bg-white pt-24">
-      <div className="container mx-auto px-4 py-12">
-        {/* Contact Information */}
-        <div>
-          <h2 className="text-2xl font-bold mb-6">{t("contact.title")}</h2>
-          <p className="text-gray-700 mb-8 leading-relaxed">{t("contact.description")}</p>
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-24">
+      <div className="container mx-auto px-4 max-w-6xl py-12">
+        {/* Header Section */}
+        <div className="mb-16">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">{t("contact.title")}</h1>
+          <p className="text-lg text-gray-600 leading-relaxed max-w-3xl">{t("contact.description")}</p>
+        </div>
 
-          <div className="space-y-6">
+        {/* Contact Information Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+          <div>
+            <h2 className="text-2xl font-bold mb-8 text-gray-900">Get in Touch</h2>
+            <div className="space-y-6">
             <div className="flex items-start gap-4">
               <div className="w-12 h-12 bg-[#f39c12] rounded-full flex items-center justify-center flex-shrink-0">
                 <MapPin className="w-6 h-6 text-white" />
@@ -158,13 +163,26 @@ export default function ContactPageClient() {
               </div>
             </div>
           </div>
+
+          {/* Image Column */}
+          <div className="relative hidden md:block">
+            <div className="bg-gradient-to-br from-[#f39c12]/10 to-[#1e3a5f]/5 rounded-2xl p-8 h-full flex items-center justify-center">
+              <div className="text-center">
+                <div className="text-6xl mb-4">📞</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">We're Here to Help</h3>
+                <p className="text-gray-600 leading-relaxed">Contact us anytime. Our team is ready to assist you with all your transportation needs in Rwanda.</p>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div className="mt-16">
-          <h2 className="text-2xl font-bold mb-2">{t("contact.faq.title")}</h2>
-          <p className="text-gray-600 mb-8">{t("contact.faq.subtitle")}</p>
+        <hr className="my-16" />
 
-          <div className="space-y-4">
+        <div className="mt-12 mb-16">
+          <h2 className="text-3xl font-bold mb-2 text-gray-900">{t("contact.faq.title")}</h2>
+          <p className="text-gray-600 mb-8 text-lg">{t("contact.faq.subtitle")}</p>
+
+          <div className="space-y-3 max-w-4xl">
             {faqItems.map((item, index) => (
               <div key={index} className="border border-gray-200 rounded-lg overflow-hidden">
                 <button
@@ -191,9 +209,9 @@ export default function ContactPageClient() {
         </div>
 
         {/* Rate Our Services Section */}
-        <div className="bg-gray-50 p-8 rounded-lg mt-12">
-          <h2 className="text-2xl font-bold mb-2">{t("contact.rateTitle")}</h2>
-          <p className="text-gray-600 mb-6">{t("contact.rateSubtitle")}</p>
+        <div className="bg-gradient-to-br from-gray-50 to-gray-100 p-12 rounded-2xl mt-16 border border-gray-200 max-w-2xl">
+          <h2 className="text-3xl font-bold mb-2 text-gray-900">{t("contact.rateTitle")}</h2>
+          <p className="text-gray-600 mb-8">{t("contact.rateSubtitle")}</p>
 
           {submitStatus.type && (
             <div

@@ -69,8 +69,14 @@ export default function AboutClientPage() {
             </div>
 
             {/* Image Column */}
-            <div className="relative h-96 md:h-[500px] rounded-2xl overflow-hidden shadow-lg">
-              
+            <div className="relative h-96 md:h-[500px] rounded-2xl overflow-hidden shadow-lg w-full">
+              <Image
+                src="/lc300-about-section.jpg"
+                alt="Limoz Rwanda Fleet Excellence"
+                fill
+                className="object-cover object-center"
+                priority
+              />
             </div>
           </div>
         </section>
