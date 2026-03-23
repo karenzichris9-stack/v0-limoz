@@ -24,34 +24,33 @@ export default function ContactPageClient() {
 
   const faqItems: FAQItem[] = [
     {
-      question: t("contact.faq.q1"),
-      answer: t("contact.faq.a1"),
+      question: "How do I make a booking with Limoz Rwanda?",
+      answer: "You can book directly through our website on the Booking page, send us an email at bookings@limozrwanda.com, or reach us instantly via WhatsApp at +250 788 318 990.",
     },
     {
-      question: t("contact.faq.q2"),
-      answer: t("contact.faq.a2"),
+      question: "Do you offer airport pickup and drop-off services?",
+      answer: "Yes! We provide reliable airport transfers to and from Kigali International Airport (RwandAir Hub). Simply share your flight details when booking and our driver will be there on time.",
     },
     {
-      question: t("contact.faq.q3"),
-      answer: t("contact.faq.a3"),
+      question: "Can I hire a car with a driver?",
+      answer: "Absolutely. All our vehicles come with professional, English-speaking drivers who know Kigali and Rwanda well. Self-drive options may also be available — contact us to discuss your needs.",
     },
     {
-      question: t("contact.faq.q4"),
-      answer: t("contact.faq.a4"),
+      question: "What types of vehicles do you have available?",
+      answer: "Our fleet includes sedans, SUVs, minivans, and safari-ready 4x4 vehicles. Visit our Fleet page to see the full range and choose the right vehicle for your trip.",
     },
     {
-      question: t("contact.faq.q5"),
-      answer: t("contact.faq.a5"),
+      question: "Do you organize safaris and tours outside Kigali?",
+      answer: "Yes, we offer guided tours and safaris across Rwanda, including Volcanoes National Park (gorilla trekking), Akagera National Park, and Nyungwe Forest. See our Tours & Safaris page for details.",
     },
     {
-      question: t("contact.faq.q6"),
-      answer: t("contact.faq.a6"),
+      question: "What are your operating hours?",
+      answer: "We are available 7 days a week. For urgent bookings or last-minute requests, you can reach us via WhatsApp at any time.",
     },
     {
-      question: t("contact.faq.q7"),
-      answer: t("contact.faq.a7"),
+      question: "What payment methods do you accept?",
+      answer: "We accept Mobile Money (MTN & Airtel), bank transfers, and cash payments in Rwandan Francs (RWF) or USD. Please confirm your preferred method when making a booking.",
     },
-
   ]
 
   async function handleReviewSubmit(e: React.FormEvent<HTMLFormElement>) {
