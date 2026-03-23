@@ -183,12 +183,15 @@ export default function ContactPageClient() {
           <div className="space-y-3 max-w-4xl">
             {faqItems.map((item, index) => (
               <div key={index} className="border border-gray-200 rounded-lg overflow-hidden">
-            <button
-              type="submit"
-              className="w-full bg-[#f39c12] hover:bg-[#e88a0e] text-white font-semibold py-3 rounded transition-colors duration-200"
-            >
-              Submit Review
-            </button>
+                <button
+                  onClick={() => setOpenFAQ(openFAQ === index ? -1 : index)}
+                  className="w-full bg-[#f39c12] hover:bg-[#e88a0e] text-white font-semibold py-4 px-4 text-left flex items-center justify-between transition-colors duration-200"
+                >
+                  <span>{item.question}</span>
+                  <span className={`transform transition-transform ${openFAQ === index ? "rotate-180" : ""}`}>
+                    ▼
+                  </span>
+                </button>
                 <div
                   className={`overflow-hidden transition-all duration-300 ${
                     openFAQ === index ? "max-h-96" : "max-h-0"
