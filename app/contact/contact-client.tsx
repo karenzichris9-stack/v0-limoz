@@ -63,7 +63,7 @@ export default function ContactPageClient() {
 
     setSubmitStatus({
       type: "success",
-      message: t("contact.reviewSuccess"),
+      message: "Thank you! Your review has been submitted successfully. We appreciate your feedback!",
     })
 
     // Reset form
@@ -162,6 +162,7 @@ export default function ContactPageClient() {
                 </div>
               </div>
             </div>
+          </div>
 
           {/* Image Column */}
           <div className="relative hidden md:block">
@@ -246,11 +247,11 @@ export default function ContactPageClient() {
               </div>
               {rating > 0 && (
                 <p className="text-sm text-gray-600 mt-2">
-                  {rating === 1 && t("contact.rating1")}
-                  {rating === 2 && t("contact.rating2")}
-                  {rating === 3 && t("contact.rating3")}
-                  {rating === 4 && t("contact.rating4")}
-                  {rating === 5 && t("contact.rating5")}
+                  {rating === 1 && "Poor experience"}
+                  {rating === 2 && "Fair experience"}
+                  {rating === 3 && "Good experience"}
+                  {rating === 4 && "Great experience"}
+                  {rating === 5 && "Excellent experience"}
                 </p>
               )}
             </div>
@@ -289,7 +290,7 @@ export default function ContactPageClient() {
               disabled={isSubmitting || rating === 0}
               className="w-full bg-[#f39c12] text-white py-3 rounded hover:bg-[#e08e0b] transition-colors font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {isSubmitting ? t("contact.submitting") : t("contact.submitReview")}
+              {isSubmitting ? "Submitting..." : "Submit Review"}
             </button>
           </form>
         </div>
