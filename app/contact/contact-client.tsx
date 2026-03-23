@@ -77,8 +77,8 @@ export default function ContactPageClient() {
       <div className="container mx-auto px-4 max-w-6xl py-12">
         {/* Header Section */}
         <div className="mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">{t("contact.title")}</h1>
-          <p className="text-lg text-gray-600 leading-relaxed max-w-3xl">{t("contact.description")}</p>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">Get in Touch With Limoz Rwanda</h1>
+          <p className="text-lg text-gray-600 leading-relaxed max-w-3xl">Have questions? We're here to help! Contact us through any of our channels and our team will respond promptly to assist you with your transportation needs.</p>
         </div>
 
         {/* Contact Information Grid */}
@@ -91,13 +91,14 @@ export default function ContactPageClient() {
                   <MapPin className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="font-semibold mb-1">{t("contact.address")}</h3>
-                  Kacyiru plot 20, Gasabo district
-                  <br />
-                  Near Police Headquarters
-                  <br />
-                  Kigali, Rwanda
-                </p>
+                  <h3 className="font-semibold mb-1">Address</h3>
+                  <p className="text-gray-700">
+                    Kacyiru plot 20, Gasabo district
+                    <br />
+                    Near Police Headquarters
+                    <br />
+                    Kigali, Rwanda
+                  </p>
                 </div>
               </div>
 
@@ -106,7 +107,7 @@ export default function ContactPageClient() {
                   <Phone className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="font-semibold mb-1">{t("contact.phone")}</h3>
+                  <h3 className="font-semibold mb-1">Phone</h3>
                   <p className="text-gray-700">
                     +250 788 123 456
                     <br />
@@ -122,7 +123,7 @@ export default function ContactPageClient() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-semibold mb-1">{t("contact.whatsapp")}</h3>
+                  <h3 className="font-semibold mb-1">WhatsApp</h3>
                   <a
                     href="https://wa.me/250788318990"
                     target="_blank"
@@ -139,7 +140,7 @@ export default function ContactPageClient() {
                   <Mail className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="font-semibold mb-1">{t("contact.email")}</h3>
+                  <h3 className="font-semibold mb-1">Email</h3>
                   <p className="text-gray-700">
                     info@limozrwanda.com
                     <br />
@@ -153,11 +154,11 @@ export default function ContactPageClient() {
                   <Clock className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="font-semibold mb-1">{t("contact.hours")}</h3>
-                  <p
-                    className="text-gray-700"
-                    dangerouslySetInnerHTML={{ __html: t("contact.hoursValue").replace(/\n/g, "<br />") }}
-                  />
+                  <h3 className="font-semibold mb-1">Operating Hours</h3>
+                  <p className="text-gray-700">
+                    Monday - Sunday: 7:00 AM - 8:00 PM<br />
+                    Emergency bookings available 24/7 via WhatsApp
+                  </p>
                 </div>
               </div>
             </div>
