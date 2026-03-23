@@ -183,17 +183,12 @@ export default function ContactPageClient() {
           <div className="space-y-3 max-w-4xl">
             {faqItems.map((item, index) => (
               <div key={index} className="border border-gray-200 rounded-lg overflow-hidden">
-                <button
-                  onClick={() => setOpenFAQ(openFAQ === index ? null : index)}
-                  className="w-full flex items-center justify-between p-4 text-left bg-gray-50 hover:bg-gray-100 transition-colors"
-                >
-                  <span className="font-semibold text-gray-800">{item.question}</span>
-                  <ChevronDown
-                    className={`w-5 h-5 text-[#f39c12] transition-transform duration-300 ${
-                      openFAQ === index ? "rotate-180" : ""
-                    }`}
-                  />
-                </button>
+            <button
+              type="submit"
+              className="w-full bg-[#f39c12] hover:bg-[#e88a0e] text-white font-semibold py-3 rounded transition-colors duration-200"
+            >
+              Submit Review
+            </button>
                 <div
                   className={`overflow-hidden transition-all duration-300 ${
                     openFAQ === index ? "max-h-96" : "max-h-0"
@@ -208,8 +203,8 @@ export default function ContactPageClient() {
 
         {/* Rate Our Services Section */}
         <div className="bg-gradient-to-br from-gray-50 to-gray-100 p-12 rounded-2xl mt-16 border border-gray-200 max-w-2xl">
-          <h2 className="text-3xl font-bold mb-2 text-gray-900">{t("contact.rateTitle")}</h2>
-          <p className="text-gray-600 mb-8">{t("contact.rateSubtitle")}</p>
+          <h2 className="text-3xl font-bold mb-2 text-gray-900">Rate Our Services</h2>
+          <p className="text-gray-600 mb-8">Tell us about your experience with Limoz Rwanda. Your feedback helps us improve!</p>
 
           {submitStatus.type && (
             <div
@@ -226,7 +221,7 @@ export default function ContactPageClient() {
           <form className="space-y-6" onSubmit={handleReviewSubmit}>
             {/* Star Rating */}
             <div>
-              <label className="block text-sm font-medium mb-3">{t("contact.yourRating")} *</label>
+              <label className="block text-sm font-medium mb-3">Your Rating *</label>
               <div className="flex gap-2">
                 {[1, 2, 3, 4, 5].map((star) => (
                   <button
@@ -257,7 +252,7 @@ export default function ContactPageClient() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium mb-2">{t("contact.yourName")} *</label>
+              <label className="block text-sm font-medium mb-2">Your Name *</label>
               <input
                 type="text"
                 name="name"
@@ -267,7 +262,7 @@ export default function ContactPageClient() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium mb-2">{t("contact.emailAddress")}</label>
+              <label className="block text-sm font-medium mb-2">Email Address</label>
               <input
                 type="email"
                 name="email"
@@ -276,12 +271,11 @@ export default function ContactPageClient() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium mb-2">{t("contact.reviewText")} *</label>
+              <label className="block text-sm font-medium mb-2">Your Review *</label>
               <textarea
                 name="review"
-                rows={5}
                 required
-                placeholder={t("contact.reviewPlaceholder")}
+                placeholder="Share your experience with Limoz Rwanda..."
                 className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-[#f39c12] bg-white"
               ></textarea>
             </div>

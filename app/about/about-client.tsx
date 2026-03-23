@@ -33,7 +33,7 @@ export default function AboutClientPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             <div className="text-center">
               <div className="text-4xl md:text-5xl font-bold text-[#ffd700] mb-2 drop-shadow-lg">50+</div>
-              <p className="text-white text-sm md:text-base font-medium drop-shadow-lg">{t("aboutPage.statsVehicles") || "Vehicles"}</p>
+              <p className="text-white text-sm md:text-base font-medium drop-shadow-lg opacity-0">{t("aboutPage.statsVehicles") || "Vehicles"}</p>
             </div>
             <div className="text-center">
               <div className="text-4xl md:text-5xl font-bold text-[#ffd700] mb-2 drop-shadow-lg">5+</div>
