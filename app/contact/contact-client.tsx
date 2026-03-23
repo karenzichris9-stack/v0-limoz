@@ -87,7 +87,7 @@ export default function ContactPageClient() {
           <div>
             <h2 className="text-2xl font-bold mb-8 text-gray-900">Get in Touch</h2>
             <div className="space-y-6">
-            <div className="flex items-start gap-4">
+              <div className="flex items-start gap-4">
               <div className="w-12 h-12 bg-[#f39c12] rounded-full flex items-center justify-center flex-shrink-0">
                 <MapPin className="w-6 h-6 text-white" />
               </div>
