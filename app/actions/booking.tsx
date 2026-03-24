@@ -13,21 +13,29 @@ export async function submitBooking(formData: FormData) {
     const phone = formData.get("phone") as string
     const vehicleType = formData.get("vehicleType") as string
     const pickupDate = formData.get("pickupDate") as string
-    const duration = formData.get("duration") as string
+    const dropOffDate = formData.get("dropOffDate") as string
     const notes = formData.get("notes") as string
 
     // Validate required fields
-    if (!fullName || !email || !phone || !vehicleType || !pickupDate || !duration) {
+    if (!fullName || !email || !phone || !vehicleType || !pickupDate || !dropOffDate) {
       console.log("[v0] Booking validation failed - missing required fields")
+      console.log("[v0] Received: fullName:", fullName, "email:", email, "phone:", phone, "vehicleType:", vehicleType, "pickupDate:", pickupDate, "dropOffDate:", dropOffDate)
       return {
         success: false,
         message: "Please fill in all required fields",
       }
     }
 
+    // Calculate duration in days
+    const pickup = new Date(pickupDate)
+    const dropOff = new Date(dropOffDate)
+    const duration = Math.ceil((dropOff.getTime() - pickup.getTime()) / (1000 * 60 * 60 * 24))
+
     console.log("[v0] Sending booking email to bookings@limozrwanda.com")
     console.log("[v0] Vehicle type:", vehicleType)
     console.log("[v0] Pickup date:", pickupDate)
+    console.log("[v0] Drop-off date:", dropOffDate)
+    console.log("[v0] Duration:", duration, "days")
 
     const result = await resend.emails.send({
       from: "Limoz Rwanda <onboarding@resend.dev>",
@@ -50,7 +58,8 @@ export async function submitBooking(formData: FormData) {
             <h3 style="color: #333; margin-top: 0;">Booking Details</h3>
             <p><strong>Vehicle Type:</strong> ${vehicleType}</p>
             <p><strong>Pickup Date:</strong> ${pickupDate}</p>
-            <p><strong>Duration:</strong> ${duration}</p>
+            <p><strong>Drop-off Date:</strong> ${dropOffDate}</p>
+            <p><strong>Duration:</strong> ${duration} day(s)</p>
           </div>
           
           ${
