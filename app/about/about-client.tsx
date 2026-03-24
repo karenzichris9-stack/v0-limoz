@@ -28,24 +28,24 @@ export default function AboutClientPage() {
       </div>
 
       {/* Stats Section */}
-      <div className="w-full bg-white py-8 md:py-10 px-4">
+      <div className="w-full bg-white py-5 md:py-6 px-4">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4">
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-[#f39c12] mb-1">50+</div>
-              <p className="text-gray-700 text-xs md:text-sm font-medium">Vehicles in Fleet</p>
+              <div className="text-2xl md:text-3xl font-bold text-[#f39c12]">50+</div>
+              <p className="text-gray-700 text-xs font-medium">Vehicles</p>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-[#f39c12] mb-1">5+</div>
-              <p className="text-gray-700 text-xs md:text-sm font-medium">Years Experience</p>
+              <div className="text-2xl md:text-3xl font-bold text-[#f39c12]">5+</div>
+              <p className="text-gray-700 text-xs font-medium">Years</p>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-[#f39c12] mb-1">1000+</div>
-              <p className="text-gray-700 text-xs md:text-sm font-medium">Happy Clients</p>
+              <div className="text-2xl md:text-3xl font-bold text-[#f39c12]">1000+</div>
+              <p className="text-gray-700 text-xs font-medium">Clients</p>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-[#f39c12] mb-1">24/7</div>
-              <p className="text-gray-700 text-xs md:text-sm font-medium">Support Available</p>
+              <div className="text-2xl md:text-3xl font-bold text-[#f39c12]">24/7</div>
+              <p className="text-gray-700 text-xs font-medium">Support</p>
             </div>
           </div>
         </div>
