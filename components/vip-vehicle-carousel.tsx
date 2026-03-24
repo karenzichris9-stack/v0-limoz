@@ -41,7 +41,7 @@ const vipVehicles = [
   {
     name: "Mercedes-Benz S-Class",
     type: "VVIP Class",
-    image: "/mercedes-s-class.jpg",
+    image: "/mercedes-e-benz-uk-plate-1.jpg",
     seats: 5,
     transmission: "Automatic",
     fuelType: "Petrol",
