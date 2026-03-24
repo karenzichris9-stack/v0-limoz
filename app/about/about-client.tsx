@@ -33,7 +33,7 @@ export default function AboutClientPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             <div className="text-center">
               <div className="text-4xl md:text-5xl font-bold text-[#ffd700] mb-2 drop-shadow-lg">50+</div>
-              <p className="text-white text-sm md:text-base font-medium drop-shadow-lg">{t("aboutPage.statsVehicles") || "Vehicles"}</p>
+              <p className="text-white text-sm md:text-base font-medium drop-shadow-lg opacity-0">{t("aboutPage.statsVehicles") || "Vehicles"}</p>
             </div>
             <div className="text-center">
               <div className="text-4xl md:text-5xl font-bold text-[#ffd700] mb-2 drop-shadow-lg">5+</div>
@@ -69,8 +69,14 @@ export default function AboutClientPage() {
             </div>
 
             {/* Image Column */}
-            <div className="relative h-96 md:h-[500px] rounded-2xl overflow-hidden shadow-lg">
-              
+            <div className="relative h-96 md:h-[500px] rounded-2xl overflow-hidden shadow-lg w-full">
+              <Image
+                src="/lc300-about-section.jpg"
+                alt="Limoz Rwanda Fleet Excellence"
+                fill
+                className="object-cover object-center"
+                priority
+              />
             </div>
           </div>
         </section>
