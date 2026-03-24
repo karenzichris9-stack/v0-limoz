@@ -76,7 +76,7 @@ export default function ContactPageClient() {
     } catch (error) {
       setSubmitStatus({
         type: "error",
-        message: "An error occurred. Please try again later.",
+        message: "Failed to send message. Please try again or contact us directly at +250 788 309 189.",
       })
     } finally {
       setIsSubmitting(false)
