@@ -282,6 +282,7 @@ export default function ContactPageClient() {
         </div>
 
         <Footer />
+      </div>
     </div>
   )
 }
