@@ -26,7 +26,7 @@ export default function ContactPageClient() {
   const faqItems: FAQItem[] = [
     {
       question: "How do I make a booking with Limoz Rwanda?",
-      answer: "You can book directly through our website on the Booking page, send us an email at bookings@limozrwanda.com, or reach us instantly via WhatsApp at +250 788 318 990.",
+      answer: "You can book directly through our website on the Booking page, send us an email at info@limozrwanda.com, or reach us instantly via WhatsApp at +250 788 309 189.",
     },
     {
       question: "Do you offer airport pickup and drop-off services?",
@@ -46,7 +46,7 @@ export default function ContactPageClient() {
     },
     {
       question: "What are your operating hours?",
-      answer: "We are available 7 days a week. For urgent bookings or last-minute requests, you can reach us via WhatsApp at any time.",
+      answer: "We are available 7 days a week. For urgent bookings or last-minute requests, you can reach us via WhatsApp at +250 788 309 189.",
     },
     {
       question: "What payment methods do you accept?",
@@ -122,9 +122,7 @@ export default function ContactPageClient() {
                 <div>
                   <h3 className="font-semibold mb-1">Phone</h3>
                   <p className="text-gray-700">
-                    +250 788 123 456
-                    <br />
-                    +250 788 654 321
+                    +250 788 309 189
                   </p>
                 </div>
               </div>
@@ -235,7 +233,7 @@ export default function ContactPageClient() {
               </div>
 
               {submitStatus.type && (
-                <div className={`p-4 rounded-lg ${submitStatus.type === "success" ? "bg-green-100 text-green-700" : "bg-red-100 text-red-700"}`}>
+                <div className={`p-4 rounded-lg ${submitStatus.type === "success" ? "bg-green-100 text-green-700 border border-green-300" : "bg-red-100 text-red-700 border border-red-300"}`}>
                   {submitStatus.message}
                 </div>
               )}
