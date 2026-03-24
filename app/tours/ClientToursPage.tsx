@@ -154,7 +154,7 @@ export default function ClientToursPage() {
                   <p className="text-gray-600 mb-6 leading-relaxed">{tour.description}</p>
 
                   {/* Tour Details */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
                     <div className="flex items-start gap-3">
                       <div className="p-2 bg-[#f39c12]/10 rounded-lg flex-shrink-0">
                         <MapPin className="w-5 h-5 text-[#f39c12]" />
@@ -180,15 +180,6 @@ export default function ClientToursPage() {
                       <div className="flex-1 min-w-0">
                         <p className="text-xs text-gray-500 font-medium">{t("tours.groupSize")}</p>
                         <p className="text-sm text-gray-900 font-semibold break-words">{tour.groupSize}</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <div className="p-2 bg-[#f39c12]/10 rounded-lg flex-shrink-0">
-                        <Star className="w-5 h-5 text-[#f39c12]" />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <p className="text-xs text-gray-500 font-medium">{t("tours.price")}</p>
-                        <p className="text-sm text-gray-900 font-semibold break-words">{tour.price}</p>
                       </div>
                     </div>
                   </div>
