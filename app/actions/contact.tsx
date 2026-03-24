@@ -5,8 +5,6 @@ import { Resend } from "resend"
 const resend = new Resend(process.env.RESEND_API_KEY)
 
 export async function submitContactForm(formData: FormData) {
-  console.log("[v0] Contact form submission started")
-
   try {
     const name = formData.get("name") as string
     const email = formData.get("email") as string
@@ -16,14 +14,11 @@ export async function submitContactForm(formData: FormData) {
 
     // Validate required fields
     if (!name || !email || !message) {
-      console.log("[v0] Contact form validation failed - missing required fields")
       return {
         success: false,
         error: "Please fill in all required fields",
       }
     }
-
-    console.log("[v0] Sending contact emails")
 
     // Email content template
     const emailHTML = `
@@ -57,8 +52,6 @@ export async function submitContactForm(formData: FormData) {
       subject: `Contact Form: ${subject || "New Message"}`,
       html: emailHTML,
     })
-
-    console.log("[v0] Contact email sent to info@limozrwanda.com:", result)
 
     return {
       success: true,

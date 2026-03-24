@@ -1,10 +1,9 @@
 "use client"
 
 import type React from "react"
-import { Phone, Mail, MapPin, Clock, Star, ChevronDown } from "lucide-react"
+import { Phone, Mail, MapPin, Clock } from "lucide-react"
 import { useState } from "react"
 import { Footer } from "@/components/footer"
-import { useLanguage } from "@/lib/language-context"
 import { submitContactForm } from "@/app/actions/contact"
 
 interface FAQItem {
@@ -13,7 +12,6 @@ interface FAQItem {
 }
 
 export default function ContactPageClient() {
-  const { t } = useLanguage()
   const [rating, setRating] = useState(0)
   const [hoverRating, setHoverRating] = useState(0)
   const [isSubmitting, setIsSubmitting] = useState(false)
