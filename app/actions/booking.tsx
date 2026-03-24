@@ -31,56 +31,70 @@ export async function submitBooking(formData: FormData) {
     const dropOff = new Date(dropOffDate)
     const duration = Math.ceil((dropOff.getTime() - pickup.getTime()) / (1000 * 60 * 60 * 24))
 
-    console.log("[v0] Sending booking email to verified address")
+    console.log("[v0] Sending booking emails")
     console.log("[v0] Vehicle type:", vehicleType)
     console.log("[v0] Pickup date:", pickupDate)
     console.log("[v0] Drop-off date:", dropOffDate)
     console.log("[v0] Duration:", duration, "days")
 
-    const result = await resend.emails.send({
-      from: "Limoz Rwanda <onboarding@resend.dev>",
-      to: "karenzichris9@gmail.com",
-      subject: `New Booking Request - ${vehicleType}`,
-      html: `
-        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-          <h2 style="color: #f39c12; border-bottom: 3px solid #f39c12; padding-bottom: 10px;">
-            New Booking Request
-          </h2>
-          
-          <div style="background-color: #f9f9f9; padding: 20px; border-radius: 8px; margin: 20px 0;">
-            <h3 style="color: #333; margin-top: 0;">Customer Information</h3>
-            <p><strong>Name:</strong> ${fullName}</p>
-            <p><strong>Email:</strong> ${email}</p>
-            <p><strong>Phone:</strong> ${phone}</p>
-          </div>
-          
-          <div style="background-color: #f9f9f9; padding: 20px; border-radius: 8px; margin: 20px 0;">
-            <h3 style="color: #333; margin-top: 0;">Booking Details</h3>
-            <p><strong>Vehicle Type:</strong> ${vehicleType}</p>
-            <p><strong>Pickup Date:</strong> ${pickupDate}</p>
-            <p><strong>Drop-off Date:</strong> ${dropOffDate}</p>
-            <p><strong>Duration:</strong> ${duration} day(s)</p>
-          </div>
-          
-          ${
-            notes
-              ? `
-          <div style="background-color: #f9f9f9; padding: 20px; border-radius: 8px; margin: 20px 0;">
-            <h3 style="color: #333; margin-top: 0;">Additional Notes</h3>
-            <p>${notes}</p>
-          </div>
-          `
-              : ""
-          }
-          
-          <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd; color: #666; font-size: 12px;">
-            <p>This booking request was submitted through the Limoz Rwanda website.</p>
-          </div>
+    // Email content template
+    const emailHTML = `
+      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+        <h2 style="color: #f39c12; border-bottom: 3px solid #f39c12; padding-bottom: 10px;">
+          New Booking Request
+        </h2>
+        
+        <div style="background-color: #f9f9f9; padding: 20px; border-radius: 8px; margin: 20px 0;">
+          <h3 style="color: #333; margin-top: 0;">Customer Information</h3>
+          <p><strong>Name:</strong> ${fullName}</p>
+          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Phone:</strong> ${phone}</p>
         </div>
-      `,
+        
+        <div style="background-color: #f9f9f9; padding: 20px; border-radius: 8px; margin: 20px 0;">
+          <h3 style="color: #333; margin-top: 0;">Booking Details</h3>
+          <p><strong>Vehicle Type:</strong> ${vehicleType}</p>
+          <p><strong>Pickup Date:</strong> ${pickupDate}</p>
+          <p><strong>Drop-off Date:</strong> ${dropOffDate}</p>
+          <p><strong>Duration:</strong> ${duration} day(s)</p>
+        </div>
+        
+        ${
+          notes
+            ? `
+        <div style="background-color: #f9f9f9; padding: 20px; border-radius: 8px; margin: 20px 0;">
+          <h3 style="color: #333; margin-top: 0;">Additional Notes</h3>
+          <p>${notes}</p>
+        </div>
+        `
+            : ""
+        }
+        
+        <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd; color: #666; font-size: 12px;">
+          <p>This booking request was submitted through the Limoz Rwanda website.</p>
+        </div>
+      </div>
+    `
+
+    // Send to bookings@limozrwanda.com
+    const bookingsResult = await resend.emails.send({
+      from: "Limoz Rwanda <onboarding@resend.dev>",
+      to: "bookings@limozrwanda.com",
+      subject: `New Booking Request - ${vehicleType}`,
+      html: emailHTML,
     })
 
-    console.log("[v0] Email sent successfully:", result)
+    console.log("[v0] Booking email sent to bookings@limozrwanda.com:", bookingsResult)
+
+    // Send to info@limozrwanda.com
+    const infoResult = await resend.emails.send({
+      from: "Limoz Rwanda <onboarding@resend.dev>",
+      to: "info@limozrwanda.com",
+      subject: `New Booking Request - ${vehicleType}`,
+      html: emailHTML,
+    })
+
+    console.log("[v0] Notification email sent to info@limozrwanda.com:", infoResult)
 
     return {
       success: true,
