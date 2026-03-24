@@ -4,7 +4,7 @@ import { useLanguage } from "@/lib/language-context"
 import { AnimatedSection } from "./animated-section"
 import { CTAButton } from "./cta-button"
 import { CheckCircle } from "lucide-react"
-import Image from "next/image"
+import { VIPVehicleCarousel } from "./vip-vehicle-carousel"
 
 export function About() {
   const { t } = useLanguage()
@@ -43,27 +43,19 @@ export function About() {
             </div>
           </AnimatedSection>
 
-          {/* Image */}
+          {/* Carousel */}
           <AnimatedSection animation="fade-left" delay={0.2}>
             <div className="relative group">
               {/* Background decoration */}
               <div className="absolute -inset-2 md:-inset-4 bg-gradient-to-br from-[#ffd700] to-[#f7e7ce] rounded-2xl transform rotate-2 md:rotate-3 group-hover:rotate-4 md:group-hover:rotate-6 transition-transform duration-500" />
               <div className="absolute -inset-2 md:-inset-4 bg-gradient-to-br from-[#ffd700]/20 to-[#f7e7ce]/20 rounded-2xl transform -rotate-2 md:-rotate-3 group-hover:-rotate-4 md:group-hover:-rotate-6 transition-transform duration-500" />
 
-              {/* Image container */}
+              {/* Carousel container */}
               <div className="relative bg-white p-3 rounded-xl shadow-2xl overflow-hidden border border-[#ffd700]/20">
-                <div className="relative overflow-hidden rounded-lg aspect-[4/3]">
-                  <Image
-                    src="/about-rav4-hero.jpg"
-                    alt="Toyota RAV4 2024"
-                    fill
-                    className="object-cover transform group-hover:scale-105 transition-transform duration-700"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
-                </div>
+                <VIPVehicleCarousel />
               </div>
 
-              {/* Stats bar - below image */}
+              {/* Stats bar - below carousel */}
               <div className="relative mt-4 bg-white rounded-lg p-3 md:p-4 shadow-lg border border-[#ffd700]/20">
                 <div className="flex justify-between items-center">
                   <div className="text-center flex-1">

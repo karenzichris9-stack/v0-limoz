@@ -1,7 +1,7 @@
 import { Hero } from "@/components/hero"
 import { TrustIndicators } from "@/components/trust-indicators"
 import { About } from "@/components/about"
-import { VIPVehicleCarousel } from "@/components/vip-vehicle-carousel"
+import { Fleet } from "@/components/fleet"
 import { WhyChoose } from "@/components/why-choose"
 import { HowItWorks } from "@/components/how-it-works"
 import { Testimonials } from "@/components/testimonials"
@@ -18,7 +18,7 @@ export default function Home() {
       <Hero />
       <TrustIndicators />
       <About />
-      <VIPVehicleCarousel />
+      <Fleet />
       <WhyChoose />
       <HowItWorks />
       <Testimonials />
