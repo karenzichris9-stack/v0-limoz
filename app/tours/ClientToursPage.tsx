@@ -149,10 +149,6 @@ export default function ClientToursPage() {
                       <Users className="w-4 h-4" />
                       {tour.groupSize}
                     </span>
-                    <span className="inline-flex items-center gap-1 px-3 py-1.5 bg-[#f39c12] text-white text-sm font-medium rounded-full">
-                      <Star className="w-4 h-4" />
-                      {tour.price}
-                    </span>
                   </div>
 
                   <p className="text-gray-600 mb-6 leading-relaxed">{tour.description}</p>

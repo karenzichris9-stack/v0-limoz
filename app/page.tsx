@@ -1,12 +1,12 @@
 import { Hero } from "@/components/hero"
 import { TrustIndicators } from "@/components/trust-indicators"
 import { About } from "@/components/about"
-import { Fleet } from "@/components/fleet"
+import { VIPVehicleCarousel } from "@/components/vip-vehicle-carousel"
 import { WhyChoose } from "@/components/why-choose"
 import { HowItWorks } from "@/components/how-it-works"
 import { Testimonials } from "@/components/testimonials"
-import { AppPromo } from "@/components/app-promo"
 import { Partners } from "@/components/partners"
+import { AppPromo } from "@/components/app-promo"
 import { Footer } from "@/components/footer"
 import { FloatingCTA } from "@/components/floating-cta"
 import { StickyBookingBar } from "@/components/sticky-booking-bar"
@@ -18,7 +18,7 @@ export default function Home() {
       <Hero />
       <TrustIndicators />
       <About />
-      <Fleet />
+      <VIPVehicleCarousel />
       <WhyChoose />
       <HowItWorks />
       <Testimonials />

@@ -240,7 +240,7 @@ export const vehicles: Vehicle[] = [
   {
     id: "byd-atto-3",
     name: "BYD Atto 3",
-    class: "VVIP",
+    class: "VIP",
     image: "/byd-atto-3.jpg",
     images: {
       exterior: ["/byd-atto-3.jpg"],
@@ -277,7 +277,7 @@ export const vehicles: Vehicle[] = [
       "Fast Charging",
     ],
     description:
-      "The BYD ATTO 3 represents the future of electric mobility with its stunning design and advanced technology. Featuring a spacious interior with premium materials, panoramic sunroof, and cutting-edge EV performance, this electric SUV delivers a luxurious and eco-friendly driving experience perfect for modern travelers.",
+      "The BYD ATTO 3 is a premium electric SUV that combines innovative EV technology with sophisticated design. Featuring a spacious and comfortable interior, advanced driver assistance systems, panoramic sunroof, and rapid charging capabilities, the ATTO 3 offers an eco-conscious luxury experience perfect for environmentally aware travelers seeking modern comfort.",
     available: true,
   },
   {
@@ -306,7 +306,7 @@ export const vehicles: Vehicle[] = [
     specs: {
       seats: 7,
       transmission: "Automatic",
-      fuelType: "Diesel",
+      fuelType: "Petrol",
       driveType: "4WD",
       luggage: "8 Bags",
       year: 2024,
