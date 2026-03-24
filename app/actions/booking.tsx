@@ -76,25 +76,15 @@ export async function submitBooking(formData: FormData) {
       </div>
     `
 
-    // Send to bookings@limozrwanda.com
-    const bookingsResult = await resend.emails.send({
-      from: "Limoz Rwanda <onboarding@resend.dev>",
-      to: "bookings@limozrwanda.com",
-      subject: `New Booking Request - ${vehicleType}`,
-      html: emailHTML,
-    })
-
-    console.log("[v0] Booking email sent to bookings@limozrwanda.com:", bookingsResult)
-
     // Send to info@limozrwanda.com
-    const infoResult = await resend.emails.send({
+    const result = await resend.emails.send({
       from: "Limoz Rwanda <onboarding@resend.dev>",
       to: "info@limozrwanda.com",
       subject: `New Booking Request - ${vehicleType}`,
       html: emailHTML,
     })
 
-    console.log("[v0] Notification email sent to info@limozrwanda.com:", infoResult)
+    console.log("[v0] Booking email sent to info@limozrwanda.com:", result)
 
     return {
       success: true,

@@ -50,25 +50,15 @@ export async function submitContactForm(formData: FormData) {
       </div>
     `
 
-    // Send to info@limozrwanda.com
-    const infoResult = await resend.emails.send({
+    // Send to info@limozrwanda.com only
+    const result = await resend.emails.send({
       from: "Limoz Rwanda <onboarding@resend.dev>",
       to: "info@limozrwanda.com",
       subject: `Contact Form: ${subject || "New Message"}`,
       html: emailHTML,
     })
 
-    console.log("[v0] Contact email sent to info@limozrwanda.com:", infoResult)
-
-    // Send to bookings@limozrwanda.com
-    const bookingsResult = await resend.emails.send({
-      from: "Limoz Rwanda <onboarding@resend.dev>",
-      to: "bookings@limozrwanda.com",
-      subject: `Contact Form: ${subject || "New Message"}`,
-      html: emailHTML,
-    })
-
-    console.log("[v0] Notification sent to bookings@limozrwanda.com:", bookingsResult)
+    console.log("[v0] Contact email sent to info@limozrwanda.com:", result)
 
     return {
       success: true,
