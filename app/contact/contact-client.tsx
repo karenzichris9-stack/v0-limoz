@@ -84,8 +84,8 @@ export default function ContactPageClient() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-24">
-      <div className="container mx-auto px-4 max-w-6xl py-12">
+    <div className="flex flex-col min-h-screen bg-gradient-to-b from-gray-50 to-white pt-24">
+      <div className="flex-1 container mx-auto px-4 max-w-6xl py-12">
         {/* Header Section */}
         <div className="mb-16">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">Get in Touch With Limoz Rwanda</h1>
@@ -276,9 +276,9 @@ export default function ContactPageClient() {
             ))}
           </div>
         </div>
-
-        <Footer />
       </div>
+
+      <Footer />
     </div>
   )
 }
