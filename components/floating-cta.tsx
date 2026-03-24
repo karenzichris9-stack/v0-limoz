@@ -32,7 +32,7 @@ export function FloatingCTA() {
         )}
       >
         <a
-          href="tel:+250788318990"
+          href="tel:+250788380013"
           className="flex items-center gap-3 bg-white shadow-lg rounded-full px-4 py-3 hover:shadow-xl transition-all hover:scale-105"
         >
           <div className="p-2 bg-green-500 rounded-full">
@@ -41,7 +41,7 @@ export function FloatingCTA() {
           <span className="text-sm font-medium text-gray-800">{language === "fr" ? "Appeler" : "Call Now"}</span>
         </a>
         <a
-          href="https://wa.me/250788318990"
+          href="https://wa.me/250788380013"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-3 bg-white shadow-lg rounded-full px-4 py-3 hover:shadow-xl transition-all hover:scale-105"

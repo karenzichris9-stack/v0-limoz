@@ -24,7 +24,7 @@ export default function ContactPageClient() {
   const faqItems: FAQItem[] = [
     {
       question: "How do I make a booking with Limoz Rwanda?",
-      answer: "You can book directly through our website on the Booking page, send us an email at info@limozrwanda.com, or reach us instantly via WhatsApp at +250 788 309 189.",
+      answer: "You can book directly through our website on the Booking page, send us an email at info@limozrwanda.com, or reach us instantly via WhatsApp at +250788380013.",
     },
     {
       question: "Do you offer airport pickup and drop-off services?",
@@ -44,7 +44,7 @@ export default function ContactPageClient() {
     },
     {
       question: "What are your operating hours?",
-      answer: "We are available 7 days a week. For urgent bookings or last-minute requests, you can reach us via WhatsApp at +250 788 309 189.",
+      answer: "We are available 7 days a week. For urgent bookings or last-minute requests, you can reach us via WhatsApp at +250788380013.",
     },
     {
       question: "What payment methods do you accept?",
@@ -76,7 +76,7 @@ export default function ContactPageClient() {
     } catch (error) {
       setSubmitStatus({
         type: "error",
-        message: "An error occurred. Please try again later.",
+        message: "Failed to send message. Please try again or contact us directly at +250788380013.",
       })
     } finally {
       setIsSubmitting(false)
@@ -84,8 +84,8 @@ export default function ContactPageClient() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-24">
-      <div className="container mx-auto px-4 max-w-6xl py-12">
+    <div className="flex flex-col min-h-screen bg-gradient-to-b from-gray-50 to-white pt-24">
+      <div className="flex-1 container mx-auto px-4 max-w-6xl py-12">
         {/* Header Section */}
         <div className="mb-16">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">Get in Touch With Limoz Rwanda</h1>
@@ -120,7 +120,7 @@ export default function ContactPageClient() {
                 <div>
                   <h3 className="font-semibold mb-1">Phone</h3>
                   <p className="text-gray-700">
-                    +250 788 309 189
+                    +250788380013
                   </p>
                 </div>
               </div>
@@ -276,9 +276,9 @@ export default function ContactPageClient() {
             ))}
           </div>
         </div>
-
-        <Footer />
       </div>
+
+      <Footer />
     </div>
   )
 }

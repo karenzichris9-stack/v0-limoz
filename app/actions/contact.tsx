@@ -65,7 +65,7 @@ export async function submitContactForm(formData: FormData) {
     }
     return {
       success: false,
-      error: "Failed to send message. Please try again or contact us directly at +250 788 309 189.",
+      error: "Failed to send message. Please try again or contact us directly at +250788380013.",
     }
   }
 }
