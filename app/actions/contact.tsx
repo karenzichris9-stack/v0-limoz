@@ -23,38 +23,42 @@ export async function submitContactForm(formData: FormData) {
       }
     }
 
-    console.log("[v0] Sending contact email to karenzichris9@gmail.com")
+    console.log("[v0] Sending contact emails")
 
+    // Email content template
+    const emailHTML = `
+      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+        <h2 style="color: #f39c12; border-bottom: 3px solid #f39c12; padding-bottom: 10px;">
+          New Contact Form Submission
+        </h2>
+        
+        <div style="background-color: #f9f9f9; padding: 20px; border-radius: 8px; margin: 20px 0;">
+          <p><strong>Name:</strong> ${name}</p>
+          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Phone:</strong> ${phone || "Not provided"}</p>
+          <p><strong>Subject:</strong> ${subject || "No subject"}</p>
+        </div>
+        
+        <div style="background-color: #f9f9f9; padding: 20px; border-radius: 8px; margin: 20px 0;">
+          <h3 style="color: #333; margin-top: 0;">Message</h3>
+          <p>${message}</p>
+        </div>
+        
+        <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd; color: #666; font-size: 12px;">
+          <p>This message was submitted through the Limoz Rwanda contact form.</p>
+        </div>
+      </div>
+    `
+
+    // Send to info@limozrwanda.com only
     const result = await resend.emails.send({
       from: "Limoz Rwanda <onboarding@resend.dev>",
-      to: "karenzichris9@gmail.com",
+      to: "info@limozrwanda.com",
       subject: `Contact Form: ${subject || "New Message"}`,
-      html: `
-        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-          <h2 style="color: #f39c12; border-bottom: 3px solid #f39c12; padding-bottom: 10px;">
-            New Contact Form Submission
-          </h2>
-          
-          <div style="background-color: #f9f9f9; padding: 20px; border-radius: 8px; margin: 20px 0;">
-            <p><strong>Name:</strong> ${name}</p>
-            <p><strong>Email:</strong> ${email}</p>
-            <p><strong>Phone:</strong> ${phone || "Not provided"}</p>
-            <p><strong>Subject:</strong> ${subject || "No subject"}</p>
-          </div>
-          
-          <div style="background-color: #f9f9f9; padding: 20px; border-radius: 8px; margin: 20px 0;">
-            <h3 style="color: #333; margin-top: 0;">Message</h3>
-            <p>${message}</p>
-          </div>
-          
-          <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd; color: #666; font-size: 12px;">
-            <p>This message was submitted through the Limoz Rwanda contact form.</p>
-          </div>
-        </div>
-      `,
+      html: emailHTML,
     })
 
-    console.log("[v0] Contact email sent successfully:", result)
+    console.log("[v0] Contact email sent to info@limozrwanda.com:", result)
 
     return {
       success: true,
@@ -67,7 +71,7 @@ export async function submitContactForm(formData: FormData) {
     }
     return {
       success: false,
-      error: "Failed to send message. Please try again or contact us directly at +250 782 280 204.",
+      error: "Failed to send message. Please try again or contact us directly at +250 788 309 189.",
     }
   }
 }

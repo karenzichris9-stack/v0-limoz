@@ -5,6 +5,7 @@ import { Phone, Mail, MapPin, Clock, Star, ChevronDown } from "lucide-react"
 import { useState } from "react"
 import { Footer } from "@/components/footer"
 import { useLanguage } from "@/lib/language-context"
+import { submitContactForm } from "@/app/actions/contact"
 
 interface FAQItem {
   question: string
@@ -25,7 +26,7 @@ export default function ContactPageClient() {
   const faqItems: FAQItem[] = [
     {
       question: "How do I make a booking with Limoz Rwanda?",
-      answer: "You can book directly through our website on the Booking page, send us an email at bookings@limozrwanda.com, or reach us instantly via WhatsApp at +250 788 318 990.",
+      answer: "You can book directly through our website on the Booking page, send us an email at info@limozrwanda.com, or reach us instantly via WhatsApp at +250 788 309 189.",
     },
     {
       question: "Do you offer airport pickup and drop-off services?",
@@ -45,7 +46,7 @@ export default function ContactPageClient() {
     },
     {
       question: "What are your operating hours?",
-      answer: "We are available 7 days a week. For urgent bookings or last-minute requests, you can reach us via WhatsApp at any time.",
+      answer: "We are available 7 days a week. For urgent bookings or last-minute requests, you can reach us via WhatsApp at +250 788 309 189.",
     },
     {
       question: "What payment methods do you accept?",
@@ -53,23 +54,35 @@ export default function ContactPageClient() {
     },
   ]
 
-  async function handleReviewSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleContactSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
     setIsSubmitting(true)
     setSubmitStatus({ type: null, message: "" })
 
-    // Simulate submission - in production, you'd send this to your backend
-    await new Promise((resolve) => setTimeout(resolve, 1000))
+    try {
+      const formData = new FormData(e.currentTarget)
+      const result = await submitContactForm(formData)
 
-    setSubmitStatus({
-      type: "success",
-      message: "Thank you! Your review has been submitted successfully. We appreciate your feedback!",
-    })
-
-    // Reset form
-    e.currentTarget.reset()
-    setRating(0)
-    setIsSubmitting(false)
+      if (result.success) {
+        setSubmitStatus({
+          type: "success",
+          message: result.message || "Your message has been sent successfully!",
+        })
+        e.currentTarget.reset()
+      } else {
+        setSubmitStatus({
+          type: "error",
+          message: result.error || "Failed to send message. Please try again.",
+        })
+      }
+    } catch (error) {
+      setSubmitStatus({
+        type: "error",
+        message: "An error occurred. Please try again later.",
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -109,9 +122,7 @@ export default function ContactPageClient() {
                 <div>
                   <h3 className="font-semibold mb-1">Phone</h3>
                   <p className="text-gray-700">
-                    +250 788 123 456
-                    <br />
-                    +250 788 654 321
+                    +250 788 309 189
                   </p>
                 </div>
               </div>
@@ -164,15 +175,77 @@ export default function ContactPageClient() {
             </div>
           </div>
 
-          {/* Image Column */}
-          <div className="relative hidden md:block">
-            <div className="bg-gradient-to-br from-[#f39c12]/10 to-[#1e3a5f]/5 rounded-2xl p-8 h-full flex items-center justify-center">
-              <div className="text-center">
-                <div className="text-6xl mb-4">📞</div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">We're Here to Help</h3>
-                <p className="text-gray-600 leading-relaxed">Contact us anytime. Our team is ready to assist you with all your transportation needs in Rwanda.</p>
+          {/* Contact Form Column */}
+          <div>
+            <h2 className="text-2xl font-bold mb-8 text-gray-900">Send us a Message</h2>
+            <form onSubmit={handleContactSubmit} className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium mb-2 text-gray-700">Name *</label>
+                <input
+                  type="text"
+                  name="name"
+                  required
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#f39c12]"
+                  placeholder="Your name"
+                />
               </div>
-            </div>
+
+              <div>
+                <label className="block text-sm font-medium mb-2 text-gray-700">Email *</label>
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#f39c12]"
+                  placeholder="your@email.com"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium mb-2 text-gray-700">Phone</label>
+                <input
+                  type="tel"
+                  name="phone"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#f39c12]"
+                  placeholder="+250 788 123 456"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium mb-2 text-gray-700">Subject</label>
+                <input
+                  type="text"
+                  name="subject"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#f39c12]"
+                  placeholder="What is this about?"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium mb-2 text-gray-700">Message *</label>
+                <textarea
+                  name="message"
+                  required
+                  rows={4}
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#f39c12] resize-none"
+                  placeholder="Tell us how we can help..."
+                />
+              </div>
+
+              {submitStatus.type && (
+                <div className={`p-4 rounded-lg ${submitStatus.type === "success" ? "bg-green-100 text-green-700 border border-green-300" : "bg-red-100 text-red-700 border border-red-300"}`}>
+                  {submitStatus.message}
+                </div>
+              )}
+
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="w-full bg-[#f39c12] text-white font-semibold py-3 rounded-lg hover:bg-[#e08e0b] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {isSubmitting ? "Sending..." : "Send Message"}
+              </button>
+            </form>
           </div>
         </div>
 
@@ -206,96 +279,8 @@ export default function ContactPageClient() {
           </div>
         </div>
 
-        {/* Rate Our Services Section */}
-        <div className="bg-gradient-to-br from-gray-50 to-gray-100 p-12 rounded-2xl mt-16 border border-gray-200 max-w-2xl">
-          <h2 className="text-3xl font-bold mb-2 text-gray-900">Rate Our Services</h2>
-          <p className="text-gray-600 mb-8">Tell us about your experience with Limoz Rwanda. Your feedback helps us improve!</p>
-
-          {submitStatus.type && (
-            <div
-              className={`mb-6 p-4 rounded ${
-                submitStatus.type === "success"
-                  ? "bg-green-100 text-green-800 border border-green-200"
-                  : "bg-red-100 text-red-800 border border-red-200"
-              }`}
-            >
-              {submitStatus.message}
-            </div>
-          )}
-
-          <form className="space-y-6" onSubmit={handleReviewSubmit}>
-            {/* Star Rating */}
-            <div>
-              <label className="block text-sm font-medium mb-3">Your Rating *</label>
-              <div className="flex gap-2">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <button
-                    key={star}
-                    type="button"
-                    onClick={() => setRating(star)}
-                    onMouseEnter={() => setHoverRating(star)}
-                    onMouseLeave={() => setHoverRating(0)}
-                    className="transition-transform hover:scale-110 focus:outline-none"
-                  >
-                    <Star
-                      className={`w-10 h-10 ${
-                        star <= (hoverRating || rating) ? "fill-[#f39c12] text-[#f39c12]" : "text-gray-300"
-                      } transition-colors`}
-                    />
-                  </button>
-                ))}
-              </div>
-              {rating > 0 && (
-                <p className="text-sm text-gray-600 mt-2">
-                  {rating === 1 && "Poor experience"}
-                  {rating === 2 && "Fair experience"}
-                  {rating === 3 && "Good experience"}
-                  {rating === 4 && "Great experience"}
-                  {rating === 5 && "Excellent experience"}
-                </p>
-              )}
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium mb-2">Your Name *</label>
-              <input
-                type="text"
-                name="name"
-                required
-                className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-[#f39c12] bg-white"
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium mb-2">Email Address</label>
-              <input
-                type="email"
-                name="email"
-                className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-[#f39c12] bg-white"
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium mb-2">Your Review *</label>
-              <textarea
-                name="review"
-                required
-                placeholder="Share your experience with Limoz Rwanda..."
-                className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-[#f39c12] bg-white"
-              ></textarea>
-            </div>
-
-            <button
-              type="submit"
-              disabled={isSubmitting || rating === 0}
-              className="w-full bg-[#f39c12] text-white py-3 rounded hover:bg-[#e08e0b] transition-colors font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
-            >
-              {isSubmitting ? "Submitting..." : "Submit Review"}
-            </button>
-          </form>
-        </div>
+        <Footer />
       </div>
-      <Footer />
     </div>
   )
 }

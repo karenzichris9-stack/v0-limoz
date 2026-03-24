@@ -9,43 +9,43 @@ export default function AboutClientPage() {
   const { t } = useLanguage()
 
   return (
-    <div className="min-h-screen bg-white pt-20">
-      {/* Full-width Fleet Banner with Headline Overlay */}
-      <div className="relative w-full h-96 md:h-[500px] -mt-20 pt-20">
+    <div className="min-h-screen bg-white">
+      {/* Full-width Hero Section */}
+      <div className="relative w-full h-72 md:h-96 mt-20 overflow-hidden">
         <Image
-          src="/lc300-real.jpg"
+          src="/about-hero-vehicle.jpg"
           alt="Limoz Rwanda Fleet"
           fill
-          className="object-cover brightness-75"
+          className="object-contain"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0f0f23] via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-black/20" />
         <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-[#ffd700] text-center text-shadow-lg">
+          <h1 className="text-4xl md:text-6xl font-bold text-white text-center drop-shadow-lg">
             {t("aboutPage.title")}
           </h1>
         </div>
       </div>
 
-      {/* 4-Stat Counter Row */}
-      <div className="py-12 md:py-16 px-4">
+      {/* Stats Section */}
+      <div className="w-full bg-white py-5 md:py-6 px-4">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4">
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-[#ffd700] mb-2 drop-shadow-lg">50+</div>
-              <p className="text-white text-sm md:text-base font-medium drop-shadow-lg opacity-0">{t("aboutPage.statsVehicles") || "Vehicles"}</p>
+              <div className="text-2xl md:text-3xl font-bold text-[#f39c12]">50+</div>
+              <p className="text-gray-700 text-xs font-medium">Vehicles</p>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-[#ffd700] mb-2 drop-shadow-lg">5+</div>
-              <p className="text-white text-sm md:text-base font-medium drop-shadow-lg">{t("aboutPage.statsYears") || "Years Experience"}</p>
+              <div className="text-2xl md:text-3xl font-bold text-[#f39c12]">5+</div>
+              <p className="text-gray-700 text-xs font-medium">Years</p>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-[#ffd700] mb-2 drop-shadow-lg">1000+</div>
-              <p className="text-white text-sm md:text-base font-medium drop-shadow-lg">{t("aboutPage.statsClients") || "Happy Clients"}</p>
+              <div className="text-2xl md:text-3xl font-bold text-[#f39c12]">1000+</div>
+              <p className="text-gray-700 text-xs font-medium">Clients</p>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-[#ffd700] mb-2 drop-shadow-lg">24/7</div>
-              <p className="text-white text-sm md:text-base font-medium drop-shadow-lg">{t("aboutPage.statsSupport") || "Support"}</p>
+              <div className="text-2xl md:text-3xl font-bold text-[#f39c12]">24/7</div>
+              <p className="text-gray-700 text-xs font-medium">Support</p>
             </div>
           </div>
         </div>
