@@ -31,7 +31,7 @@ export async function submitBooking(formData: FormData) {
     const dropOff = new Date(dropOffDate)
     const duration = Math.ceil((dropOff.getTime() - pickup.getTime()) / (1000 * 60 * 60 * 24))
 
-    console.log("[v0] Sending booking email to bookings@limozrwanda.com")
+    console.log("[v0] Sending booking email to verified address")
     console.log("[v0] Vehicle type:", vehicleType)
     console.log("[v0] Pickup date:", pickupDate)
     console.log("[v0] Drop-off date:", dropOffDate)
@@ -39,7 +39,7 @@ export async function submitBooking(formData: FormData) {
 
     const result = await resend.emails.send({
       from: "Limoz Rwanda <onboarding@resend.dev>",
-      to: "bookings@limozrwanda.com",
+      to: "karenzichris9@gmail.com",
       subject: `New Booking Request - ${vehicleType}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">

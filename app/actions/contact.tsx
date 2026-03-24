@@ -23,11 +23,11 @@ export async function submitContactForm(formData: FormData) {
       }
     }
 
-    console.log("[v0] Sending contact email to info@limozrwanda.com")
+    console.log("[v0] Sending contact email to verified address")
 
     const result = await resend.emails.send({
       from: "Limoz Rwanda <onboarding@resend.dev>",
-      to: "info@limozrwanda.com",
+      to: "karenzichris9@gmail.com",
       subject: `Contact Form: ${subject || "New Message"}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
