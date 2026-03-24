@@ -47,8 +47,9 @@ export async function submitContactForm(formData: FormData) {
 
     // Send to info@limozrwanda.com only
     const result = await resend.emails.send({
-      from: "Limoz Rwanda <onboarding@resend.dev>",
+      from: "info@limozrwanda.com",
       to: "info@limozrwanda.com",
+      replyTo: email,
       subject: `Contact Form: ${subject || "New Message"}`,
       html: emailHTML,
     })
