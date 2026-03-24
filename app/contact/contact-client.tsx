@@ -5,6 +5,7 @@ import { Phone, Mail, MapPin, Clock, Star, ChevronDown } from "lucide-react"
 import { useState } from "react"
 import { Footer } from "@/components/footer"
 import { useLanguage } from "@/lib/language-context"
+import { submitContactForm } from "@/app/actions/contact"
 
 interface FAQItem {
   question: string
@@ -53,23 +54,35 @@ export default function ContactPageClient() {
     },
   ]
 
-  async function handleReviewSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleContactSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
     setIsSubmitting(true)
     setSubmitStatus({ type: null, message: "" })
 
-    // Simulate submission - in production, you'd send this to your backend
-    await new Promise((resolve) => setTimeout(resolve, 1000))
+    try {
+      const formData = new FormData(e.currentTarget)
+      const result = await submitContactForm(formData)
 
-    setSubmitStatus({
-      type: "success",
-      message: "Thank you! Your review has been submitted successfully. We appreciate your feedback!",
-    })
-
-    // Reset form
-    e.currentTarget.reset()
-    setRating(0)
-    setIsSubmitting(false)
+      if (result.success) {
+        setSubmitStatus({
+          type: "success",
+          message: result.message || "Your message has been sent successfully!",
+        })
+        e.currentTarget.reset()
+      } else {
+        setSubmitStatus({
+          type: "error",
+          message: result.error || "Failed to send message. Please try again.",
+        })
+      }
+    } catch (error) {
+      setSubmitStatus({
+        type: "error",
+        message: "An error occurred. Please try again later.",
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -164,15 +177,77 @@ export default function ContactPageClient() {
             </div>
           </div>
 
-          {/* Image Column */}
-          <div className="relative hidden md:block">
-            <div className="bg-gradient-to-br from-[#f39c12]/10 to-[#1e3a5f]/5 rounded-2xl p-8 h-full flex items-center justify-center">
-              <div className="text-center">
-                <div className="text-6xl mb-4">📞</div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">We're Here to Help</h3>
-                <p className="text-gray-600 leading-relaxed">Contact us anytime. Our team is ready to assist you with all your transportation needs in Rwanda.</p>
+          {/* Contact Form Column */}
+          <div>
+            <h2 className="text-2xl font-bold mb-8 text-gray-900">Send us a Message</h2>
+            <form onSubmit={handleContactSubmit} className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium mb-2 text-gray-700">Name *</label>
+                <input
+                  type="text"
+                  name="name"
+                  required
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#f39c12]"
+                  placeholder="Your name"
+                />
               </div>
-            </div>
+
+              <div>
+                <label className="block text-sm font-medium mb-2 text-gray-700">Email *</label>
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#f39c12]"
+                  placeholder="your@email.com"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium mb-2 text-gray-700">Phone</label>
+                <input
+                  type="tel"
+                  name="phone"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#f39c12]"
+                  placeholder="+250 788 123 456"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium mb-2 text-gray-700">Subject</label>
+                <input
+                  type="text"
+                  name="subject"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#f39c12]"
+                  placeholder="What is this about?"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium mb-2 text-gray-700">Message *</label>
+                <textarea
+                  name="message"
+                  required
+                  rows={4}
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#f39c12] resize-none"
+                  placeholder="Tell us how we can help..."
+                />
+              </div>
+
+              {submitStatus.type && (
+                <div className={`p-4 rounded-lg ${submitStatus.type === "success" ? "bg-green-100 text-green-700" : "bg-red-100 text-red-700"}`}>
+                  {submitStatus.message}
+                </div>
+              )}
+
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="w-full bg-[#f39c12] text-white font-semibold py-3 rounded-lg hover:bg-[#e08e0b] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {isSubmitting ? "Sending..." : "Send Message"}
+              </button>
+            </form>
           </div>
         </div>
 
