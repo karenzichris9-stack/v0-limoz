@@ -1,13 +1,10 @@
 "use client"
 
 import { Footer } from "@/components/footer"
-import { useLanguage } from "@/lib/language-context"
 import { Building2, Eye, Target } from "lucide-react"
 import Image from "next/image"
 
 export default function AboutClientPage() {
-  const { t } = useLanguage()
-
   return (
     <div className="min-h-screen bg-white">
       {/* Full-width Hero Section */}
@@ -16,36 +13,36 @@ export default function AboutClientPage() {
           src="/about-hero-vehicle.jpg"
           alt="Limoz Rwanda Fleet"
           fill
-          className="object-contain"
+          className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-black/20" />
+        <div className="absolute inset-0 bg-black/30" />
         <div className="absolute inset-0 flex items-center justify-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white text-center drop-shadow-lg">
-            {t("aboutPage.title")}
+            About Limoz Rwanda
           </h1>
         </div>
       </div>
 
       {/* Stats Section */}
-      <div className="w-full bg-white py-5 md:py-6 px-4">
+      <div className="w-full bg-[#1e3a5f] py-8 md:py-10 px-4">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-[#f39c12]">50+</div>
-              <p className="text-gray-700 text-xs font-medium">Vehicles</p>
+              <div className="text-3xl md:text-4xl font-bold text-[#E8A020] mb-2">50+</div>
+              <p className="text-white text-sm font-medium">Vehicles</p>
             </div>
             <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-[#f39c12]">5+</div>
-              <p className="text-gray-700 text-xs font-medium">Years</p>
+              <div className="text-3xl md:text-4xl font-bold text-[#E8A020] mb-2">5+</div>
+              <p className="text-white text-sm font-medium">Years Experience</p>
             </div>
             <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-[#f39c12]">1000+</div>
-              <p className="text-gray-700 text-xs font-medium">Clients</p>
+              <div className="text-3xl md:text-4xl font-bold text-[#E8A020] mb-2">1000+</div>
+              <p className="text-white text-sm font-medium">Happy Clients</p>
             </div>
             <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-[#f39c12]">24/7</div>
-              <p className="text-gray-700 text-xs font-medium">Support</p>
+              <div className="text-3xl md:text-4xl font-bold text-[#E8A020] mb-2">24/7</div>
+              <p className="text-white text-sm font-medium">Support</p>
             </div>
           </div>
         </div>
@@ -58,12 +55,12 @@ export default function AboutClientPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             {/* Text Column */}
             <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">{t("aboutPage.excellence")}</h2>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Story</h2>
               <div className="space-y-6">
-                <p className="text-gray-700 leading-relaxed text-lg">{t("aboutPage.excellenceText")}</p>
+                <p className="text-gray-700 leading-relaxed text-lg">Limoz Rwanda Ltd is a leading car rental company based in Kigali, Rwanda. With over 5 years of experience in the industry, we have built a reputation for delivering exceptional service, reliability, and competitive pricing to both business and leisure travelers.</p>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{t("aboutPage.whyUs")}</h3>
-                  <p className="text-gray-700 leading-relaxed">{t("aboutPage.whyUsText")}</p>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">Why Choose Limoz Rwanda?</h3>
+                  <p className="text-gray-700 leading-relaxed">We pride ourselves on service delivery, reliability, and client satisfaction. Our fleet of over 50 premium vehicles includes luxury sedans, SUVs, safari vehicles, and buses. We offer dynamic lease options, affordable prices, and drivers who speak English, French, and Kinyarwanda.</p>
                 </div>
               </div>
             </div>
@@ -90,10 +87,10 @@ export default function AboutClientPage() {
               </div>
               <div>
                 <p className="text-white/60 text-sm font-medium tracking-wider uppercase mb-2">
-                  {t("aboutPage.mfkPartOf")}
+                  Part of
                 </p>
-                <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">{t("aboutPage.mfkGroup")}</h3>
-                <p className="text-white/80 text-lg leading-relaxed">{t("aboutPage.mfkText")}</p>
+                <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">MFK Group</h3>
+                <p className="text-white/80 text-lg leading-relaxed">Limoz Rwanda is a proud member of the MFK Group, a diversified holding company committed to excellence across multiple sectors including transportation, hospitality, and tourism services throughout East Africa.</p>
               </div>
             </div>
           </div>
@@ -103,33 +100,33 @@ export default function AboutClientPage() {
         <section className="mb-20 grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="bg-gradient-to-br from-gray-50 to-white p-8 md:p-10 rounded-2xl shadow-sm border border-gray-100">
             <div className="flex items-center gap-4 mb-6">
-              <div className="w-14 h-14 bg-[#f39c12]/10 rounded-full flex items-center justify-center flex-shrink-0">
-                <Eye className="w-7 h-7 text-[#f39c12]" />
+              <div className="w-14 h-14 bg-[#E8A020]/10 rounded-full flex items-center justify-center flex-shrink-0">
+                <Eye className="w-7 h-7 text-[#E8A020]" />
               </div>
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900">{t("aboutPage.vision")}</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Our Vision</h2>
             </div>
-            <p className="text-gray-700 leading-relaxed text-lg">{t("aboutPage.visionText")}</p>
+            <p className="text-gray-700 leading-relaxed text-lg">To be the leading premium car rental and transportation provider in Rwanda, recognized for exceptional service, innovation, and commitment to customer satisfaction across all business and leisure travel sectors.</p>
           </div>
 
-          <div className="bg-gradient-to-br from-[#f39c12]/5 to-white p-8 md:p-10 rounded-2xl shadow-sm border border-[#f39c12]/10">
+          <div className="bg-gradient-to-br from-[#E8A020]/5 to-white p-8 md:p-10 rounded-2xl shadow-sm border border-[#E8A020]/10">
             <div className="flex items-center gap-4 mb-6">
               <div className="w-14 h-14 bg-[#1e3a5f]/10 rounded-full flex items-center justify-center flex-shrink-0">
                 <Target className="w-7 h-7 text-[#1e3a5f]" />
               </div>
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900">{t("aboutPage.mission")}</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Our Mission</h2>
             </div>
-            <p className="text-gray-700 leading-relaxed text-lg">{t("aboutPage.missionText")}</p>
+            <p className="text-gray-700 leading-relaxed text-lg">To provide premium, reliable transportation and tourism solutions that exceed customer expectations while maintaining the highest standards of safety, professionalism, and service excellence.</p>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="text-center py-16 bg-gradient-to-r from-[#f39c12] to-[#e67e22] rounded-2xl shadow-lg">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white px-4">{t("aboutPage.cta")}</h2>
+        <section className="text-center py-16 bg-gradient-to-r from-[#E8A020] to-[#d89817] rounded-2xl shadow-lg">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white px-4">Ready to Experience Premium Transportation?</h2>
           <a
-            href="/contact"
-            className="inline-block bg-white text-[#f39c12] px-10 py-4 rounded-lg hover:bg-gray-100 transition-all font-semibold text-lg shadow-md hover:shadow-xl transform hover:scale-105"
+            href="/booking"
+            className="inline-block bg-white text-[#E8A020] px-10 py-4 rounded-lg hover:bg-gray-100 transition-all font-semibold text-lg shadow-md hover:shadow-xl transform hover:scale-105"
           >
-            {t("aboutPage.ctaButton")}
+            Book Your Journey
           </a>
         </section>
       </div>
