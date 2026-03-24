@@ -29,14 +29,14 @@ export function Footer() {
             <h3 className="text-[#ffd700] text-xl font-bold mb-6">{t("footer.phone")}</h3>
             <div className="space-y-3">
               <a
-                href="tel:+250788315017"
+                href="tel:+250788380013"
                 className="flex items-center gap-3 text-gray-300 hover:text-[#ffd700] transition-colors group"
               >
                 <Phone className="w-5 h-5 group-hover:animate-pulse" />
-                <span>(+250) 788 315 017</span>
+                <span>(+250) 788 380 013</span>
               </a>
               <a
-                href="https://wa.me/250788315017"
+                href="https://wa.me/250788380013"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-gray-300 hover:text-green-400 transition-colors group"
@@ -114,7 +114,7 @@ export function Footer() {
                 </svg>
               </a>
               <a
-                href="https://wa.me/250788318990"
+                href="https://wa.me/250788380013"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-green-400 transition-colors hover:scale-110 transform"

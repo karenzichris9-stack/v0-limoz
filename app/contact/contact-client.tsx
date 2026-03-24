@@ -24,7 +24,7 @@ export default function ContactPageClient() {
   const faqItems: FAQItem[] = [
     {
       question: "How do I make a booking with Limoz Rwanda?",
-      answer: "You can book directly through our website on the Booking page, send us an email at info@limozrwanda.com, or reach us instantly via WhatsApp at +250 788 309 189.",
+      answer: "You can book directly through our website on the Booking page, send us an email at info@limozrwanda.com, or reach us instantly via WhatsApp at +250788380013.",
     },
     {
       question: "Do you offer airport pickup and drop-off services?",
@@ -44,7 +44,7 @@ export default function ContactPageClient() {
     },
     {
       question: "What are your operating hours?",
-      answer: "We are available 7 days a week. For urgent bookings or last-minute requests, you can reach us via WhatsApp at +250 788 309 189.",
+      answer: "We are available 7 days a week. For urgent bookings or last-minute requests, you can reach us via WhatsApp at +250788380013.",
     },
     {
       question: "What payment methods do you accept?",
@@ -76,7 +76,7 @@ export default function ContactPageClient() {
     } catch (error) {
       setSubmitStatus({
         type: "error",
-        message: "Failed to send message. Please try again or contact us directly at +250 788 309 189.",
+        message: "Failed to send message. Please try again or contact us directly at +250788380013.",
       })
     } finally {
       setIsSubmitting(false)
@@ -120,7 +120,7 @@ export default function ContactPageClient() {
                 <div>
                   <h3 className="font-semibold mb-1">Phone</h3>
                   <p className="text-gray-700">
-                    +250 788 309 189
+                    +250788380013
                   </p>
                 </div>
               </div>
