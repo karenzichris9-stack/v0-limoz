@@ -11,12 +11,13 @@ export default function AboutClientPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Full-width Hero Section */}
-      <div className="relative w-full h-80 md:h-96 mt-20">
+      <div className="relative w-full h-auto mt-20">
         <Image
           src="/about-hero-vehicle.jpg"
           alt="Limoz Rwanda Fleet"
-          fill
-          className="object-cover"
+          width={1200}
+          height={600}
+          className="w-full h-auto"
           priority
         />
         <div className="absolute inset-0 bg-black/20" />
