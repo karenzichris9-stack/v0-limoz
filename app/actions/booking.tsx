@@ -25,13 +25,13 @@ export async function submitBooking(formData: FormData) {
       }
     }
 
-    console.log("[v0] Sending booking email to karenzichris9@gmail.com")
+    console.log("[v0] Sending booking email to bookings@limozrwanda.com")
     console.log("[v0] Vehicle type:", vehicleType)
     console.log("[v0] Pickup date:", pickupDate)
 
     const result = await resend.emails.send({
       from: "Limoz Rwanda <onboarding@resend.dev>",
-      to: "karenzichris9@gmail.com",
+      to: "bookings@limozrwanda.com",
       subject: `New Booking Request - ${vehicleType}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -85,7 +85,7 @@ export async function submitBooking(formData: FormData) {
     }
     return {
       success: false,
-      message: "Failed to submit booking. Please try contacting us directly at +250 782 280 204.",
+      message: "Failed to submit booking. Please try contacting us directly at +250 788 309 189.",
     }
   }
 }
