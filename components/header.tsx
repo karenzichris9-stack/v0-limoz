@@ -46,14 +46,8 @@ export function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative w-12 h-12 transition-transform duration-300 group-hover:scale-110">
-              <Image src="/limoz-logo.png" alt="Limoz Rwanda Logo" fill className="object-contain" priority />
-            </div>
-            <div className="flex flex-col">
-              <span className="font-bold text-sm bg-gradient-to-r from-[#ffd700] via-white to-[#ffd700] bg-clip-text text-transparent animate-gold-shimmer">
-                {t("header.logo")}
-              </span>
-              <span className="text-white/70 text-xs">{t("header.tagline")}</span>
+            <div className="relative w-32 h-12 transition-transform duration-300 group-hover:scale-110">
+              <Image src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ANKO%20PROPERTIES-VX58PtUQZTavD5OlZrgl7J9LruCsip.png" alt="ANKO PROPERTIES LIMITED" fill className="object-contain" priority />
             </div>
           </Link>
 
