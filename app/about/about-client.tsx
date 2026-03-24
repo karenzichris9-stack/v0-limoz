@@ -9,17 +9,17 @@ export default function AboutClientPage() {
   const { t } = useLanguage()
 
   return (
-    <div className="min-h-screen bg-white pt-20">
-      {/* Full-width Hero Section - No Overlay */}
-      <div className="relative w-full h-96 md:h-[500px] -mt-20 pt-20">
+    <div className="min-h-screen bg-white">
+      {/* Full-width Hero Section */}
+      <div className="relative w-full h-96 md:h-[500px] mt-20">
         <Image
           src="/lc300-real.jpg"
           alt="Limoz Rwanda Fleet"
           fill
-          className="object-cover brightness-90"
+          className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-black/20" />
         <div className="absolute inset-0 flex items-center justify-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white text-center drop-shadow-lg">
             {t("aboutPage.title")}
@@ -27,25 +27,25 @@ export default function AboutClientPage() {
         </div>
       </div>
 
-      {/* 4-Stat Counter Row - Separate Section Below Hero */}
-      <div className="w-full bg-white py-16 md:py-20 px-4 border-t border-gray-200">
+      {/* Stats Section */}
+      <div className="w-full bg-white py-16 md:py-20 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-[#f39c12] mb-2">{t("aboutPage.statsVehicles") || "50+"}</div>
-              <p className="text-gray-700 text-sm md:text-base font-medium">{t("aboutPage.statsVehiclesLabel") || "Vehicles in Fleet"}</p>
+              <div className="text-4xl md:text-5xl font-bold text-[#f39c12] mb-2">50+</div>
+              <p className="text-gray-700 text-sm md:text-base font-medium">Vehicles in Fleet</p>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-[#f39c12] mb-2">{t("aboutPage.statsYears") || "5+"}</div>
-              <p className="text-gray-700 text-sm md:text-base font-medium">{t("aboutPage.statsYearsLabel") || "Years Experience"}</p>
+              <div className="text-4xl md:text-5xl font-bold text-[#f39c12] mb-2">5+</div>
+              <p className="text-gray-700 text-sm md:text-base font-medium">Years Experience</p>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-[#f39c12] mb-2">{t("aboutPage.statsClients") || "1000+"}</div>
-              <p className="text-gray-700 text-sm md:text-base font-medium">{t("aboutPage.statsClientsLabel") || "Happy Clients"}</p>
+              <div className="text-4xl md:text-5xl font-bold text-[#f39c12] mb-2">1000+</div>
+              <p className="text-gray-700 text-sm md:text-base font-medium">Happy Clients</p>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-[#f39c12] mb-2">{t("aboutPage.statsSupport") || "24/7"}</div>
-              <p className="text-gray-700 text-sm md:text-base font-medium">{t("aboutPage.statsSupportLabel") || "Support Available"}</p>
+              <div className="text-4xl md:text-5xl font-bold text-[#f39c12] mb-2">24/7</div>
+              <p className="text-gray-700 text-sm md:text-base font-medium">Support Available</p>
             </div>
           </div>
         </div>
