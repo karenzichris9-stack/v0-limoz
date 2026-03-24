@@ -78,7 +78,7 @@ export async function submitBooking(formData: FormData) {
 
     // Send to info@limozrwanda.com
     const result = await resend.emails.send({
-      from: "Limoz Rwanda <onboarding@resend.dev>",
+      from: "info@limozrwanda.com",
       to: "info@limozrwanda.com",
       subject: `New Booking Request - ${vehicleType}`,
       html: emailHTML,

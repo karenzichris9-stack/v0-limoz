@@ -47,7 +47,7 @@ export async function submitContactForm(formData: FormData) {
 
     // Send to info@limozrwanda.com only
     const result = await resend.emails.send({
-      from: "noreply@limozrwanda.com",
+      from: "info@limozrwanda.com",
       to: "info@limozrwanda.com",
       replyTo: email,
       subject: `Contact Form: ${subject || "New Message"}`,
