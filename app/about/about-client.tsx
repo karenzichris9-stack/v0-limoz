@@ -11,9 +11,9 @@ export default function AboutClientPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Full-width Hero Section */}
-      <div className="relative w-full h-96 md:h-[500px] mt-20">
+      <div className="relative w-full h-80 md:h-96 mt-20">
         <Image
-          src="/lc300-real.jpg"
+          src="/about-hero-vehicle.jpg"
           alt="Limoz Rwanda Fleet"
           fill
           className="object-cover"
@@ -28,24 +28,24 @@ export default function AboutClientPage() {
       </div>
 
       {/* Stats Section */}
-      <div className="w-full bg-white py-16 md:py-20 px-4">
+      <div className="w-full bg-white py-8 md:py-10 px-4">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-[#f39c12] mb-2">50+</div>
-              <p className="text-gray-700 text-sm md:text-base font-medium">Vehicles in Fleet</p>
+              <div className="text-3xl md:text-4xl font-bold text-[#f39c12] mb-1">50+</div>
+              <p className="text-gray-700 text-xs md:text-sm font-medium">Vehicles in Fleet</p>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-[#f39c12] mb-2">5+</div>
-              <p className="text-gray-700 text-sm md:text-base font-medium">Years Experience</p>
+              <div className="text-3xl md:text-4xl font-bold text-[#f39c12] mb-1">5+</div>
+              <p className="text-gray-700 text-xs md:text-sm font-medium">Years Experience</p>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-[#f39c12] mb-2">1000+</div>
-              <p className="text-gray-700 text-sm md:text-base font-medium">Happy Clients</p>
+              <div className="text-3xl md:text-4xl font-bold text-[#f39c12] mb-1">1000+</div>
+              <p className="text-gray-700 text-xs md:text-sm font-medium">Happy Clients</p>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-[#f39c12] mb-2">24/7</div>
-              <p className="text-gray-700 text-sm md:text-base font-medium">Support Available</p>
+              <div className="text-3xl md:text-4xl font-bold text-[#f39c12] mb-1">24/7</div>
+              <p className="text-gray-700 text-xs md:text-sm font-medium">Support Available</p>
             </div>
           </div>
         </div>
