@@ -103,6 +103,18 @@ export default function FleetClientPage() {
         { icon: Shield, labelKey: "safety", valueKey: "advancedSafety" },
       ],
     },
+    {
+      id: "byd-dolphin",
+      name: "BYD Dolphin",
+      image: "/byd-dolphin-black-with-plate.jpg",
+      features: [
+        { icon: Zap, labelKey: "power", valueKey: "electric" },
+        { icon: Wind, labelKey: "climate", valueKey: "dualClimateControl" },
+        { icon: Users, labelKey: "capacity", valueKey: "fiveSeater" },
+        { icon: Radio, labelKey: "entertainment", valueKey: "premium" },
+        { icon: Shield, labelKey: "safety", valueKey: "advancedSafety" },
+      ],
+    },
   ]
 
   const utilityVehicles = [
