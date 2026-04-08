@@ -123,7 +123,6 @@ export default function FleetClientPage() {
       name: "Coaster Bus",
       image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_3091%20%281%29.JPG-v0a8YnCuhg2DdbfuXLBFzDdHBgwzvX.jpeg",
       imagePosition: "object-center",
-      useContain: true,
       features: [
         { icon: Users, labelKey: "capacity", valueKey: "thirtyThreeSeater" },
         { icon: Wind, labelKey: "climate", valueKey: "airConditioning" },
@@ -136,8 +135,8 @@ export default function FleetClientPage() {
     {
       id: "tunland-foton",
       name: "Tunland Foton",
-      image: "/tunland-foton.jpg",
-      imagePosition: "object-bottom",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202026-04-09%20at%2000.11.28-GgS21nbykmkEm0UUU9GONAQYpxduhL.png",
+      imagePosition: "object-center",
       features: [
         { icon: Wind, labelKey: "climate", valueKey: "airConditioning" },
         { icon: Users, labelKey: "capacity", valueKey: "fiveSeater" },
