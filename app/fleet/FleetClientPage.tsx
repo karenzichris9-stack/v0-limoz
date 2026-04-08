@@ -121,7 +121,7 @@ export default function FleetClientPage() {
     {
       id: "coaster-bus",
       name: "Coaster Bus",
-      image: "/coaster-bus.jpg",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_3091%20%281%29.JPG-v0a8YnCuhg2DdbfuXLBFzDdHBgwzvX.jpeg",
       imagePosition: "object-center",
       useContain: true,
       features: [

@@ -443,6 +443,48 @@ export const vehicles: Vehicle[] = [
       "The Executive Van is perfect for group travel, offering comfortable seating for up to 14 passengers with ample luggage space. Ideal for airport transfers, corporate shuttles, and group tours across Rwanda.",
     available: true,
   },
+  {
+    id: "coaster-bus",
+    name: "Coaster Bus",
+    class: "Standard",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_3091%20%281%29.JPG-v0a8YnCuhg2DdbfuXLBFzDdHBgwzvX.jpeg",
+    images: {
+      exterior: [
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_3091%20%281%29.JPG-v0a8YnCuhg2DdbfuXLBFzDdHBgwzvX.jpeg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_3085%20%281%29.JPG-Kif4Mpv8QDylYhLyqwLlat6tfHQMfs.jpeg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_3089%20%281%29.JPG-Xp3k6PgM6wMboVc6ReBy7IXVp578Sp.jpeg",
+      ],
+      interior: [
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_3086%20%281%29.JPG-mXSfHjd1ULE0mNixdGNIV4kLN4ilnS.jpeg",
+      ],
+    },
+    price: {
+      daily: 120,
+      weekly: 700,
+      monthly: 2400,
+    },
+    specs: {
+      seats: 33,
+      transmission: "Manual",
+      fuelType: "Diesel",
+      driveType: "RWD",
+      luggage: "15 Bags",
+      year: 2023,
+    },
+    features: [
+      "Air Conditioning",
+      "Spacious Interior",
+      "USB Charging Ports",
+      "Bluetooth Audio",
+      "Large Luggage Space",
+      "Comfortable Seating",
+      "Safety Features",
+      "Group Transport",
+    ],
+    description:
+      "The Toyota Coaster Bus offers the ultimate solution for group travel and tours. With seating for up to 33 passengers, air conditioning, and spacious luggage compartments, the Coaster is perfect for large group tours, corporate events, and multi-day adventures across Rwanda.",
+    available: true,
+  },
 ]
 
 export const incomingVehicles = [
