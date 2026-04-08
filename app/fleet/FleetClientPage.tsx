@@ -121,7 +121,7 @@ export default function FleetClientPage() {
     {
       id: "coaster-bus",
       name: "Coaster Bus",
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_3091%20%281%29.JPG-v0a8YnCuhg2DdbfuXLBFzDdHBgwzvX.jpeg",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_3085%20%281%29.JPG-PRz4yRYnd0jDwBuqZbwKYFGiIolIbK.jpeg",
       imagePosition: "object-center",
       features: [
         { icon: Users, labelKey: "capacity", valueKey: "thirtyThreeSeater" },

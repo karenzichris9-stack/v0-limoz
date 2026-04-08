@@ -447,11 +447,11 @@ export const vehicles: Vehicle[] = [
     id: "coaster-bus",
     name: "Coaster Bus",
     class: "Standard",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_3091%20%281%29.JPG-v0a8YnCuhg2DdbfuXLBFzDdHBgwzvX.jpeg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_3085%20%281%29.JPG-PRz4yRYnd0jDwBuqZbwKYFGiIolIbK.jpeg",
     images: {
       exterior: [
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_3085%20%281%29.JPG-PRz4yRYnd0jDwBuqZbwKYFGiIolIbK.jpeg",
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_3091%20%281%29.JPG-v0a8YnCuhg2DdbfuXLBFzDdHBgwzvX.jpeg",
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_3085%20%281%29.JPG-Kif4Mpv8QDylYhLyqwLlat6tfHQMfs.jpeg",
         "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_3089%20%281%29.JPG-Xp3k6PgM6wMboVc6ReBy7IXVp578Sp.jpeg",
       ],
       interior: [
