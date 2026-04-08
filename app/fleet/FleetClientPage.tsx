@@ -63,9 +63,9 @@ export default function FleetClientPage() {
     {
       id: "executive-van",
       name: "Executive Van",
-      image: "/executive-van-hiace.jpg",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202026-04-09%20at%2000.46.06-x7MQtJs3URvRgTNC6D0DD4JH9eKMyH.png",
       isExecutiveVan: true,
-      imagePosition: "object-bottom",
+      imagePosition: "object-center",
       features: [
         { icon: Wind, labelKey: "climate", valueKey: "rearClimateControl" },
         { icon: Users, labelKey: "capacity", valueKey: "fourteenSeater" },
@@ -93,8 +93,8 @@ export default function FleetClientPage() {
     {
       id: "byd-atto-3",
       name: "BYD ATTO 3",
-      image: "/byd-atto3.jpg",
-      imagePosition: "object-bottom",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202026-04-09%20at%2000.45.25-DqMssk2DI8hepMQPaTUIzySn3hmb6M.png",
+      imagePosition: "object-center",
       features: [
         { icon: Zap, labelKey: "power", valueKey: "electric" },
         { icon: Wind, labelKey: "climate", valueKey: "climate" },

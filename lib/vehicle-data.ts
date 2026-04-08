@@ -241,9 +241,11 @@ export const vehicles: Vehicle[] = [
     id: "byd-atto-3",
     name: "BYD Atto 3",
     class: "VIP",
-    image: "/byd-atto-3.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202026-04-09%20at%2000.45.25-DqMssk2DI8hepMQPaTUIzySn3hmb6M.png",
     images: {
-      exterior: ["/byd-atto-3.jpg"],
+      exterior: [
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202026-04-09%20at%2000.45.25-DqMssk2DI8hepMQPaTUIzySn3hmb6M.png",
+      ],
       interior: [
         "/byd-atto3-interior-front.jpg",
         "/byd-atto3-interior-sunroof.jpg",
@@ -407,10 +409,10 @@ export const vehicles: Vehicle[] = [
     id: "executive-van",
     name: "Executive Van",
     class: "VIP",
-    image: "/executive-van-exterior-side.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202026-04-09%20at%2000.46.06-x7MQtJs3URvRgTNC6D0DD4JH9eKMyH.png",
     images: {
       exterior: [
-        "/executive-van-exterior-side.jpg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202026-04-09%20at%2000.46.06-x7MQtJs3URvRgTNC6D0DD4JH9eKMyH.png",
         "/executive-van-exterior-front.jpg",
         "/executive-van-exterior-driver-side.jpg",
         "/executive-van-exterior-rear.jpg",
