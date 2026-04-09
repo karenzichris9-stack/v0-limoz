@@ -36,7 +36,7 @@ export function Footer() {
                 <span>(+250) 788 380 013</span>
               </a>
               <a
-                href="https://wa.me/250788380013"
+                href="https://wa.me/250788318990"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-gray-300 hover:text-green-400 transition-colors group"
@@ -114,7 +114,7 @@ export function Footer() {
                 </svg>
               </a>
               <a
-                href="https://wa.me/250788380013"
+                href="https://wa.me/250788318990"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-green-400 transition-colors hover:scale-110 transform"
