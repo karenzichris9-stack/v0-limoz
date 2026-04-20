@@ -22,6 +22,14 @@ export function EventBanner() {
               2 Days Left
             </div>
 
+            {/* "Limoz Sponsor" Badge */}
+            <div className="absolute top-4 left-4 z-10 bg-gradient-to-r from-[#ffd700] to-[#f7e7ce] text-gray-900 px-3 py-1 rounded-full text-xs sm:text-sm font-bold shadow-lg flex items-center gap-1.5">
+              <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              Limoz Sponsor
+            </div>
+
             {/* Poster Card */}
             <div className="bg-white rounded-xl sm:rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden">
               {/* Poster Image */}
