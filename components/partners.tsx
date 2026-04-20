@@ -3,11 +3,6 @@
 export function Partners() {
   const partners = [
     {
-      name: "Garden Fresh Rwanda",
-      logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/garden%20fresh%20logo-qZpgbXPveAMlY5Qupq94WuUXXEDDVt.png",
-      alt: "Garden Fresh Rwanda"
-    },
-    {
       name: "Goritech Garage Services",
       logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/gori-SytMdLNp0eSlOSt0h5def2u4skMHmg.png",
       alt: "Goritech Garage Services"
@@ -28,9 +23,8 @@ export function Partners() {
     <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-white">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-8 sm:mb-10 md:mb-12">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-gray-900">Our Partners</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-gray-900"></h2>
           <p className="text-sm sm:text-base text-gray-600 max-w-2xl mx-auto px-2">
-            Trusted by leading businesses in Rwanda for reliable transportation and logistics solutions
           </p>
         </div>
 
