@@ -2,7 +2,7 @@
 
 export function EventBanner() {
   return (
-    <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-gradient-to-b from-gray-50 to-white overflow-x-hidden">
+    <section className="py-12 sm:py-16 md:py-8 px-4 sm:px-6 bg-gradient-to-b from-gray-50 to-white overflow-x-hidden">
       <div className="container mx-auto px-0 sm:px-0">
         {/* Section Heading */}
         <div className="text-center mb-8 sm:mb-10 md:mb-12 px-4">
