@@ -38,15 +38,15 @@ export function Partners() {
           {partners.map((partner, index) => (
             <div
               key={index}
-              className="flex flex-col items-center justify-center p-4 sm:p-6 rounded-lg hover:shadow-lg transition-shadow duration-300 bg-gray-50 hover:bg-gray-100 w-full h-32 sm:h-40"
+              className="flex flex-col items-center justify-center p-4 sm:p-6 rounded-lg hover:shadow-lg transition-shadow duration-300 bg-gray-50 hover:bg-gray-100 w-full min-h-48 sm:min-h-56"
             >
               <img
                 src={partner.logo}
                 alt={partner.alt}
-                className="h-16 sm:h-20 md:h-24 w-auto object-contain mb-2 sm:mb-3"
+                className="h-16 sm:h-20 md:h-24 w-auto object-contain mb-3 sm:mb-4"
                 loading="lazy"
               />
-              <p className="text-xs sm:text-sm md:text-base text-gray-700 font-medium text-center line-clamp-2">{partner.name}</p>
+              <p className="text-xs sm:text-sm md:text-base text-gray-700 font-medium text-center line-clamp-3">{partner.name}</p>
             </div>
           ))}
         </div>
