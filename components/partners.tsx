@@ -1,23 +1,7 @@
 'use client'
 
 export function Partners() {
-  const partners = [
-    {
-      name: "Goritech Garage Services",
-      logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/gori-SytMdLNp0eSlOSt0h5def2u4skMHmg.png",
-      alt: "Goritech Garage Services"
-    },
-    {
-      name: "Anko Properties Limited",
-      logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ANKO%20PROPERTIES-4IK1Sa2GGSQorwTg7ds5P0GCvIjrnn.png",
-      alt: "Anko Properties Limited"
-    },
-    {
-      name: "Gorilland Safaris Ltd",
-      logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/gorilland-NcfExEM2sdJjlhV5nGnVkfEyUrFFJ3.png",
-      alt: "Gorilland Safaris Ltd"
-    }
-  ]
+  const partners = []
 
   return (
     <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-white">
