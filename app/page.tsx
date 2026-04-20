@@ -5,6 +5,7 @@ import { Fleet } from "@/components/fleet"
 import { WhyChoose } from "@/components/why-choose"
 import { HowItWorks } from "@/components/how-it-works"
 import { Testimonials } from "@/components/testimonials"
+import { EventBanner } from "@/components/event-banner"
 import { Partners } from "@/components/partners"
 import { AppPromo } from "@/components/app-promo"
 import { Footer } from "@/components/footer"
@@ -22,6 +23,7 @@ export default function Home() {
       <WhyChoose />
       <HowItWorks />
       <Testimonials />
+      <EventBanner />
       <Partners />
       <AppPromo />
       <Footer />
