@@ -2,20 +2,20 @@
 
 export function EventBanner() {
   return (
-    <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 bg-gradient-to-b from-gray-50 to-white">
-      <div className="container mx-auto">
+    <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-gradient-to-b from-gray-50 to-white overflow-x-hidden">
+      <div className="container mx-auto px-0 sm:px-0">
         {/* Section Heading */}
-        <div className="text-center mb-8 sm:mb-12">
+        <div className="text-center mb-8 sm:mb-10 md:mb-12 px-4">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-2 sm:mb-3">
             Events in Kigali
           </h2>
-          <p className="text-sm sm:text-base text-gray-600">
+          <p className="text-xs sm:text-sm md:text-base text-gray-600">
             Happening near you
           </p>
         </div>
 
         {/* Event Card */}
-        <div className="flex justify-center">
+        <div className="flex justify-center px-4">
           <div className="w-full max-w-sm relative">
             {/* "2 Days Left" Badge */}
             <div className="absolute top-4 right-4 z-10 bg-red-500 text-white px-3 py-1 rounded-full text-xs sm:text-sm font-bold shadow-lg">

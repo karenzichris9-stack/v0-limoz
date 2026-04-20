@@ -29,25 +29,25 @@ export function StickyBookingBar() {
           isVisible ? "translate-y-0 opacity-100" : "translate-y-full opacity-0",
         )}
       >
-        <div className="flex gap-2 p-3">
+        <div className="flex gap-2 p-2.5 sm:p-3">
           {/* WhatsApp Button */}
           <a
             href="https://wa.me/250788318990"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-1 flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-green-500/25"
+            className="flex-1 flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white px-2 sm:px-4 py-2.5 sm:py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-green-500/25 min-h-[44px]"
           >
-            <MessageCircle className="w-5 h-5" />
-            <span className="text-sm">{t("contact.whatsappUs") || "WhatsApp Us"}</span>
+            <MessageCircle className="w-4 sm:w-5 h-4 sm:h-5 flex-shrink-0" />
+            <span className="text-xs sm:text-sm hidden xs:inline">{t("contact.whatsappUs") || "WhatsApp"}</span>
           </a>
 
           {/* Call Button */}
           <a
             href="tel:+250788318990"
-            className="flex-1 flex items-center justify-center gap-2 bg-[#f39c12] hover:bg-[#e67e22] text-white px-4 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#f39c12]/25"
+            className="flex-1 flex items-center justify-center gap-2 bg-[#f39c12] hover:bg-[#e67e22] text-white px-2 sm:px-4 py-2.5 sm:py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#f39c12]/25 min-h-[44px]"
           >
-            <Phone className="w-5 h-5" />
-            <span className="text-sm">{t("contact.callNow") || "Call Now"}</span>
+            <Phone className="w-4 sm:w-5 h-4 sm:h-5 flex-shrink-0" />
+            <span className="text-xs sm:text-sm hidden xs:inline">{t("contact.callNow") || "Call"}</span>
           </a>
         </div>
       </div>
