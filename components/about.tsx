@@ -15,7 +15,7 @@ export function About() {
     <section className="py-12 md:py-20 bg-gradient-to-b from-[#f7e7ce]/20 via-white to-white overflow-hidden relative">
 
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center max-w-6xl mx-auto">
           {/* Text Content */}
           <AnimatedSection animation="fade-right">
             <div>

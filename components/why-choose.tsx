@@ -16,9 +16,9 @@ export function WhyChoose() {
   ]
 
   return (
-    <section className="py-20 bg-white overflow-hidden">
+    <section className="py-16 md:py-20 bg-white overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center max-w-6xl mx-auto">
           {/* Image */}
           <AnimatedSection animation="fade-right" className="order-2 md:order-1">
             <div className="relative">
@@ -35,16 +35,16 @@ export function WhyChoose() {
               </div>
 
               {/* Rating card */}
-              <div className="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 bg-gradient-to-br from-[#ffd700] to-[#f7e7ce] text-[#0f0f23] p-4 md:p-6 rounded-xl shadow-xl border border-[#ffd700]/30">
-                <p className="text-4xl font-bold">4.9</p>
+              <div className="absolute -bottom-3 -right-3 sm:-bottom-4 sm:-right-4 md:-bottom-6 md:-right-6 bg-gradient-to-br from-[#ffd700] to-[#f7e7ce] text-[#0f0f23] p-3 sm:p-4 md:p-6 rounded-lg md:rounded-xl shadow-lg md:shadow-xl border border-[#ffd700]/30 z-10">
+                <p className="text-3xl sm:text-4xl font-bold">4.9</p>
                 <div className="flex gap-1 my-1">
                   {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="w-4 h-4 fill-current text-[#0f0f23]" viewBox="0 0 20 20">
+                    <svg key={i} className="w-3 sm:w-4 h-3 sm:h-4 fill-current text-[#0f0f23]" viewBox="0 0 20 20">
                       <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
                     </svg>
                   ))}
                 </div>
-                <p className="text-sm opacity-80">{t("whyChoose.customerRating")}</p>
+                <p className="text-xs sm:text-sm opacity-80">{t("whyChoose.customerRating")}</p>
               </div>
             </div>
           </AnimatedSection>

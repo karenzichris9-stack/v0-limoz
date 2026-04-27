@@ -29,12 +29,12 @@ export function HowItWorks() {
   return (
     <section className="py-20 bg-gradient-to-b from-white to-gray-50 overflow-hidden">
       <div className="container mx-auto px-4">
-        <AnimatedSection animation="fade-up" className="text-center mb-16">
-          <span className="inline-block px-4 py-1.5 bg-[#f39c12]/10 text-[#f39c12] text-sm font-semibold rounded-full mb-4">
+        <AnimatedSection animation="fade-up" className="text-center mb-12 md:mb-16">
+          <span className="inline-block px-4 py-1.5 bg-[#f39c12]/10 text-[#f39c12] text-xs sm:text-sm font-semibold rounded-full mb-3 sm:mb-4">
             {t("howItWorks.sectionLabel")}
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">{t("howItWorks.title")}</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto text-lg">{t("howItWorks.subtitle")}</p>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-3 sm:mb-4">{t("howItWorks.title")}</h2>
+          <p className="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base md:text-lg">{t("howItWorks.subtitle")}</p>
         </AnimatedSection>
 
         <div className="max-w-5xl mx-auto">
@@ -48,12 +48,12 @@ export function HowItWorks() {
                 <AnimatedSection key={index} animation="fade-up" delay={index * 0.15}>
                   <div className="relative text-center">
                     {/* Large gold step number */}
-                    <div className="text-8xl font-bold text-[#f39c12] opacity-20 mb-4">{step.number}</div>
+                    <div className="text-6xl sm:text-7xl md:text-8xl font-bold text-[#f39c12] opacity-20 mb-4">{step.number}</div>
 
                     {/* Content */}
                     <div className="relative -mt-8">
-                      <h3 className="text-2xl font-bold text-gray-900 mb-3">{t(step.titleKey)}</h3>
-                      <p className="text-gray-600 leading-relaxed">{t(step.descKey)}</p>
+                      <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-2 md:mb-3">{t(step.titleKey)}</h3>
+                      <p className="text-xs sm:text-sm md:text-base text-gray-600 leading-relaxed">{t(step.descKey)}</p>
                     </div>
                   </div>
                 </AnimatedSection>
@@ -62,23 +62,23 @@ export function HowItWorks() {
           </div>
 
           {/* Mobile: Vertical layout with vertical connector */}
-          <div className="md:hidden space-y-12">
-            <div className="relative pl-12">
+          <div className="md:hidden space-y-8 sm:space-y-10 md:space-y-12">
+            <div className="relative pl-10 sm:pl-12">
               {/* Vertical dashed connector line */}
-              <div className="absolute left-4 top-0 bottom-0 w-0.5 border-l-2 border-dashed border-[#f39c12]/40" />
+              <div className="absolute left-3.5 sm:left-4 top-0 bottom-0 w-0.5 border-l-2 border-dashed border-[#f39c12]/40" />
 
               {steps.map((step, index) => (
                 <AnimatedSection key={index} animation="fade-up" delay={index * 0.15}>
                   <div className="relative">
                     {/* Step number circle */}
-                    <div className="absolute -left-10 -top-2 w-8 h-8 rounded-full bg-[#f39c12] flex items-center justify-center text-white font-bold text-lg z-10">
+                    <div className="absolute -left-8 sm:-left-9 -top-1 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#f39c12] flex items-center justify-center text-white font-bold text-sm sm:text-base z-10 flex-shrink-0">
                       {step.number}
                     </div>
 
                     {/* Content */}
-                    <div className="pt-2">
-                      <h3 className="text-xl font-bold text-gray-900 mb-3">{t(step.titleKey)}</h3>
-                      <p className="text-gray-600 leading-relaxed">{t(step.descKey)}</p>
+                    <div className="pt-1 md:pt-2">
+                      <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 md:mb-3">{t(step.titleKey)}</h3>
+                      <p className="text-xs sm:text-sm md:text-base text-gray-600 leading-relaxed">{t(step.descKey)}</p>
                     </div>
                   </div>
                 </AnimatedSection>
@@ -88,7 +88,7 @@ export function HowItWorks() {
         </div>
 
         {/* CTA */}
-        <AnimatedSection animation="fade-up" delay={0.5} className="text-center mt-12">
+        <AnimatedSection animation="fade-up" delay={0.5} className="text-center mt-10 md:mt-12">
           <CTAButton href="/booking" variant="primary" size="lg" showArrow>
             {t("howItWorks.startBooking")}
           </CTAButton>

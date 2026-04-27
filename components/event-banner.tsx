@@ -1,0 +1,84 @@
+"use client"
+
+export function EventBanner() {
+  return (
+    <section className="py-12 sm:py-16 md:py-8 px-4 sm:px-6 bg-gradient-to-b from-gray-50 to-white overflow-x-hidden">
+      <div className="container mx-auto px-0 sm:px-0">
+        {/* Section Heading */}
+        <div className="text-center mb-8 sm:mb-10 md:mb-12 px-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-2 sm:mb-3">
+            Events in Kigali
+          </h2>
+          <p className="text-xs sm:text-sm md:text-base text-gray-600">
+            Happening near you
+          </p>
+        </div>
+
+        {/* Event Card */}
+        <div className="flex justify-center px-4">
+          <div className="w-full max-w-sm relative">
+            {/* "2 Days Left" Badge */}
+            <div className="absolute top-4 right-4 z-10 bg-red-500 text-white px-3 py-1 rounded-full text-xs sm:text-sm font-bold shadow-lg">
+              2 Days Left
+            </div>
+
+            {/* "Limoz Sponsor" Badge */}
+            <div className="absolute top-4 left-4 z-10 bg-gradient-to-r from-[#ffd700] to-[#f7e7ce] text-gray-900 px-3 py-1 rounded-full text-xs sm:text-sm font-bold shadow-lg flex items-center gap-1.5">
+              <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+              Limoz Sponsor
+            </div>
+
+            {/* Poster Card */}
+            <div className="bg-white rounded-xl sm:rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden">
+              {/* Poster Image */}
+              <div className="relative aspect-square overflow-hidden bg-gray-100">
+                <img
+                  src="/cavb-poster.jpg"
+                  alt="47th CAVB Men's Club Championship Rwanda 2026"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
+                />
+              </div>
+
+              {/* Card Content */}
+              <div className="p-4 sm:p-6 text-center">
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">
+                  47th CAVB Men's Championship
+                </h3>
+                <p className="text-xs sm:text-sm text-gray-600 mb-4">
+                  <span className="block font-semibold">April 22 - May 2, 2026</span>
+                  <span className="block">BK Arena & Petit Stade, Kigali</span>
+                </p>
+
+                {/* CTA Button */}
+                <a
+                  href="https://ticqet.rw"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white py-2.5 sm:py-3 px-4 rounded-lg font-semibold hover:from-blue-700 hover:to-blue-800 transition-all duration-300 hover:shadow-lg mb-3"
+                >
+                  Get Tickets
+                </a>
+
+                {/* Alternative Link Note */}
+                <p className="text-xs sm:text-sm text-gray-600">
+                  Also available on{" "}
+                  <a
+                    href="https://sportspass.rw"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:text-blue-700 font-semibold underline"
+                  >
+                    Sportspass.rw
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}

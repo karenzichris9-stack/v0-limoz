@@ -130,7 +130,7 @@ export default function RootLayout({
         {/* Preload hero poster image for faster LCP */}
         <link rel="preload" as="image" href="/luxury-car-on-scenic-road-in-rwanda.jpg" />
       </head>
-      <body className={`font-sans antialiased`}>
+      <body className={`font-sans antialiased overflow-x-hidden`}>
         <JsonLd />
         <LanguageProvider>
           <Suspense fallback={null}>
