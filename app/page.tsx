@@ -2,6 +2,7 @@ import { Hero } from "@/components/hero"
 import { TrustIndicators } from "@/components/trust-indicators"
 import { About } from "@/components/about"
 import { Fleet } from "@/components/fleet"
+import { LimozTrucks } from "@/components/limoz-trucks"
 import { WhyChoose } from "@/components/why-choose"
 import { HowItWorks } from "@/components/how-it-works"
 import { Testimonials } from "@/components/testimonials"
@@ -19,6 +20,7 @@ export default function Home() {
       <TrustIndicators />
       <About />
       <Fleet />
+      <LimozTrucks />
       <WhyChoose />
       <HowItWorks />
       <Testimonials />
