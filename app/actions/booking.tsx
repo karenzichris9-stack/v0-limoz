@@ -4,6 +4,42 @@ import { Resend } from "resend"
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
+async function sendWhatsAppMessage(phoneNumber: string, bookingDetails: string) {
+  try {
+    // Using Twilio WhatsApp API
+    if (!process.env.TWILIO_ACCOUNT_SID || !process.env.TWILIO_AUTH_TOKEN || !process.env.TWILIO_WHATSAPP_NUMBER) {
+      console.log("[v0] WhatsApp credentials not configured, skipping WhatsApp notification")
+      return
+    }
+
+    const twilioUrl = `https://api.twilio.com/2010-04-01/Accounts/${process.env.TWILIO_ACCOUNT_SID}/Messages.json`
+    
+    const formData = new URLSearchParams()
+    formData.append("From", `whatsapp:${process.env.TWILIO_WHATSAPP_NUMBER}`)
+    formData.append("To", `whatsapp:${phoneNumber}`)
+    formData.append("Body", bookingDetails)
+
+    const authString = Buffer.from(`${process.env.TWILIO_ACCOUNT_SID}:${process.env.TWILIO_AUTH_TOKEN}`).toString("base64")
+
+    const response = await fetch(twilioUrl, {
+      method: "POST",
+      headers: {
+        "Authorization": `Basic ${authString}`,
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body: formData.toString(),
+    })
+
+    if (!response.ok) {
+      console.error("[v0] WhatsApp message failed:", response.statusText)
+    } else {
+      console.log("[v0] WhatsApp message sent successfully to", phoneNumber)
+    }
+  } catch (error) {
+    console.error("[v0] Error sending WhatsApp message:", error)
+  }
+}
+
 export async function submitBooking(formData: FormData) {
   console.log("[v0] Booking submission started")
 
@@ -31,7 +67,7 @@ export async function submitBooking(formData: FormData) {
     const dropOff = new Date(dropOffDate)
     const duration = Math.ceil((dropOff.getTime() - pickup.getTime()) / (1000 * 60 * 60 * 24))
 
-    console.log("[v0] Sending booking emails")
+    console.log("[v0] Sending booking emails and WhatsApp")
     console.log("[v0] Vehicle type:", vehicleType)
     console.log("[v0] Pickup date:", pickupDate)
     console.log("[v0] Drop-off date:", dropOffDate)
@@ -76,15 +112,37 @@ export async function submitBooking(formData: FormData) {
       </div>
     `
 
-    // Send to booking@limozrwanda.com
-    const result = await resend.emails.send({
-      from: "booking@limozrwanda.com",
-      to: "booking@limozrwanda.com",
+    // WhatsApp message content
+    const whatsappMessage = `
+🚗 *New Booking Request - Limoz Rwanda*
+
+👤 *Customer:* ${fullName}
+📧 *Email:* ${email}
+📱 *Phone:* ${phone}
+
+🚙 *Vehicle:* ${vehicleType}
+📅 *Pickup:* ${pickupDate}
+📅 *Drop-off:* ${dropOffDate}
+⏱️ *Duration:* ${duration} day(s)
+
+${notes ? `📝 *Notes:* ${notes}` : ""}
+
+---
+Submitted via Limoz Rwanda Website
+`.trim()
+
+    // Send email to info@limozrwanda.com
+    const emailResult = await resend.emails.send({
+      from: "info@limozrwanda.com",
+      to: "info@limozrwanda.com",
       subject: `New Booking Request - ${vehicleType}`,
       html: emailHTML,
     })
 
-    console.log("[v0] Booking email sent to booking@limozrwanda.com:", result)
+    console.log("[v0] Booking email sent to info@limozrwanda.com:", emailResult)
+
+    // Send WhatsApp message to the business number
+    await sendWhatsAppMessage("+250788318990", whatsappMessage)
 
     return {
       success: true,
@@ -98,7 +156,7 @@ export async function submitBooking(formData: FormData) {
     }
     return {
       success: false,
-      message: "Failed to submit booking. Please try contacting us directly at +250 788 309 189.",
+      message: "Failed to submit booking. Please try contacting us directly at +250 788 318 990.",
     }
   }
 }
