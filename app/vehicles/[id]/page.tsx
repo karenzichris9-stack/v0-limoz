@@ -136,18 +136,15 @@ export default function VehicleDetailPage() {
               <div>
                 <h2 className="text-3xl font-bold mb-6">{t("vehicleDetails.interiorGallery")}</h2>
                 <div className="grid sm:grid-cols-2 gap-4">
-                  {detailInteriorImages.map((img, idx) => {
-                    if (idx === 3) return null
-                    return (
-                      <div key={idx} className="aspect-video bg-gray-100 rounded-xl overflow-hidden">
-                        <img
-                          src={img || "/placeholder.svg?height=400&width=600"}
-                          alt={`${vehicle.name} interior ${idx + 1}`}
-                          className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
-                        />
-                      </div>
-                    )
-                  })}
+                  {detailInteriorImages.map((img, idx) => (
+                    <div key={idx} className="aspect-video bg-gray-100 rounded-xl overflow-hidden">
+                      <img
+                        src={img || "/placeholder.svg?height=400&width=600"}
+                        alt={`${vehicle.name} interior ${idx + 1}`}
+                        className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                      />
+                    </div>
+                  ))}
                 </div>
               </div>
             )}
@@ -182,7 +179,7 @@ export default function VehicleDetailPage() {
                     {t("vehicleDetails.callUs")}
                   </a>
                   <a
-                    href="https://wa.me/250788318990"
+                    href="https://wa.me/250782280204"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block w-full text-center bg-green-500 text-white py-3 px-6 rounded-lg hover:bg-green-600 transition-all font-semibold"

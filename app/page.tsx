@@ -2,11 +2,10 @@ import { Hero } from "@/components/hero"
 import { TrustIndicators } from "@/components/trust-indicators"
 import { About } from "@/components/about"
 import { Fleet } from "@/components/fleet"
+import { LimozTrucks } from "@/components/limoz-trucks"
 import { WhyChoose } from "@/components/why-choose"
 import { HowItWorks } from "@/components/how-it-works"
 import { Testimonials } from "@/components/testimonials"
-import { EventBanner } from "@/components/event-banner"
-import { Partners } from "@/components/partners"
 import { AppPromo } from "@/components/app-promo"
 import { Footer } from "@/components/footer"
 import { FloatingCTA } from "@/components/floating-cta"
@@ -20,11 +19,10 @@ export default function Home() {
       <TrustIndicators />
       <About />
       <Fleet />
+      <LimozTrucks />
       <WhyChoose />
       <HowItWorks />
       <Testimonials />
-      <EventBanner />
-      <Partners />
       <AppPromo />
       <Footer />
       <FloatingCTA />

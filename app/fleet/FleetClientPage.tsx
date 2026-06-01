@@ -63,9 +63,9 @@ export default function FleetClientPage() {
     {
       id: "executive-van",
       name: "Executive Van",
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202026-04-09%20at%2000.46.06-x7MQtJs3URvRgTNC6D0DD4JH9eKMyH.png",
+      image: "/executive-van-hiace.jpg",
       isExecutiveVan: true,
-      imagePosition: "object-center",
+      imagePosition: "object-bottom",
       features: [
         { icon: Wind, labelKey: "climate", valueKey: "rearClimateControl" },
         { icon: Users, labelKey: "capacity", valueKey: "fourteenSeater" },
@@ -93,8 +93,8 @@ export default function FleetClientPage() {
     {
       id: "byd-atto-3",
       name: "BYD ATTO 3",
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202026-04-09%20at%2000.45.25-DqMssk2DI8hepMQPaTUIzySn3hmb6M.png",
-      imagePosition: "object-center",
+      image: "/byd-atto3.jpg",
+      imagePosition: "object-bottom",
       features: [
         { icon: Zap, labelKey: "power", valueKey: "electric" },
         { icon: Wind, labelKey: "climate", valueKey: "climate" },
@@ -121,8 +121,9 @@ export default function FleetClientPage() {
     {
       id: "coaster-bus",
       name: "Coaster Bus",
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_3085%20%281%29.JPG-PRz4yRYnd0jDwBuqZbwKYFGiIolIbK.jpeg",
+      image: "/coaster-bus.jpg",
       imagePosition: "object-center",
+      useContain: true,
       features: [
         { icon: Users, labelKey: "capacity", valueKey: "thirtyThreeSeater" },
         { icon: Wind, labelKey: "climate", valueKey: "airConditioning" },
@@ -135,8 +136,8 @@ export default function FleetClientPage() {
     {
       id: "tunland-foton",
       name: "Tunland Foton",
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202026-04-09%20at%2000.11.28-GgS21nbykmkEm0UUU9GONAQYpxduhL.png",
-      imagePosition: "object-center",
+      image: "/tunland-foton.jpg",
+      imagePosition: "object-bottom",
       features: [
         { icon: Wind, labelKey: "climate", valueKey: "airConditioning" },
         { icon: Users, labelKey: "capacity", valueKey: "fiveSeater" },

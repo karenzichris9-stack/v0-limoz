@@ -44,7 +44,7 @@ export function StickyBookingBar() {
           {/* Call Button */}
           <a
             href="tel:+250788318990"
-            className="flex-1 flex items-center justify-center gap-2 bg-[#f39c12] hover:bg-[#e67e22] text-white px-2 sm:px-4 py-2.5 sm:py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#f39c12]/25 min-h-[44px]"
+            className="flex-1 flex items-center justify-center gap-2 bg-[#f39c12] hover:bg-[#e67e22] text-white px-4 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#f39c12]/25"
           >
             <Phone className="w-4 sm:w-5 h-4 sm:h-5 flex-shrink-0" />
             <span className="text-xs sm:text-sm hidden xs:inline">{t("contact.callNow") || "Call"}</span>
