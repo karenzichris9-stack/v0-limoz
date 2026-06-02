@@ -28,5 +28,9 @@ export function PageTransition({ children }: { children: React.ReactNode }) {
     return () => observer.disconnect()
   }, [])
 
-  return <div ref={ref}>{children}</div>
+  return (
+    <div ref={ref} suppressHydrationWarning>
+      {children}
+    </div>
+  )
 }
