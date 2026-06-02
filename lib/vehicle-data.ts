@@ -31,12 +31,21 @@ export const vehicles: Vehicle[] = [
   // VVIP Class
   {
     id: "land-cruiser-txl-2023",
-    name: "LANDCRUISER 200 SERIES", // Updated name to "LANDCRUISER 200 SERIES"
+    name: "LANDCRUISER 200 SERIES",
     class: "VVIP",
-    image: "/land-cruiser-txl-exterior-1.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/10-WrxsMDFksxi3P5qPvkrPk7pmDqVrIe.jpg",
     images: {
-      exterior: ["/land-cruiser-txl-exterior-1.jpg", "/land-cruiser-txl-exterior-2.jpg"],
-      interior: [],
+      exterior: [
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/10-WrxsMDFksxi3P5qPvkrPk7pmDqVrIe.jpg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1-DQSobRZzETOspR2StT429CxZbqv5fl.jpg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3-BtJSR3aH9vJoB62Lxfd2uw5yZJy3Pj.jpg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/11-DkFPy8ImfgFYUVJprFW5UPrxu2edu9.jpg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/12-dLqCnHmk4BNDIJrPOVjTIUqudqIDx9.jpg",
+      ],
+      interior: [
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/6-vbkQLKhBRSttPa2fNCrxNkqCOyKDi2.jpg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/5-J4zEpF5W1tZzS1uvyOuO7K61ZBnzqL.jpg",
+      ],
     },
     videos: ["https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DJI_20251020_114443_765%E2%80%AFAM_video-ahCcoQDbjiOIaqY97KnMhhRnLPT8Sv.MP4"],
     price: {

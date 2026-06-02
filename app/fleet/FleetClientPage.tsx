@@ -81,7 +81,8 @@ export default function FleetClientPage() {
     {
       id: "land-cruiser-200-series",
       name: "Land Cruiser 200 Series",
-      image: "/land-cruiser-exterior-side-angle.jpg",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/10-WrxsMDFksxi3P5qPvkrPk7pmDqVrIe.jpg",
+      imagePosition: "object-center",
       features: [
         { icon: Wind, labelKey: "climate", valueKey: "dualClimateControl" },
         { icon: Users, labelKey: "capacity", valueKey: "sevenSeater" },
