@@ -63,9 +63,9 @@ export default function FleetClientPage() {
     {
       id: "executive-van",
       name: "Executive Van",
-      image: "/executive-van-hiace.jpg",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1.JPG-Ni0AiKCM6DsxBU8Yp0QDxbVOSEEWcv.jpeg",
       isExecutiveVan: true,
-      imagePosition: "object-bottom",
+      imagePosition: "object-center",
       features: [
         { icon: Wind, labelKey: "climate", valueKey: "rearClimateControl" },
         { icon: Users, labelKey: "capacity", valueKey: "fourteenSeater" },

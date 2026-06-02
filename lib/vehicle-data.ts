@@ -419,15 +419,18 @@ export const vehicles: Vehicle[] = [
     id: "executive-van",
     name: "Executive Van",
     class: "VIP",
-    image: "/executive-van-exterior-side.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1.JPG-Ni0AiKCM6DsxBU8Yp0QDxbVOSEEWcv.jpeg",
     images: {
       exterior: [
-        "/executive-van-exterior-side.jpg",
-        "/executive-van-exterior-front.jpg",
-        "/executive-van-exterior-driver-side.jpg",
-        "/executive-van-exterior-rear.jpg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1.JPG-Ni0AiKCM6DsxBU8Yp0QDxbVOSEEWcv.jpeg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_4.JPG-WKjDEQqEmRpXXsqXVqefdzywTFqXD8.jpeg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_3.JPG-qJmL8La5RmwckTIi1hakghtdw7uBCo.jpeg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_2.JPG-l3uyK6iL3zvNJHZPe1DAgjHU5C8os5.jpeg",
       ],
-      interior: ["/executive-van-interior-cabin.jpg", "/executive-van-interior-dashboard.jpg"],
+      interior: [
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_8.JPG-ktn9mEVJLZVP6nOURhIAHUpTP9yQ6g.jpeg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_11.JPG-UnidE58AxrX3UbbjCGrhdcbZbxRSNE.jpeg",
+      ],
     },
     price: {
       daily: 180,
