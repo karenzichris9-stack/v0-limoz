@@ -93,8 +93,8 @@ export default function FleetClientPage() {
     {
       id: "byd-atto-3",
       name: "BYD ATTO 3",
-      image: "/byd-atto3.jpg",
-      imagePosition: "object-bottom",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/4-RrbGvsNwRaf1If4M9dIausD5EngzFg.jpg",
+      imagePosition: "object-center",
       features: [
         { icon: Zap, labelKey: "power", valueKey: "electric" },
         { icon: Wind, labelKey: "climate", valueKey: "climate" },

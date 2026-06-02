@@ -241,14 +241,17 @@ export const vehicles: Vehicle[] = [
     id: "byd-atto-3",
     name: "BYD Atto 3",
     class: "VIP",
-    image: "/byd-atto-3.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/4-RrbGvsNwRaf1If4M9dIausD5EngzFg.jpg",
     images: {
-      exterior: ["/byd-atto-3.jpg"],
+      exterior: [
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/4-RrbGvsNwRaf1If4M9dIausD5EngzFg.jpg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3-DiF6bOboOCVOVH6k3z8y6F84Djs0FU.jpg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/2-5WTiZwgcOJQ4FBWXdOXBHiFZeZWD09.jpg",
+      ],
       interior: [
-        "/byd-atto3-interior-front.jpg",
-        "/byd-atto3-interior-sunroof.jpg",
-        "/byd-atto3-interior-driver.jpg",
-        "/byd-atto3-interior-rear.jpg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/11-DINoOO1stVwLtdUYLSEjrfaVpHwshh.jpg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/10-WRLVOIeLhG5KVgWR1CN5FmstpKU0jL.jpg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/5-Y5dVfuEH2ZeboCaCAW9aaPg9NXZ2mf.jpg",
       ],
     },
     price: {
