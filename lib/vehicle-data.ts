@@ -296,10 +296,18 @@ export const vehicles: Vehicle[] = [
     id: "byd-dolphin",
     name: "BYD Dolphin",
     class: "VIP",
-    image: "/byd-dolphin-black-with-plate.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_1.JPG-WZKPPE161FNsLy0SHrcuxpY19ZEoLJ.jpeg",
     images: {
-      exterior: ["/byd-dolphin-black-with-plate.jpg", "/byd-dolphin.jpg"],
-      interior: [],
+      exterior: [
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_1.JPG-WZKPPE161FNsLy0SHrcuxpY19ZEoLJ.jpeg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_3.JPG-JvlnX72bQ2jlvqYn1qGrp1n3l2aPMo.jpeg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_5.JPG-caUgRfdojrDWkbd6kDsy9e67JkZIgg.jpeg",
+      ],
+      interior: [
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_10.JPG-ZCsSHtDfBCvqoywuc9U1XpqQpYJ7FF.jpeg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_7.JPG-cOszM4G75T55H2bCfXwKQVFXy466x4.jpeg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_9.JPG-kXIQdAQ7C9vIkjZC1NmWwp8Ti7y9Vz.jpeg",
+      ],
     },
     price: {
       daily: 150,

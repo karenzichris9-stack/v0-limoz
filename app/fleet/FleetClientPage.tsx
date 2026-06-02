@@ -107,7 +107,7 @@ export default function FleetClientPage() {
     {
       id: "byd-dolphin",
       name: "BYD Dolphin",
-      image: "/byd-dolphin-black-with-plate.jpg",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_1.JPG-WZKPPE161FNsLy0SHrcuxpY19ZEoLJ.jpeg",
       features: [
         { icon: Zap, labelKey: "power", valueKey: "electric" },
         { icon: Wind, labelKey: "climate", valueKey: "dualClimateControl" },
