@@ -33,10 +33,19 @@ export const vehicles: Vehicle[] = [
     id: "land-cruiser-txl-2023",
     name: "LANDCRUISER 200 SERIES",
     class: "VVIP",
-    image: "/land-cruiser-txl-exterior-1.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202026-03-17%20at%2013.33.39-RtUQJqAFHRwXKrYfmex38gsD3XzX2b.png",
     images: {
-      exterior: ["/land-cruiser-txl-exterior-1.jpg", "/land-cruiser-txl-exterior-2.jpg"],
-      interior: [],
+      exterior: [
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202026-03-17%20at%2013.33.39-RtUQJqAFHRwXKrYfmex38gsD3XzX2b.png",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202026-03-17%20at%2013.34.28-Rre05AHdaq8lKXEU7gEWMEhtaymptR.png",
+      ],
+      interior: [
+        "/land-cruiser-200-interior-1.jpg",
+        "/land-cruiser-200-interior-2.jpg",
+        "/land-cruiser-200-interior-3.jpg",
+        "/land-cruiser-200-interior-4.jpg",
+        "/land-cruiser-200-interior-5.jpg",
+      ],
     },
     videos: ["https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DJI_20251020_114443_765%E2%80%AFAM_video-ahCcoQDbjiOIaqY97KnMhhRnLPT8Sv.MP4"],
     price: {
