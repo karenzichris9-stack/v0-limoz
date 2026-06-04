@@ -25,7 +25,7 @@ export default function FleetClientPage() {
     {
       id: "land-cruiser-250-series",
       name: "Land Cruiser 250 Series",
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_8.JPG-aozKY0h9esC3ooI8OzT7hHnP5p3pel.jpeg",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_1.JPG-Zi80ljBntElUSKTW4XNceq6YEPJuti.jpeg",
       imagePosition: "object-center",
       features: [
         { icon: Wind, labelKey: "climate", valueKey: "dualClimateControl" },
