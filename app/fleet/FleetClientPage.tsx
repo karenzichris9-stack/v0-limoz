@@ -224,9 +224,10 @@ export default function FleetClientPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {vipVehicles.map((vehicle, index) => (
-              <div
+              <Link
                 key={index}
-                className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-2xl transition-all hover:scale-105 group h-full flex flex-col"
+                href={`/vehicles/${vehicle.id}`}
+                className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-2xl transition-all hover:scale-105 group block h-full flex flex-col"
               >
                 <div className="h-72 w-full overflow-hidden flex items-center justify-center flex-shrink-0">
                   <img
@@ -251,11 +252,11 @@ export default function FleetClientPage() {
                       </div>
                     ))}
                   </div>
-                  <Link href="/booking">
-                    <Button className="w-full bg-[#f39c12] hover:bg-[#e67e22] text-white mt-auto">{t("fleet.bookNow")}</Button>
-                  </Link>
+                  <Button className="w-full bg-[#f39c12] hover:bg-[#e67e22] text-white mt-auto">
+                    {t("fleet.viewDetails")}
+                  </Button>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </section>
@@ -268,9 +269,10 @@ export default function FleetClientPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {utilityVehicles.map((vehicle, index) => (
-              <div
+              <Link
                 key={index}
-                className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-2xl transition-all hover:scale-105 group h-full flex flex-col"
+                href={`/vehicles/${vehicle.id}`}
+                className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-2xl transition-all hover:scale-105 group block h-full flex flex-col"
               >
                 <div className="h-72 w-full overflow-hidden flex items-center justify-center flex-shrink-0">
                   <img
@@ -295,11 +297,11 @@ export default function FleetClientPage() {
                       </div>
                     ))}
                   </div>
-                  <Link href="/booking">
-                    <Button className="w-full bg-[#f39c12] hover:bg-[#e67e22] text-white mt-auto">{t("fleet.bookNow")}</Button>
-                  </Link>
+                  <Button className="w-full bg-[#f39c12] hover:bg-[#e67e22] text-white mt-auto">
+                    {t("fleet.viewDetails")}
+                  </Button>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </section>
