@@ -31,12 +31,19 @@ export const vehicles: Vehicle[] = [
   // VVIP Class
   {
     id: "land-cruiser-txl-2023",
-    name: "LANDCRUISER 200 SERIES", // Updated name to "LANDCRUISER 200 SERIES"
+    name: "LANDCRUISER 200 SERIES",
     class: "VVIP",
-    image: "/land-cruiser-txl-exterior-1.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_1.JPG-egc8KI38IiKSztE6aQiaGG6g6sgRhS.jpeg",
     images: {
-      exterior: ["/land-cruiser-txl-exterior-1.jpg", "/land-cruiser-txl-exterior-2.jpg"],
-      interior: [],
+      exterior: [
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_1.JPG-egc8KI38IiKSztE6aQiaGG6g6sgRhS.jpeg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_4.JPG-zJiR3PLeAfiPxJm4xPTLOpkT6hAb11.jpeg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_2.JPG-u8glNtvvJHAZk1Iz8PzmwfuL487cUX.jpeg",
+      ],
+      interior: [
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_6.JPG-jBOiUqeilcvdJSKZK2MOwJALKiG0ul.jpeg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_7.JPG-g3QVPH1oZ0z3DiYNAtRRUX6OMXR3Fb.jpeg",
+      ],
     },
     videos: ["https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DJI_20251020_114443_765%E2%80%AFAM_video-ahCcoQDbjiOIaqY97KnMhhRnLPT8Sv.MP4"],
     price: {
@@ -109,20 +116,18 @@ export const vehicles: Vehicle[] = [
     id: "land-cruiser-lc300-v6",
     name: "Land Cruiser LC 300 V6",
     class: "VVIP",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202026-03-17%20at%2013.19.43-RbOqtR37FFYmytUfMhhcMcWFEd3aib.png",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/10-WrxsMDFksxi3P5qPvkrPk7pmDqVrIe.jpg",
     images: {
       exterior: [
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202026-03-17%20at%2013.19.43-RbOqtR37FFYmytUfMhhcMcWFEd3aib.png",
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202026-03-17%20at%2013.22.28-OSqTiX6wrsfunWbVaHzX0LE2gTD3Es.png",
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202026-03-17%20at%2013.20.11-P5xqmD2INb6VhN18eeTIPafTvt2Kkd.png",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/10-WrxsMDFksxi3P5qPvkrPk7pmDqVrIe.jpg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1-DQSobRZzETOspR2StT429CxZbqv5fl.jpg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3-BtJSR3aH9vJoB62Lxfd2uw5yZJy3Pj.jpg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/11-DkFPy8ImfgFYUVJprFW5UPrxu2edu9.jpg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/12-dLqCnHmk4BNDIJrPOVjTIUqudqIDx9.jpg",
       ],
       interior: [
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5407-SzY9VRSIGt2vSaxEpspSJCc61OFnSn.jpg",
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5410-TohmOnnKfgtu4edwopPe4wHtWYPtci.jpg",
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5405-sWUw0ULMS75oggHeEbpCdgOapCwWzD.jpg",
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5404-M0CHhAL4u0DfuHGzbX2bcWjKA4DkZk.jpg",
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5403-a7I6MpTNea2GW7Ut2IdQJ5nV5dkAT6.jpg",
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5399-HnZFE7NHZ3t50tT1D4U9SOfWC947ui.jpg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/6-vbkQLKhBRSttPa2fNCrxNkqCOyKDi2.jpg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/5-J4zEpF5W1tZzS1uvyOuO7K61ZBnzqL.jpg",
       ],
     },
     price: {
@@ -158,16 +163,17 @@ export const vehicles: Vehicle[] = [
     id: "mercedes-e-class",
     name: "Mercedes-Benz E-Class",
     class: "VVIP",
-    image: "/mercedes-e-class-black.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_1.JPG-36G0tDy4DEWgLfAEmcizyNSBcMqqtX.jpeg",
     images: {
       exterior: [
-        "/mercedes-e-class-black.jpg",
-        "/mercedes-e-exterior-front-angle.jpg",
-        "/mercedes-e-exterior-side-view.jpg",
-        "/mercedes-e-exterior-front-quarter.jpg",
-        "/mercedes-e-exterior-front-full.jpg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_1.JPG-36G0tDy4DEWgLfAEmcizyNSBcMqqtX.jpeg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_2.JPG-MRqcIM1VoYaWpVc6lSrYarxIKmemEs.jpeg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_13.JPG-LFjoIIeOA21zpCD4psyOaEEv9BeqTc.jpeg",
       ],
-      interior: ["/mercedes-e-interior-rear-cabin.jpg", "/mercedes-e-interior-dashboard.jpg"],
+      interior: [
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_8.JPG-rau0eAGds1TAKD7J9FRzHOP9jWWgWP.jpeg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_9.JPG-GdQUKgDPUkVUheG4djrzFpHmgANYth.jpeg",
+      ],
     },
     price: {
       daily: 220,
@@ -241,14 +247,17 @@ export const vehicles: Vehicle[] = [
     id: "byd-atto-3",
     name: "BYD Atto 3",
     class: "VIP",
-    image: "/byd-atto-3.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/4-RrbGvsNwRaf1If4M9dIausD5EngzFg.jpg",
     images: {
-      exterior: ["/byd-atto-3.jpg"],
+      exterior: [
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/4-RrbGvsNwRaf1If4M9dIausD5EngzFg.jpg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3-DiF6bOboOCVOVH6k3z8y6F84Djs0FU.jpg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/2-5WTiZwgcOJQ4FBWXdOXBHiFZeZWD09.jpg",
+      ],
       interior: [
-        "/byd-atto3-interior-front.jpg",
-        "/byd-atto3-interior-sunroof.jpg",
-        "/byd-atto3-interior-driver.jpg",
-        "/byd-atto3-interior-rear.jpg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/11-DINoOO1stVwLtdUYLSEjrfaVpHwshh.jpg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/10-WRLVOIeLhG5KVgWR1CN5FmstpKU0jL.jpg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/5-Y5dVfuEH2ZeboCaCAW9aaPg9NXZ2mf.jpg",
       ],
     },
     price: {
@@ -284,10 +293,18 @@ export const vehicles: Vehicle[] = [
     id: "byd-dolphin",
     name: "BYD Dolphin",
     class: "VIP",
-    image: "/byd-dolphin-black-with-plate.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_1.JPG-WZKPPE161FNsLy0SHrcuxpY19ZEoLJ.jpeg",
     images: {
-      exterior: ["/byd-dolphin-black-with-plate.jpg", "/byd-dolphin.jpg"],
-      interior: [],
+      exterior: [
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_1.JPG-WZKPPE161FNsLy0SHrcuxpY19ZEoLJ.jpeg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_3.JPG-JvlnX72bQ2jlvqYn1qGrp1n3l2aPMo.jpeg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_5.JPG-caUgRfdojrDWkbd6kDsy9e67JkZIgg.jpeg",
+      ],
+      interior: [
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_10.JPG-ZCsSHtDfBCvqoywuc9U1XpqQpYJ7FF.jpeg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_7.JPG-cOszM4G75T55H2bCfXwKQVFXy466x4.jpeg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_9.JPG-kXIQdAQ7C9vIkjZC1NmWwp8Ti7y9Vz.jpeg",
+      ],
     },
     price: {
       daily: 150,
@@ -322,18 +339,15 @@ export const vehicles: Vehicle[] = [
     id: "land-cruiser-250-series",
     name: "Land Cruiser 250 Series",
     class: "VVIP",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202026-03-17%20at%2013.33.39-RtUQJqAFHRwXKrYfmex38gsD3XzX2b.png",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_1.JPG-Zi80ljBntElUSKTW4XNceq6YEPJuti.jpeg",
     images: {
       exterior: [
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202026-03-17%20at%2013.33.39-RtUQJqAFHRwXKrYfmex38gsD3XzX2b.png",
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202026-03-17%20at%2013.34.28-Rre05AHdaq8lKXEU7gEWMEhtaymptR.png",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_1.JPG-Zi80ljBntElUSKTW4XNceq6YEPJuti.jpeg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_8.JPG-aozKY0h9esC3ooI8OzT7hHnP5p3pel.jpeg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1.JPG-AEfmdKuKtNjhohLFaqLA3qWLvJBr0m.jpeg",
       ],
       interior: [
-        "/land-cruiser-250-interior-1.jpg",
-        "/land-cruiser-250-interior-2.jpg",
-        "/land-cruiser-250-interior-3.jpg",
-        "/land-cruiser-250-interior-4.jpg",
-        "/land-cruiser-250-interior-5.jpg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_13.JPG-ZbnS8xtLcN1T4hoxTwrOVyc6dEXrZx.jpeg",
       ],
     },
     price: {
@@ -369,10 +383,16 @@ export const vehicles: Vehicle[] = [
     id: "toyota-rav4-2024",
     name: "Toyota RAV4 2024",
     class: "VVIP",
-    image: "/toyota-rav4-2024.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_7.JPG-nZrGmqN07Kuhj9qDVHmgE4oowUjDvD.jpeg",
     images: {
-      exterior: ["/toyota-rav4-2024.jpg", "/toyota-rav4-2024-exterior-2.jpg"],
-      interior: ["/toyota-rav4-2024-interior-1.jpg", "/toyota-rav4-2024-interior-2.jpg"],
+      exterior: [
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_7.JPG-nZrGmqN07Kuhj9qDVHmgE4oowUjDvD.jpeg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_3.JPG-W6O3hIgtWfW2Hl5aTBvkQyABUyRuMh.jpeg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_2.JPG-Xu4iBIjAv6jQeteV5kdHirkxhcBMRB.jpeg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_5.JPG-l74YYmEJqQpWUO39WSyLnp2nZLoBa9.jpeg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_13.JPG-d7zJEVosZBt9yGeZvyAHIHLzIo97v0.jpeg",
+      ],
+      interior: [],
     },
     price: {
       daily: 180,
@@ -407,15 +427,18 @@ export const vehicles: Vehicle[] = [
     id: "executive-van",
     name: "Executive Van",
     class: "VIP",
-    image: "/executive-van-exterior-side.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1.JPG-Ni0AiKCM6DsxBU8Yp0QDxbVOSEEWcv.jpeg",
     images: {
       exterior: [
-        "/executive-van-exterior-side.jpg",
-        "/executive-van-exterior-front.jpg",
-        "/executive-van-exterior-driver-side.jpg",
-        "/executive-van-exterior-rear.jpg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1.JPG-Ni0AiKCM6DsxBU8Yp0QDxbVOSEEWcv.jpeg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_4.JPG-WKjDEQqEmRpXXsqXVqefdzywTFqXD8.jpeg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_3.JPG-qJmL8La5RmwckTIi1hakghtdw7uBCo.jpeg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_2.JPG-l3uyK6iL3zvNJHZPe1DAgjHU5C8os5.jpeg",
       ],
-      interior: ["/executive-van-interior-cabin.jpg", "/executive-van-interior-dashboard.jpg"],
+      interior: [
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_8.JPG-ktn9mEVJLZVP6nOURhIAHUpTP9yQ6g.jpeg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_11.JPG-UnidE58AxrX3UbbjCGrhdcbZbxRSNE.jpeg",
+      ],
     },
     price: {
       daily: 180,
@@ -474,4 +497,49 @@ export function getVehiclesByClass(vehicleClass: Vehicle["class"]): Vehicle[] {
   return vehicles
     .filter((v) => v.class === vehicleClass)
     .concat(incomingVehicles.filter((v) => v.class === vehicleClass))
+}
+
+// Coaster Bus vehicle data
+export const coasterBus = {
+  id: "coaster-bus",
+  name: "Coaster Bus",
+  class: "Standard" as const,
+  image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/4.JPG-7CQAadPk36u5ZkCBP7V5TTthzmc1ce.jpeg",
+  images: {
+    exterior: [
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/4.JPG-7CQAadPk36u5ZkCBP7V5TTthzmc1ce.jpeg",
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/2.JPG-bO1G6QkzG3Bd2EMMvR5wH3iwJHfqxR.jpeg",
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1.JPG-Lsu8ht7ulNPKOXcc3qVuiWh4GWclOh.jpeg",
+    ],
+    interior: [
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/7.JPG-1GVx5v9a8jJnruLFxAwXXVXe7FtN7K.jpeg",
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/12.JPG-VUjWlOCCrxkhh1GVYwnvRxvbRne0VU.jpeg",
+    ],
+  },
+  price: {
+    daily: 250,
+    weekly: 1500,
+    monthly: 5000,
+  },
+  specs: {
+    seats: 33,
+    transmission: "Manual",
+    fuelType: "Diesel",
+    driveType: "RWD",
+    luggage: "12 Bags",
+    year: 2022,
+  },
+  features: [
+    "Large Capacity Seating",
+    "Air Conditioning",
+    "Comfortable Seats",
+    "Large Windows",
+    "Spacious Interior",
+    "Professional Driver",
+    "Route Flexibility",
+    "Group Travel",
+  ],
+  description:
+    "The Coaster Bus is perfect for large group transportation with comfortable seating for up to 33 passengers. Ideal for corporate events, church groups, family outings, and group tours across Rwanda.",
+  available: true,
 }

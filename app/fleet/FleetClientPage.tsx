@@ -12,7 +12,7 @@ export default function FleetClientPage() {
     {
       id: "land-cruiser-lc300-v6",
       name: "Land Cruiser LC 300 V6",
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202026-03-17%20at%2013.19.43-NNzu8LWFmY5AmEL2iMfIBW268YOIGQ.png",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/10-WrxsMDFksxi3P5qPvkrPk7pmDqVrIe.jpg",
       imagePosition: "object-center",
       features: [
         { icon: Wind, labelKey: "climate", valueKey: "triZoneClimate" },
@@ -25,8 +25,8 @@ export default function FleetClientPage() {
     {
       id: "land-cruiser-250-series",
       name: "Land Cruiser 250 Series",
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202026-03-17%20at%2013.33.39-RtUQJqAFHRwXKrYfmex38gsD3XzX2b.png",
-      imagePosition: "object-bottom",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_1.JPG-Zi80ljBntElUSKTW4XNceq6YEPJuti.jpeg",
+      imagePosition: "object-center",
       features: [
         { icon: Wind, labelKey: "climate", valueKey: "dualClimateControl" },
         { icon: Users, labelKey: "capacity", valueKey: "sevenSeater" },
@@ -38,7 +38,7 @@ export default function FleetClientPage() {
     {
       id: "mercedes-e-class",
       name: "Mercedes-Benz E-Class",
-      image: "/mercedes-e-class-black.jpg",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_1.JPG-36G0tDy4DEWgLfAEmcizyNSBcMqqtX.jpeg",
       features: [
         { icon: Wind, labelKey: "climate", valueKey: "autoClimateControl" },
         { icon: Users, labelKey: "capacity", valueKey: "fiveSeater" },
@@ -51,7 +51,7 @@ export default function FleetClientPage() {
     {
       id: "toyota-rav4-2024",
       name: "Toyota RAV4 2024",
-      image: "/toyota-rav4-2024.jpg",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_7.JPG-nZrGmqN07Kuhj9qDVHmgE4oowUjDvD.jpeg",
       features: [
         { icon: Wind, labelKey: "climate", valueKey: "dualClimateControl" },
         { icon: Users, labelKey: "capacity", valueKey: "fiveSeater" },
@@ -63,9 +63,9 @@ export default function FleetClientPage() {
     {
       id: "executive-van",
       name: "Executive Van",
-      image: "/executive-van-hiace.jpg",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1.JPG-Ni0AiKCM6DsxBU8Yp0QDxbVOSEEWcv.jpeg",
       isExecutiveVan: true,
-      imagePosition: "object-bottom",
+      imagePosition: "object-center",
       features: [
         { icon: Wind, labelKey: "climate", valueKey: "rearClimateControl" },
         { icon: Users, labelKey: "capacity", valueKey: "fourteenSeater" },
@@ -81,7 +81,8 @@ export default function FleetClientPage() {
     {
       id: "land-cruiser-200-series",
       name: "Land Cruiser 200 Series",
-      image: "/land-cruiser-exterior-side-angle.jpg",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_1.JPG-egc8KI38IiKSztE6aQiaGG6g6sgRhS.jpeg",
+      imagePosition: "object-center",
       features: [
         { icon: Wind, labelKey: "climate", valueKey: "dualClimateControl" },
         { icon: Users, labelKey: "capacity", valueKey: "sevenSeater" },
@@ -93,8 +94,8 @@ export default function FleetClientPage() {
     {
       id: "byd-atto-3",
       name: "BYD ATTO 3",
-      image: "/byd-atto3.jpg",
-      imagePosition: "object-bottom",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/4-RrbGvsNwRaf1If4M9dIausD5EngzFg.jpg",
+      imagePosition: "object-center",
       features: [
         { icon: Zap, labelKey: "power", valueKey: "electric" },
         { icon: Wind, labelKey: "climate", valueKey: "climate" },
@@ -106,7 +107,7 @@ export default function FleetClientPage() {
     {
       id: "byd-dolphin",
       name: "BYD Dolphin",
-      image: "/byd-dolphin-black-with-plate.jpg",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_1.JPG-WZKPPE161FNsLy0SHrcuxpY19ZEoLJ.jpeg",
       features: [
         { icon: Zap, labelKey: "power", valueKey: "electric" },
         { icon: Wind, labelKey: "climate", valueKey: "dualClimateControl" },
@@ -121,7 +122,7 @@ export default function FleetClientPage() {
     {
       id: "coaster-bus",
       name: "Coaster Bus",
-      image: "/coaster-bus.jpg",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/4.JPG-7CQAadPk36u5ZkCBP7V5TTthzmc1ce.jpeg",
       imagePosition: "object-center",
       useContain: true,
       features: [
@@ -136,8 +137,8 @@ export default function FleetClientPage() {
     {
       id: "tunland-foton",
       name: "Tunland Foton",
-      image: "/tunland-foton.jpg",
-      imagePosition: "object-bottom",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ICONNECTSOLUTIONS_132.JPG-VueGBiFJ0vw1jeVjHyPUP8x9hZFUPd.jpeg",
+      imagePosition: "object-center",
       features: [
         { icon: Wind, labelKey: "climate", valueKey: "airConditioning" },
         { icon: Users, labelKey: "capacity", valueKey: "fiveSeater" },
@@ -223,9 +224,10 @@ export default function FleetClientPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {vipVehicles.map((vehicle, index) => (
-              <div
+              <Link
                 key={index}
-                className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-2xl transition-all hover:scale-105 group h-full flex flex-col"
+                href={`/vehicles/${vehicle.id}`}
+                className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-2xl transition-all hover:scale-105 group block h-full flex flex-col"
               >
                 <div className="h-72 w-full overflow-hidden flex items-center justify-center flex-shrink-0">
                   <img
@@ -250,11 +252,11 @@ export default function FleetClientPage() {
                       </div>
                     ))}
                   </div>
-                  <Link href="/booking">
-                    <Button className="w-full bg-[#f39c12] hover:bg-[#e67e22] text-white mt-auto">{t("fleet.bookNow")}</Button>
-                  </Link>
+                  <Button className="w-full bg-[#f39c12] hover:bg-[#e67e22] text-white mt-auto">
+                    {t("fleet.viewDetails")}
+                  </Button>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </section>
@@ -267,9 +269,10 @@ export default function FleetClientPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {utilityVehicles.map((vehicle, index) => (
-              <div
+              <Link
                 key={index}
-                className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-2xl transition-all hover:scale-105 group h-full flex flex-col"
+                href={`/vehicles/${vehicle.id}`}
+                className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-2xl transition-all hover:scale-105 group block h-full flex flex-col"
               >
                 <div className="h-72 w-full overflow-hidden flex items-center justify-center flex-shrink-0">
                   <img
@@ -294,11 +297,11 @@ export default function FleetClientPage() {
                       </div>
                     ))}
                   </div>
-                  <Link href="/booking">
-                    <Button className="w-full bg-[#f39c12] hover:bg-[#e67e22] text-white mt-auto">{t("fleet.bookNow")}</Button>
-                  </Link>
+                  <Button className="w-full bg-[#f39c12] hover:bg-[#e67e22] text-white mt-auto">
+                    {t("fleet.viewDetails")}
+                  </Button>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </section>
