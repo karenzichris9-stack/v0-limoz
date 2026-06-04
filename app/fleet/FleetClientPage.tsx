@@ -38,7 +38,7 @@ export default function FleetClientPage() {
     {
       id: "mercedes-e-class",
       name: "Mercedes-Benz E-Class",
-      image: "/mercedes-e-class-black.jpg",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_1.JPG-36G0tDy4DEWgLfAEmcizyNSBcMqqtX.jpeg",
       features: [
         { icon: Wind, labelKey: "climate", valueKey: "autoClimateControl" },
         { icon: Users, labelKey: "capacity", valueKey: "fiveSeater" },

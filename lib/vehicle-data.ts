@@ -165,16 +165,17 @@ export const vehicles: Vehicle[] = [
     id: "mercedes-e-class",
     name: "Mercedes-Benz E-Class",
     class: "VVIP",
-    image: "/mercedes-e-class-black.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_1.JPG-36G0tDy4DEWgLfAEmcizyNSBcMqqtX.jpeg",
     images: {
       exterior: [
-        "/mercedes-e-class-black.jpg",
-        "/mercedes-e-exterior-front-angle.jpg",
-        "/mercedes-e-exterior-side-view.jpg",
-        "/mercedes-e-exterior-front-quarter.jpg",
-        "/mercedes-e-exterior-front-full.jpg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_1.JPG-36G0tDy4DEWgLfAEmcizyNSBcMqqtX.jpeg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_2.JPG-MRqcIM1VoYaWpVc6lSrYarxIKmemEs.jpeg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_13.JPG-LFjoIIeOA21zpCD4psyOaEEv9BeqTc.jpeg",
       ],
-      interior: ["/mercedes-e-interior-rear-cabin.jpg", "/mercedes-e-interior-dashboard.jpg"],
+      interior: [
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_8.JPG-rau0eAGds1TAKD7J9FRzHOP9jWWgWP.jpeg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_9.JPG-GdQUKgDPUkVUheG4djrzFpHmgANYth.jpeg",
+      ],
     },
     price: {
       daily: 220,
