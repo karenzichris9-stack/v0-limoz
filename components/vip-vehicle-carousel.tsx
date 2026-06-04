@@ -9,7 +9,7 @@ const vipVehicles = [
   {
     name: "Toyota RAV4 2024",
     type: "VVIP Class",
-    image: "/toyota-rav4-2024.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_7.JPG-nZrGmqN07Kuhj9qDVHmgE4oowUjDvD.jpeg",
     seats: 5,
     transmission: "Automatic",
     fuelType: "Petrol",
@@ -17,7 +17,7 @@ const vipVehicles = [
   {
     name: "Land Cruiser LC 300 V6",
     type: "VVIP Class",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202026-03-17%20at%2013.19.43-NNzu8LWFmY5AmEL2iMfIBW268YOIGQ.png",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/10-WrxsMDFksxi3P5qPvkrPk7pmDqVrIe.jpg",
     seats: 7,
     transmission: "Automatic",
     fuelType: "Petrol",
@@ -25,7 +25,7 @@ const vipVehicles = [
   {
     name: "Mercedes-Benz E-Class",
     type: "VVIP Class",
-    image: "/mercedes-e-class-black.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_1.JPG-36G0tDy4DEWgLfAEmcizyNSBcMqqtX.jpeg",
     seats: 5,
     transmission: "Automatic",
     fuelType: "Petrol",
