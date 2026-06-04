@@ -386,10 +386,16 @@ export const vehicles: Vehicle[] = [
     id: "toyota-rav4-2024",
     name: "Toyota RAV4 2024",
     class: "VVIP",
-    image: "/toyota-rav4-2024.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_7.JPG-nZrGmqN07Kuhj9qDVHmgE4oowUjDvD.jpeg",
     images: {
-      exterior: ["/toyota-rav4-2024.jpg", "/toyota-rav4-2024-exterior-2.jpg"],
-      interior: ["/toyota-rav4-2024-interior-1.jpg", "/toyota-rav4-2024-interior-2.jpg"],
+      exterior: [
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_7.JPG-nZrGmqN07Kuhj9qDVHmgE4oowUjDvD.jpeg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_3.JPG-W6O3hIgtWfW2Hl5aTBvkQyABUyRuMh.jpeg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_2.JPG-Xu4iBIjAv6jQeteV5kdHirkxhcBMRB.jpeg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_5.JPG-l74YYmEJqQpWUO39WSyLnp2nZLoBa9.jpeg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_13.JPG-d7zJEVosZBt9yGeZvyAHIHLzIo97v0.jpeg",
+      ],
+      interior: [],
     },
     price: {
       daily: 180,

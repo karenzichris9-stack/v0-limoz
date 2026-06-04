@@ -51,7 +51,7 @@ export default function FleetClientPage() {
     {
       id: "toyota-rav4-2024",
       name: "Toyota RAV4 2024",
-      image: "/toyota-rav4-2024.jpg",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_7.JPG-nZrGmqN07Kuhj9qDVHmgE4oowUjDvD.jpeg",
       features: [
         { icon: Wind, labelKey: "climate", valueKey: "dualClimateControl" },
         { icon: Users, labelKey: "capacity", valueKey: "fiveSeater" },
