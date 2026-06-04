@@ -33,19 +33,10 @@ export const vehicles: Vehicle[] = [
     id: "land-cruiser-txl-2023",
     name: "LANDCRUISER 200 SERIES",
     class: "VVIP",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/10-WrxsMDFksxi3P5qPvkrPk7pmDqVrIe.jpg",
+    image: "/land-cruiser-txl-exterior-1.jpg",
     images: {
-      exterior: [
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/10-WrxsMDFksxi3P5qPvkrPk7pmDqVrIe.jpg",
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1-DQSobRZzETOspR2StT429CxZbqv5fl.jpg",
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3-BtJSR3aH9vJoB62Lxfd2uw5yZJy3Pj.jpg",
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/11-DkFPy8ImfgFYUVJprFW5UPrxu2edu9.jpg",
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/12-dLqCnHmk4BNDIJrPOVjTIUqudqIDx9.jpg",
-      ],
-      interior: [
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/6-vbkQLKhBRSttPa2fNCrxNkqCOyKDi2.jpg",
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/5-J4zEpF5W1tZzS1uvyOuO7K61ZBnzqL.jpg",
-      ],
+      exterior: ["/land-cruiser-txl-exterior-1.jpg", "/land-cruiser-txl-exterior-2.jpg"],
+      interior: [],
     },
     videos: ["https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DJI_20251020_114443_765%E2%80%AFAM_video-ahCcoQDbjiOIaqY97KnMhhRnLPT8Sv.MP4"],
     price: {
@@ -118,20 +109,18 @@ export const vehicles: Vehicle[] = [
     id: "land-cruiser-lc300-v6",
     name: "Land Cruiser LC 300 V6",
     class: "VVIP",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202026-03-17%20at%2013.19.43-RbOqtR37FFYmytUfMhhcMcWFEd3aib.png",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/10-WrxsMDFksxi3P5qPvkrPk7pmDqVrIe.jpg",
     images: {
       exterior: [
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202026-03-17%20at%2013.19.43-RbOqtR37FFYmytUfMhhcMcWFEd3aib.png",
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202026-03-17%20at%2013.22.28-OSqTiX6wrsfunWbVaHzX0LE2gTD3Es.png",
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202026-03-17%20at%2013.20.11-P5xqmD2INb6VhN18eeTIPafTvt2Kkd.png",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/10-WrxsMDFksxi3P5qPvkrPk7pmDqVrIe.jpg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1-DQSobRZzETOspR2StT429CxZbqv5fl.jpg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3-BtJSR3aH9vJoB62Lxfd2uw5yZJy3Pj.jpg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/11-DkFPy8ImfgFYUVJprFW5UPrxu2edu9.jpg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/12-dLqCnHmk4BNDIJrPOVjTIUqudqIDx9.jpg",
       ],
       interior: [
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5407-SzY9VRSIGt2vSaxEpspSJCc61OFnSn.jpg",
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5410-TohmOnnKfgtu4edwopPe4wHtWYPtci.jpg",
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5405-sWUw0ULMS75oggHeEbpCdgOapCwWzD.jpg",
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5404-M0CHhAL4u0DfuHGzbX2bcWjKA4DkZk.jpg",
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5403-a7I6MpTNea2GW7Ut2IdQJ5nV5dkAT6.jpg",
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_5399-HnZFE7NHZ3t50tT1D4U9SOfWC947ui.jpg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/6-vbkQLKhBRSttPa2fNCrxNkqCOyKDi2.jpg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/5-J4zEpF5W1tZzS1uvyOuO7K61ZBnzqL.jpg",
       ],
     },
     price: {

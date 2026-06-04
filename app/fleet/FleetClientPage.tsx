@@ -12,7 +12,7 @@ export default function FleetClientPage() {
     {
       id: "land-cruiser-lc300-v6",
       name: "Land Cruiser LC 300 V6",
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202026-03-17%20at%2013.19.43-NNzu8LWFmY5AmEL2iMfIBW268YOIGQ.png",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/10-WrxsMDFksxi3P5qPvkrPk7pmDqVrIe.jpg",
       imagePosition: "object-center",
       features: [
         { icon: Wind, labelKey: "climate", valueKey: "triZoneClimate" },
@@ -81,7 +81,7 @@ export default function FleetClientPage() {
     {
       id: "land-cruiser-200-series",
       name: "Land Cruiser 200 Series",
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/10-WrxsMDFksxi3P5qPvkrPk7pmDqVrIe.jpg",
+      image: "/land-cruiser-txl-exterior-1.jpg",
       imagePosition: "object-center",
       features: [
         { icon: Wind, labelKey: "climate", valueKey: "dualClimateControl" },
