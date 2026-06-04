@@ -499,3 +499,48 @@ export function getVehiclesByClass(vehicleClass: Vehicle["class"]): Vehicle[] {
     .filter((v) => v.class === vehicleClass)
     .concat(incomingVehicles.filter((v) => v.class === vehicleClass))
 }
+
+// Coaster Bus vehicle data
+export const coasterBus = {
+  id: "coaster-bus",
+  name: "Coaster Bus",
+  class: "Standard" as const,
+  image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/4.JPG-7CQAadPk36u5ZkCBP7V5TTthzmc1ce.jpeg",
+  images: {
+    exterior: [
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/4.JPG-7CQAadPk36u5ZkCBP7V5TTthzmc1ce.jpeg",
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/2.JPG-bO1G6QkzG3Bd2EMMvR5wH3iwJHfqxR.jpeg",
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1.JPG-Lsu8ht7ulNPKOXcc3qVuiWh4GWclOh.jpeg",
+    ],
+    interior: [
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/7.JPG-1GVx5v9a8jJnruLFxAwXXVXe7FtN7K.jpeg",
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/12.JPG-VUjWlOCCrxkhh1GVYwnvRxvbRne0VU.jpeg",
+    ],
+  },
+  price: {
+    daily: 250,
+    weekly: 1500,
+    monthly: 5000,
+  },
+  specs: {
+    seats: 33,
+    transmission: "Manual",
+    fuelType: "Diesel",
+    driveType: "RWD",
+    luggage: "12 Bags",
+    year: 2022,
+  },
+  features: [
+    "Large Capacity Seating",
+    "Air Conditioning",
+    "Comfortable Seats",
+    "Large Windows",
+    "Spacious Interior",
+    "Professional Driver",
+    "Route Flexibility",
+    "Group Travel",
+  ],
+  description:
+    "The Coaster Bus is perfect for large group transportation with comfortable seating for up to 33 passengers. Ideal for corporate events, church groups, family outings, and group tours across Rwanda.",
+  available: true,
+}
