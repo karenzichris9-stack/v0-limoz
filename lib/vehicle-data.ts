@@ -342,18 +342,15 @@ export const vehicles: Vehicle[] = [
     id: "land-cruiser-250-series",
     name: "Land Cruiser 250 Series",
     class: "VVIP",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202026-03-17%20at%2013.33.39-RtUQJqAFHRwXKrYfmex38gsD3XzX2b.png",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_8.JPG-aozKY0h9esC3ooI8OzT7hHnP5p3pel.jpeg",
     images: {
       exterior: [
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202026-03-17%20at%2013.33.39-RtUQJqAFHRwXKrYfmex38gsD3XzX2b.png",
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202026-03-17%20at%2013.34.28-Rre05AHdaq8lKXEU7gEWMEhtaymptR.png",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_8.JPG-aozKY0h9esC3ooI8OzT7hHnP5p3pel.jpeg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_1.JPG-Zi80ljBntElUSKTW4XNceq6YEPJuti.jpeg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1.JPG-AEfmdKuKtNjhohLFaqLA3qWLvJBr0m.jpeg",
       ],
       interior: [
-        "/land-cruiser-250-interior-1.jpg",
-        "/land-cruiser-250-interior-2.jpg",
-        "/land-cruiser-250-interior-3.jpg",
-        "/land-cruiser-250-interior-4.jpg",
-        "/land-cruiser-250-interior-5.jpg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_13.JPG-ZbnS8xtLcN1T4hoxTwrOVyc6dEXrZx.jpeg",
       ],
     },
     price: {
