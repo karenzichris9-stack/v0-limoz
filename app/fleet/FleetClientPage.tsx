@@ -137,8 +137,8 @@ export default function FleetClientPage() {
     {
       id: "tunland-foton",
       name: "Tunland Foton",
-      image: "/tunland-foton.jpg",
-      imagePosition: "object-bottom",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ICONNECTSOLUTIONS_132.JPG-VueGBiFJ0vw1jeVjHyPUP8x9hZFUPd.jpeg",
+      imagePosition: "object-center",
       features: [
         { icon: Wind, labelKey: "climate", valueKey: "airConditioning" },
         { icon: Users, labelKey: "capacity", valueKey: "fiveSeater" },
