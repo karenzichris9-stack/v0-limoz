@@ -93,8 +93,10 @@ export function Fleet() {
                             alt={vehicle.name}
                             fill
                             loading="lazy"
+                            quality={80}
                             className="object-cover transition-transform duration-500 group-hover:scale-105"
                             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                            placeholder="empty"
                           />
                         </div>
                       </div>
@@ -140,8 +142,10 @@ export function Fleet() {
                         src={vehicle.image || "/placeholder.svg"}
                         alt={vehicle.name}
                         fill
+                        quality={85}
                         className={`object-cover ${vehicle.imagePosition || "object-center"}`}
                         sizes="(max-width: 768px) 100vw, 640px"
+                        placeholder="empty"
                       />
                     </div>
                     <div>

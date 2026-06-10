@@ -127,8 +127,10 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* DNS prefetch for CDN */}
+        <link rel="dns-prefetch" href="https://hebbkx1anhila5yf.public.blob.vercel-storage.com" />
         {/* Preload hero poster image for faster LCP */}
-        <link rel="preload" as="image" href="/luxury-car-on-scenic-road-in-rwanda.jpg" />
+        <link rel="preload" as="image" href="/luxury-car-on-scenic-road-in-rwanda.jpg" type="image/jpeg" fetchpriority="high" />
       </head>
       <body className={`font-sans antialiased overflow-x-hidden`}>
         <JsonLd />

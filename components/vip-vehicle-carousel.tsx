@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
+import Image from "next/image"
 import { AnimatedSection } from "./animated-section"
 import { useLanguage } from "@/lib/language-context"
 
@@ -76,10 +77,15 @@ export function VIPVehicleCarousel() {
           <div className="relative bg-white rounded-3xl overflow-hidden shadow-2xl group">
             {/* Main carousel image */}
             <div className="relative w-full h-96 md:h-[500px] overflow-hidden flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-50 p-8">
-              <img
+              <Image
                 src={currentVehicle.image}
                 alt={currentVehicle.name}
-                className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+                fill
+                priority={currentIndex === 0}
+                quality={80}
+                className="object-contain transition-transform duration-500 group-hover:scale-105"
+                sizes="(max-width: 768px) 100vw, 90vw"
+                placeholder="empty"
               />
             </div>
 
