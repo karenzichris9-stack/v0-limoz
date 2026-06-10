@@ -79,7 +79,7 @@ export default function FleetClientPage() {
 
   const vipVehicles = [
     {
-      id: "land-cruiser-200-series",
+      id: "land-cruiser-txl-2023",
       name: "Land Cruiser 200 Series",
       image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_1.JPG-egc8KI38IiKSztE6aQiaGG6g6sgRhS.jpeg",
       imagePosition: "object-center",
