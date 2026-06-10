@@ -466,6 +466,88 @@ export const vehicles: Vehicle[] = [
       "The Executive Van is perfect for group travel, offering comfortable seating for up to 14 passengers with ample luggage space. Ideal for airport transfers, corporate shuttles, and group tours across Rwanda.",
     available: true,
   },
+  {
+    id: "coaster-bus",
+    name: "Coaster Bus",
+    class: "Standard" as const,
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/4.JPG-7CQAadPk36u5ZkCBP7V5TTthzmc1ce.jpeg",
+    images: {
+      exterior: [
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/4.JPG-7CQAadPk36u5ZkCBP7V5TTthzmc1ce.jpeg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/2.JPG-bO1G6QkzG3Bd2EMMvR5wH3iwJHfqxR.jpeg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1.JPG-Lsu8ht7ulNPKOXcc3qVuiWh4GWclOh.jpeg",
+      ],
+      interior: [
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/7.JPG-1GVx5v9a8jJnruLFxAwXXVXe7FtN7K.jpeg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/12.JPG-VUjWlOCCrxkhh1GVYwnvRxvbRne0VU.jpeg",
+      ],
+    },
+    price: {
+      daily: 250,
+      weekly: 1500,
+      monthly: 5000,
+    },
+    specs: {
+      seats: 33,
+      transmission: "Manual",
+      fuelType: "Diesel",
+      driveType: "RWD",
+      luggage: "12 Bags",
+      year: 2022,
+    },
+    features: [
+      "Large Capacity Seating",
+      "Air Conditioning",
+      "Comfortable Seats",
+      "Large Windows",
+      "Spacious Interior",
+      "Professional Driver",
+      "Route Flexibility",
+      "Group Travel",
+    ],
+    description:
+      "The Coaster Bus is perfect for large group transportation with comfortable seating for up to 33 passengers. Ideal for corporate events, church groups, family outings, and group tours across Rwanda.",
+    available: true,
+  },
+  {
+    id: "tunland-foton",
+    name: "Tunland Foton",
+    class: "Utility" as const,
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ICONNECTSOLUTIONS_132.JPG-VueGBiFJ0vw1jeVjHyPUP8x9hZFUPd.jpeg",
+    images: {
+      exterior: [
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ICONNECTSOLUTIONS_132.JPG-VueGBiFJ0vw1jeVjHyPUP8x9hZFUPd.jpeg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ICONNECTSOLUTIONS_130.JPG-lIarXgHDWtQfuuueskGw5LvLVcl5kA.jpeg",
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ICONNECTSOLUTIONS_129.JPG-6giSvDHWayrYu6MXXf2MJMqpOZgraL.jpeg",
+      ],
+      interior: [],
+    },
+    price: {
+      daily: 120,
+      weekly: 700,
+      monthly: 2500,
+    },
+    specs: {
+      seats: 5,
+      transmission: "Manual",
+      fuelType: "Diesel",
+      driveType: "RWD",
+      luggage: "3 Bags",
+      year: 2022,
+    },
+    features: [
+      "Air Conditioning",
+      "Double Cab Pickup",
+      "Reliable Engine",
+      "Good Fuel Economy",
+      "Spacious Cargo Area",
+      "Durable Construction",
+      "Easy Maintenance",
+    ],
+    description:
+      "The Tunland Foton is a reliable and affordable double-cab pickup truck perfect for local transport, small businesses, and short-distance travel. Its durability and low operating costs make it an excellent choice for budget-conscious travelers.",
+    available: true,
+  },
 ]
 
 export const incomingVehicles = [
