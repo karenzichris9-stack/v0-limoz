@@ -11,7 +11,7 @@ const localBusiness = {
   image: "https://limozrwanda.com/land-cruiser-exterior-side-angle.jpg",
   logo: "https://limozrwanda.com/limoz-logo.png",
   url: "https://limozrwanda.com",
-  telephone: "+250782280204",
+  telephone: "+250788380013",
   email: "info@limozrwanda.com",
   priceRange: "$$-$$$",
   address: {
@@ -135,7 +135,7 @@ const faq = {
       name: "How do I book a car rental in Kigali?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Book online 24/7 through our website with instant confirmation. You can also call/WhatsApp +250 782 280 204 or email info@limozrwanda.com.",
+        text: "Book online 24/7 through our website with instant confirmation. You can also call/WhatsApp +250 788 380 013 or email info@limozrwanda.com.",
       },
     },
     {
