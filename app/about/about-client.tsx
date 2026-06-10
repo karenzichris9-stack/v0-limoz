@@ -10,11 +10,12 @@ export default function AboutClientPage() {
       {/* Full-width Hero Section */}
       <div className="relative w-full h-72 md:h-96 mt-20 overflow-hidden">
         <Image
-          src="/about-hero-vehicle.jpg"
-          alt="Limoz Rwanda Fleet"
+          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_1.JPG-36G0tDy4DEWgLfAEmcizyNSBcMqqtX.jpeg"
+          alt="Limoz Rwanda Fleet - Mercedes-Benz E-Class"
           fill
           className="object-cover"
           priority
+          quality={85}
         />
         <div className="absolute inset-0 bg-black/30" />
         <div className="absolute inset-0 flex items-center justify-center">
@@ -68,11 +69,12 @@ export default function AboutClientPage() {
             {/* Image Column */}
             <div className="relative h-96 md:h-[500px] rounded-2xl overflow-hidden shadow-lg w-full">
               <Image
-                src="/lc300-about-section.jpg"
-                alt="Limoz Rwanda Fleet Excellence"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_1.JPG-egc8KI38IiKSztE6aQiaGG6g6sgRhS.jpeg"
+                alt="Limoz Rwanda Fleet - Land Cruiser 200 Series"
                 fill
                 className="object-cover object-center"
                 priority
+                quality={85}
               />
             </div>
           </div>
