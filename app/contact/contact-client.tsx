@@ -134,12 +134,12 @@ export default function ContactPageClient() {
                 <div>
                   <h3 className="font-semibold mb-1">WhatsApp</h3>
                   <a
-                    href="https://wa.me/250788318990"
+                    href="https://wa.me/250788380013"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-green-600 hover:text-green-700 transition-colors"
                   >
-                    +250 788 318 990
+                    +250 788 380 013
                   </a>
                 </div>
               </div>
