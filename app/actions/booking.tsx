@@ -131,18 +131,18 @@ ${notes ? `📝 *Notes:* ${notes}` : ""}
 Submitted via Limoz Rwanda Website
 `.trim()
 
-    // Send email to info@limozrwanda.com
+    // Send email to booking@limozrwanda.com
     const emailResult = await resend.emails.send({
-      from: "info@limozrwanda.com",
-      to: "info@limozrwanda.com",
+      from: "booking@limozrwanda.com",
+      to: "booking@limozrwanda.com",
       subject: `New Booking Request - ${vehicleType}`,
       html: emailHTML,
     })
 
-    console.log("[v0] Booking email sent to info@limozrwanda.com:", emailResult)
+    console.log("[v0] Booking email sent to booking@limozrwanda.com:", emailResult)
 
     // Send WhatsApp message to the business number
-    await sendWhatsAppMessage("+250788318990", whatsappMessage)
+    await sendWhatsAppMessage("+250788380013", whatsappMessage)
 
     return {
       success: true,
@@ -156,7 +156,7 @@ Submitted via Limoz Rwanda Website
     }
     return {
       success: false,
-      message: "Failed to submit booking. Please try contacting us directly at +250 788 318 990.",
+      message: "Failed to submit booking. Please try contacting us directly at +250 788 380 013.",
     }
   }
 }

@@ -45,10 +45,10 @@ export async function submitContactForm(formData: FormData) {
       </div>
     `
 
-    // Send to info@limozrwanda.com only
+    // Send to booking@limozrwanda.com
     const result = await resend.emails.send({
-      from: "info@limozrwanda.com",
-      to: "info@limozrwanda.com",
+      from: "booking@limozrwanda.com",
+      to: "booking@limozrwanda.com",
       replyTo: email,
       subject: `Contact Form: ${subject || "New Message"}`,
       html: emailHTML,
@@ -65,7 +65,7 @@ export async function submitContactForm(formData: FormData) {
     }
     return {
       success: false,
-      error: "Failed to send message. Please try again or contact us directly at +250788380013.",
+      error: "Failed to send message. Please try again or contact us directly at +250 788 380 013.",
     }
   }
 }

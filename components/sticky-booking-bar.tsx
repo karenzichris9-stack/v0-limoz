@@ -32,7 +32,7 @@ export function StickyBookingBar() {
         <div className="flex gap-2 p-2.5 sm:p-3">
           {/* WhatsApp Button */}
           <a
-            href="https://wa.me/250788318990"
+            href="https://wa.me/250788380013"
             target="_blank"
             rel="noopener noreferrer"
             className="flex-1 flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white px-2 sm:px-4 py-2.5 sm:py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-green-500/25 min-h-[44px]"
@@ -43,7 +43,7 @@ export function StickyBookingBar() {
 
           {/* Call Button */}
           <a
-            href="tel:+250788318990"
+            href="tel:+250788380013"
             className="flex-1 flex items-center justify-center gap-2 bg-[#f39c12] hover:bg-[#e67e22] text-white px-4 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#f39c12]/25"
           >
             <Phone className="w-4 sm:w-5 h-4 sm:h-5 flex-shrink-0" />
@@ -61,7 +61,7 @@ export function StickyBookingBar() {
       >
         {/* WhatsApp Button */}
         <a
-          href="https://wa.me/250788318990"
+          href="https://wa.me/250788380013"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-5 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-green-500/30"
@@ -72,7 +72,7 @@ export function StickyBookingBar() {
 
         {/* Call Button */}
         <a
-          href="tel:+250788318990"
+          href="tel:+250788380013"
           className="flex items-center gap-2 bg-[#f39c12] hover:bg-[#e67e22] text-white px-5 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-[#f39c12]/30"
         >
           <Phone className="w-5 h-5" />

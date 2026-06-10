@@ -130,7 +130,7 @@ export function Hero() {
           {/* Quick contact */}
           <div className="mt-5 md:mt-6 flex justify-center">
             <a
-              href="tel:+250788318990"
+              href="tel:+250788380013"
               className="flex items-center gap-2 text-white/80 hover:text-[#ffd700] transition-colors group"
             >
               <div className="p-2 bg-white/10 rounded-full group-hover:bg-[#ffd700] group-hover:text-[#0f0f23] transition-colors border border-[#ffd700]/20">
