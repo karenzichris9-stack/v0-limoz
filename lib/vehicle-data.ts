@@ -52,7 +52,7 @@ export const vehicles: Vehicle[] = [
       monthly: 5500,
     },
     specs: {
-      seats: 7,
+      seats: 5,
       transmission: "Automatic",
       fuelType: "Diesel",
       driveType: "4WD",
@@ -72,7 +72,7 @@ export const vehicles: Vehicle[] = [
       "Premium Sound System",
     ],
     description:
-      "The Land Cruiser TXL 2023 represents the pinnacle of luxury SUV design. With its powerful diesel engine, advanced 4WD system, and spacious 7-seater configuration, this vehicle is perfect for both executive travel and adventurous safari expeditions across Rwanda's stunning landscapes.",
+      "The Land Cruiser TXL 2023 represents the pinnacle of luxury SUV design. With its powerful diesel engine, advanced 4WD system, and spacious 5-seater configuration, this vehicle is perfect for both executive travel and adventurous safari expeditions across Rwanda's stunning landscapes.",
     available: true,
   },
   {
@@ -136,7 +136,7 @@ export const vehicles: Vehicle[] = [
       monthly: 6200,
     },
     specs: {
-      seats: 7,
+      seats: 5,
       transmission: "Automatic",
       fuelType: "Petrol",
       driveType: "4WD",
@@ -156,7 +156,7 @@ export const vehicles: Vehicle[] = [
       "LED Ambient Lighting",
     ],
     description:
-      "The latest Land Cruiser LC 300 V6 combines legendary off-road capability with cutting-edge luxury. Featuring a powerful V6 engine and the most advanced technology suite, this flagship SUV delivers unmatched comfort and performance for discerning travelers.",
+      "The latest Land Cruiser LC 300 V6 combines legendary off-road capability with cutting-edge luxury. Featuring a powerful V6 engine and the most advanced technology suite, this flagship SUV delivers unmatched comfort and performance for discerning travelers in its exclusive 5-seater configuration.",
     available: true,
   },
   {
@@ -356,7 +356,7 @@ export const vehicles: Vehicle[] = [
       monthly: 6500,
     },
     specs: {
-      seats: 7,
+      seats: 5,
       transmission: "Automatic",
       fuelType: "Petrol",
       driveType: "4WD",
@@ -376,7 +376,7 @@ export const vehicles: Vehicle[] = [
       "Premium JBL Sound System",
     ],
     description:
-      "The all-new Land Cruiser 250 Series represents the next generation of Toyota's legendary off-road SUV. Featuring a bold boxy design, premium leather interior with dual entertainment screens, panoramic sunroof, and advanced technology throughout, this vehicle combines rugged capability with executive luxury for discerning travelers.",
+      "The all-new Land Cruiser 250 Series represents the next generation of Toyota's legendary off-road SUV. Featuring a bold boxy design, premium leather interior with dual entertainment screens, panoramic sunroof, and advanced technology throughout, this 5-seater vehicle combines rugged capability with executive luxury for discerning travelers.",
     available: true,
   },
   {
@@ -488,7 +488,7 @@ export const vehicles: Vehicle[] = [
       monthly: 5000,
     },
     specs: {
-      seats: 33,
+      seats: 32,
       transmission: "Manual",
       fuelType: "Diesel",
       driveType: "RWD",
@@ -506,7 +506,7 @@ export const vehicles: Vehicle[] = [
       "Group Travel",
     ],
     description:
-      "The Coaster Bus is perfect for large group transportation with comfortable seating for up to 33 passengers. Ideal for corporate events, church groups, family outings, and group tours across Rwanda.",
+      "The Coaster Bus is perfect for large group transportation with comfortable seating for up to 32 passengers. Ideal for corporate events, church groups, family outings, and group tours across Rwanda.",
     available: true,
   },
   {
