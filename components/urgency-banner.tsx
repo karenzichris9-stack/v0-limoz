@@ -3,8 +3,10 @@
 import { useState, useEffect } from "react"
 import { X, Clock, Zap } from "lucide-react"
 import Link from "next/link"
+import { useLanguage } from "@/lib/language-context"
 
 export function UrgencyBanner() {
+  const { t, lang } = useLanguage()
   const [isVisible, setIsVisible] = useState(true)
   const [timeLeft, setTimeLeft] = useState({
     hours: 23,
@@ -31,6 +33,9 @@ export function UrgencyBanner() {
 
   if (!isVisible) return null
 
+  const limitedTimeText = lang === "fr" ? "Offre à durée limitée : " : "Limited Time Offer: "
+  const offText = lang === "fr" ? "RÉDUCTION" : "OFF"
+
   return (
     <div className="bg-gradient-to-r from-[#f39c12] via-[#e67e22] to-[#f39c12] text-white py-2.5 px-4 relative overflow-hidden">
       {/* Animated shine effect */}
@@ -39,8 +44,8 @@ export function UrgencyBanner() {
       <div className="container mx-auto flex items-center justify-center gap-4 relative">
         <Zap className="w-4 h-4 animate-pulse" />
         <p className="text-sm font-medium text-center">
-          <span className="hidden sm:inline">Limited Time Offer: </span>
-          <span className="font-bold">10% OFF</span> on all bookings
+          <span className="hidden sm:inline">{limitedTimeText}</span>
+          <span className="font-bold">10% {offText}</span> {lang === "fr" ? "sur toutes les réservations" : "on all bookings"}
         </p>
 
         {/* Countdown */}
@@ -56,13 +61,13 @@ export function UrgencyBanner() {
           href="/booking"
           className="hidden sm:inline-flex items-center gap-1 bg-white text-[#f39c12] px-3 py-1 rounded-full text-xs font-bold hover:bg-gray-100 transition-colors"
         >
-          Book Now
+          {lang === "fr" ? "Réserver" : "Book Now"}
         </Link>
 
         <button
           onClick={() => setIsVisible(false)}
           className="absolute right-4 p-1 hover:bg-white/20 rounded-full transition-colors"
-          aria-label="Close banner"
+          aria-label={lang === "fr" ? "Fermer la bannière" : "Close banner"}
         >
           <X className="w-4 h-4" />
         </button>
