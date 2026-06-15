@@ -836,6 +836,7 @@ export const translations = {
       onAllBookings: "sur toutes les réservations",
       bookNowBanner: "Réserver",
       closeBanner: "Fermer la bannière",
+    },
     news: {
       title: "Dernières nouvelles",
       subtitle: "Restez informé des dernières activités, réalisations et annonces de Limoz Rwanda",
