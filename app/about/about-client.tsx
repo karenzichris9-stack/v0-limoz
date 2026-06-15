@@ -1,12 +1,68 @@
 "use client"
 
 import { Footer } from "@/components/footer"
-import { Building2, Eye, Target } from "lucide-react"
+import { Building2, Eye, Target, ChevronLeft, ChevronRight } from "lucide-react"
 import Image from "next/image"
 import { useLanguage } from "@/lib/language-context"
+import { useState, useEffect } from "react"
+
+const landCruiserVehicles = [
+  {
+    name: "Land Cruiser LC 300 V6",
+    type: "VVIP Class",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/10-WrxsMDFksxi3P5qPvkrPk7pmDqVrIe.jpg",
+    seats: 5,
+    transmission: "Automatic",
+    fuelType: "Petrol",
+    year: 2024,
+  },
+  {
+    name: "Land Cruiser 250 Series",
+    type: "VVIP Class",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_1.JPG-Zi80ljBntElUSKTW4XNceq6YEPJuti.jpeg",
+    seats: 5,
+    transmission: "Automatic",
+    fuelType: "Diesel",
+    year: 2024,
+  },
+  {
+    name: "Land Cruiser 200 Series",
+    type: "VIP Class",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_1.JPG-egc8KI38IiKSztE6aQiaGG6g6sgRhS.jpeg",
+    seats: 5,
+    transmission: "Automatic",
+    fuelType: "Diesel",
+    year: 2023,
+  },
+]
 
 export default function AboutClientPage() {
   const { t } = useLanguage()
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const [autoPlay, setAutoPlay] = useState(true)
+
+  useEffect(() => {
+    if (!autoPlay) return
+
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % landCruiserVehicles.length)
+    }, 5000)
+
+    return () => clearInterval(interval)
+  }, [autoPlay])
+
+  const goToPrevious = () => {
+    setCurrentIndex((prev) => (prev - 1 + landCruiserVehicles.length) % landCruiserVehicles.length)
+    setAutoPlay(false)
+  }
+
+  const goToNext = () => {
+    setCurrentIndex((prev) => (prev + 1) % landCruiserVehicles.length)
+    setAutoPlay(false)
+  }
+
+  const currentVehicle = landCruiserVehicles[currentIndex]
+
   return (
     <div className="min-h-screen bg-white">
       {/* Full-width Hero Section */}
@@ -27,25 +83,93 @@ export default function AboutClientPage() {
         </div>
       </div>
 
-      {/* Stats Section */}
-      <div className="w-full bg-[#1e3a5f] py-8 md:py-10 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-[#E8A020] mb-2">50+</div>
-              <p className="text-white text-sm font-medium">{t("aboutPage.statsVehicles")}</p>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-[#E8A020] mb-2">5+</div>
-              <p className="text-white text-sm font-medium">{t("aboutPage.statsYears")}</p>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-[#E8A020] mb-2">1000+</div>
-              <p className="text-white text-sm font-medium">{t("aboutPage.statsClients")}</p>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-[#E8A020] mb-2">24/7</div>
-              <p className="text-white text-sm font-medium">{t("aboutPage.statsSupport")}</p>
+      {/* Vehicle Carousel Section - Replacing Stats */}
+      <div className="w-full bg-gradient-to-b from-gray-50 to-white py-16 md:py-20">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">{t("fleet.homeTitle")}</h2>
+            <p className="text-gray-600 text-lg">{t("fleet.homeSubtitle")}</p>
+          </div>
+
+          <div className="max-w-5xl mx-auto">
+            <div className="relative bg-white rounded-3xl overflow-hidden shadow-2xl group">
+              {/* Main carousel image */}
+              <div className="relative w-full h-96 md:h-[500px] overflow-hidden flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-50 p-8">
+                <Image
+                  src={currentVehicle.image}
+                  alt={currentVehicle.name}
+                  fill
+                  priority={currentIndex === 0}
+                  quality={80}
+                  className="object-contain transition-transform duration-500 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, 90vw"
+                  placeholder="empty"
+                />
+              </div>
+
+              {/* Navigation buttons */}
+              <button
+                onClick={goToPrevious}
+                className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-[#f39c12] text-gray-900 hover:text-white p-3 rounded-full transition-all shadow-lg hover:shadow-xl"
+              >
+                <ChevronLeft className="w-6 h-6" />
+              </button>
+              <button
+                onClick={goToNext}
+                className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-[#f39c12] text-gray-900 hover:text-white p-3 rounded-full transition-all shadow-lg hover:shadow-xl"
+              >
+                <ChevronRight className="w-6 h-6" />
+              </button>
+
+              {/* Vehicle info */}
+              <div className="p-6 md:p-8 bg-white">
+                <div className="flex items-center justify-between mb-4">
+                  <div>
+                    <h3 className="text-2xl md:text-3xl font-bold text-gray-900">{currentVehicle.name}</h3>
+                    <p className="text-[#f39c12] font-semibold text-sm md:text-base">{currentVehicle.type}</p>
+                  </div>
+                  <div className="text-right">
+                    <p className="text-sm text-gray-500 font-medium">{currentIndex + 1} of {landCruiserVehicles.length}</p>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-4 gap-4 mb-6">
+                  <div className="p-3 bg-[#f39c12]/5 rounded-lg text-center">
+                    <p className="text-xs text-gray-500 mb-1">Seats</p>
+                    <p className="text-lg font-bold text-gray-900">{currentVehicle.seats}</p>
+                  </div>
+                  <div className="p-3 bg-[#f39c12]/5 rounded-lg text-center">
+                    <p className="text-xs text-gray-500 mb-1">Transmission</p>
+                    <p className="text-sm font-bold text-gray-900">{currentVehicle.transmission}</p>
+                  </div>
+                  <div className="p-3 bg-[#f39c12]/5 rounded-lg text-center">
+                    <p className="text-xs text-gray-500 mb-1">Fuel</p>
+                    <p className="text-sm font-bold text-gray-900">{currentVehicle.fuelType}</p>
+                  </div>
+                  <div className="p-3 bg-[#f39c12]/5 rounded-lg text-center">
+                    <p className="text-xs text-gray-500 mb-1">Year</p>
+                    <p className="text-sm font-bold text-gray-900">{currentVehicle.year}</p>
+                  </div>
+                </div>
+
+                {/* Dots indicator */}
+                <div className="flex items-center justify-center gap-2">
+                  {landCruiserVehicles.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => {
+                        setCurrentIndex(index)
+                        setAutoPlay(false)
+                      }}
+                      className={`h-2 rounded-full transition-all ${
+                        index === currentIndex
+                          ? "bg-[#f39c12] w-8"
+                          : "bg-gray-300 w-2 hover:bg-gray-400"
+                      }`}
+                    />
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
