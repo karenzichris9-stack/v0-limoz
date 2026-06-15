@@ -1,6 +1,8 @@
 import type { Metadata } from "next"
 import ContactPageClient from "./contact-client"
 
+export const dynamic = "force-dynamic"
+
 export const metadata: Metadata = {
   title: "Contact Limoz Rwanda - Kigali Car Rental | +250 782 280 204",
   description:
