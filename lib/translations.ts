@@ -591,6 +591,7 @@ export const translations = {
     },
     booking: {
       title: "Demander une réservation",
+      note: "Note: Nous répondons généralement dans les 2 heures pendant les heures de travail (7h-21h CAT).",
       fullName: "Nom complet",
       email: "Adresse e-mail",
       phone: "Numéro de téléphone",
@@ -967,7 +968,7 @@ export const translations = {
       heavyCargoHandling: "Manutention de fret lourd",
       routeOptimization: "Optimisation des itinéraires",
       safetyCompliance: "Conformité de sécurité",
-        "Nous offrons des services de transport complets, notamment les transferts aéroport, les voyages d'affaires, le transport de mariage, les safaris et circuits touristiques, et la location de véhicules à long terme. Que vous ayez besoin d'un véhicule pour quelques heures ou plusieurs semaines, nous avons des options flexibles pour répondre à vos besoins à des prix compétitifs.",
+      completeTransport: "Nous offrons des services de transport complets, notamment les transferts aéroport, les voyages d'affaires, le transport de mariage, les safaris et circuits touristiques, et la location de véhicules à long terme. Que vous ayez besoin d'un véhicule pour quelques heures ou plusieurs semaines, nous avons des options flexibles pour répondre à vos besoins à des prix compétitifs.",
       fleet: "Notre Flotte",
       fleetText:
         "Notre flotte diversifiée comprend des berlines de luxe, des SUV, des Land Cruiser, des fourgonnettes exécutives, des véhicules de safari et des voitures économiques. Du prestigieux Land Cruiser TXL et LC 300 V6 aux confortables fourgonnettes Toyota HiAce, nous avons le véhicule parfait pour chaque occasion et budget.",
