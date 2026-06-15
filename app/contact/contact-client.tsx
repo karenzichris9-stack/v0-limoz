@@ -5,6 +5,7 @@ import { Phone, Mail, MapPin, Clock } from "lucide-react"
 import { useState } from "react"
 import { Footer } from "@/components/footer"
 import { submitContactForm } from "@/app/actions/contact"
+import { useLanguage } from "@/lib/language-context"
 
 interface FAQItem {
   question: string
@@ -12,6 +13,7 @@ interface FAQItem {
 }
 
 export default function ContactPageClient() {
+  const { t } = useLanguage()
   const [rating, setRating] = useState(0)
   const [hoverRating, setHoverRating] = useState(0)
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -23,32 +25,32 @@ export default function ContactPageClient() {
 
   const faqItems: FAQItem[] = [
     {
-      question: "How do I make a booking with Limoz Rwanda?",
-      answer: "You can book directly through our website on the Booking page, send us an email at info@limozrwanda.com, or reach us instantly via WhatsApp at +250788380013.",
+      question: t("faq.q1"),
+      answer: t("faq.a1"),
     },
     {
-      question: "Do you offer airport pickup and drop-off services?",
-      answer: "Yes! We provide reliable airport transfers to and from Kigali International Airport (RwandAir Hub). Simply share your flight details when booking and our driver will be there on time.",
+      question: t("faq.q2"),
+      answer: t("faq.a2"),
     },
     {
-      question: "Can I hire a car with a driver?",
-      answer: "Absolutely. All our vehicles come with professional, English-speaking drivers who know Kigali and Rwanda well. Self-drive options may also be available — contact us to discuss your needs.",
+      question: t("faq.q3"),
+      answer: t("faq.a3"),
     },
     {
-      question: "What types of vehicles do you have available?",
-      answer: "Our fleet includes sedans, SUVs, minivans, and safari-ready 4x4 vehicles. Visit our Fleet page to see the full range and choose the right vehicle for your trip.",
+      question: t("faq.q4"),
+      answer: t("faq.a4"),
     },
     {
-      question: "Do you organize safaris and tours outside Kigali?",
-      answer: "Yes, we offer guided tours and safaris across Rwanda, including Volcanoes National Park (gorilla trekking), Akagera National Park, and Nyungwe Forest. See our Tours & Safaris page for details.",
+      question: t("faq.q5"),
+      answer: t("faq.a5"),
     },
     {
-      question: "What are your operating hours?",
-      answer: "We are available 7 days a week. For urgent bookings or last-minute requests, you can reach us via WhatsApp at +250788380013.",
+      question: t("faq.q6"),
+      answer: t("faq.a6"),
     },
     {
-      question: "What payment methods do you accept?",
-      answer: "We accept Mobile Money (MTN & Airtel), bank transfers, and cash payments in Rwandan Francs (RWF) or USD. Please confirm your preferred method when making a booking.",
+      question: t("faq.q7"),
+      answer: t("faq.a7"),
     },
   ]
 
@@ -64,19 +66,19 @@ export default function ContactPageClient() {
       if (result.success) {
         setSubmitStatus({
           type: "success",
-          message: result.message || "Your message has been sent successfully!",
+          message: result.message || t("contact.successMessage") || "Your message has been sent successfully!",
         })
         e.currentTarget.reset()
       } else {
         setSubmitStatus({
           type: "error",
-          message: result.error || "Failed to send message. Please try again.",
+          message: result.error || t("contact.errorMessage") || "Failed to send message. Please try again.",
         })
       }
     } catch (error) {
       setSubmitStatus({
         type: "error",
-        message: "Failed to send message. Please try again or contact us directly at +250788380013.",
+        message: t("contact.tryAgainMessage") || "Failed to send message. Please try again or contact us directly at +250 788 380 013.",
       })
     } finally {
       setIsSubmitting(false)
@@ -88,21 +90,21 @@ export default function ContactPageClient() {
       <div className="flex-1 container mx-auto px-4 max-w-6xl py-12">
         {/* Header Section */}
         <div className="mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">Get in Touch With Limoz Rwanda</h1>
-          <p className="text-lg text-gray-600 leading-relaxed max-w-3xl">Have questions? We're here to help! Contact us through any of our channels and our team will respond promptly to assist you with your transportation needs.</p>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">{t("contact.title")}</h1>
+          <p className="text-lg text-gray-600 leading-relaxed max-w-3xl">{t("contact.subtitle")}</p>
         </div>
 
         {/* Contact Information Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           <div>
-            <h2 className="text-2xl font-bold mb-8 text-gray-900">Get in Touch</h2>
+            <h2 className="text-2xl font-bold mb-8 text-gray-900">{t("contact.getInTouch")}</h2>
             <div className="space-y-6">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-[#f39c12] rounded-full flex items-center justify-center flex-shrink-0">
                   <MapPin className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="font-semibold mb-1">Address</h3>
+                  <h3 className="font-semibold mb-1">{t("contact.address")}</h3>
                   <p className="text-gray-700">
                     Kacyiru plot 20, Gasabo district
                     <br />
@@ -118,7 +120,7 @@ export default function ContactPageClient() {
                   <Phone className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="font-semibold mb-1">Phone</h3>
+                  <h3 className="font-semibold mb-1">{t("contact.phone")}</h3>
                   <p className="text-gray-700">
                     +250788380013
                   </p>
@@ -149,7 +151,7 @@ export default function ContactPageClient() {
                   <Mail className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="font-semibold mb-1">Email</h3>
+                  <h3 className="font-semibold mb-1">{t("contact.email")}</h3>
                   <p className="text-gray-700">
                     info@limozrwanda.com
                     <br />
@@ -163,7 +165,7 @@ export default function ContactPageClient() {
                   <Clock className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="font-semibold mb-1">Operating Hours</h3>
+                  <h3 className="font-semibold mb-1">{t("contact.operatingHours")}</h3>
                   <p className="text-gray-700">
                     Monday - Sunday: 7:00 AM - 8:00 PM<br />
                     Emergency bookings available 24/7 via WhatsApp
@@ -175,21 +177,21 @@ export default function ContactPageClient() {
 
           {/* Contact Form Column */}
           <div>
-            <h2 className="text-2xl font-bold mb-8 text-gray-900">Send us a Message</h2>
+            <h2 className="text-2xl font-bold mb-8 text-gray-900">{t("contact.sendMessage")}</h2>
             <form onSubmit={handleContactSubmit} className="space-y-4">
               <div>
-                <label className="block text-sm font-medium mb-2 text-gray-700">Name *</label>
+                <label className="block text-sm font-medium mb-2 text-gray-700">{t("contact.name")} *</label>
                 <input
                   type="text"
                   name="name"
                   required
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#f39c12]"
-                  placeholder="Your name"
+                  placeholder={t("contact.name") || "Your name"}
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium mb-2 text-gray-700">Email *</label>
+                <label className="block text-sm font-medium mb-2 text-gray-700">{t("contact.emailField")} *</label>
                 <input
                   type="email"
                   name="email"
@@ -200,7 +202,7 @@ export default function ContactPageClient() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium mb-2 text-gray-700">Phone</label>
+                <label className="block text-sm font-medium mb-2 text-gray-700">{t("contact.phoneField")}</label>
                 <input
                   type="tel"
                   name="phone"
@@ -210,23 +212,23 @@ export default function ContactPageClient() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium mb-2 text-gray-700">Subject</label>
+                <label className="block text-sm font-medium mb-2 text-gray-700">{t("contact.subject")}</label>
                 <input
                   type="text"
                   name="subject"
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#f39c12]"
-                  placeholder="What is this about?"
+                  placeholder={t("contact.subject") || "What is this about?"}
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium mb-2 text-gray-700">Message *</label>
+                <label className="block text-sm font-medium mb-2 text-gray-700">{t("contact.message")} *</label>
                 <textarea
                   name="message"
                   required
                   rows={4}
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#f39c12] resize-none"
-                  placeholder="Tell us how we can help..."
+                  placeholder={t("contact.message") || "Tell us how we can help..."}
                 />
               </div>
 
@@ -241,7 +243,7 @@ export default function ContactPageClient() {
                 disabled={isSubmitting}
                 className="w-full bg-[#f39c12] text-white font-semibold py-3 rounded-lg hover:bg-[#e08e0b] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {isSubmitting ? "Sending..." : "Send Message"}
+                {isSubmitting ? t("contact.sending") || "Sending..." : t("contact.send")}
               </button>
             </form>
           </div>
@@ -250,8 +252,8 @@ export default function ContactPageClient() {
         <hr className="my-16" />
 
         <div className="mt-12 mb-16">
-          <h2 className="text-3xl font-bold mb-2 text-gray-900">Frequently Asked Questions</h2>
-          <p className="text-gray-600 mb-8 text-lg">Find answers to common questions about our services, fleet, and booking process.</p>
+          <h2 className="text-3xl font-bold mb-2 text-gray-900">{t("faq.title")}</h2>
+          <p className="text-gray-600 mb-8 text-lg">{t("faq.subtitle")}</p>
 
           <div className="space-y-3 max-w-4xl">
             {faqItems.map((item, index) => (
