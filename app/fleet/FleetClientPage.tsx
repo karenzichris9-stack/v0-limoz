@@ -16,7 +16,7 @@ export default function FleetClientPage() {
       imagePosition: "object-center",
       features: [
         { icon: Wind, labelKey: "climate", valueKey: "triZoneClimate" },
-        { icon: Users, labelKey: "capacity", valueKey: "sevenSeater" },
+        { icon: Users, labelKey: "capacity", valueKey: "fiveSeater" },
         { icon: Cog, labelKey: "transmission", valueKey: "automatic" },
         { icon: Radio, labelKey: "entertainment", valueKey: "premiumAudio" },
         { icon: Shield, labelKey: "safety", valueKey: "advancedSafety" },
@@ -29,7 +29,7 @@ export default function FleetClientPage() {
       imagePosition: "object-center",
       features: [
         { icon: Wind, labelKey: "climate", valueKey: "dualClimateControl" },
-        { icon: Users, labelKey: "capacity", valueKey: "sevenSeater" },
+        { icon: Users, labelKey: "capacity", valueKey: "fiveSeater" },
         { icon: Cog, labelKey: "transmission", valueKey: "automatic" },
         { icon: Radio, labelKey: "entertainment", valueKey: "premiumAudio" },
         { icon: Shield, labelKey: "safety", valueKey: "advancedSafety" },
@@ -85,7 +85,7 @@ export default function FleetClientPage() {
       imagePosition: "object-center",
       features: [
         { icon: Wind, labelKey: "climate", valueKey: "dualClimateControl" },
-        { icon: Users, labelKey: "capacity", valueKey: "sevenSeater" },
+        { icon: Users, labelKey: "capacity", valueKey: "fiveSeater" },
         { icon: Cog, labelKey: "transmission", valueKey: "automatic" },
         { icon: Radio, labelKey: "entertainment", valueKey: "premiumSound" },
         { icon: Shield, labelKey: "safety", valueKey: "advancedSafety" },
@@ -126,7 +126,7 @@ export default function FleetClientPage() {
       imagePosition: "object-center",
       useContain: true,
       features: [
-        { icon: Users, labelKey: "capacity", valueKey: "thirtyThreeSeater" },
+        { icon: Users, labelKey: "capacity", valueKey: "thirtyTwoSeater" },
         { icon: Wind, labelKey: "climate", valueKey: "airConditioning" },
         { icon: Cog, labelKey: "transmission", valueKey: "manual" },
         { icon: Package, labelKey: "cargo", valueKey: "doubleCabPickup" },
