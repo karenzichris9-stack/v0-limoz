@@ -1,6 +1,8 @@
 import type { Metadata } from "next"
 import ClientToursPage from "./ClientToursPage"
 
+export const dynamic = "force-dynamic"
+
 export const metadata: Metadata = {
   title: "Rwanda Tours & Safaris 2025 - Gorilla Trekking, Akagera Safari, Nyungwe | Limoz Rwanda",
   description:
