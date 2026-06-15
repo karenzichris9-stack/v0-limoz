@@ -165,10 +165,9 @@ export default function ContactPageClient() {
                   <Clock className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="font-semibold mb-1">{t("contact.operatingHours")}</h3>
-                  <p className="text-gray-700">
-                    Monday - Sunday: 7:00 AM - 8:00 PM<br />
-                    Emergency bookings available 24/7 via WhatsApp
+                  <h3 className="font-semibold mb-1">{t("contact.hours")}</h3>
+                  <p className="text-gray-700 whitespace-pre-line">
+                    {t("contact.operatingHours")}
                   </p>
                 </div>
               </div>
