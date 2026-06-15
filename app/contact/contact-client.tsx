@@ -25,32 +25,32 @@ export default function ContactPageClient() {
 
   const faqItems: FAQItem[] = [
     {
-      question: t("faq.q1"),
-      answer: t("faq.a1"),
+      question: t("contact.faq.q1"),
+      answer: t("contact.faq.a1"),
     },
     {
-      question: t("faq.q2"),
-      answer: t("faq.a2"),
+      question: t("contact.faq.q2"),
+      answer: t("contact.faq.a2"),
     },
     {
-      question: t("faq.q3"),
-      answer: t("faq.a3"),
+      question: t("contact.faq.q3"),
+      answer: t("contact.faq.a3"),
     },
     {
-      question: t("faq.q4"),
-      answer: t("faq.a4"),
+      question: t("contact.faq.q4"),
+      answer: t("contact.faq.a4"),
     },
     {
-      question: t("faq.q5"),
-      answer: t("faq.a5"),
+      question: t("contact.faq.q5"),
+      answer: t("contact.faq.a5"),
     },
     {
-      question: t("faq.q6"),
-      answer: t("faq.a6"),
+      question: t("contact.faq.q6"),
+      answer: t("contact.faq.a6"),
     },
     {
-      question: t("faq.q7"),
-      answer: t("faq.a7"),
+      question: t("contact.faq.q7"),
+      answer: t("contact.faq.a7"),
     },
   ]
 
@@ -252,8 +252,8 @@ export default function ContactPageClient() {
         <hr className="my-16" />
 
         <div className="mt-12 mb-16">
-          <h2 className="text-3xl font-bold mb-2 text-gray-900">{t("faq.title")}</h2>
-          <p className="text-gray-600 mb-8 text-lg">{t("faq.subtitle")}</p>
+          <h2 className="text-3xl font-bold mb-2 text-gray-900">{t("contact.faq.title")}</h2>
+          <p className="text-gray-600 mb-8 text-lg">{t("contact.faq.subtitle")}</p>
 
           <div className="space-y-3 max-w-4xl">
             {faqItems.map((item, index) => (
