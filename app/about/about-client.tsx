@@ -65,27 +65,73 @@ export default function AboutClientPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Full-width Hero Section */}
-      <div className="relative w-full h-72 md:h-96 mt-20 overflow-hidden">
+      {/* Full-width Hero Section with Vehicle Carousel */}
+      <div className="relative w-full h-72 md:h-96 mt-20 overflow-hidden rounded-b-3xl shadow-lg">
+        {/* Carousel background image */}
         <Image
-          src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_1.JPG-36G0tDy4DEWgLfAEmcizyNSBcMqqtX.jpeg"
-          alt="Limoz Rwanda Fleet - Mercedes-Benz E-Class"
+          src={currentVehicle.image}
+          alt={currentVehicle.name}
           fill
-          className="object-cover"
+          className="object-contain bg-gradient-to-br from-gray-100 to-gray-50"
           priority
           quality={85}
         />
-        <div className="absolute inset-0 bg-black/30" />
-        <div className="absolute inset-0 flex items-center justify-center">
+        
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/25" />
+        
+        {/* Title */}
+        <div className="absolute inset-0 flex items-center justify-center z-10">
           <h1 className="text-4xl md:text-6xl font-bold text-white text-center drop-shadow-lg">
             {t("aboutPage.title")}
           </h1>
+        </div>
+
+        {/* Navigation buttons */}
+        <button
+          onClick={goToPrevious}
+          className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-[#f39c12] text-gray-900 hover:text-white p-3 rounded-full transition-all shadow-lg hover:shadow-xl"
+        >
+          <ChevronLeft className="w-6 h-6" />
+        </button>
+        <button
+          onClick={goToNext}
+          className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-[#f39c12] text-gray-900 hover:text-white p-3 rounded-full transition-all shadow-lg hover:shadow-xl"
+        >
+          <ChevronRight className="w-6 h-6" />
+        </button>
+
+        {/* Vehicle Info and Navigation */}
+        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 md:p-6 z-10">
+          <div className="flex items-center justify-between">
+            <div>
+              <h3 className="text-lg md:text-2xl font-bold text-white">{currentVehicle.name}</h3>
+              <p className="text-[#f39c12] font-semibold text-sm">{currentVehicle.type}</p>
+            </div>
+            <div className="flex items-center gap-2">
+              {landCruiserVehicles.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => {
+                    setCurrentIndex(index)
+                    setAutoPlay(false)
+                  }}
+                  className={`h-2 rounded-full transition-all ${
+                    index === currentIndex
+                      ? "bg-[#f39c12] w-6"
+                      : "bg-white/40 w-2 hover:bg-white/60"
+                  }`}
+                  aria-label={`Go to vehicle ${index + 1}`}
+                />
+              ))}
+            </div>
+          </div>
         </div>
       </div>
 
       <div className="container mx-auto px-4 py-12 max-w-6xl">
 
-        {/* Two-Column Our Story Section with Vehicle Carousel */}
+        {/* Two-Column Our Story Section */}
         <section className="mb-20 py-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             {/* Text Column */}
@@ -100,80 +146,16 @@ export default function AboutClientPage() {
               </div>
             </div>
 
-            {/* Image Column - Vehicle Carousel */}
+            {/* Image Column */}
             <div className="relative h-96 md:h-[500px] rounded-2xl overflow-hidden shadow-lg w-full">
-              <div className="relative bg-white rounded-2xl overflow-hidden shadow-lg group h-full flex flex-col">
-                {/* Carousel image */}
-                <div className="relative flex-1 overflow-hidden flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-50 p-4">
-                  <Image
-                    src={currentVehicle.image}
-                    alt={currentVehicle.name}
-                    fill
-                    priority={currentIndex === 0}
-                    quality={80}
-                    className="object-contain transition-transform duration-500 group-hover:scale-105"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    placeholder="empty"
-                  />
-                </div>
-
-                {/* Navigation buttons */}
-                <button
-                  onClick={goToPrevious}
-                  className="absolute left-2 top-1/3 z-20 bg-white/80 hover:bg-[#f39c12] text-gray-900 hover:text-white p-2 rounded-full transition-all shadow-lg hover:shadow-xl"
-                >
-                  <ChevronLeft className="w-5 h-5" />
-                </button>
-                <button
-                  onClick={goToNext}
-                  className="absolute right-2 top-1/3 z-20 bg-white/80 hover:bg-[#f39c12] text-gray-900 hover:text-white p-2 rounded-full transition-all shadow-lg hover:shadow-xl"
-                >
-                  <ChevronRight className="w-5 h-5" />
-                </button>
-
-                {/* Vehicle info */}
-                <div className="p-4 bg-white border-t">
-                  <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-1">{currentVehicle.name}</h3>
-                  <p className="text-[#f39c12] font-semibold text-xs md:text-sm mb-3">{currentVehicle.type}</p>
-
-                  <div className="grid grid-cols-4 gap-2 mb-3">
-                    <div className="p-2 bg-[#f39c12]/5 rounded text-center">
-                      <p className="text-xs text-gray-500 mb-0.5">Seats</p>
-                      <p className="text-sm font-bold text-gray-900">{currentVehicle.seats}</p>
-                    </div>
-                    <div className="p-2 bg-[#f39c12]/5 rounded text-center">
-                      <p className="text-xs text-gray-500 mb-0.5">Trans</p>
-                      <p className="text-xs font-bold text-gray-900">{currentVehicle.transmission}</p>
-                    </div>
-                    <div className="p-2 bg-[#f39c12]/5 rounded text-center">
-                      <p className="text-xs text-gray-500 mb-0.5">Fuel</p>
-                      <p className="text-xs font-bold text-gray-900">{currentVehicle.fuelType}</p>
-                    </div>
-                    <div className="p-2 bg-[#f39c12]/5 rounded text-center">
-                      <p className="text-xs text-gray-500 mb-0.5">Year</p>
-                      <p className="text-xs font-bold text-gray-900">{currentVehicle.year}</p>
-                    </div>
-                  </div>
-
-                  {/* Dots indicator */}
-                  <div className="flex items-center justify-center gap-1.5">
-                    {landCruiserVehicles.map((_, index) => (
-                      <button
-                        key={index}
-                        onClick={() => {
-                          setCurrentIndex(index)
-                          setAutoPlay(false)
-                        }}
-                        className={`h-1.5 rounded-full transition-all ${
-                          index === currentIndex
-                            ? "bg-[#f39c12] w-6"
-                            : "bg-gray-300 w-1.5 hover:bg-gray-400"
-                        }`}
-                      />
-                    ))}
-                  </div>
-                </div>
-              </div>
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_1.JPG-egc8KI38IiKSztE6aQiaGG6g6sgRhS.jpeg"
+                alt="Limoz Rwanda Fleet - Land Cruiser 200 Series"
+                fill
+                className="object-cover object-center"
+                priority
+                quality={85}
+              />
             </div>
           </div>
         </section>
