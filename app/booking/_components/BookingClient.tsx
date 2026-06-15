@@ -34,7 +34,7 @@ export default function BookingClient() {
     if (!pickupDate) newErrors.pickupDate = t("booking.fieldRequired") || "This field is required"
     else if (pickupDate < today) newErrors.pickupDate = t("booking.dateError") || "Pickup date must be in the future"
     if (!dropOffDate) newErrors.dropOffDate = t("booking.fieldRequired") || "This field is required"
-    else if (dropOffDate < pickupDate) newErrors.dropOffDate = "Drop-off date must be after pickup date"
+    else if (dropOffDate < pickupDate) newErrors.dropOffDate = t("booking.dateError") || "Drop-off date must be after pickup date"
 
     return newErrors
   }
@@ -48,13 +48,13 @@ export default function BookingClient() {
     const formData = new FormData(form)
 
     // Validate form
-    const formErrors = validateForm(formData)
-    if (Object.keys(formErrors).length > 0) {
-      setErrors(formErrors)
-      setSubmitStatus({
-        type: "error",
-        message: "Please fill in all required fields correctly",
-      })
+      const formErrors = validateForm(formData)
+      if (Object.keys(formErrors).length > 0) {
+        setErrors(formErrors)
+        setSubmitStatus({
+          type: "error",
+          message: t("booking.fieldRequired"),
+        })
       setIsSubmitting(false)
       return
     }
@@ -67,7 +67,7 @@ export default function BookingClient() {
       if (result.success) {
         setSubmitStatus({
           type: "success",
-          message: "Your request has been received! We'll contact you within 2 hours.",
+          message: t("booking.success"),
         })
         form.reset()
         setErrors({})
@@ -129,7 +129,7 @@ export default function BookingClient() {
             {/* Note above form */}
             <div className="mb-8 p-4 bg-blue-50 border border-blue-200 rounded-lg">
               <p className="text-sm text-blue-800">
-                <strong>Note:</strong> We typically respond within 2 hours during business hours (7am–9pm CAT).
+                <strong>Note:</strong> {t("booking.note")}
               </p>
             </div>
 

@@ -130,7 +130,7 @@ export default function RootLayout({
         {/* DNS prefetch for CDN */}
         <link rel="dns-prefetch" href="https://hebbkx1anhila5yf.public.blob.vercel-storage.com" />
         {/* Preload hero poster image for faster LCP */}
-        <link rel="preload" as="image" href="/luxury-car-on-scenic-road-in-rwanda.jpg" type="image/jpeg" fetchpriority="high" />
+        <link rel="preload" as="image" href="/luxury-car-on-scenic-road-in-rwanda.jpg" type="image/jpeg" fetchPriority="high" />
       </head>
       <body className={`font-sans antialiased overflow-x-hidden`}>
         <JsonLd />
