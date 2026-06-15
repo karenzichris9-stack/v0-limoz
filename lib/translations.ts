@@ -405,10 +405,6 @@ export const translations = {
       tagline: "Like it, Hire it.",
       quickLinks: "Quick Links",
     },
-    contact: {
-      whatsappUs: "WhatsApp Us",
-      callNow: "Call Now",
-    },
     aboutPage: {
       title: "About Us",
       excellence: "Excellence in Transportation",

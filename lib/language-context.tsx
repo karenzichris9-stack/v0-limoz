@@ -48,6 +48,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
       if (value && typeof value === "object" && k in value) {
         value = value[k]
       } else {
+        console.log("[v0] Translation key not found:", key, "language:", language, "value:", value)
         return key
       }
     }
