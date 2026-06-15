@@ -22,7 +22,7 @@ export default function AboutClientPage() {
         <div className="absolute inset-0 bg-black/30" />
         <div className="absolute inset-0 flex items-center justify-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white text-center drop-shadow-lg">
-            {t("aboutPage.aboutTitle")}
+            {t("aboutPage.title")}
           </h1>
         </div>
       </div>
@@ -33,19 +33,19 @@ export default function AboutClientPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-[#E8A020] mb-2">50+</div>
-              <p className="text-white text-sm font-medium">{t("aboutPage.vehicles") || "Vehicles"}</p>
+              <p className="text-white text-sm font-medium">{t("aboutPage.statsVehicles")}</p>
             </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-[#E8A020] mb-2">5+</div>
-              <p className="text-white text-sm font-medium">{t("aboutPage.yearsExperience") || "Years Experience"}</p>
+              <p className="text-white text-sm font-medium">{t("aboutPage.statsYears")}</p>
             </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-[#E8A020] mb-2">1000+</div>
-              <p className="text-white text-sm font-medium">{t("aboutPage.happyClients") || "Happy Clients"}</p>
+              <p className="text-white text-sm font-medium">{t("aboutPage.statsClients")}</p>
             </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-[#E8A020] mb-2">24/7</div>
-              <p className="text-white text-sm font-medium">{t("aboutPage.support") || "Support"}</p>
+              <p className="text-white text-sm font-medium">{t("aboutPage.statsSupport")}</p>
             </div>
           </div>
         </div>
@@ -58,11 +58,11 @@ export default function AboutClientPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             {/* Text Column */}
             <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">{t("aboutPage.ourStory")}</h2>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">{t("aboutPage.excellence")}</h2>
               <div className="space-y-6">
                 <p className="text-gray-700 leading-relaxed text-lg">{t("aboutPage.excellenceText")}</p>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{t("aboutPage.whyChooseLimoz")}</h3>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">{t("aboutPage.whyUs")}</h3>
                   <p className="text-gray-700 leading-relaxed">{t("aboutPage.whyUsText")}</p>
                 </div>
               </div>
@@ -91,10 +91,10 @@ export default function AboutClientPage() {
               </div>
               <div>
                 <p className="text-white/60 text-sm font-medium tracking-wider uppercase mb-2">
-                  {t("aboutPage.partOf")}
+                  {t("aboutPage.mfkPartOf")}
                 </p>
                 <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">{t("aboutPage.mfkGroup")}</h3>
-                <p className="text-white/80 text-lg leading-relaxed">{t("aboutPage.mfkGroupText")}</p>
+                <p className="text-white/80 text-lg leading-relaxed">{t("aboutPage.mfkText")}</p>
               </div>
             </div>
           </div>
@@ -107,7 +107,7 @@ export default function AboutClientPage() {
               <div className="w-14 h-14 bg-[#E8A020]/10 rounded-full flex items-center justify-center flex-shrink-0">
                 <Eye className="w-7 h-7 text-[#E8A020]" />
               </div>
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900">{t("aboutPage.ourVision")}</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900">{t("aboutPage.vision")}</h2>
             </div>
             <p className="text-gray-700 leading-relaxed text-lg">{t("aboutPage.visionText")}</p>
           </div>
@@ -117,7 +117,7 @@ export default function AboutClientPage() {
               <div className="w-14 h-14 bg-[#1e3a5f]/10 rounded-full flex items-center justify-center flex-shrink-0">
                 <Target className="w-7 h-7 text-[#1e3a5f]" />
               </div>
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900">{t("aboutPage.ourMission")}</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900">{t("aboutPage.mission")}</h2>
             </div>
             <p className="text-gray-700 leading-relaxed text-lg">{t("aboutPage.missionText")}</p>
           </div>
@@ -125,12 +125,12 @@ export default function AboutClientPage() {
 
         {/* CTA Section */}
         <section className="text-center py-16 bg-gradient-to-r from-[#E8A020] to-[#d89817] rounded-2xl shadow-lg">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white px-4">{t("aboutPage.readyToExperience")}</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white px-4">{t("aboutPage.cta")}</h2>
           <a
             href="/booking"
             className="inline-block bg-white text-[#E8A020] px-10 py-4 rounded-lg hover:bg-gray-100 transition-all font-semibold text-lg shadow-md hover:shadow-xl transform hover:scale-105"
           >
-            {t("aboutPage.bookYourJourney")}
+            {t("aboutPage.ctaButton")}
           </a>
         </section>
       </div>
