@@ -169,6 +169,8 @@ export const translations = {
       successMessage: "Your message has been sent successfully! We'll get back to you soon.",
       errorMessage: "Failed to send message. Please try again.",
       tryAgainMessage: "Failed to send message. Please try again or contact us directly.",
+      whatsappUs: "WhatsApp Us",
+      callNow: "Call Now",
       faq: {
         title: "Frequently Asked Questions",
         subtitle: "Find answers to common questions about our services, fleet, and booking process.",
@@ -637,6 +639,8 @@ export const translations = {
       successMessage: "Votre message a été envoyé avec succès! Nous vous répondrons bientôt.",
       errorMessage: "Échec de l'envoi du message. Veuillez réessayer.",
       tryAgainMessage: "Échec de l'envoi du message. Veuillez réessayer ou nous contacter directement.",
+      whatsappUs: "Contactez-nous sur WhatsApp",
+      callNow: "Appelez maintenant",
       faq: {
         title: "Questions Fréquemment Posées",
         subtitle: "Trouvez des réponses aux questions courantes sur nos services, notre flotte et notre processus de réservation.",
