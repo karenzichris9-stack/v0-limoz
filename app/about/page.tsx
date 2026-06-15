@@ -1,6 +1,8 @@
 import type { Metadata } from "next"
 import AboutClientPage from "./about-client"
 
+export const dynamic = "force-dynamic"
+
 export const metadata: Metadata = {
   title: "About Limoz Rwanda - Leading Car Rental Company in Kigali | Est. 2010",
   description:

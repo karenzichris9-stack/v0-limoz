@@ -1,6 +1,8 @@
 import type { Metadata } from "next"
 import BookingClient from "./_components/BookingClient"
 
+export const dynamic = "force-dynamic"
+
 export const metadata: Metadata = {
   title: "Book Car Rental Online Kigali Rwanda | Instant Confirmation | Limoz Rwanda",
   description:
