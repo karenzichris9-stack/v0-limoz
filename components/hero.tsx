@@ -1,8 +1,7 @@
 "use client"
 
 import { useLanguage } from "@/lib/language-context"
-import { CTAButton } from "./cta-button"
-import { Shield, Clock, Star, CheckCircle, Phone } from "lucide-react"
+import { Shield, Clock, Star } from "lucide-react"
 import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
 
@@ -100,44 +99,6 @@ export function Hero() {
               <Star className="w-3.5 h-3.5 md:w-4 md:h-4 text-[#ffd700]" />
               <span className="text-xs md:text-sm font-medium">{t("hero.rating49")}</span>
             </div>
-          </div>
-
-          {/* CTA card */}
-          <div className="relative bg-white/95 backdrop-blur-md py-6 px-4 md:py-8 md:px-12 rounded-2xl max-w-3xl mx-auto shadow-2xl border border-[#ffd700]/30 overflow-hidden">
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#0f0f23] mb-2">{t("hero.title")}</h2>
-            <p className="text-[#1a1a3e]/80 mb-5 md:mb-6 text-sm md:text-lg">{t("hero.subtitle")}</p>
-
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-              <CTAButton href="/booking" variant="primary" size="lg" showArrow pulse className="w-full sm:w-auto">
-                {t("hero.carBooking")}
-              </CTAButton>
-              <CTAButton href="/tours-booking" variant="outline" size="lg" showArrow className="w-full sm:w-auto">
-                {t("hero.toursBooking")}
-              </CTAButton>
-            </div>
-
-            {/* Value props */}
-            <div className="mt-5 md:mt-6 pt-5 md:pt-6 border-t border-[#ffd700]/20 grid grid-cols-2 gap-3 md:gap-4">
-              {[t("hero.professionalChauffeurs"), t("hero.airportPickup"), t("hero.flexibleBookings"), t("hero.bestRates")].map((prop, i) => (
-                <div key={i} className="flex items-center gap-2 text-xs md:text-sm text-[#1a1a3e]/80">
-                  <CheckCircle className="w-3.5 h-3.5 md:w-4 md:h-4 text-[#ffd700] flex-shrink-0" />
-                  <span>{prop}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Quick contact */}
-          <div className="mt-5 md:mt-6 flex justify-center">
-            <a
-              href="tel:+250788380013"
-              className="flex items-center gap-2 text-white/80 hover:text-[#ffd700] transition-colors group"
-            >
-              <div className="p-2 bg-white/10 rounded-full group-hover:bg-[#ffd700] group-hover:text-[#0f0f23] transition-colors border border-[#ffd700]/20">
-                <Phone className="w-4 h-4" />
-              </div>
-              <span className="text-xs md:text-sm">{t("hero.needHelp")}</span>
-            </a>
           </div>
         </div>
       </div>
