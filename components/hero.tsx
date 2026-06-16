@@ -16,10 +16,11 @@ export function Hero() {
     // Lazy-load video after page paint
     const timer = setTimeout(() => {
       if (videoRef.current) {
-        // Rotate between two videos for variety
+        // Rotate between three videos for variety
         const videos = [
           "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/lc300%20%281%29%20%281%29-JhJ9zjfc5i2yeiYMcbaNZQzn91LMuo.mp4",
-          "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/6th%202-ZFbNGj7tPXOp9RVvlm9joRV3ebRkmu.mp4"
+          "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/6th%202-ZFbNGj7tPXOp9RVvlm9joRV3ebRkmu.mp4",
+          "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/lc300%20%281%29%20%281%29-z6wOYGG00Mdd8rrqmg23xqrM3HgK2v.mp4"
         ]
         const randomVideo = videos[Math.floor(Math.random() * videos.length)]
         videoRef.current.src = randomVideo
