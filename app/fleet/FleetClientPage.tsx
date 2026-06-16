@@ -15,11 +15,12 @@ export default function FleetClientPage() {
       image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/10-WrxsMDFksxi3P5qPvkrPk7pmDqVrIe.jpg",
       imagePosition: "object-center",
       features: [
-        { icon: Wind, labelKey: "climate", valueKey: "triZoneClimate" },
+        { icon: Wind, labelKey: "climate", valueKey: "dualClimateControl" },
         { icon: Users, labelKey: "capacity", valueKey: "fiveSeater" },
         { icon: Cog, labelKey: "transmission", valueKey: "automatic" },
         { icon: Radio, labelKey: "entertainment", valueKey: "premiumAudio" },
         { icon: Shield, labelKey: "safety", valueKey: "advancedSafety" },
+        { icon: Wifi, labelKey: "connectivity", valueKey: "wifi" },
       ],
     },
     {
@@ -45,6 +46,7 @@ export default function FleetClientPage() {
         { icon: Cog, labelKey: "transmission", valueKey: "automatic" },
         { icon: Wifi, labelKey: "connectivity", valueKey: "bluetoothWifi" },
         { icon: Shield, labelKey: "safety", valueKey: "premiumSafety" },
+        { icon: Wifi, labelKey: "connectivity", valueKey: "wifi" },
       ],
     },
     
@@ -58,6 +60,7 @@ export default function FleetClientPage() {
         { icon: Cog, labelKey: "transmission", valueKey: "automatic" },
         { icon: Radio, labelKey: "entertainment", valueKey: "premiumAudio" },
         { icon: Shield, labelKey: "safety", valueKey: "advancedSafety" },
+        { icon: Wifi, labelKey: "connectivity", valueKey: "wifi" },
       ],
     },
     {
@@ -73,6 +76,7 @@ export default function FleetClientPage() {
         { icon: Radio, labelKey: "entertainment", valueKey: "bluetoothAudio" },
         { icon: Wifi, labelKey: "connectivity", valueKey: "usbCharging" },
         { icon: Shield, labelKey: "safety", valueKey: "passengerSafety" },
+        { icon: Wifi, labelKey: "connectivity", valueKey: "wifi" },
       ],
     },
   ]
@@ -89,6 +93,7 @@ export default function FleetClientPage() {
         { icon: Cog, labelKey: "transmission", valueKey: "automatic" },
         { icon: Radio, labelKey: "entertainment", valueKey: "premiumSound" },
         { icon: Shield, labelKey: "safety", valueKey: "advancedSafety" },
+        { icon: Wifi, labelKey: "connectivity", valueKey: "wifi" },
       ],
     },
     {
@@ -102,6 +107,7 @@ export default function FleetClientPage() {
         { icon: Users, labelKey: "capacity", valueKey: "fiveSeater" },
         { icon: Radio, labelKey: "entertainment", valueKey: "premium" },
         { icon: Shield, labelKey: "safety", valueKey: "advancedSafety" },
+        { icon: Wifi, labelKey: "connectivity", valueKey: "wifi" },
       ],
     },
     {
@@ -114,6 +120,7 @@ export default function FleetClientPage() {
         { icon: Users, labelKey: "capacity", valueKey: "fiveSeater" },
         { icon: Radio, labelKey: "entertainment", valueKey: "premium" },
         { icon: Shield, labelKey: "safety", valueKey: "advancedSafety" },
+        { icon: Wifi, labelKey: "connectivity", valueKey: "wifi" },
       ],
     },
   ]
@@ -131,7 +138,7 @@ export default function FleetClientPage() {
         { icon: Cog, labelKey: "transmission", valueKey: "manual" },
         { icon: Package, labelKey: "cargo", valueKey: "doubleCabPickup" },
         { icon: Shield, labelKey: "safety", valueKey: "passengerSafety" },
-        { icon: Wifi, labelKey: "type", valueKey: "groupTransport" },
+        { icon: Wifi, labelKey: "connectivity", valueKey: "wifi" },
       ],
     },
     {
@@ -145,6 +152,7 @@ export default function FleetClientPage() {
         { icon: Cog, labelKey: "transmission", valueKey: "manual" },
         { icon: Package, labelKey: "cargo", valueKey: "doubleCabPickup" },
         { icon: Shield, labelKey: "safety", valueKey: "durabilitySafety" },
+        { icon: Wifi, labelKey: "connectivity", valueKey: "wifi" },
       ],
     },
   ]
@@ -313,78 +321,61 @@ export default function FleetClientPage() {
             <p className="text-gray-600 text-lg">{t("fleet.safariDesc")}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-2xl transition-all hover:scale-105 group h-full flex flex-col">
-                <div className="h-72 w-full overflow-hidden flex items-center justify-center flex-shrink-0">
-                  <img
-                    src="/safari-land-cruiser-with-pop-up-roof.jpg"
-                    alt="Safari Land Cruiser"
-                    loading="lazy"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-              <div className="p-6 flex flex-col flex-grow">
-                <h3 className="text-xl font-bold mb-4 text-gray-900">Safari Land Cruiser</h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6 flex-grow">
-                  <div className="flex items-start gap-2">
-                    <div className="p-2 bg-[#f39c12]/10 rounded-lg flex-shrink-0">
-                      <Car className="w-4 h-4 text-[#f39c12]" />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <p className="text-xs text-gray-500 font-medium">{t("fleet.type")}</p>
-                      <p className="text-sm text-gray-900 font-semibold break-words">{t("fleet.popUpRoof")}</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <div className="p-2 bg-[#f39c12]/10 rounded-lg flex-shrink-0">
-                      <Users className="w-4 h-4 text-[#f39c12]" />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <p className="text-xs text-gray-500 font-medium">{t("fleet.capacity")}</p>
-                      <p className="text-sm text-gray-900 font-semibold break-words">{t("fleet.sevenSeater")}</p>
-                    </div>
-                  </div>
-                </div>
-                <Link href="/booking">
-                  <Button className="w-full bg-[#f39c12] hover:bg-[#e67e22] text-white mt-auto">{t("fleet.bookSafari")}</Button>
-                </Link>
-              </div>
-            </div>
-            <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-2xl transition-all hover:scale-105 group h-full flex flex-col">
+            <Link
+              href="/booking"
+              className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-2xl transition-all hover:scale-105 group h-full flex flex-col"
+            >
               <div className="h-72 w-full overflow-hidden flex items-center justify-center flex-shrink-0">
                 <img
-                  src="/safari-4x4-vehicle-with-open-roof.jpg"
-                  alt="Safari 4x4"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-06-15%20at%2016.16.31%20%281%29-80K5JdDdAmWhM27uGDcN4eqvJHM9S9.jpeg"
+                  alt="Land Cruiser 70 Series Safari"
                   loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <div className="p-6 flex flex-col flex-grow">
-                <h3 className="text-xl font-bold mb-4 text-gray-900">Safari 4x4</h3>
+                <h3 className="text-xl font-bold mb-4 text-gray-900">Land Cruiser 70 Series</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6 flex-grow">
-                  <div className="flex items-start gap-2">
-                    <div className="p-2 bg-[#f39c12]/10 rounded-lg flex-shrink-0">
-                      <Car className="w-4 h-4 text-[#f39c12]" />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <p className="text-xs text-gray-500 font-medium">{t("fleet.type")}</p>
-                      <p className="text-sm text-gray-900 font-semibold break-words">{t("fleet.openRoof")}</p>
-                    </div>
-                  </div>
                   <div className="flex items-start gap-2">
                     <div className="p-2 bg-[#f39c12]/10 rounded-lg flex-shrink-0">
                       <Users className="w-4 h-4 text-[#f39c12]" />
                     </div>
                     <div className="flex-1 min-w-0">
                       <p className="text-xs text-gray-500 font-medium">{t("fleet.capacity")}</p>
-                      <p className="text-sm text-gray-900 font-semibold break-words">{t("fleet.sevenSeater")}</p>
+                      <p className="text-sm text-gray-900 font-semibold break-words">4 Seater</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <div className="p-2 bg-[#f39c12]/10 rounded-lg flex-shrink-0">
+                      <Wind className="w-4 h-4 text-[#f39c12]" />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <p className="text-xs text-gray-500 font-medium">{t("fleet.climate")}</p>
+                      <p className="text-sm text-gray-900 font-semibold break-words">Air Conditioning</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <div className="p-2 bg-[#f39c12]/10 rounded-lg flex-shrink-0">
+                      <Cog className="w-4 h-4 text-[#f39c12]" />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <p className="text-xs text-gray-500 font-medium">{t("fleet.transmission")}</p>
+                      <p className="text-sm text-gray-900 font-semibold break-words">Manual</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <div className="p-2 bg-[#f39c12]/10 rounded-lg flex-shrink-0">
+                      <Wifi className="w-4 h-4 text-[#f39c12]" />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <p className="text-xs text-gray-500 font-medium">{t("fleet.connectivity")}</p>
+                      <p className="text-sm text-gray-900 font-semibold break-words">WiFi</p>
                     </div>
                   </div>
                 </div>
-                <Link href="/booking">
-                  <Button className="w-full bg-[#f39c12] hover:bg-[#e67e22] text-white mt-auto">{t("fleet.bookSafari")}</Button>
-                </Link>
+                <Button className="w-full bg-[#f39c12] hover:bg-[#e67e22] text-white mt-auto">{t("fleet.bookSafari")}</Button>
               </div>
-            </div>
+            </Link>
           </div>
         </section>
       </div>
