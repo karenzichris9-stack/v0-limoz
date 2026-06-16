@@ -1,6 +1,8 @@
 import type { Metadata } from "next"
 import NewsPageClient from "./NewsPageClient"
 
+export const dynamic = "force-dynamic"
+
 export const metadata: Metadata = {
   title: "Latest News & Updates - Limoz Rwanda Car Rental Kigali",
   description:

@@ -1,6 +1,8 @@
 import type { Metadata } from "next"
 import FleetClientPage from "./FleetClientPage"
 
+export const dynamic = "force-dynamic"
+
 export const metadata: Metadata = {
   title: "Car Rental Fleet Kigali - 100+ Vehicles | Land Cruiser, Mercedes, SUVs | Limoz Rwanda",
   description:

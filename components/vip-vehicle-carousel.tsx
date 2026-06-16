@@ -19,7 +19,7 @@ const vipVehicles = [
     name: "Land Cruiser LC 300 V6",
     type: "VVIP Class",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/10-WrxsMDFksxi3P5qPvkrPk7pmDqVrIe.jpg",
-    seats: 7,
+    seats: 5,
     transmission: "Automatic",
     fuelType: "Petrol",
   },
