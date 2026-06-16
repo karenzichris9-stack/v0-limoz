@@ -4,7 +4,7 @@ import BookingClient from "./_components/BookingClient"
 export const metadata: Metadata = {
   title: "Book Car Rental Online Kigali Rwanda | Instant Confirmation | Limoz Rwanda",
   description:
-    "Book your car rental in Kigali online - instant confirmation, best prices guaranteed. Rent Land Cruiser, Mercedes, Prado, safari vehicles. Airport delivery available. Pay by card, bank transfer, or mobile money. Call +250 782 280 204 for assistance.",
+    "Book your car rental in Kigali online - instant confirmation, best prices guaranteed. Rent Land Cruiser, Mercedes, Prado, safari vehicles. Airport delivery available. Pay by card, bank transfer, or mobile money. Call +250 788 380 013 for assistance.",
   keywords: [
     "book car rental Kigali online",
     "instant car hire confirmation Rwanda",

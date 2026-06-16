@@ -160,7 +160,7 @@ export function Header() {
 
               {/* Call Now Button */}
               <a
-                href="tel:+250788315017"
+                href="tel:+250788380013"
                 className="flex items-center justify-center gap-2 w-full bg-[#ffd700] hover:bg-[#e8a020] text-[#0f0f23] py-3 px-4 rounded-lg font-bold transition-all duration-300 hover:scale-105"
                 onClick={() => setMobileMenuOpen(false)}
               >

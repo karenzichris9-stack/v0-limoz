@@ -3,7 +3,6 @@
 import type React from "react"
 import { Calendar, Clock, Car, User, Mail, Phone, MessageSquare, CheckCircle2, AlertCircle } from "lucide-react"
 import { useState } from "react"
-import { submitBooking } from "@/app/actions/booking"
 import { Footer } from "@/components/footer"
 import { useLanguage } from "@/lib/language-context"
 
@@ -62,21 +61,42 @@ export default function BookingClient() {
     setErrors({})
 
     try {
-      const result = await submitBooking(formData)
+      // Prepare booking details for WhatsApp message
+      const fullName = formData.get("fullName") as string
+      const email = formData.get("email") as string
+      const phone = formData.get("phone") as string
+      const vehicleType = formData.get("vehicleType") as string
+      const pickupDate = formData.get("pickupDate") as string
+      const dropOffDate = formData.get("dropOffDate") as string
+      const pickupLocation = formData.get("pickupLocation") as string
+      const dropOffLocation = formData.get("dropOffLocation") as string
+      const message = formData.get("message") as string
 
-      if (result.success) {
-        setSubmitStatus({
-          type: "success",
-          message: t("booking.success"),
-        })
-        form.reset()
-        setErrors({})
-      } else {
-        setSubmitStatus({
-          type: "error",
-          message: result.message,
-        })
-      }
+      // Create WhatsApp message
+      const whatsappMessage = `Hello, I would like to book a vehicle:
+
+*Name:* ${fullName}
+*Email:* ${email}
+*Phone:* ${phone}
+*Vehicle Type:* ${vehicleType}
+*Pickup Date:* ${pickupDate}
+*Drop-off Date:* ${dropOffDate}
+*Pickup Location:* ${pickupLocation}
+*Drop-off Location:* ${dropOffLocation}
+*Additional Message:* ${message || "None"}
+
+Please confirm the booking.`
+
+      // Open WhatsApp with pre-filled message
+      const whatsappUrl = `https://wa.me/250788380013?text=${encodeURIComponent(whatsappMessage)}`
+      window.open(whatsappUrl, "_blank")
+
+      setSubmitStatus({
+        type: "success",
+        message: t("booking.success") || "Redirecting to WhatsApp...",
+      })
+      form.reset()
+      setErrors({})
     } catch (error) {
       console.error("[v0] Booking submission error:", error)
       setSubmitStatus({

@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import ContactPageClient from "./contact-client"
 
 export const metadata: Metadata = {
-  title: "Contact Limoz Rwanda - Kigali Car Rental | +250 782 280 204",
+  title: "Contact Limoz Rwanda - Kigali Car Rental | +250 788 380 013",
   description:
     "Contact Limoz Rwanda for car rental inquiries. Located in Kacyiru, Kigali near Police Headquarters. Available 24/7. Call, WhatsApp, or email us for bookings and questions.",
   keywords: [
