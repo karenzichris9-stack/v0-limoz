@@ -71,7 +71,7 @@ export default function FleetClientPage() {
       imagePosition: "object-center",
       features: [
         { icon: Wind, labelKey: "climate", valueKey: "rearClimateControl" },
-        { icon: Users, labelKey: "capacity", valueKey: "fourteenSeater" },
+        { icon: Users, labelKey: "capacity", valueKey: "twelveSeater" },
         { icon: Cog, labelKey: "transmission", valueKey: "automatic" },
         { icon: Radio, labelKey: "entertainment", valueKey: "bluetoothAudio" },
         { icon: Wifi, labelKey: "connectivity", valueKey: "usbCharging" },

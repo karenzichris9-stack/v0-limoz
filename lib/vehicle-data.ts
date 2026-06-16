@@ -446,7 +446,7 @@ export const vehicles: Vehicle[] = [
       monthly: 3800,
     },
     specs: {
-      seats: 14,
+      seats: 12,
       transmission: "Automatic",
       fuelType: "Diesel",
       driveType: "RWD",
@@ -463,7 +463,7 @@ export const vehicles: Vehicle[] = [
       "Sliding Door",
     ],
     description:
-      "The Executive Van is perfect for group travel, offering comfortable seating for up to 14 passengers with ample luggage space. Ideal for airport transfers, corporate shuttles, and group tours across Rwanda.",
+      "The Executive Van is perfect for group travel, offering comfortable seating for up to 12 passengers with ample luggage space. Ideal for airport transfers, corporate shuttles, and group tours across Rwanda.",
     available: true,
   },
   {
