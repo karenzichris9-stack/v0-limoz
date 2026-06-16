@@ -66,13 +66,13 @@ export default function AboutClientPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Full-width Hero Section with Vehicle Carousel */}
-      <div className="relative w-full h-72 md:h-96 mt-20 overflow-hidden rounded-b-3xl shadow-lg">
+      <div className="relative w-full h-96 md:h-[600px] mt-20 overflow-hidden shadow-lg">
         {/* Carousel background image */}
         <Image
           src={currentVehicle.image}
           alt={currentVehicle.name}
           fill
-          className="object-contain bg-gradient-to-br from-gray-100 to-gray-50"
+          className="object-cover bg-gradient-to-br from-gray-100 to-gray-50"
           priority
           quality={85}
         />
