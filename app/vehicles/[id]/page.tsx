@@ -173,7 +173,7 @@ export default function VehicleDetailPage() {
                 <p className="text-gray-600 mb-6">{t("vehicleDetails.teamAvailable")}</p>
                 <div className="space-y-3">
                   <a
-                    href="tel:+250788385000"
+                    href="tel:+250788380013"
                     className="block w-full text-center bg-white border-2 border-gray-200 text-gray-900 py-3 px-6 rounded-lg hover:border-[#f39c12] transition-all font-semibold"
                   >
                     {t("vehicleDetails.callUs")}

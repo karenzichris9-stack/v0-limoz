@@ -206,7 +206,7 @@ export default function ContactPageClient() {
                   type="tel"
                   name="phone"
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#f39c12]"
-                  placeholder="+250 788 123 456"
+                  placeholder="+250 788 380 013"
                 />
               </div>
 

@@ -17,7 +17,7 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Limoz Rwanda - Car Rental Kigali | Safari Tours Rwanda | 24/7 Airport Transfers",
   description:
-    "Best car rental company in Kigali, Rwanda. Rent luxury vehicles, 4x4 safari cars, Land Cruiser, Mercedes-Benz. Gorilla trekking tours, Akagera safari, airport transfers. Professional drivers, competitive prices. Book online 24/7 or call +250 782 280 204.",
+    "Best car rental company in Kigali, Rwanda. Rent luxury vehicles, 4x4 safari cars, Land Cruiser, Mercedes-Benz. Gorilla trekking tours, Akagera safari, airport transfers. Professional drivers, competitive prices. Book online 24/7 or call +250 788 380 013.",
   keywords: [
     "car rental Kigali Rwanda",
     "rent a car Kigali",
