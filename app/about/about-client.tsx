@@ -133,9 +133,9 @@ export default function AboutClientPage() {
 
         {/* Two-Column Our Story Section */}
         <section className="mb-20 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div>
             {/* Text Column */}
-            <div>
+            <div className="max-w-3xl">
               <h2 className="text-4xl font-bold text-gray-900 mb-6">{t("aboutPage.excellence")}</h2>
               <div className="space-y-6">
                 <p className="text-gray-700 leading-relaxed text-lg">{t("aboutPage.excellenceText")}</p>
@@ -144,18 +144,6 @@ export default function AboutClientPage() {
                   <p className="text-gray-700 leading-relaxed">{t("aboutPage.whyUsText")}</p>
                 </div>
               </div>
-            </div>
-
-            {/* Image Column */}
-            <div className="relative h-96 md:h-[500px] rounded-2xl overflow-hidden shadow-lg w-full">
-              <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_1.JPG-egc8KI38IiKSztE6aQiaGG6g6sgRhS.jpeg"
-                alt="Limoz Rwanda Fleet - Land Cruiser 200 Series"
-                fill
-                className="object-cover object-center"
-                priority
-                quality={85}
-              />
             </div>
           </div>
         </section>
