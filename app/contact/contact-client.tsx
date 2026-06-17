@@ -1,7 +1,7 @@
 "use client"
 
 import type React from "react"
-import { Phone, MapPin, Clock } from "lucide-react"
+import { Phone, Mail, MapPin, Clock } from "lucide-react"
 import { useState } from "react"
 import { Footer } from "@/components/footer"
 import { submitContactForm } from "@/app/actions/contact"
@@ -124,6 +124,18 @@ export default function ContactPageClient() {
                   <p className="text-gray-700">
                     +250788380013
                   </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-[#f39c12] rounded-full flex items-center justify-center flex-shrink-0">
+                  <Mail className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="font-semibold mb-1">{t("contact.email")}</h3>
+                  <a href="mailto:info@limozrwanda.com" className="text-[#f39c12] hover:text-[#e08e0b] transition-colors">
+                    info@limozrwanda.com
+                  </a>
                 </div>
               </div>
 
