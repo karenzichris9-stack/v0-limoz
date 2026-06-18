@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { useState, useEffect } from "react"
-import { Menu, X, Globe } from "lucide-react"
+import { Menu, X, Globe, ChevronDown } from "lucide-react"
 import { usePathname } from "next/navigation"
 import { useLanguage } from "@/lib/language-context"
 import Image from "next/image"
@@ -11,6 +11,7 @@ import Image from "next/image"
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [servicesDropdown, setServicesDropdown] = useState(false)
   const pathname = usePathname()
   const { language, setLanguage, t } = useLanguage()
 
@@ -61,21 +62,48 @@ export function Header() {
             {[
               { href: "/", key: "home" },
               { href: "/about", key: "about" },
+              { href: null, key: "services", hasDropdown: true },
               { href: "/tours", key: "tours" },
               { href: "/fleet", key: "fleet" },
               { href: "/booking", key: "booking" },
               { href: "/contact", key: "contact" },
             ].map((item) => (
-              <Link
-                key={item.key}
-                href={item.href}
-                className={`relative ${isActive(item.href) ? "text-[#ffd700]" : "text-white"} hover:text-[#ffd700] transition-all duration-300 text-sm font-medium hover:scale-105`}
-              >
-                {t(`header.${item.key}`)}
-                {isActive(item.href) && (
-                  <span className="absolute -bottom-1 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#ffd700] to-transparent" />
-                )}
-              </Link>
+              item.hasDropdown ? (
+                <div key={item.key} className="relative group">
+                  <button
+                    onClick={() => setServicesDropdown(!servicesDropdown)}
+                    className="relative text-white hover:text-[#ffd700] transition-all duration-300 text-sm font-medium hover:scale-105 flex items-center gap-1"
+                  >
+                    {t(`header.${item.key}`)}
+                    <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
+                  </button>
+                  <div className="absolute top-full left-0 mt-2 w-48 bg-gradient-to-br from-[#1a1a3e] to-[#0f0f23] rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-[#ffd700]/20 py-2">
+                    <Link href="/services/airport-transfers" className="block px-4 py-2 text-white hover:text-[#ffd700] hover:bg-[#ffd700]/10 transition-colors text-sm">
+                      {t("header.airport")}
+                    </Link>
+                    <Link href="/services/chauffeur-service" className="block px-4 py-2 text-white hover:text-[#ffd700] hover:bg-[#ffd700]/10 transition-colors text-sm">
+                      {t("header.chauffeur")}
+                    </Link>
+                    <Link href="/services/corporate-transport" className="block px-4 py-2 text-white hover:text-[#ffd700] hover:bg-[#ffd700]/10 transition-colors text-sm">
+                      {t("header.corporate")}
+                    </Link>
+                    <Link href="/services/conference-transport" className="block px-4 py-2 text-white hover:text-[#ffd700] hover:bg-[#ffd700]/10 transition-colors text-sm">
+                      {t("header.conference")}
+                    </Link>
+                  </div>
+                </div>
+              ) : (
+                <Link
+                  key={item.key}
+                  href={item.href}
+                  className={`relative ${isActive(item.href) ? "text-[#ffd700]" : "text-white"} hover:text-[#ffd700] transition-all duration-300 text-sm font-medium hover:scale-105`}
+                >
+                  {t(`header.${item.key}`)}
+                  {isActive(item.href) && (
+                    <span className="absolute -bottom-1 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#ffd700] to-transparent" />
+                  )}
+                </Link>
+              )
             ))}
 
             <div className="flex items-center gap-2 ml-4 pl-4 border-l border-[#ffd700]/20">
@@ -118,19 +146,48 @@ export function Header() {
               {[
                 { href: "/", key: "home" },
                 { href: "/about", key: "about" },
+                { href: null, key: "services", hasDropdown: true },
                 { href: "/tours", key: "tours" },
                 { href: "/fleet", key: "fleet" },
                 { href: "/booking", key: "booking" },
                 { href: "/contact", key: "contact" },
               ].map((item) => (
-                <Link
-                  key={item.key}
-                  href={item.href}
-                  className={`${isActive(item.href) ? "text-[#ffd700] bg-[#ffd700]/10" : "text-white"} hover:text-[#ffd700] transition-colors text-sm font-medium py-3 px-3 rounded-lg`}
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {t(`header.${item.key}`)}
-                </Link>
+                item.hasDropdown ? (
+                  <div key={item.key} className="flex flex-col">
+                    <button
+                      onClick={() => setServicesDropdown(!servicesDropdown)}
+                      className="text-white hover:text-[#ffd700] transition-colors text-sm font-medium py-3 px-3 rounded-lg flex items-center justify-between"
+                    >
+                      {t(`header.${item.key}`)}
+                      <ChevronDown className={`w-4 h-4 transition-transform ${servicesDropdown ? "rotate-180" : ""}`} />
+                    </button>
+                    {servicesDropdown && (
+                      <div className="bg-[#ffd700]/5 ml-3 rounded-lg border border-[#ffd700]/10">
+                        <Link href="/services/airport-transfers" className="block px-4 py-2 text-white hover:text-[#ffd700] text-sm" onClick={() => { setMobileMenuOpen(false); setServicesDropdown(false); }}>
+                          {t("header.airport")}
+                        </Link>
+                        <Link href="/services/chauffeur-service" className="block px-4 py-2 text-white hover:text-[#ffd700] text-sm" onClick={() => { setMobileMenuOpen(false); setServicesDropdown(false); }}>
+                          {t("header.chauffeur")}
+                        </Link>
+                        <Link href="/services/corporate-transport" className="block px-4 py-2 text-white hover:text-[#ffd700] text-sm" onClick={() => { setMobileMenuOpen(false); setServicesDropdown(false); }}>
+                          {t("header.corporate")}
+                        </Link>
+                        <Link href="/services/conference-transport" className="block px-4 py-2 text-white hover:text-[#ffd700] text-sm" onClick={() => { setMobileMenuOpen(false); setServicesDropdown(false); }}>
+                          {t("header.conference")}
+                        </Link>
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <Link
+                    key={item.key}
+                    href={item.href}
+                    className={`${isActive(item.href) ? "text-[#ffd700] bg-[#ffd700]/10" : "text-white"} hover:text-[#ffd700] transition-colors text-sm font-medium py-3 px-3 rounded-lg`}
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {t(`header.${item.key}`)}
+                  </Link>
+                )
               ))}
 
               <div className="flex items-center gap-3 pt-4 border-t border-[#ffd700]/20 mb-4">
