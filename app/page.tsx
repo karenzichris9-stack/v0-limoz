@@ -2,6 +2,7 @@ import { Hero } from "@/components/hero"
 import { TrustIndicators } from "@/components/trust-indicators"
 import { About } from "@/components/about"
 import { Fleet } from "@/components/fleet"
+import { VIPConcierge } from "@/components/vip-concierge"
 import { WhyChoose } from "@/components/why-choose"
 import { HowItWorks } from "@/components/how-it-works"
 import { Testimonials } from "@/components/testimonials"
@@ -18,6 +19,7 @@ export default function Home() {
       <TrustIndicators />
       <About />
       <Fleet />
+      <VIPConcierge />
       <WhyChoose />
       <HowItWorks />
       <Testimonials />
