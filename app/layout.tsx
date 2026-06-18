@@ -102,7 +102,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "google-site-verification-code-here",
+    google: process.env.GOOGLE_SITE_VERIFICATION || "google-site-verification-code-here",
   },
 }
 

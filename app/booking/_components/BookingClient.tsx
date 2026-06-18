@@ -88,6 +88,8 @@ export default function BookingClient() {
       const dropOffDate = formData.get("dropOffDate") as string
       const pickupLocation = formData.get("pickupLocation") as string
       const dropOffLocation = formData.get("dropOffLocation") as string
+      const passengers = formData.get("passengers") as string
+      const childSeats = formData.get("childSeats") as string
       const message = formData.get("message") as string
 
       // Create WhatsApp message
@@ -98,11 +100,13 @@ export default function BookingClient() {
 *Phone:* ${phone}
 *Vehicle Type:* ${vehicleType}
 *Specific Vehicle:* ${specificVehicle}
+*Passengers:* ${passengers}
+*Child Seats:* ${childSeats === "0" ? "None" : childSeats}
+*Pickup Location:* ${pickupLocation}
+*Drop-off Location:* ${dropOffLocation}
 *Pickup Date:* ${pickupDate}
 *Drop-off Date:* ${dropOffDate}
 *Number of Days:* ${numberOfDays}
-*Pickup Location:* ${pickupLocation}
-*Drop-off Location:* ${dropOffLocation}
 *Additional Message:* ${message || "None"}
 
 Please confirm the booking.`
@@ -352,6 +356,49 @@ Please confirm the booking.`
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-sm font-semibold mb-3 text-gray-700 flex items-center gap-2">
+                    <MapPin className="w-4 h-4 text-[#f39c12]" />
+                    Pickup Location <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="pickupLocation"
+                    placeholder="e.g., Kigali Airport, Hotel, Address"
+                    required
+                    className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#f39c12] focus:border-transparent transition-all ${
+                      errors.pickupLocation ? "border-red-500 bg-red-50" : "border-gray-300"
+                    }`}
+                  />
+                  {errors.pickupLocation && (
+                    <p className="text-red-500 text-sm mt-1 flex items-center gap-1">
+                      <AlertCircle className="w-3 h-3" /> {errors.pickupLocation}
+                    </p>
+                  )}
+                </div>
+                <div>
+                  <label className="block text-sm font-semibold mb-3 text-gray-700 flex items-center gap-2">
+                    <MapPin className="w-4 h-4 text-[#f39c12]" />
+                    Drop-off Location <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="dropOffLocation"
+                    placeholder="e.g., Hotel, Address, Destination"
+                    required
+                    className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#f39c12] focus:border-transparent transition-all ${
+                      errors.dropOffLocation ? "border-red-500 bg-red-50" : "border-gray-300"
+                    }`}
+                  />
+                  {errors.dropOffLocation && (
+                    <p className="text-red-500 text-sm mt-1 flex items-center gap-1">
+                      <AlertCircle className="w-3 h-3" /> {errors.dropOffLocation}
+                    </p>
+                  )}
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label className="block text-sm font-semibold mb-3 text-gray-700 flex items-center gap-2">
                     <Calendar className="w-4 h-4 text-[#f39c12]" />
                     {t("booking.pickupDate")} <span className="text-red-500">*</span>
                   </label>
@@ -389,6 +436,42 @@ Please confirm the booking.`
                       <AlertCircle className="w-3 h-3" /> {errors.dropOffDate}
                     </p>
                   )}
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label className="block text-sm font-semibold mb-3 text-gray-700 flex items-center gap-2">
+                    <User className="w-4 h-4 text-[#f39c12]" />
+                    Number of Passengers <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="number"
+                    name="passengers"
+                    min="1"
+                    max="10"
+                    placeholder="1"
+                    required
+                    defaultValue="1"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#f39c12] focus:border-transparent transition-all"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-semibold mb-3 text-gray-700 flex items-center gap-2">
+                    <Car className="w-4 h-4 text-[#f39c12]" />
+                    Child Seats Required
+                  </label>
+                  <select
+                    name="childSeats"
+                    defaultValue="0"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#f39c12] focus:border-transparent transition-all bg-white"
+                  >
+                    <option value="0">None</option>
+                    <option value="1">1 Child Seat</option>
+                    <option value="2">2 Child Seats</option>
+                    <option value="3">3 Child Seats</option>
+                    <option value="4">4+ Child Seats</option>
+                  </select>
                 </div>
               </div>
 
