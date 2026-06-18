@@ -2,7 +2,7 @@ export const translations = {
   en: {
     header: {
       logo: "LIMOZ RWANDA",
-      tagline: "Like it. Hire it.",
+      tagline: "Rwanda's Premier Executive Transport",
       home: "HOME",
       about: "ABOUT US",
       tours: "OUR TOURS & SAFARIS",
@@ -21,17 +21,17 @@ export const translations = {
       contact: "CONTACT US",
     },
     hero: {
-      welcome: "Welcome to",
-      company: "LIMOZ RWANDA Ltd",
-      tagline: "Your Trusted Partner for Car Rentals in Kigali",
+      welcome: "Rwanda's Premier",
+      company: "Executive Transport",
+      tagline: "Precision Transport. Presidential Standards.",
       title: "Premium Car Rental & Tours",
       subtitle:
         "Experience luxury and comfort with our premium fleet. Available 24/7 for all your transportation needs in Rwanda.",
-      carBooking: "CAR BOOKING",
-      toursBooking: "TOURS BOOKING",
+      carBooking: "REQUEST A VEHICLE",
+      toursBooking: "SPEAK TO OUR CONCIERGE",
       fullyInsured: "Fully Insured",
       service247: "24/7 Service",
-      rating49: "4.9 Rating",
+      rating49: "Trusted Choice",
       professionalChauffeurs: "Professional Chauffeurs",
       airportPickup: "Airport Pickup",
       flexibleBookings: "Flexible Bookings",
@@ -489,10 +489,10 @@ export const translations = {
       callUs: "Call Us",
     },
   },
-  fr: {
+    fr: {
     header: {
       logo: "LIMOZ RWANDA",
-      tagline: "Aimez-le. Louez-le.",
+      tagline: "Transport Exécutif Premium du Rwanda",
       home: "ACCUEIL",
       about: "À PROPOS",
       tours: "NOS CIRCUITS & SAFARIS",
@@ -511,9 +511,9 @@ export const translations = {
       contact: "CONTACT",
     },
     hero: {
-      welcome: "Bienvenue chez",
-      company: "LIMOZ RWANDA Ltd",
-      tagline: "Votre partenaire de confiance pour la location de voitures à Kigali",
+      welcome: "Transport Exécutif Premium",
+      company: "du Rwanda",
+      tagline: "Transport précis. Normes présidentielles.",
       title: "Location de voitures et circuits premium",
       subtitle:
         "Découvrez le luxe et le confort avec notre flotte premium. Disponible 24h/24 et 7j/7 pour tous vos besoins de transport au Rwanda.",

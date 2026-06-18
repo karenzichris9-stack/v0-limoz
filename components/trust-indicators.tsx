@@ -9,9 +9,9 @@ export function TrustIndicators() {
 
   const indicators = [
     { icon: Shield, label: language === "fr" ? "Agréé et assuré" : "Licensed & Insured", value: "100%" },
-    { icon: Award, label: language === "fr" ? "Années d'expérience" : "Years Experience", value: "10+" },
-    { icon: Users, label: language === "fr" ? "Clients satisfaits" : "Happy Clients", value: "5000+" },
-    { icon: Star, label: language === "fr" ? "Note moyenne" : "Average Rating", value: "4.9" },
+    { icon: Award, label: language === "fr" ? "Années d'expérience" : "Years Experience", value: "14+" },
+    { icon: Users, label: language === "fr" ? "Clients satisfaits" : "Happy Clients", value: "8000+" },
+    { icon: Star, label: language === "fr" ? "Clients de confiance" : "5-Star Hotels", value: "10+" },
   ]
 
   return (

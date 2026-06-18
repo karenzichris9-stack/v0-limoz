@@ -369,7 +369,7 @@ export default function FleetClientPage() {
                     </div>
                     <div className="flex-1 min-w-0">
                       <p className="text-xs text-gray-500 font-medium">{t("fleet.connectivity")}</p>
-                      <p className="text-sm text-gray-900 font-semibold break-words">WiFi</p>
+                      <p className="text-sm text-gray-900 font-semibold break-words">WiFi & Bluetooth</p>
                     </div>
                   </div>
                 </div>
