@@ -1,19 +1,30 @@
 "use client"
 
 import type React from "react"
-import { Calendar, Clock, Car, User, Mail, Phone, MessageSquare, CheckCircle2, AlertCircle } from "lucide-react"
-import { useState } from "react"
+import { Calendar, Clock, Car, User, Mail, Phone, MessageSquare, CheckCircle2, AlertCircle, MapPin } from "lucide-react"
+import { useState, useMemo } from "react"
 import { Footer } from "@/components/footer"
 import { useLanguage } from "@/lib/language-context"
+import { vehicles } from "@/lib/vehicle-data"
 
 export default function BookingClient() {
   const { t } = useLanguage()
   const [errors, setErrors] = useState<Record<string, string>>({})
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [pickupDate, setPickupDate] = useState("")
+  const [dropOffDate, setDropOffDate] = useState("")
+  const [vehicleType, setVehicleType] = useState("")
+  const [specificVehicle, setSpecificVehicle] = useState("")
   const [submitStatus, setSubmitStatus] = useState<{
     type: "success" | "error" | null
     message: string
   }>({ type: null, message: "" })
+
+  // Get available vehicles based on selected type
+  const availableVehicles = useMemo(() => {
+    if (!vehicleType) return []
+    return vehicles.filter(v => v.name === vehicleType && v.available)
+  }, [vehicleType])
 
   const today = new Date().toISOString().split("T")[0]
 
@@ -25,11 +36,17 @@ export default function BookingClient() {
     const email = (formData.get("email") as string)?.trim()
     const phone = (formData.get("phone") as string)?.trim()
     const vehicleType = formData.get("vehicleType") as string
+    const specificVehicle = formData.get("specificVehicle") as string
+    const pickupLocation = (formData.get("pickupLocation") as string)?.trim()
+    const dropOffLocation = (formData.get("dropOffLocation") as string)?.trim()
 
     if (!fullName) newErrors.fullName = t("booking.fieldRequired") || "This field is required"
     if (!email) newErrors.email = t("booking.fieldRequired") || "This field is required"
     if (!phone) newErrors.phone = t("booking.fieldRequired") || "This field is required"
     if (!vehicleType || vehicleType === "") newErrors.vehicleType = t("booking.fieldRequired") || "This field is required"
+    if (!specificVehicle || specificVehicle === "") newErrors.specificVehicle = t("booking.fieldRequired") || "This field is required"
+    if (!pickupLocation) newErrors.pickupLocation = t("booking.fieldRequired") || "This field is required"
+    if (!dropOffLocation) newErrors.dropOffLocation = t("booking.fieldRequired") || "This field is required"
     if (!pickupDate) newErrors.pickupDate = t("booking.fieldRequired") || "This field is required"
     else if (pickupDate < today) newErrors.pickupDate = t("booking.dateError") || "Pickup date must be in the future"
     if (!dropOffDate) newErrors.dropOffDate = t("booking.fieldRequired") || "This field is required"
@@ -66,6 +83,7 @@ export default function BookingClient() {
       const email = formData.get("email") as string
       const phone = formData.get("phone") as string
       const vehicleType = formData.get("vehicleType") as string
+      const specificVehicle = formData.get("specificVehicle") as string
       const pickupDate = formData.get("pickupDate") as string
       const dropOffDate = formData.get("dropOffDate") as string
       const pickupLocation = formData.get("pickupLocation") as string
@@ -79,8 +97,10 @@ export default function BookingClient() {
 *Email:* ${email}
 *Phone:* ${phone}
 *Vehicle Type:* ${vehicleType}
+*Specific Vehicle:* ${specificVehicle}
 *Pickup Date:* ${pickupDate}
 *Drop-off Date:* ${dropOffDate}
+*Number of Days:* ${numberOfDays}
 *Pickup Location:* ${pickupLocation}
 *Drop-off Location:* ${dropOffLocation}
 *Additional Message:* ${message || "None"}
@@ -244,21 +264,58 @@ Please confirm the booking.`
                   </label>
                   <select
                     name="vehicleType"
+                    value={vehicleType}
+                    onChange={(e) => {
+                      setVehicleType(e.target.value)
+                      setSpecificVehicle("")
+                    }}
                     required
                     className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#f39c12] focus:border-transparent transition-all bg-white ${
                       errors.vehicleType ? "border-red-500 bg-red-50" : "border-gray-300"
                     }`}
                   >
                     <option value="">{t("booking.selectVehicle")}</option>
-                    <option value="vvip">VVIP Class</option>
-                    <option value="vip">VIP Class</option>
-                    <option value="utility">Utility</option>
-                    <option value="safari">Safari Vehicle</option>
+                    {Array.from(new Set(vehicles.filter(v => v.available).map(v => v.name))).map((name) => (
+                      <option key={name} value={name}>
+                        {name}
+                      </option>
+                    ))}
                   </select>
                   {errors.vehicleType && (
                     <p className="text-red-500 text-sm mt-1 flex items-center gap-1">
                       <AlertCircle className="w-3 h-3" /> {errors.vehicleType}
                     </p>
+                  )}
+                </div>
+                <div>
+                  <label className="block text-sm font-semibold mb-3 text-gray-700 flex items-center gap-2">
+                    <Car className="w-4 h-4 text-[#f39c12]" />
+                    Specific Vehicle <span className="text-red-500">*</span>
+                  </label>
+                  <select
+                    name="specificVehicle"
+                    value={specificVehicle}
+                    onChange={(e) => setSpecificVehicle(e.target.value)}
+                    required
+                    disabled={availableVehicles.length === 0}
+                    className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#f39c12] focus:border-transparent transition-all bg-white ${
+                      errors.specificVehicle ? "border-red-500 bg-red-50" : availableVehicles.length === 0 ? "border-gray-300 bg-gray-100" : "border-gray-300"
+                    }`}
+                  >
+                    <option value="">Select a specific vehicle</option>
+                    {availableVehicles.map((vehicle) => (
+                      <option key={vehicle.id} value={`${vehicle.name} - ${vehicle.year} (${vehicle.specs.seats} seats)`}>
+                        {vehicle.name} - {vehicle.year} ({vehicle.specs.seats} seats)
+                      </option>
+                    ))}
+                  </select>
+                  {errors.specificVehicle && (
+                    <p className="text-red-500 text-sm mt-1 flex items-center gap-1">
+                      <AlertCircle className="w-3 h-3" /> {errors.specificVehicle}
+                    </p>
+                  )}
+                  {vehicleType && availableVehicles.length === 0 && (
+                    <p className="text-gray-500 text-sm mt-1">No vehicles available for this type</p>
                   )}
                 </div>
               </div>
