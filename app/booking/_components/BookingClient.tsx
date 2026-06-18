@@ -23,7 +23,7 @@ export default function BookingClient() {
   // Get available vehicles based on selected type
   const availableVehicles = useMemo(() => {
     if (!vehicleType) return []
-    return vehicles.filter(v => v.name === vehicleType && v.available)
+    return vehicles.filter(v => v.name === vehicleType)
   }, [vehicleType])
 
   const today = new Date().toISOString().split("T")[0]
@@ -275,12 +275,41 @@ Please confirm the booking.`
                     }`}
                   >
                     <option value="">{t("booking.selectVehicle")}</option>
-                    {Array.from(new Set(vehicles.filter(v => v.available).map(v => v.name))).map((name) => (
+                    {Array.from(new Set(vehicles.map(v => v.name))).map((name) => (
                       <option key={name} value={name}>
                         {name}
                       </option>
                     ))}
                   </select>
+                  {errors.vehicleType && (
+                    <p className="text-red-500 text-sm mt-1 flex items-center gap-1">
+                      <AlertCircle className="w-3 h-3" /> {errors.vehicleType}
+                    </p>
+                  )}
+                </div>
+              <div>
+                <label className="block text-sm font-semibold mb-3 text-gray-700 flex items-center gap-2">
+                  <Car className="w-4 h-4 text-[#f39c12]" />
+                  {t("booking.vehicleType")} <span className="text-red-500">*</span>
+                </label>
+                <select
+                  value={vehicleType}
+                  onChange={(e) => {
+                    const newType = e.target.value
+                    setVehicleType(newType)
+                    setSpecificVehicle("")
+                  }}
+                  className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#f39c12] focus:border-transparent transition-all bg-white ${
+                    errors.vehicleType ? "border-red-500 bg-red-50" : "border-gray-300"
+                  }`}
+                >
+                  <option value="">Select a vehicle</option>
+                  {Array.from(new Set(vehicles.map(v => v.name))).map((name) => (
+                    <option key={name} value={name}>
+                      {name}
+                    </option>
+                  ))}
+                </select>
                   {errors.vehicleType && (
                     <p className="text-red-500 text-sm mt-1 flex items-center gap-1">
                       <AlertCircle className="w-3 h-3" /> {errors.vehicleType}
