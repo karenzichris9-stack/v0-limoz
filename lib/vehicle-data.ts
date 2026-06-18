@@ -395,7 +395,7 @@ export const vehicles: Vehicle[] = [
   {
     id: "toyota-rav4-2024",
     name: "Toyota RAV4 2024",
-    class: "VVIP",
+    class: "VIP",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_7.JPG-nZrGmqN07Kuhj9qDVHmgE4oowUjDvD.jpeg",
     images: {
       exterior: [
