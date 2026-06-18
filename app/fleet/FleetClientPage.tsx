@@ -1,12 +1,15 @@
 "use client"
 
 import Link from "next/link"
-import { Car, Users, Cog, Wind, Shield, Radio, Wifi, Zap, Package } from "lucide-react"
+import { Car, Users, Cog, Wind, Shield, Radio, Wifi, Zap, Package, Search, X } from "lucide-react"
+import { useState, useMemo } from "react"
 import { useLanguage } from "@/lib/language-context"
 import { Button } from "@/components/ui/button"
 
 export default function FleetClientPage() {
   const { t } = useLanguage()
+  const [selectedClass, setSelectedClass] = useState<string | null>(null)
+  const [searchTerm, setSearchTerm] = useState("")
 
   const vvipFleet = [
     {
@@ -179,14 +182,96 @@ export default function FleetClientPage() {
           <div className="w-24 h-1 bg-[#f39c12] mx-auto mt-6"></div>
         </div>
 
+        {/* Filter Section */}
+        <div className="mb-12 bg-gradient-to-r from-[#f39c12]/5 to-[#e67e22]/5 p-8 rounded-2xl border border-[#f39c12]/20">
+          <h3 className="text-xl font-bold mb-6 text-gray-900">Filter Fleet</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Search */}
+            <div className="relative">
+              <Search className="absolute left-3 top-3.5 w-5 h-5 text-gray-400" />
+              <input
+                type="text"
+                placeholder="Search by vehicle name..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#f39c12] focus:border-transparent"
+              />
+              {searchTerm && (
+                <button
+                  onClick={() => setSearchTerm("")}
+                  className="absolute right-3 top-3.5 text-gray-400 hover:text-gray-600"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              )}
+            </div>
+
+            {/* Vehicle Class Filter */}
+            <div className="flex gap-3 flex-wrap items-center">
+              <span className="font-semibold text-gray-700">Class:</span>
+              <button
+                onClick={() => setSelectedClass(null)}
+                className={`px-4 py-2 rounded-lg transition-all ${
+                  selectedClass === null
+                    ? "bg-[#f39c12] text-white"
+                    : "bg-white border border-gray-300 text-gray-700 hover:border-[#f39c12]"
+                }`}
+              >
+                All
+              </button>
+              <button
+                onClick={() => setSelectedClass("vvip")}
+                className={`px-4 py-2 rounded-lg transition-all ${
+                  selectedClass === "vvip"
+                    ? "bg-[#f39c12] text-white"
+                    : "bg-white border border-gray-300 text-gray-700 hover:border-[#f39c12]"
+                }`}
+              >
+                VVIP
+              </button>
+              <button
+                onClick={() => setSelectedClass("vip")}
+                className={`px-4 py-2 rounded-lg transition-all ${
+                  selectedClass === "vip"
+                    ? "bg-[#f39c12] text-white"
+                    : "bg-white border border-gray-300 text-gray-700 hover:border-[#f39c12]"
+                }`}
+              >
+                VIP
+              </button>
+              <button
+                onClick={() => setSelectedClass("utility")}
+                className={`px-4 py-2 rounded-lg transition-all ${
+                  selectedClass === "utility"
+                    ? "bg-[#f39c12] text-white"
+                    : "bg-white border border-gray-300 text-gray-700 hover:border-[#f39c12]"
+                }`}
+              >
+                Utility
+              </button>
+              <button
+                onClick={() => setSelectedClass("safari")}
+                className={`px-4 py-2 rounded-lg transition-all ${
+                  selectedClass === "safari"
+                    ? "bg-[#f39c12] text-white"
+                    : "bg-white border border-gray-300 text-gray-700 hover:border-[#f39c12]"
+                }`}
+              >
+                Safari
+              </button>
+            </div>
+          </div>
+        </div>
+
         {/* VVIP Class */}
+        {(selectedClass === null || selectedClass === "vvip") && (
         <section className="mb-32">
           <div className="mb-16 pl-6 border-l-4 border-[#E8A020]">
             <h2 className="text-4xl font-bold mb-2 text-gray-900">{t("fleet.vvipClass")}</h2>
             <p className="text-gray-600 text-lg">{t("fleet.vvipDesc")}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {vvipFleet.map((vehicle, index) => (
+            {vvipFleet.filter(v => v.name.toLowerCase().includes(searchTerm.toLowerCase())).map((vehicle, index) => (
               <Link
                 key={index}
                 href={`/vehicles/${vehicle.id}`}
@@ -223,8 +308,10 @@ export default function FleetClientPage() {
             ))}
           </div>
         </section>
+        )}
 
         {/* VIP Class */}
+        {(selectedClass === null || selectedClass === "vip") && (
         <section className="mb-32">
           <div className="mb-16 pl-6 border-l-4 border-[#E8A020]">
             <h2 className="text-4xl font-bold mb-2 text-gray-900">{t("fleet.vipClass")}</h2>
@@ -268,15 +355,17 @@ export default function FleetClientPage() {
             ))}
           </div>
         </section>
+        )}
 
         {/* Utility Vehicles */}
+        {(selectedClass === null || selectedClass === "utility") && (
         <section className="mb-32">
           <div className="mb-16 pl-6 border-l-4 border-[#E8A020]">
             <h2 className="text-4xl font-bold mb-2 text-gray-900">{t("fleet.utilityVehicles")}</h2>
             <p className="text-gray-600 text-lg">{t("fleet.utilityDesc")}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {utilityVehicles.map((vehicle, index) => (
+            {utilityVehicles.filter(v => v.name.toLowerCase().includes(searchTerm.toLowerCase())).map((vehicle, index) => (
               <Link
                 key={index}
                 href={`/vehicles/${vehicle.id}`}
@@ -313,8 +402,10 @@ export default function FleetClientPage() {
             ))}
           </div>
         </section>
+        )}
 
         {/* Safari Cars */}
+        {(selectedClass === null || selectedClass === "safari") && (
         <section>
           <div className="mb-16 pl-6 border-l-4 border-[#E8A020]">
             <h2 className="text-4xl font-bold mb-2 text-gray-900">{t("fleet.safariCars")}</h2>
@@ -378,6 +469,7 @@ export default function FleetClientPage() {
             </Link>
           </div>
         </section>
+        )}
       </div>
     </div>
   )
