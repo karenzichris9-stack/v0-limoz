@@ -1,5 +1,5 @@
 import { Metadata } from "next"
-import { MapPin, Clock, CheckCircle2, Users, Smartphone, Shield } from "lucide-react"
+import { MapPin, Clock, CheckCircle2, Users, Smartphone, Shield, CheckCircle } from "lucide-react"
 import { Footer } from "@/components/footer"
 
 export const metadata: Metadata = {

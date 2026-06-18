@@ -1,5 +1,5 @@
 import { Metadata } from "next"
-import { Award, Shield, Clock, MapPin, Users, Briefcase } from "lucide-react"
+import { Award, Shield, Clock, MapPin, Users, Briefcase, CheckCircle } from "lucide-react"
 import { Footer } from "@/components/footer"
 
 export const metadata: Metadata = {
@@ -40,23 +40,23 @@ export default function ChauffeurService() {
               <h3 className="text-2xl font-bold mb-6 text-gray-900">Selection & Training</h3>
               <ul className="space-y-4">
                 <li className="flex gap-3">
-                  <Checkmark />
+                  <CheckCircle className="w-5 h-5 text-[#f39c12] flex-shrink-0 mt-1" />
                   <span className="text-gray-700"><strong>Rigorous vetting:</strong> Background checks, license verification, driving record review</span>
                 </li>
                 <li className="flex gap-3">
-                  <Checkmark />
+                  <CheckCircle className="w-5 h-5 text-[#f39c12] flex-shrink-0 mt-1" />
                   <span className="text-gray-700"><strong>Protocol training:</strong> Diplomatic protocols, VIP etiquette, confidentiality</span>
                 </li>
                 <li className="flex gap-3">
-                  <Checkmark />
+                  <CheckCircle className="w-5 h-5 text-[#f39c12] flex-shrink-0 mt-1" />
                   <span className="text-gray-700"><strong>Route expertise:</strong> Comprehensive knowledge of Kigali and national routes</span>
                 </li>
                 <li className="flex gap-3">
-                  <Checkmark />
+                  <CheckCircle className="w-5 h-5 text-[#f39c12] flex-shrink-0 mt-1" />
                   <span className="text-gray-700"><strong>Professional appearance:</strong> Smart dress code, grooming standards</span>
                 </li>
                 <li className="flex gap-3">
-                  <Checkmark />
+                  <CheckCircle className="w-5 h-5 text-[#f39c12] flex-shrink-0 mt-1" />
                   <span className="text-gray-700"><strong>Vehicle expertise:</strong> Complete knowledge of all vehicle systems and comfort features</span>
                 </li>
               </ul>
@@ -65,23 +65,23 @@ export default function ChauffeurService() {
               <h3 className="text-2xl font-bold mb-6 text-gray-900">On-Duty Excellence</h3>
               <ul className="space-y-4">
                 <li className="flex gap-3">
-                  <Checkmark />
+                  <CheckCircle className="w-5 h-5 text-[#f39c12] flex-shrink-0 mt-1" />
                   <span className="text-gray-700"><strong>Discretion:</strong> Absolute confidentiality in all matters</span>
                 </li>
                 <li className="flex gap-3">
-                  <Checkmark />
+                  <CheckCircle className="w-5 h-5 text-[#f39c12] flex-shrink-0 mt-1" />
                   <span className="text-gray-700"><strong>Professionalism:</strong> Courteous, polite, never intrusive</span>
                 </li>
                 <li className="flex gap-3">
-                  <Checkmark />
+                  <CheckCircle className="w-5 h-5 text-[#f39c12] flex-shrink-0 mt-1" />
                   <span className="text-gray-700"><strong>Punctuality:</strong> Always on-time, anticipates traffic patterns</span>
                 </li>
                 <li className="flex gap-3">
-                  <Checkmark />
+                  <CheckCircle className="w-5 h-5 text-[#f39c12] flex-shrink-0 mt-1" />
                   <span className="text-gray-700"><strong>Reliability:</strong> Fully insured, maintained vehicles</span>
                 </li>
                 <li className="flex gap-3">
-                  <Checkmark />
+                  <CheckCircle className="w-5 h-5 text-[#f39c12] flex-shrink-0 mt-1" />
                   <span className="text-gray-700"><strong>Communication:</strong> Clear, professional phone manner</span>
                 </li>
               </ul>

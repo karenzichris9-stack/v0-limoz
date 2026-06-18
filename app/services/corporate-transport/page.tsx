@@ -1,5 +1,5 @@
 import { Metadata } from "next"
-import { Building2, Users, TrendingUp, Lock, Zap, BarChart3 } from "lucide-react"
+import { Building2, Users, TrendingUp, Lock, Zap, BarChart3, CheckCircle } from "lucide-react"
 import { Footer } from "@/components/footer"
 
 export const metadata: Metadata = {
